@@ -1,0 +1,83 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * IMPORTS
+ * GRIDS
+*/
+
+
+
+
+
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+
+@import "../partials/grids/grids-extends";
+@import "../partials/grids/grids-mixins";
+
+
+
+
+
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+
+/**
+ * !IMPORTANT - It is best to only attach grid and/or width styles to your
+ * grid classes. Don't clutter them with other styles. Instead add markup
+ * inside these divs and then style those.
+ *
+ * grid blocks need to start with .g- and grid cells should start with .gc-
+ *
+ * Note: If you don't give a grid cell a width it will just fill the
+ * remaining space.
+ */
+
+
+.g-main{
+    @extend %grid;
+//    @extend %grid--quarters;
+    @extend %grid--palm-full;
+    @extend %gutters-large;
+}
+
+    .gc-reminders{
+        @extend %grid__item;
+        @extend %grid__item--third;
+        @extend %grid__item--palm-full;
+    }
+
+    .gc-content{
+        @extend %grid__item;
+        @extend %grid__item--palm-full;
+    }
+
+    .gc-sidebar{
+        @extend %grid__item;
+        @extend %grid__item--palm-full;
+
+        @extend %grid__item--fixed-400;
+
+        @include media-query(lap) {
+            width: 200px;
+        }
+    }
+
+    
+.g-reminders{
+    @extend %grid;
+    @extend %grid--halves;
+    @extend %gutters-large;
+    @extend %grid--palm-full;
+}
+
+    .gc-reminder{
+        @extend %grid__item;
+    }
+    
+    .gc-reminder--wide{
+        @extend %grid__item--full;
+    }

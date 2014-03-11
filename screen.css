@@ -1,0 +1,478 @@
+@charset "UTF-8";
+/**
+ * General
+ */
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * RESPONSIVENESS
+ * COLORS
+*/
+/*------------------------------------*\
+    $RESPONSIVENESS
+\*------------------------------------*/
+/**
+ * Set where breakpoints start.
+ */
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * RESPONSIVE
+*/
+/*------------------------------------*\
+    $RESPONSIVE
+\*------------------------------------*/
+/**
+ * Media query mixin.
+ *
+ * It’s not great practice to define solid breakpoints up-front, preferring to
+ * modify your design when it needs it, rather than assuming you’ll want a
+ * change at ‘mobile’. However, as inuit.css is required to take a hands off
+ * approach to design decisions, this is the closest we can get to baked-in
+ * responsiveness. It’s flexible enough to allow you to set your own breakpoints
+ * but solid enough to be frameworkified.
+ *
+ * We define some broad breakpoints in our vars file that are picked up here
+ * for use in a simple media query mixin. Our options are:
+ *
+ * palm
+ * lap
+ * portable
+ * desk
+ * desk-wide
+ *
+ * Not using a media query will, naturally, serve styles to all devices.
+ *
+ * `@include media-query(palm){ [styles here] }`
+ *
+ * We work out your end points for you:
+ */
+/**
+ * UI
+ */
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * RESET
+*/
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/**
+ * A more considered reset; more of a restart...
+ * As per: csswizardry.com/2011/10/reset-restarted
+ */
+/**
+* Let’s make the box model all nice, shall we...?
+*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/**
+ * The usual...
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr, body {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+abbr[title], dfn[title] {
+  cursor: help;
+}
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+u, ins {
+  text-decoration: none;
+}
+
+/**
+ * Apply faux underline via `border-bottom`.
+ */
+ins {
+  border-bottom: 1px solid;
+}
+
+/**
+ * So that `alt` text is visually offset if images don’t load.
+ */
+img {
+  font-style: italic;
+}
+
+/**
+ * Give form elements some cursor interactions...
+ */
+label,
+input,
+textarea,
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+  outline: none;
+}
+
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * IMPORTS
+ * GRIDS
+*/
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * GRID DEFAULT
+ * FLEX CELLS MODIFIER
+ * GROUP WIDTH MODIFIERS
+ * SINGLE WIDTH MODIFIERS
+ * GUTTER MODIFIERS
+ * GROUP ALIGNMENT MODIFIERS
+ * SINGLE ALIGNMENT MODIFIERS
+*/
+/*------------------------------------*\
+    GRID DEFAULT
+\*------------------------------------*/
+.g-main, .g-reminders {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gc-reminders, .gc-content, .gc-sidebar, .gc-reminder {
+  flex: 1;
+}
+
+/*------------------------------------*\ 
+    $FLEX CELLS MODIFIER
+\*------------------------------------*/
+/**
+
+/**
+ * This will make all cells the same height.
+ *
+ * Apply with %grid.
+ */
+/*------------------------------------*\ 
+    $GROUP WIDTH MODIFIERS
+\*------------------------------------*/
+/**
+ * If we need to set a specific width to all
+ * cells in a grid use these classes
+ *
+ * Apply them with the .grid class.
+ */
+.g-reminders > div[class^='gc-'] {
+  flex: 0 0 50%;
+}
+
+/*------------------------------------*\ 
+    $SINGLE WIDTH MODIFIERS
+\*------------------------------------*/
+/**
+ * We can set individual cell width with
+ * these classes.
+ *
+ * Apply them with the %grid__item class.
+ */
+.gc-reminder--wide {
+  width: 100%;
+  flex: none !important;
+}
+
+.gc-reminders {
+  width: 33.3333%;
+  flex: none !important;
+}
+
+/*------------------------------------*\ 
+    $GUTTER MODIFIERS
+\*------------------------------------*/
+/**
+ * We can set individual grid gutter width with these.
+ *
+ * Apply them with the .grid class.
+ */
+.g-main, .g-reminders {
+  margin-left: -2em;
+}
+.g-main > div[class^='gc-'], .g-reminders > div[class^='gc-'] {
+  padding-left: 2em;
+  margin-bottom: 2em;
+}
+
+/*------------------------------------*\
+    $GROUP ALIGNMENT MODIFIERS
+\*------------------------------------*/
+/**
+ * If we need all cells in a grid to align to the
+ * same location use these classes.
+ *
+ * Apply them with the .grid class.
+ */
+/*------------------------------------*\
+    $SINGLE ALIGNMENT MODIFIERS
+\*------------------------------------*/
+/**
+ * If we need single cells in a grid to align to a
+ * specific location use these classes.
+ *
+ * Apply them with the .grid__item class.
+ */
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * RESPONSIVE EXTENDS
+ * FIXED WIDTH GRID CELLS
+*/
+/*------------------------------------*\
+    $RESPONSIVE EXTENDS
+\*------------------------------------*/
+/**
+ * These came from CSS Wizardry Grids - http://csswizardry.com/csswizardry-grids/
+ *
+ * Define your breakpoints. The first value is the prefix that shall be used for
+ * your classes (e.g. `.palm--full`), the second value is the media query
+ * that the breakpoint fires at.
+ */
+/**
+ * This list will make silent classes like %palm--full or %palm--grid-halves render
+ * for you to extend. Your options are 'palm', 'lap', 'portable', 'desk', 'wide'.
+ * If $use-silent-classes is set to false it will make regular classes instead of
+ * silent classes.
+ */
+/**
+ * Enclose a block of code with a media query as named in `$breakpoints`.
+ */
+/**
+ * Create our width & gutter extends (or classes), prefixed by the specified namespace.
+ */
+/**
+ * Generate our responsive extends (or classes)
+ */
+@media only screen and (max-width: 480px) {
+  /**
+   * Width Whole
+   */
+  .g-main > div[class^='gc-'], .g-reminders > div[class^='gc-'] {
+    flex: 0 0 100% !important;
+  }
+
+  .gc-reminders, .gc-content, .gc-sidebar {
+    width: 100%;
+    flex: none !important;
+  }
+
+  /**
+   * Width Half
+   */
+  /**
+   * Width Third
+   */
+  /**
+   * Width Quarter
+   */
+  /**
+   * Width Fifth
+   */
+  /**
+   * Gutter Small
+   */
+  /**
+   * Gutter Medium
+   */
+  /**
+   * Gutter Large
+   */
+  /**
+   * Gutter xLarge
+   */
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /**
+   * Width Whole
+   */
+  /**
+   * Width Half
+   */
+  /**
+   * Width Third
+   */
+  /**
+   * Width Quarter
+   */
+  /**
+   * Width Fifth
+   */
+  /**
+   * Gutter Small
+   */
+  /**
+   * Gutter Medium
+   */
+  /**
+   * Gutter Large
+   */
+  /**
+   * Gutter xLarge
+   */
+}
+@media only screen and (max-width: 1023px) {
+  /**
+   * Width Whole
+   */
+  /**
+   * Width Half
+   */
+  /**
+   * Width Third
+   */
+  /**
+   * Width Quarter
+   */
+  /**
+   * Width Fifth
+   */
+  /**
+   * Gutter Small
+   */
+  /**
+   * Gutter Medium
+   */
+  /**
+   * Gutter Large
+   */
+  /**
+   * Gutter xLarge
+   */
+}
+@media only screen and (max-width: 1024px) {
+  /**
+   * Width Whole
+   */
+  /**
+   * Width Half
+   */
+  /**
+   * Width Third
+   */
+  /**
+   * Width Quarter
+   */
+  /**
+   * Width Fifth
+   */
+  /**
+   * Gutter Small
+   */
+  /**
+   * Gutter Medium
+   */
+  /**
+   * Gutter Large
+   */
+  /**
+   * Gutter xLarge
+   */
+}
+@media only screen and (min-width: 1500px) {
+  /**
+   * Width Whole
+   */
+  /**
+   * Width Half
+   */
+  /**
+   * Width Third
+   */
+  /**
+   * Width Quarter
+   */
+  /**
+   * Width Fifth
+   */
+  /**
+   * Gutter Small
+   */
+  /**
+   * Gutter Medium
+   */
+  /**
+   * Gutter Large
+   */
+  /**
+   * Gutter xLarge
+   */
+}
+/*------------------------------------*\ 
+    $FIXED WITH GRID CELLS
+\*------------------------------------*/
+/**
+ * Set the widths you need in your layout here.
+ * These are px values.
+ */
+/**
+ * Generate our fixed width extends (or classes)
+ */
+.gc-sidebar {
+  width: 400px;
+  flex: none !important;
+}
+
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+/**
+ * !IMPORTANT - It is best to only attach grid and/or width styles to your
+ * grid classes. Don't clutter them with other styles. Instead add markup
+ * inside these divs and then style those.
+ *
+ * grid blocks need to start with .g- and grid cells should start with .gc-
+ *
+ * Note: If you don't give a grid cell a width it will just fill the
+ * remaining space.
+ */
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .gc-sidebar {
+    width: 200px;
+  }
+}
+
+/*------------------------------------*\
+    $TESTING
+\*------------------------------------*/
+.block {
+  background-color: red;
+}
+
+.block--nested {
+  background-color: purple;
+}

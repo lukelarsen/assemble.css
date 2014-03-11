@@ -1,0 +1,224 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * RESPONSIVE EXTENDS
+ * FIXED WIDTH GRID CELLS
+*/
+
+
+
+
+
+/*------------------------------------*\
+    $RESPONSIVE EXTENDS
+\*------------------------------------*/
+
+/**
+ * These came from CSS Wizardry Grids - http://csswizardry.com/csswizardry-grids/
+ *
+ * Define your breakpoints. The first value is the prefix that shall be used for
+ * your classes (e.g. `.palm--full`), the second value is the media query
+ * that the breakpoint fires at.
+ */
+$breakpoints: (
+    'palm' '(max-width: 480px)',
+    'lap' '(min-width: 481px) and (max-width: 1023px)',
+    'portable' '(max-width: 1023px)', // both lap and palm
+    'desk' '(max-width: 1024px)',
+    'wide' '(min-width:1500px)'
+);
+
+
+/**
+ * This list will make silent classes like %palm--full or %palm--grid-halves render
+ * for you to extend. Your options are 'palm', 'lap', 'portable', 'desk', 'wide'.
+ * If $use-silent-classes is set to false it will make regular classes instead of
+ * silent classes.
+ */
+$breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk', 'wide');
+$use-silent-classes:    true;
+$class-type:            unquote(".");
+@if $use-silent-classes == true{
+    $class-type:        unquote("%");
+}
+
+/**
+ * Enclose a block of code with a media query as named in `$breakpoints`.
+ */
+@mixin grid-media-query($media-query){
+    $breakpoint-found: false;
+
+    @each $breakpoint in $breakpoints{
+        $name: nth($breakpoint, 1);
+        $declaration: nth($breakpoint, 2);
+
+        @if $media-query == $name and $declaration{
+            $breakpoint-found: true;
+
+            @media only screen and #{$declaration}{
+                @content;
+            }
+        }
+    }
+
+    @if $breakpoint-found == false{
+        @warn "Breakpoint ‘#{$media-query}’ does not exist"
+    }
+}
+
+
+/**
+ * Create our width & gutter extends (or classes), prefixed by the specified namespace.
+ */
+@mixin device-type($namespace:""){
+
+    /**
+     * Width Whole
+     */
+    #{$class-type}grid--#{$namespace}-full > div[class^='gc-']{
+        flex: 0 0 100% !important;
+    }
+    #{$class-type}grid__item--#{$namespace}-full {
+        width: 100%;
+        flex: none !important;
+    }
+
+
+    /**
+     * Width Half
+     */
+    #{$class-type}grid--#{$namespace}-halves > div[class^='gc-'] {
+        flex: 0 0 50% !important;
+    }
+    #{$class-type}grid__item--#{$namespace}-half {
+        width: 50%;
+        flex: none !important;
+    }
+
+
+    /**
+     * Width Third
+     */
+    #{$class-type}grid--#{$namespace}-thirds > div[class^='gc-'] {
+        flex: 0 0 33.3333% !important;
+    }
+    #{$class-type}grid__item--#{$namespace}-third {
+        width: 33.3333%;
+        flex: none !important;
+    }
+
+
+    /**
+     * Width Quarter
+     */
+    #{$class-type}grid--#{$namespace}-quarters > div[class^='gc-'] {
+        flex: 0 0 25% !important;
+    }
+    #{$class-type}grid__item--#{$namespace}-quarter {
+        width: 25%;
+        flex: none !important;
+    }
+
+
+    /**
+     * Width Fifth
+     */
+    #{$class-type}grid--#{$namespace}-fifths > div[class^='gc-'] {
+        flex: 0 0 20% !important;
+    }
+    #{$class-type}grid__item--#{$namespace}-fifth {
+        width: 20%;
+        flex: none !important;
+    }
+
+
+    /**
+     * Gutter Small
+     */
+    #{$class-type}gutters--#{$namespace}-small{
+        margin-left: -1em;
+        & > div[class^='gc-'] {
+            padding-left: 1em;
+            margin-bottom: 1em;
+        }
+    }
+
+
+    /**
+     * Gutter Medium
+     */
+    #{$class-type}gutters--#{$namespace}-medium{
+        margin-left: -1.5em;
+        & > div[class^='gc-'] {
+            padding-left: 1.5em;
+            margin-bottom: 1.5em;
+        }
+    }
+
+
+    /**
+     * Gutter Large
+     */
+    #{$class-type}gutters--#{$namespace}-large{
+        margin-left: -2em;
+        & > div[class^='gc-'] {
+            padding-left: 2em;
+            margin-bottom: 2em;
+        }
+    }
+
+
+    /**
+     * Gutter xLarge
+     */
+    #{$class-type}gutters--#{$namespace}-xlarge{
+        margin-left: -3em;
+        & > div[class^='gc-'] {
+            padding-left: 3em;
+            margin-bottom: 3em;
+        }
+    }
+
+}
+
+
+/**
+ * Generate our responsive extends (or classes)
+ */
+
+@each $name in $breakpoint-has-widths {
+    @include grid-media-query($name) {
+        @include device-type('#{$name}');
+    }
+}
+
+
+
+
+
+/*------------------------------------*\ 
+    $FIXED WITH GRID CELLS
+\*------------------------------------*/
+
+/**
+ * Set the widths you need in your layout here.
+ * These are px values.
+ */
+
+$grid-fixed-widths: (
+    '200',
+    '400'
+);
+
+
+/**
+ * Generate our fixed width extends (or classes)
+ */
+
+@each $width in $grid-fixed-widths {
+    #{$class-type}grid__item--fixed-#{$width} {
+        width: #{$width}px;
+        flex: none !important;
+    }
+}
