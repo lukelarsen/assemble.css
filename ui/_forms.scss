@@ -1,0 +1,58 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * IMPORTS
+ * FORMS
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+
+@import "../partials/forms/forms-extends";
+@import "../partials/forms/forms-mixins";
+@import "../partials/forms/forms-base";
+
+
+
+
+
+/*------------------------------------*\ 
+    $FORMS
+\*------------------------------------*/
+
+/* Add classes here to extend the different columns your
+ * project will need. The classes need to start with .form-
+ * For example .form-three-cols
+ * Each class much extend %form-fields
+ * You can then optionally include one of these:
+ * %form--fit
+ * %form--full
+ * %form--halves
+ * %form--thirds
+ * %form--quarters
+ * %form--fifths
+ */
+
+.form-thirds{
+    @extend %form;
+    @extend %form--thirds;
+}
+
+.form-quarters{
+    @extend %form;
+    @extend %form--quarters;
+    @extend %form--palm-full;
+}
+
+
+
+
+.form-item-half{
+    @extend %form__item--half;
+}

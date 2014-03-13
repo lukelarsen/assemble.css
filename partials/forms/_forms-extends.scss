@@ -1,0 +1,107 @@
+/*------------------------------------*\
+    GENERAL
+\*------------------------------------*/
+/**
+ * FORM GRID
+ * FORM FIELD COLS
+ * FORM FIELD ITEMS
+*/
+
+
+
+
+
+/*------------------------------------*\
+    $FORM GRID
+\*------------------------------------*/
+
+%form{
+    margin-left: -1em;
+    @extend %grid;
+
+    > li{
+
+        /*
+            Todo - The margin-bottom value can become dynamic or a variable
+            @author - lukelarsen
+            @date - 3/13/14
+            @time - 7:21 AM
+         */
+
+        margin-bottom: 15px;
+        padding-left: 1em;
+        @extend %grid__item;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    $FORM FIELD COLS
+\*------------------------------------*/
+
+%form--fit{
+    > li{
+        flex: 1;
+    }
+}
+
+%form--full{
+    > li{
+        flex: 0 0 100%;
+    }
+}
+
+%form--halves{
+    > li{
+        flex: 0 0 50%;
+    }
+}
+
+%form--thirds{
+    > li{
+        flex: 0 0 33.3333%;
+    }
+}
+
+%form--quarters{
+    > li{
+        flex: 0 0 25%;
+    }
+}
+
+%form--fifths{
+    > li{
+        flex: 0 0 20%;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    $FORM FIELD ITEMS
+\*------------------------------------*/
+
+%form__item--full{
+    flex: 0 0 100% !important;
+}
+
+%form__item--half{
+    flex: 0 0 50% !important;
+}
+
+%form__item--third{
+    flex: 0 0 33.3333% !important;
+}
+
+%form__item--quarter{
+    flex: 0 0 25% !important;
+}
+
+%form__item--fifth{
+    flex: 0 0 20% !important;
+}

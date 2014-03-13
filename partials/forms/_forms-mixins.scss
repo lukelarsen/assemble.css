@@ -1,0 +1,136 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * RESPONSIVE EXTENDS
+*/
+
+
+
+
+
+/*------------------------------------*\
+    $RESPONSIVE EXTENDS
+\*------------------------------------*/
+
+@mixin forms-device-type($namespace:""){
+
+    /**
+     * One Col
+     */
+    #{$class-type}form--#{$namespace}-full > li{
+        flex: 0 0 100% !important;
+    }
+    #{$class-type}form__item--#{$namespace}-full {
+        width: 100%;
+        flex: none !important;
+    }
+
+
+    /**
+     * Two Cols
+     */
+    #{$class-type}form--#{$namespace}-halves > li {
+        flex: 0 0 50% !important;
+    }
+    #{$class-type}form__item--#{$namespace}-half {
+        width: 50%;
+        flex: none !important;
+    }
+
+
+    /**
+     * Three Cols
+     */
+    #{$class-type}form--#{$namespace}-thirds > li {
+        flex: 0 0 33.3333% !important;
+    }
+    #{$class-type}form__item--#{$namespace}-third {
+        width: 33.3333%;
+        flex: none !important;
+    }
+
+
+    /**
+     * Four Cols
+     */
+    #{$class-type}form--#{$namespace}-quarters > li {
+        flex: 0 0 25% !important;
+    }
+    #{$class-type}form__item--#{$namespace}-quarter {
+        width: 25%;
+        flex: none !important;
+    }
+
+
+    /**
+     * Five Cols
+     */
+    #{$class-type}form--#{$namespace}-fifths > li {
+        flex: 0 0 20% !important;
+    }
+    #{$class-type}form__item--#{$namespace}-fifth {
+        width: 20%;
+        flex: none !important;
+    }
+
+
+//    /**
+//     * Gutter Small
+//     */
+//    #{$class-type}gutters--#{$namespace}-small{
+//        margin-left: -1em;
+//        & > div[class^='gc-'] {
+//            padding-left: 1em;
+//            margin-bottom: 1em;
+//        }
+//    }
+//
+//
+//    /**
+//     * Gutter Medium
+//     */
+//    #{$class-type}gutters--#{$namespace}-medium{
+//        margin-left: -1.5em;
+//        & > div[class^='gc-'] {
+//            padding-left: 1.5em;
+//            margin-bottom: 1.5em;
+//        }
+//    }
+//
+//
+//    /**
+//     * Gutter Large
+//     */
+//    #{$class-type}gutters--#{$namespace}-large{
+//        margin-left: -2em;
+//        & > div[class^='gc-'] {
+//            padding-left: 2em;
+//            margin-bottom: 2em;
+//        }
+//    }
+//
+//
+//    /**
+//     * Gutter xLarge
+//     */
+//    #{$class-type}gutters--#{$namespace}-xlarge{
+//        margin-left: -3em;
+//        & > div[class^='gc-'] {
+//            padding-left: 3em;
+//            margin-bottom: 3em;
+//        }
+//    }
+
+}
+
+
+/**
+ * Generate our responsive extends (or classes)
+ */
+
+@each $name in $breakpoint-has-widths {
+    @include grid-media-query($name) {
+        @include forms-device-type('#{$name}');
+    }
+}

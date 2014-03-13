@@ -64,7 +64,7 @@
  * If we need to set a specific width to all
  * cells in a grid use these classes
  *
- * Apply them with the .grid class.
+ * Extend them along with %grid.
  */
 %grid--fit{
     > div[class^='gc-'] {

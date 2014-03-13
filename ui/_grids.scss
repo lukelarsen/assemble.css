@@ -32,6 +32,9 @@
  *
  * grid blocks need to start with .g- and grid cells should start with .gc-
  *
+ * @extend %grid__item is only needed with there isn't another extend
+ * defining it's flex width.
+ *
  * Note: If you don't give a grid cell a width it will just fill the
  * remaining space.
  */
@@ -45,7 +48,6 @@
 }
 
     .gc-reminders{
-        @extend %grid__item;
         @extend %grid__item--third;
         @extend %grid__item--palm-full;
     }
@@ -56,17 +58,15 @@
     }
 
     .gc-sidebar{
-        @extend %grid__item;
         @extend %grid__item--palm-full;
-
-        @extend %grid__item--fixed-400;
+        @extend %grid__item--fixed-200;
 
         @include media-query(lap) {
-            width: 200px;
+            width: 100px;
         }
     }
 
-    
+
 .g-reminders{
     @extend %grid;
     @extend %grid--halves;

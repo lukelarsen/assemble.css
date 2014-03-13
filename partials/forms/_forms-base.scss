@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * GENERAL
+ * CHECKBOXES & RADIOS
+ * TEXTAREA
+*/
+
+
+
+
+
+/*------------------------------------*\
+    $GENERAL
+\*------------------------------------*/
+
+[class^='form-'] {
+    > li > label,
+    > li > .label,
+    > li > input[type="text"],
+    > li > input[type="number"],
+    > li > input[type="date"],
+    > li > textarea,
+    > li > select{
+        width: 100%;
+        display: block;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    $CHECKBOXES & RADIOS
+\*------------------------------------*/
+
+.check-list,
+.check-list--inline{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.check-list--inline{
+
+    /*
+        Todo - Remove overflow and replace with .cf
+        @author - lukelarsen
+        @date - 3/13/14
+        @time - 7:20 AM
+     */
+
+    overflow: hidden;
+    li{
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+
+
+
+/*------------------------------------*\
+    $TEXTAREA
+\*------------------------------------*/
+
+textarea{
+    height: 100px;
+}
