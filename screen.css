@@ -13,7 +13,20 @@
     $RESPONSIVENESS
 \*------------------------------------*/
 /**
+ * These came from CSS Wizardry Grids - http://csswizardry.com/csswizardry-grids/
+ *
+ * Define your breakpoints. The first value is the prefix that shall be used for
+ * your classes (e.g. `.palm--full`), the second value is the media query
+ * that the breakpoint fires at.
+ */
+/**
  * Set where breakpoints start.
+ */
+/**
+ * This list will make silent classes like %palm--full or %palm--grid-halves render
+ * for you to extend. Your options are 'palm', 'lap', 'portable', 'desk', 'wide'.
+ * If $use-silent-classes is set to false it will make regular classes instead of
+ * silent classes.
  */
 /*------------------------------------*\
     CONTENTS
@@ -544,11 +557,11 @@ table {
 /**
  * GRID DEFAULT
  * FLEX CELLS MODIFIER
- * GROUP WIDTH MODIFIERS
- * SINGLE WIDTH MODIFIERS
- * GUTTER MODIFIERS
- * GROUP ALIGNMENT MODIFIERS
- * SINGLE ALIGNMENT MODIFIERS
+ * GRID WIDTH MODIFIERS
+ * GRID SINGLE WIDTH MODIFIERS
+ * GRID GUTTER MODIFIERS
+ * GRID ALIGNMENT MODIFIERS
+ * GRID SINGLE ALIGNMENT MODIFIERS
 */
 /*------------------------------------*\
     GRID DEFAULT
@@ -561,7 +574,7 @@ table {
   padding: 0;
 }
 
-.gc-content, .gc-reminder, .form-thirds > li, .form-quarters > li {
+.gc-content, .gc-reminder {
   flex: 1;
 }
 
@@ -575,12 +588,16 @@ table {
  *
  * Apply with %grid.
  */
+.g-main > div[class^='gc-'] {
+  display: flex;
+}
+
 /*------------------------------------*\ 
-    $GROUP WIDTH MODIFIERS
+    $GRID WIDTH MODIFIERS
 \*------------------------------------*/
 /**
  * If we need to set a specific width to all
- * cells in a grid use these classes
+ * cells in a grid use these extends
  *
  * Extend them along with %grid.
  */
@@ -589,31 +606,26 @@ table {
 }
 
 /*------------------------------------*\ 
-    $SINGLE WIDTH MODIFIERS
+    $GRID SINGLE WIDTH MODIFIERS
 \*------------------------------------*/
 /**
- * We can set individual cell width with
- * these classes.
- *
- * Apply them with the %grid__item class.
+ * We can set individual cell width with these extends.
  */
 .gc-reminder--wide {
-  width: 100%;
-  flex: none !important;
+  flex: 0 0 100% !important;
 }
 
 .gc-reminders {
-  width: 33.3333%;
-  flex: none !important;
+  flex: 0 0 20% !important;
 }
 
 /*------------------------------------*\ 
-    $GUTTER MODIFIERS
+    $GRID GUTTER MODIFIERS
 \*------------------------------------*/
 /**
  * We can set individual grid gutter width with these.
  *
- * Apply them with the .grid class.
+ * Apply them with the %grid extend.
  */
 .g-main, .g-reminders {
   margin-left: -2em;
@@ -624,46 +636,33 @@ table {
 }
 
 /*------------------------------------*\
-    $GROUP ALIGNMENT MODIFIERS
+    $GRID ALIGNMENT MODIFIERS
 \*------------------------------------*/
 /**
  * If we need all cells in a grid to align to the
  * same location use these classes.
  *
- * Apply them with the .grid class.
+ * Apply them with the %grid extend.
  */
 /*------------------------------------*\
-    $SINGLE ALIGNMENT MODIFIERS
+    $GRID SINGLE ALIGNMENT MODIFIERS
 \*------------------------------------*/
 /**
  * If we need single cells in a grid to align to a
- * specific location use these classes.
+ * specific location use these extends.
  *
- * Apply them with the .grid__item class.
+ * Apply them with the %grid__item extend.
  */
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
 /**
- * RESPONSIVE EXTENDS
+ * GRID RESPONSIVE EXTENDS
  * FIXED WIDTH GRID CELLS
 */
 /*------------------------------------*\
     $RESPONSIVE EXTENDS
 \*------------------------------------*/
-/**
- * These came from CSS Wizardry Grids - http://csswizardry.com/csswizardry-grids/
- *
- * Define your breakpoints. The first value is the prefix that shall be used for
- * your classes (e.g. `.palm--full`), the second value is the media query
- * that the breakpoint fires at.
- */
-/**
- * This list will make silent classes like %palm--full or %palm--grid-halves render
- * for you to extend. Your options are 'palm', 'lap', 'portable', 'desk', 'wide'.
- * If $use-silent-classes is set to false it will make regular classes instead of
- * silent classes.
- */
 /**
  * Enclose a block of code with a media query as named in `$breakpoints`.
  */
@@ -677,13 +676,11 @@ table {
   /**
    * Width Whole
    */
-  .g-main > div[class^='gc-'], .g-reminders > div[class^='gc-'] {
+  .g-main > div[class^='gc-'], .g-reminders > div[class^='gc-'],
+  .gc-reminders,
+  .gc-content,
+  .gc-sidebar {
     flex: 0 0 100% !important;
-  }
-
-  .gc-reminders, .gc-content, .gc-sidebar {
-    width: 100%;
-    flex: none !important;
   }
 
   /**
@@ -852,7 +849,7 @@ table {
  *
  * grid blocks need to start with .g- and grid cells should start with .gc-
  *
- * @extend %grid__item is only needed with there isn't another extend
+ * @extend %grid__item is only needed when there isn't another extend
  * defining it's flex width.
  *
  * Note: If you don't give a grid cell a width it will just fill the
@@ -875,12 +872,13 @@ table {
     $IMPORTS
 \*------------------------------------*/
 /*------------------------------------*\
-    GENERAL
+    CONTENTS
 \*------------------------------------*/
 /**
  * FORM GRID
- * FORM FIELD COLS
- * FORM FIELD ITEMS
+ * FORM WIDTH MODIFIERS
+ * SINGLE FORM FIELD MODIFIERS
+ * FORM GUTTER MODIFIERS
 */
 /*------------------------------------*\
     $FORM GRID
@@ -900,7 +898,7 @@ table {
 }
 
 /*------------------------------------*\
-    $FORM FIELD COLS
+    $FORM WIDTH MODIFIERS
 \*------------------------------------*/
 .form-thirds > li {
   flex: 0 0 33.3333%;
@@ -911,111 +909,206 @@ table {
 }
 
 /*------------------------------------*\
-    $FORM FIELD ITEMS
+    $SINGLE FORM FIELD MODIFIERS
 \*------------------------------------*/
+/**
+ * We can set individual form width with these extends.
+ */
 .form-item-half {
   flex: 0 0 50% !important;
 }
 
 /*------------------------------------*\
+    $FORM GUTTER MODIFIERS
+\*------------------------------------*/
+/**
+ * The small settings are the default so they are not included
+ * here. These others will override the small size default.
+ */
+/*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
 /**
- * RESPONSIVE EXTENDS
+ * FORM RESPONSIVE EXTENDS
 */
 /*------------------------------------*\
-    $RESPONSIVE EXTENDS
+    $FORM RESPONSIVE EXTENDS
 \*------------------------------------*/
 /**
  * Generate our responsive extends (or classes)
  */
 @media only screen and (max-width: 480px) {
   /**
-   * One Col
+   * Forms One Col
    */
   .form-quarters > li {
     flex: 0 0 100% !important;
   }
 
   /**
-   * Two Cols
+   * Form Two Cols
    */
   /**
-   * Three Cols
+   * Form Three Cols
    */
   /**
-   * Four Cols
+   * Forms Four Cols
    */
   /**
-   * Five Cols
+   * Forms Five Cols
+   */
+  /**
+   * Forms Gutter Small
+   */
+  /**
+   * There is no extend for Forms Gutter Small because it is
+   * the default. Just don't extend any form gutters to get
+   * it's size.
+   */
+  /**
+   * Forms Gutter Medium
+   */
+  /**
+   * Forms Gutter Large
+   */
+  /**
+   * Forms Gutter xLarge
    */
 }
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
   /**
-   * One Col
+   * Forms One Col
    */
   /**
-   * Two Cols
+   * Form Two Cols
    */
   /**
-   * Three Cols
+   * Form Three Cols
    */
   /**
-   * Four Cols
+   * Forms Four Cols
    */
   /**
-   * Five Cols
+   * Forms Five Cols
+   */
+  /**
+   * Forms Gutter Small
+   */
+  /**
+   * There is no extend for Forms Gutter Small because it is
+   * the default. Just don't extend any form gutters to get
+   * it's size.
+   */
+  /**
+   * Forms Gutter Medium
+   */
+  /**
+   * Forms Gutter Large
+   */
+  /**
+   * Forms Gutter xLarge
    */
 }
 @media only screen and (max-width: 1023px) {
   /**
-   * One Col
+   * Forms One Col
    */
   /**
-   * Two Cols
+   * Form Two Cols
    */
   /**
-   * Three Cols
+   * Form Three Cols
    */
   /**
-   * Four Cols
+   * Forms Four Cols
    */
   /**
-   * Five Cols
+   * Forms Five Cols
+   */
+  /**
+   * Forms Gutter Small
+   */
+  /**
+   * There is no extend for Forms Gutter Small because it is
+   * the default. Just don't extend any form gutters to get
+   * it's size.
+   */
+  /**
+   * Forms Gutter Medium
+   */
+  /**
+   * Forms Gutter Large
+   */
+  /**
+   * Forms Gutter xLarge
    */
 }
 @media only screen and (max-width: 1024px) {
   /**
-   * One Col
+   * Forms One Col
    */
   /**
-   * Two Cols
+   * Form Two Cols
    */
   /**
-   * Three Cols
+   * Form Three Cols
    */
   /**
-   * Four Cols
+   * Forms Four Cols
    */
   /**
-   * Five Cols
+   * Forms Five Cols
+   */
+  /**
+   * Forms Gutter Small
+   */
+  /**
+   * There is no extend for Forms Gutter Small because it is
+   * the default. Just don't extend any form gutters to get
+   * it's size.
+   */
+  /**
+   * Forms Gutter Medium
+   */
+  /**
+   * Forms Gutter Large
+   */
+  /**
+   * Forms Gutter xLarge
    */
 }
 @media only screen and (min-width: 1500px) {
   /**
-   * One Col
+   * Forms One Col
    */
   /**
-   * Two Cols
+   * Form Two Cols
    */
   /**
-   * Three Cols
+   * Form Three Cols
    */
   /**
-   * Four Cols
+   * Forms Four Cols
    */
   /**
-   * Five Cols
+   * Forms Five Cols
+   */
+  /**
+   * Forms Gutter Small
+   */
+  /**
+   * There is no extend for Forms Gutter Small because it is
+   * the default. Just don't extend any form gutters to get
+   * it's size.
+   */
+  /**
+   * Forms Gutter Medium
+   */
+  /**
+   * Forms Gutter Large
+   */
+  /**
+   * Forms Gutter xLarge
    */
 }
 /*------------------------------------*\
@@ -1078,7 +1171,6 @@ textarea {
 /* Add classes here to extend the different columns your
  * project will need. The classes need to start with .form-
  * For example .form-three-cols
- * Each class much extend %form-fields
  * You can then optionally include one of these:
  * %form--fit
  * %form--full

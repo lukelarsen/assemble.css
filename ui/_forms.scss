@@ -29,7 +29,6 @@
 /* Add classes here to extend the different columns your
  * project will need. The classes need to start with .form-
  * For example .form-three-cols
- * Each class much extend %form-fields
  * You can then optionally include one of these:
  * %form--fit
  * %form--full
@@ -48,6 +47,8 @@
     @extend %form;
     @extend %form--quarters;
     @extend %form--palm-full;
+//    @extend %form-gutters-xlarge;
+//    @extend %form-gutters--portable-xlarge;
 }
 
 

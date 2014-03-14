@@ -32,7 +32,7 @@
  *
  * grid blocks need to start with .g- and grid cells should start with .gc-
  *
- * @extend %grid__item is only needed with there isn't another extend
+ * @extend %grid__item is only needed when there isn't another extend
  * defining it's flex width.
  *
  * Note: If you don't give a grid cell a width it will just fill the
@@ -42,13 +42,13 @@
 
 .g-main{
     @extend %grid;
-//    @extend %grid--quarters;
+    @extend %grid--flex-cells;
     @extend %grid--palm-full;
     @extend %gutters-large;
 }
 
     .gc-reminders{
-        @extend %grid__item--third;
+        @extend %grid__item--fifth;
         @extend %grid__item--palm-full;
     }
 

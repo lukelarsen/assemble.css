@@ -2,7 +2,7 @@
     CONTENTS
 \*------------------------------------*/
 /**
- * RESPONSIVE EXTENDS
+ * GRID RESPONSIVE EXTENDS
  * FIXED WIDTH GRID CELLS
 */
 
@@ -13,35 +13,6 @@
 /*------------------------------------*\
     $RESPONSIVE EXTENDS
 \*------------------------------------*/
-
-/**
- * These came from CSS Wizardry Grids - http://csswizardry.com/csswizardry-grids/
- *
- * Define your breakpoints. The first value is the prefix that shall be used for
- * your classes (e.g. `.palm--full`), the second value is the media query
- * that the breakpoint fires at.
- */
-$breakpoints: (
-    'palm' '(max-width: 480px)',
-    'lap' '(min-width: 481px) and (max-width: 1023px)',
-    'portable' '(max-width: 1023px)', // both lap and palm
-    'desk' '(max-width: 1024px)',
-    'wide' '(min-width:1500px)'
-);
-
-
-/**
- * This list will make silent classes like %palm--full or %palm--grid-halves render
- * for you to extend. Your options are 'palm', 'lap', 'portable', 'desk', 'wide'.
- * If $use-silent-classes is set to false it will make regular classes instead of
- * silent classes.
- */
-$breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk', 'wide');
-$use-silent-classes:    true;
-$class-type:            unquote(".");
-@if $use-silent-classes == true{
-    $class-type:        unquote("%");
-}
 
 /**
  * Enclose a block of code with a media query as named in `$breakpoints`.
@@ -73,63 +44,51 @@ $class-type:            unquote(".");
  */
 @mixin device-type($namespace:""){
 
+    // The first call is for the entire grid block
+    // The second call is for individual grid cells
+
     /**
      * Width Whole
      */
-    #{$class-type}grid--#{$namespace}-full > div[class^='gc-']{
+    #{$class-type}grid--#{$namespace}-full > div[class^='gc-'],
+    #{$class-type}grid__item--#{$namespace}-full{
         flex: 0 0 100% !important;
-    }
-    #{$class-type}grid__item--#{$namespace}-full {
-        width: 100%;
-        flex: none !important;
     }
 
 
     /**
      * Width Half
      */
-    #{$class-type}grid--#{$namespace}-halves > div[class^='gc-'] {
+    #{$class-type}grid--#{$namespace}-halves > div[class^='gc-'],
+    #{$class-type}grid__item--#{$namespace}-half{
         flex: 0 0 50% !important;
-    }
-    #{$class-type}grid__item--#{$namespace}-half {
-        width: 50%;
-        flex: none !important;
     }
 
 
     /**
      * Width Third
      */
-    #{$class-type}grid--#{$namespace}-thirds > div[class^='gc-'] {
+    #{$class-type}grid--#{$namespace}-thirds > div[class^='gc-'],
+    #{$class-type}grid__item--#{$namespace}-third{
         flex: 0 0 33.3333% !important;
-    }
-    #{$class-type}grid__item--#{$namespace}-third {
-        width: 33.3333%;
-        flex: none !important;
     }
 
 
     /**
      * Width Quarter
      */
-    #{$class-type}grid--#{$namespace}-quarters > div[class^='gc-'] {
+    #{$class-type}grid--#{$namespace}-quarters > div[class^='gc-'],
+    #{$class-type}grid__item--#{$namespace}-quarter{
         flex: 0 0 25% !important;
-    }
-    #{$class-type}grid__item--#{$namespace}-quarter {
-        width: 25%;
-        flex: none !important;
     }
 
 
     /**
      * Width Fifth
      */
-    #{$class-type}grid--#{$namespace}-fifths > div[class^='gc-'] {
+    #{$class-type}grid--#{$namespace}-fifths > div[class^='gc-'],
+    #{$class-type}grid__item--#{$namespace}-fifth{
         flex: 0 0 20% !important;
-    }
-    #{$class-type}grid__item--#{$namespace}-fifth {
-        width: 20%;
-        flex: none !important;
     }
 
 

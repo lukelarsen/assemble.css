@@ -1,10 +1,11 @@
 /*------------------------------------*\
-    GENERAL
+    CONTENTS
 \*------------------------------------*/
 /**
  * FORM GRID
- * FORM FIELD COLS
- * FORM FIELD ITEMS
+ * FORM WIDTH MODIFIERS
+ * SINGLE FORM FIELD MODIFIERS
+ * FORM GUTTER MODIFIERS
 */
 
 
@@ -30,7 +31,6 @@
 
         margin-bottom: 15px;
         padding-left: 1em;
-        @extend %grid__item;
     }
 }
 
@@ -39,7 +39,7 @@
 
 
 /*------------------------------------*\
-    $FORM FIELD COLS
+    $FORM WIDTH MODIFIERS
 \*------------------------------------*/
 
 %form--fit{
@@ -83,8 +83,12 @@
 
 
 /*------------------------------------*\
-    $FORM FIELD ITEMS
+    $SINGLE FORM FIELD MODIFIERS
 \*------------------------------------*/
+
+/**
+ * We can set individual form width with these extends.
+ */
 
 %form__item--full{
     flex: 0 0 100% !important;
@@ -104,4 +108,41 @@
 
 %form__item--fifth{
     flex: 0 0 20% !important;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $FORM GUTTER MODIFIERS
+\*------------------------------------*/
+
+/**
+ * The small settings are the default so they are not included
+ * here. These others will override the small size default.
+ */
+
+%form-gutters-medium{
+    margin-left: -1.5em;
+    & > li {
+        padding-left: 1.5em;
+        margin-bottom: 1.5em;
+    }
+}
+
+%form-gutters-large{
+    margin-left: -2em;
+    & > li {
+        padding-left: 2em;
+        margin-bottom: 2em;
+    }
+}
+
+%form-gutters-xlarge{
+    margin-left: -3em;
+    & > li {
+        padding-left: 3em;
+        margin-bottom: 3em;
+    }
 }
