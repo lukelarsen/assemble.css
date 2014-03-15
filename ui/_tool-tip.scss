@@ -1,0 +1,92 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * VARIABLES
+ * IMPORTS
+ * TOOL TIP RIGHT
+ * TOOL TIP BOTTOM
+ * TOOL TIP CONTAINER
+ * TOOL TIP CLOSE BUTTON
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+
+// Will animate from the right slightly leftwards;
+$tool-tip--right-start:         40px;
+$tool-tip--right-end:           35px;
+$tool-tip--right-top:           -19px;
+
+// Will animate from the bottom slightly upwards;
+$tool-tip--bottom-start:         60px;
+$tool-tip--bottom-end:           55px;
+$tool-tip--bottom-left:           -179px;
+
+
+
+
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+
+@import "../partials/tool-tips/tool-tip-extends";
+
+
+
+
+
+/*------------------------------------*\
+    $TOOLTIP RIGHT
+\*------------------------------------*/
+
+.tool-tip-right{
+    @extend %tool-tip;
+    @extend %tool-tip--right;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $TOOLTIP BOTTOM
+\*------------------------------------*/
+
+.tool-tip-bottom{
+    @extend %tool-tip;
+    @extend %tool-tip--bottom;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $TOOL TIP CONTAINER
+\*------------------------------------*/
+
+.tool-tip__container{
+    // Your styles go here
+    background-color: green;
+    color: white;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $TOOL TIP CLOSE BUTTON
+\*------------------------------------*/
+
+.tool-tip__close{
+    // Your styles here
+    background-color: black;
+    color: white;
+}

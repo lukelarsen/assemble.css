@@ -4,6 +4,8 @@
 /**
  * IMPORTS
  * FORMS
+ * FORM ERRORS
+ * FORM HELP
  */
 
 
@@ -56,4 +58,27 @@
 
 .form-item-half{
     @extend %form__item--half;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $FORM ERRORS
+\*------------------------------------*/
+
+.form-error {
+    > label,
+    > .label{
+        color: red;
+    }
+
+    input[type="text"] {
+        border: solid red 1px;
+    }
+}
+
+.form-error__message{
+    color: red;
 }

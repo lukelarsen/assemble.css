@@ -16,8 +16,8 @@
 \*------------------------------------*/
 
 [class^='form-'] {
-    > li > label,
-    > li > .label,
+//    > li > label,
+//    > li > .label,
     > li > input[type="text"],
     > li > input[type="number"],
     > li > input[type="date"],
@@ -44,15 +44,8 @@
 }
 
 .check-list--inline{
+    @extend %cf;
 
-    /*
-        Todo - Remove overflow and replace with .cf
-        @author - lukelarsen
-        @date - 3/13/14
-        @time - 7:20 AM
-     */
-
-    overflow: hidden;
     li{
         float: left;
         margin-right: 10px;

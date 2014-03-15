@@ -2,6 +2,7 @@
  * General
  */
 @import "partials/general/_general-vars";
+@import "partials/general/_general-extends";
 @import "partials/general/_general-mixins";
 
 
@@ -12,6 +13,7 @@
 @import "ui/reset";
 @import "ui/grids";
 @import "ui/forms";
+@import "ui/tool-tip";
 
 
 
@@ -22,7 +24,7 @@
 \*------------------------------------*/
 
 .block{
-    background-color: red;
+    background-color: yellow;
 }
 
 .block--nested{

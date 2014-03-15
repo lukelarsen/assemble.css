@@ -36,7 +36,7 @@
                             <label>Name</label>
                             <input type="text">
                         </li>
-                        <li>
+                        <li class="form-error">
                             <span class="label">Title</span>
                             <ul class=check-list>
                                 <li>
@@ -49,6 +49,7 @@
                                     <input type="checkbox"> <label>Miss.</label>
                                 </li>
                             </ul>
+                            <span class="form-error__message">Error message</span>
                         </li>
                         <li>
                             <label>Email</label>
@@ -70,11 +71,22 @@
                         </li>
                         <li class="form-item-half">
                             <label>Email</label>
+                                <div class="tool-tip-right">
+                                    ?
+                                    <div class="tool-tip__container">
+                                        This is a tool tip<br>
+                                        This is a tool tip<br>
+                                        This is a tool tip<br>
+                                        This is a tool tip<br>This is a tool tip<br>
+                                        <span class="tool-tip__close">X</span>
+                                    </div>
+                                </div>
                             <input type="text">
                         </li>
-                        <li>
+                        <li class="form-error">
                             <label>Email</label>
                             <input type="text">
+                            <span class="form-error__message">Your email is invalid</span>
                         </li>
                         <li>
                             <label>Number</label>

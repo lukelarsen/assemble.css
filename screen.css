@@ -32,9 +32,86 @@
     CONTENTS
 \*------------------------------------*/
 /**
+ * CLEARFIX
+ * ARROWS
+ */
+/*------------------------------------*\
+    $CLEARFIX
+\*------------------------------------*/
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
+ * and over in your markup.
+ */
+.check-list--inline:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*------------------------------------*\
+    $ARROWS
+\*------------------------------------*/
+/**
+ * This is from inuit.css by @csswizardry
+ *
+ * It is a common design treatment to give an element a triangular points-out
+ * arrow, we typically build these with CSS. These following classes allow us to
+ * generate these arbitrarily with a mixin, `@arrow()`.
+ */
+/**
+ * Forms the basis for any/all CSS arrows.
+ */
+.tool-tip-bottom > .tool-tip__container, .tool-tip-right > .tool-tip__container {
+  position: relative;
+}
+.tool-tip-bottom > .tool-tip__container:before, .tool-tip-right > .tool-tip__container:before, .tool-tip-bottom > .tool-tip__container:after, .tool-tip-right > .tool-tip__container:after {
+  content: "";
+  position: absolute;
+  border-collapse: separate;
+}
+.tool-tip-bottom > .tool-tip__container:before, .tool-tip-right > .tool-tip__container:before {
+  border: 10px solid transparent;
+}
+.tool-tip-bottom > .tool-tip__container:after, .tool-tip-right > .tool-tip__container:after {
+  border: 9px solid transparent;
+}
+
+/**
+ * Define individual edges so we can combine what we need, when we need.
+ */
+.tool-tip-bottom > .tool-tip__container:before, .tool-tip-bottom > .tool-tip__container:after {
+  bottom: 100%;
+}
+
+.tool-tip-right > .tool-tip__container:before {
+  top: 9px;
+}
+.tool-tip-right > .tool-tip__container:after {
+  top: 10px;
+}
+
+.tool-tip-right > .tool-tip__container:before, .tool-tip-right > .tool-tip__container:after {
+  right: 100%;
+}
+
+.tool-tip-bottom > .tool-tip__container:before {
+  right: 9px;
+}
+.tool-tip-bottom > .tool-tip__container:after {
+  right: 10px;
+}
+
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
  * BACKGROUND IMAGES
  * SIZING
  * RESPONSIVE
+ * LOAD CUSTOM FONTS
+ * ARROWS
+ * TRANSITIONS
 */
 /*------------------------------------*\
     $BACKGROUND IMAGES
@@ -69,6 +146,54 @@
  * `@include media-query(palm){ [styles here] }`
  *
  * We work out your end points for you:
+ */
+/*------------------------------------*\
+    $LOAD CUSTOM FONTS
+\*------------------------------------*/
+/**
+ * Slightly modified from Bourbon.io
+ *
+ * Order of the includes matters, and it is: normal, bold, italic, bold+italic.
+ */
+/*------------------------------------*\
+    $ARROWS
+\*------------------------------------*/
+/**
+ * This comes from inuit.css by @csswizardry
+ *
+ * CSS arrows!!! But... before you read on, you might want to grab a coffee...
+ *
+ * This mixin creates a CSS arrow on a given element. We can have the arrow
+ * appear in one of 12 locations, thus:
+ *
+ *       01    02    03
+ *    +------------------+
+ * 12 |                  | 04
+ *    |                  |
+ * 11 |                  | 05
+ *    |                  |
+ * 10 |                  | 06
+ *    +------------------+
+ *       09    08    07
+ *
+ * You pass this position in along with a desired arrow color and optional
+ * border color, for example:
+ *
+ * `@include arrow(top, left, red)`
+ *
+ * for just a single, red arrow, or:
+ *
+ * `@include arrow(bottom, center, red, black)`
+ *
+ * which will create a red triangle with a black border which sits at the bottom
+ * center of the element. Call the mixin thus:
+ *
+   .foo{
+       background-color:#BADA55;
+       border:1px solid #ACE;
+       @include arrow(top, left, #BADA55, #ACE);
+   }
+ *
  */
 /**
  * UI
@@ -867,6 +992,8 @@ table {
 /**
  * IMPORTS
  * FORMS
+ * FORM ERRORS
+ * FORM HELP
  */
 /*------------------------------------*\
     $IMPORTS
@@ -1122,8 +1249,6 @@ table {
 /*------------------------------------*\
     $GENERAL
 \*------------------------------------*/
-[class^='form-'] > li > label,
-[class^='form-'] > li > .label,
 [class^='form-'] > li > input[type="text"],
 [class^='form-'] > li > input[type="number"],
 [class^='form-'] > li > input[type="date"],
@@ -1143,15 +1268,6 @@ table {
   padding: 0;
 }
 
-.check-list--inline {
-  /*
-      Todo - Remove overflow and replace with .cf
-      @author - lukelarsen
-      @date - 3/13/14
-      @time - 7:20 AM
-   */
-  overflow: hidden;
-}
 .check-list--inline li {
   float: left;
   margin-right: 10px;
@@ -1180,10 +1296,182 @@ textarea {
  * %form--fifths
  */
 /*------------------------------------*\
+    $FORM ERRORS
+\*------------------------------------*/
+.form-error > label,
+.form-error > .label {
+  color: red;
+}
+.form-error input[type="text"] {
+  border: solid red 1px;
+}
+
+.form-error__message {
+  color: red;
+}
+
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * VARIABLES
+ * IMPORTS
+ * TOOL TIP RIGHT
+ * TOOL TIP BOTTOM
+ * TOOL TIP CONTAINER
+ * TOOL TIP CLOSE BUTTON
+ */
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * TOOL TIP BASE
+ * TOOL TIP RIGHT
+ * TOOL TIP BOTTOM
+ * TOOL TIP ACTIVE
+ */
+/*
+    Todo - Double check the output of all this css
+    @author - lukelarsen
+    @date - 3/14/14
+    @time - 8:45 PM
+ */
+/*------------------------------------*\
+    $TOOL TIP BASE
+\*------------------------------------*/
+.tool-tip-right, .tool-tip-bottom {
+  position: relative;
+  cursor: pointer;
+  color: #B8B8B8;
+  float: right;
+}
+.tool-tip-right .tool-tip__container, .tool-tip-bottom .tool-tip__container {
+  position: absolute;
+  z-index: 9;
+  visibility: hidden;
+  padding: 10px 15px;
+  width: 200px;
+  text-transform: none;
+  opacity: 0;
+  cursor: default;
+}
+.tool-tip-right .tool-tip__close, .tool-tip-bottom .tool-tip__close {
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  padding: 3px 4px;
+  cursor: pointer;
+}
+
+/*------------------------------------*\
+    $TOOL TIP RIGHT
+\*------------------------------------*/
+.tool-tip-right > .tool-tip__container {
+  transition: visibility 0s ease-in, opacity .3s ease-in, left .3s ease-in;
+  top: -19px;
+  left: 40px;
+  /*
+      Todo - Test these media queries
+      @author - lukelarsen
+      @date - 3/14/14
+      @time - 8:10 PM
+   */
+}
+.tool-tip-right > .tool-tip__container:before {
+  border-right-color: green !important;
+}
+.tool-tip-right > .tool-tip__container:after {
+  border-right-color: green !important;
+}
+@media only screen and (max-width: 1023px) {
+  .tool-tip-right > .tool-tip__container {
+    top: 21px;
+    left: -179px !important;
+  }
+  .tool-tip-right > .tool-tip__container:before, .tool-tip-right > .tool-tip__container:after {
+    border-right-color: transparent !important;
+  }
+}
+
+/*------------------------------------*\
+    $TOOL TIP BOTTOM
+\*------------------------------------*/
+.tool-tip-bottom > .tool-tip__container {
+  transition: visibility 0s ease-in, opacity .3s ease-in, top .3s ease-in;
+  top: 60px;
+  left: -179px;
+  /*
+      Todo - Test these media queries
+      @author - lukelarsen
+      @date - 3/14/14
+      @time - 8:12 PM
+   */
+}
+.tool-tip-bottom > .tool-tip__container:before {
+  border-bottom-color: green !important;
+}
+.tool-tip-bottom > .tool-tip__container:after {
+  border-bottom-color: green !important;
+}
+@media only screen and (max-width: 1023px) {
+  .tool-tip-bottom > .tool-tip__container {
+    top: 21px;
+    left: -179px !important;
+  }
+  .tool-tip-bottom > .tool-tip__container:before, .tool-tip-bottom > .tool-tip__container:after {
+    border-right-color: transparent !important;
+  }
+}
+
+/*------------------------------------*\
+    $TOOL TIP ACTIVE
+\*------------------------------------*/
+.tool-tip-active .tool-tip__container {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tool-tip-right.tool-tip-active .tool-tip__container {
+  left: 35px;
+}
+
+.tool-tip-bottom.tool-tip-active .tool-tip__container {
+  top: 55px;
+}
+
+/*------------------------------------*\
+    $TOOLTIP RIGHT
+\*------------------------------------*/
+/*------------------------------------*\
+    $TOOLTIP BOTTOM
+\*------------------------------------*/
+/*------------------------------------*\
+    $TOOL TIP CONTAINER
+\*------------------------------------*/
+.tool-tip__container {
+  background-color: green;
+  color: white;
+}
+
+/*------------------------------------*\
+    $TOOL TIP CLOSE BUTTON
+\*------------------------------------*/
+.tool-tip__close {
+  background-color: black;
+  color: white;
+}
+
+/*------------------------------------*\
     $TESTING
 \*------------------------------------*/
 .block {
-  background-color: red;
+  background-color: yellow;
 }
 
 .block--nested {
