@@ -18,15 +18,35 @@
     $VARIABLES
 \*------------------------------------*/
 
+$tool-tip-bg-color:                  green;
+
+/**
+ * Tool Tip Right
+ */
+
 // Will animate from the right slightly leftwards;
-$tool-tip--right-start:         40px;
-$tool-tip--right-end:           35px;
-$tool-tip--right-top:           -19px;
+$tool-tip--right-start:              40px;
+$tool-tip--right-end:                35px;
+$tool-tip--right-top:               -19px;
+
+// Position under portable media query
+$tool-tip--right-top--portable:      21px;
+$tool-tip--right-left--portable:    -191px;
+
+
+/**
+ * Tool Tip Bottom
+ */
 
 // Will animate from the bottom slightly upwards;
-$tool-tip--bottom-start:         60px;
-$tool-tip--bottom-end:           55px;
-$tool-tip--bottom-left:           -179px;
+$tool-tip--bottom-start:            60px;
+$tool-tip--bottom-end:              55px;
+$tool-tip--bottom-left:            -179px;
+
+// Position under portable media query
+$tool-tip--bottom-top--portable:   $tool-tip--right-top--portable;
+$tool-tip--bottom-left--portable:  $tool-tip--right-left--portable;
+
 
 
 
@@ -73,7 +93,7 @@ $tool-tip--bottom-left:           -179px;
 
 .tool-tip__container{
     // Your styles go here
-    background-color: green;
+    background-color: $tool-tip-bg-color;
     color: white;
 }
 
@@ -89,4 +109,5 @@ $tool-tip--bottom-left:           -179px;
     // Your styles here
     background-color: black;
     color: white;
+    padding: 3px 10px;
 }

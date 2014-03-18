@@ -42,9 +42,8 @@
 
     .tool-tip__close{
         position: absolute;
-        right: 0px;
+        right: 0;
         bottom: 0;
-        padding: 3px 4px;
         cursor: pointer;
     }
 }
@@ -59,21 +58,14 @@
 
 %tool-tip--right{
     > .tool-tip__container{
-        @include arrow(left, top, green);
+        @include arrow(left, top, $tool-tip-bg-color);
         transition: visibility 0s ease-in, opacity .3s ease-in, left .3s ease-in;
         top: $tool-tip--right-top;
         left: $tool-tip--right-start;
 
-        /*
-            Todo - Test these media queries
-            @author - lukelarsen
-            @date - 3/14/14
-            @time - 8:10 PM
-         */
-
         @include media-query(portable) {
-            top: 21px;
-            left: -179px !important;
+            top: $tool-tip--right-top--portable;
+            left: $tool-tip--right-left--portable !important;
 
             &:before,
             &:after{
@@ -99,21 +91,9 @@
         top: $tool-tip--bottom-start;
         left: $tool-tip--bottom-left;
 
-        /*
-            Todo - Test these media queries
-            @author - lukelarsen
-            @date - 3/14/14
-            @time - 8:12 PM
-         */
-
         @include media-query(portable) {
-            top: 21px;
-            left: -179px !important;
-
-            &:before,
-            &:after{
-                border-right-color: transparent !important;
-            }
+            top: $tool-tip--bottom-top--portable;
+            left: $tool-tip--bottom-left--portable !important;
         }
     }
 }

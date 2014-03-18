@@ -89,3 +89,50 @@ textarea:focus{
 }
 
 
+time,
+.time {
+    text-transform: uppercase;
+}
+
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: emRhythm(4);
+    margin-left: emRhythm(4);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+ul ul,
+ol ol,
+dl dl {
+    margin-left: 0;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+abbr {
+    font-variant: small-caps; // https://developer.mozilla.org/en-US/docs/CSS/font-variant
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+abbr[title]:hover {
+    cursor: help; // cursor changed to a question mark when it has a title
+}
+
+em {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: bold;
+}

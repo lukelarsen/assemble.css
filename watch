@@ -4,8 +4,8 @@
 # stylesheet to be called. Do not rename `style.scss` or alter references to it.
 
 # No minification
-sass --watch style.scss:screen.css --style expanded
+sass --watch style.scss:screen.css --style expanded --precision 7
 
-#sass --watch style.scss:screen.css --style compressed
+#sass --watch style.scss:screen.css --style compressed --precision 7
 
 exit 0

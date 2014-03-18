@@ -288,6 +288,54 @@ textarea:focus {
   outline: none;
 }
 
+time,
+.time {
+  text-transform: uppercase;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: emRhythm(4);
+  margin-left: emRhythm(4);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+ul ul,
+ol ol,
+dl dl {
+  margin-left: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+abbr {
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+abbr[title]:hover {
+  cursor: help;
+}
+
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
@@ -649,7 +697,7 @@ table {
 /*------------------------------------*\
     GRID DEFAULT
 \*------------------------------------*/
-.g-main, .g-reminders, .form-thirds, .form-quarters {
+.g-main, .form-thirds, .form-quarters {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -684,7 +732,7 @@ table {
  *
  * Extend them along with %grid.
  */
-.g-reminders > div[class^='gc-'] {
+.g-main > div[class^='gc-'] {
   flex: 0 0 50%;
 }
 
@@ -698,10 +746,6 @@ table {
   flex: 0 0 100% !important;
 }
 
-.gc-reminders {
-  flex: 0 0 20% !important;
-}
-
 /*------------------------------------*\ 
     $GRID GUTTER MODIFIERS
 \*------------------------------------*/
@@ -710,10 +754,10 @@ table {
  *
  * Apply them with the %grid extend.
  */
-.g-main, .g-reminders {
+.g-main {
   margin-left: -2em;
 }
-.g-main > div[class^='gc-'], .g-reminders > div[class^='gc-'] {
+.g-main > div[class^='gc-'] {
   padding-left: 2em;
   margin-bottom: 2em;
 }
@@ -759,8 +803,7 @@ table {
   /**
    * Width Whole
    */
-  .g-main > div[class^='gc-'], .g-reminders > div[class^='gc-'],
-  .gc-reminders,
+  .g-main > div[class^='gc-'],
   .gc-content,
   .gc-sidebar {
     flex: 0 0 100% !important;
@@ -917,11 +960,6 @@ table {
 /**
  * Generate our fixed width extends (or classes)
  */
-.gc-sidebar {
-  width: 200px;
-  flex: none !important;
-}
-
 /*------------------------------------*\
     $GRIDS
 \*------------------------------------*/
@@ -994,7 +1032,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.5;
   color: black;
@@ -1011,66 +1049,65 @@ h6, .h6 {
   padding-bottom: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
-  text-transform: uppercase;
 }
 
 h1, .h1 {
-  margin-bottom: 0.75023em;
-  font-size: 1.9994em;
-  line-height: 1.12534;
+  margin-bottom: 0.7502266em;
+  font-size: 1.999396em;
+  line-height: 1.1253399;
 }
 @media (min-width: 43.75em) {
   h1, .h1 {
-    margin-bottom: 0.53057em;
-    font-size: 2.82715em;
-    line-height: 1.06114;
+    margin-bottom: 0.5305704em;
+    font-size: 2.8271459em;
+    line-height: 1.0611408;
   }
 }
 @media (min-width: 56.25em) {
   h1, .h1 {
-    margin-bottom: 0.37523em;
-    font-size: 3.99758em;
-    line-height: 0.93807;
+    margin-bottom: 0.3752266em;
+    font-size: 3.9975844em;
+    line-height: 0.9380665;
   }
 }
 
 h2, .h2 {
-  margin-bottom: 1.06082em;
+  margin-bottom: 1.0608204em;
   font-size: 1.414em;
-  line-height: 1.32603;
+  line-height: 1.3260255;
 }
 @media (min-width: 43.75em) {
   h2, .h2 {
-    margin-bottom: 0.75023em;
-    font-size: 1.9994em;
-    line-height: 1.12534;
+    margin-bottom: 0.7502266em;
+    font-size: 1.999396em;
+    line-height: 1.1253399;
   }
 }
 @media (min-width: 56.25em) {
   h2, .h2 {
-    margin-bottom: 0.53057em;
-    font-size: 2.82715em;
-    line-height: 1.06114;
+    margin-bottom: 0.5305704em;
+    font-size: 2.8271459em;
+    line-height: 1.0611408;
   }
 }
 
 h3, .h3 {
-  margin-bottom: 1.06082em;
+  margin-bottom: 1.0608204em;
   font-size: 1.414em;
-  line-height: 1.32603;
+  line-height: 1.3260255;
 }
 @media (min-width: 56.25em) {
   h3, .h3 {
-    margin-bottom: 0.75023em;
-    font-size: 1.9994em;
-    line-height: 1.12534;
+    margin-bottom: 0.7502266em;
+    font-size: 1.999396em;
+    line-height: 1.1253399;
   }
 }
 
 h4, .h4 {
-  margin-bottom: 1.06082em;
+  margin-bottom: 1.0608204em;
   font-size: 1.414em;
-  line-height: 1.32603;
+  line-height: 1.3260255;
 }
 
 h5, .h5,
@@ -1090,7 +1127,6 @@ p {
   -o-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
-  max-width: 36em;
   margin-bottom: 1.5em;
 }
 @media (min-width: 43.75em) {
@@ -1106,23 +1142,14 @@ p + p {
 
 small,
 .font-small {
-  font-size: 0.70721em;
+  font-size: 0.7072136em;
   line-height: 1.59075;
-}
-
-em {
-  font-style: italic;
-}
-
-b,
-strong {
-  font-weight: bold;
 }
 
 blockquote {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
-  margin-left: -1.875em;
+  margin-left: 0em;
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 1.5em;
@@ -1130,54 +1157,12 @@ blockquote {
   font-weight: bold;
   border-left: 6px solid gray;
 }
-blockquote footer cite:before {
-  content: " – ";
-}
 
 code,
 kbd,
 pre,
 samp {
   font-family: "Lucida Console", Monaco, monospace;
-}
-
-time,
-.time {
-  text-transform: uppercase;
-}
-
-ol,
-ul,
-dl {
-  margin-top: 0;
-  margin-bottom: 1.5em;
-  margin-left: 1.5em;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-ul ul,
-ol ol,
-dl dl {
-  margin-left: 0;
-}
-
-ul {
-  list-style: disc;
-}
-
-ol {
-  list-style: decimal;
-}
-
-abbr {
-  font-variant: small-caps;
-  font-weight: 600;
-  text-transform: lowercase;
-}
-
-abbr[title]:hover {
-  cursor: help;
 }
 
 hr {
@@ -1528,6 +1513,12 @@ textarea {
 /*------------------------------------*\
     $VARIABLES
 \*------------------------------------*/
+/**
+ * Tool Tip Right
+ */
+/**
+ * Tool Tip Bottom
+ */
 /*------------------------------------*\
     $IMPORTS
 \*------------------------------------*/
@@ -1567,9 +1558,8 @@ textarea {
 }
 .tool-tip-right .tool-tip__close, .tool-tip-bottom .tool-tip__close {
   position: absolute;
-  right: 0px;
+  right: 0;
   bottom: 0;
-  padding: 3px 4px;
   cursor: pointer;
 }
 
@@ -1580,12 +1570,6 @@ textarea {
   transition: visibility 0s ease-in, opacity .3s ease-in, left .3s ease-in;
   top: -19px;
   left: 40px;
-  /*
-      Todo - Test these media queries
-      @author - lukelarsen
-      @date - 3/14/14
-      @time - 8:10 PM
-   */
 }
 .tool-tip-right > .tool-tip__container:before {
   border-right-color: green !important;
@@ -1596,7 +1580,7 @@ textarea {
 @media only screen and (max-width: 1023px) {
   .tool-tip-right > .tool-tip__container {
     top: 21px;
-    left: -179px !important;
+    left: -191px !important;
   }
   .tool-tip-right > .tool-tip__container:before, .tool-tip-right > .tool-tip__container:after {
     border-right-color: transparent !important;
@@ -1610,12 +1594,6 @@ textarea {
   transition: visibility 0s ease-in, opacity .3s ease-in, top .3s ease-in;
   top: 60px;
   left: -179px;
-  /*
-      Todo - Test these media queries
-      @author - lukelarsen
-      @date - 3/14/14
-      @time - 8:12 PM
-   */
 }
 .tool-tip-bottom > .tool-tip__container:before {
   border-bottom-color: green !important;
@@ -1626,10 +1604,7 @@ textarea {
 @media only screen and (max-width: 1023px) {
   .tool-tip-bottom > .tool-tip__container {
     top: 21px;
-    left: -179px !important;
-  }
-  .tool-tip-bottom > .tool-tip__container:before, .tool-tip-bottom > .tool-tip__container:after {
-    border-right-color: transparent !important;
+    left: -191px !important;
   }
 }
 
@@ -1669,15 +1644,9 @@ textarea {
 .tool-tip__close {
   background-color: black;
   color: white;
+  padding: 3px 10px;
 }
 
 /*------------------------------------*\
     $TESTING
 \*------------------------------------*/
-.block {
-  background-color: yellow;
-}
-
-.block--nested {
-  background-color: purple;
-}

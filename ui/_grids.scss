@@ -43,14 +43,15 @@
 .g-main{
     @extend %grid;
     @extend %grid--flex-cells;
+    @extend %grid--halves;
     @extend %grid--palm-full;
     @extend %gutters-large;
 }
-
-    .gc-reminders{
-        @extend %grid__item--fifth;
-        @extend %grid__item--palm-full;
-    }
+//
+//    .gc-reminders{
+//        @extend %grid__item--fifth;
+//        @extend %grid__item--palm-full;
+//    }
 
     .gc-content{
         @extend %grid__item;
@@ -59,7 +60,7 @@
 
     .gc-sidebar{
         @extend %grid__item--palm-full;
-        @extend %grid__item--fixed-200;
+//        @extend %grid__item--fixed-200;
 
         @include media-query(lap) {
             width: 100px;
@@ -67,12 +68,12 @@
     }
 
 
-.g-reminders{
-    @extend %grid;
-    @extend %grid--halves;
-    @extend %gutters-large;
-    @extend %grid--palm-full;
-}
+//.g-reminders{
+//    @extend %grid;
+//    @extend %grid--halves;
+//    @extend %gutters-large;
+//    @extend %grid--palm-full;
+//}
 
     .gc-reminder{
         @extend %grid__item;
