@@ -48,5 +48,5 @@ $breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk', 'wide');
 $use-silent-classes:    true;
 $class-type:            unquote(".");
 @if $use-silent-classes == true{
-    $class-type:        unquote("%");
+    $class-type:        unquote("%") !global;
 }

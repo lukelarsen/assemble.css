@@ -1,0 +1,53 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * VARIABLES
+ * IMPORTS
+ * DEFINE BUTTONS
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+
+$btn-name:                  'btn' !default;
+$btn-size-ratio:            1.2 !default;
+$btn-hover:                 saturate 25% !default;
+$btn-border:                darken 20% !default;
+$btn-padding-sides:         1.3em !default;
+$btn-default-font-size:     .7em;
+$btn-background: (
+    'primary': #565656,
+    'secondary': #468847
+) !default;
+
+
+
+
+
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+
+@import "../partials/buttons/buttons-mixins";
+@import "../partials/buttons/buttons-extends";
+
+
+
+
+
+/*------------------------------------*\
+    $DEFINE BUTTONS
+\*------------------------------------*/
+
+.btn{
+    @extend %btn;
+    @extend %btn--primary;
+    @extend %btn--large;
+    @extend %btn--block;
+}

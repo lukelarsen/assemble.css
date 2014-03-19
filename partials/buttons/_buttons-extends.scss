@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * EXTENDS
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $EXTENDS
+\*------------------------------------*/
+
+%#{$btn-name}{
+    // Default styles
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-family: inherit;
+    font-size: $btn-default-font-size;
+    cursor: pointer;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 3;
+    height: 3em;
+    padding-right: $btn-padding-sides;
+    padding-left: $btn-padding-sides;
+    background-color: #000;
+    overflow: visible;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color .2s ease-in-out;
+
+    // Border or not border?
+    border: if($btn-border, 1px solid, none);
+
+    // Modifiers
+    &--large{
+        font-size: $btn-default-font-size * $btn-size-ratio;
+    }
+
+    &--small{
+        font-size: $btn-default-font-size / $btn-size-ratio;
+    }
+
+    &--block{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    // Color schemes
+    // Uses the mixin in _buttons-mixins to create all the silent classes for the
+    // backgrounds in the variables section of _buttons.
+    @each $key, $value in $btn-background {
+        &--#{$key} {
+            @include button-color($value);
+        }
+    }
+
+    // Clean up some annoyances.
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    &:active,
+    &:focus{
+        outline: none;
+    }
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+}

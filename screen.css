@@ -1245,10 +1245,10 @@ hr {
     CONTENTS
 \*------------------------------------*/
 /**
- * FORM RESPONSIVE EXTENDS
+ * FORM RESPONSIVE MIXINS
 */
 /*------------------------------------*\
-    $FORM RESPONSIVE EXTENDS
+    $FORM RESPONSIVE MIXINS
 \*------------------------------------*/
 /**
  * Generate our responsive extends (or classes)
@@ -1460,7 +1460,6 @@ hr {
 .check-list--inline li {
   float: left;
   margin-right: 10px;
-  margin-bottom: 5px;
 }
 
 /*------------------------------------*\
@@ -1505,6 +1504,89 @@ textarea {
 /**
  * VARIABLES
  * IMPORTS
+ * DEFINE BUTTONS
+ */
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * BUTTON COLORS
+ */
+/*------------------------------------*\
+    $BUTTON COLORS
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * EXTENDS
+ */
+/*------------------------------------*\
+    $EXTENDS
+\*------------------------------------*/
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: 0.7em;
+  cursor: pointer;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 3;
+  height: 3em;
+  padding-right: 1.3em;
+  padding-left: 1.3em;
+  background-color: #000;
+  overflow: visible;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color .2s ease-in-out;
+  border: 1px solid;
+}
+.btn {
+  font-size: 0.84em;
+}
+.btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.btn {
+  background-color: #565656;
+  border-color: #232323;
+}
+.btn:hover, .btn:active {
+  background: #6c4141;
+}
+.btn:hover, .btn:active, .btn:focus, .btn:visited {
+  text-decoration: none;
+  color: #fff;
+}
+.btn:active, .btn:focus {
+  outline: none;
+}
+.btn::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*------------------------------------*\
+    $DEFINE BUTTONS
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * VARIABLES
+ * IMPORTS
  * TOOL TIP RIGHT
  * TOOL TIP BOTTOM
  * TOOL TIP CONTAINER
@@ -1530,12 +1612,6 @@ textarea {
  * TOOL TIP RIGHT
  * TOOL TIP BOTTOM
  * TOOL TIP ACTIVE
- */
-/*
-    Todo - Double check the output of all this css
-    @author - lukelarsen
-    @date - 3/14/14
-    @time - 8:45 PM
  */
 /*------------------------------------*\
     $TOOL TIP BASE
