@@ -20,7 +20,7 @@ $btn-size-ratio:            1.2 !default;
 $btn-hover:                 saturate 25% !default;
 $btn-border:                darken 20% !default;
 $btn-padding-sides:         1.3em !default;
-$btn-default-font-size:     .7em;
+$btn-default-font-size:     100%;
 $btn-background: (
     'primary': #565656,
     'secondary': #468847
@@ -50,4 +50,16 @@ $btn-background: (
     @extend %btn--primary;
     @extend %btn--large;
     @extend %btn--block;
+}
+
+.btn-natural{
+    @extend %btn;
+    @extend %btn--primary;
+    @extend %btn--natural;
+}
+
+.btn-disabled{
+    @extend %btn;
+    @extend %btn--small;
+    @extend %btn--disabled;
 }

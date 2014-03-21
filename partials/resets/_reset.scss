@@ -33,7 +33,6 @@
  */
 h1,h2,h3,h4,h5,h6,
 p,blockquote,pre,
-dl,dd,ol,ul,
 form,fieldset,legend,
 table,th,td,caption,
 hr{
@@ -90,13 +89,13 @@ textarea:focus{
 
 
 time,
-.time {
+.time{
     text-transform: uppercase;
 }
 
 ol,
 ul,
-dl {
+dl{
     margin-top: 0;
     margin-bottom: emRhythm(4);
     margin-left: emRhythm(4);
@@ -106,33 +105,33 @@ dl {
 
 ul ul,
 ol ol,
-dl dl {
+dl dl{
     margin-left: 0;
 }
 
-ul {
+ul{
     list-style: disc;
 }
 
-ol {
+ol{
     list-style: decimal;
 }
 
-abbr {
+abbr{
     font-variant: small-caps; // https://developer.mozilla.org/en-US/docs/CSS/font-variant
     font-weight: 600;
     text-transform: lowercase;
 }
 
-abbr[title]:hover {
+abbr[title]:hover{
     cursor: help; // cursor changed to a question mark when it has a title
 }
 
-em {
+em{
     font-style: italic;
 }
 
 b,
-strong {
+strong{
     font-weight: bold;
 }

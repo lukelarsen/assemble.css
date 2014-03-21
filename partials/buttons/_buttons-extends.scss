@@ -52,10 +52,32 @@
         text-align: center;
     }
 
+    &--natural{
+        vertical-align:baseline;
+        font-size:inherit;
+        line-height:inherit;
+        height:auto;
+        padding-right:0.5em;
+        padding-left: 0.5em;
+    }
+
+    &--disabled{
+        background-color: #ddd;
+        color: #777;
+
+        &:hover,
+        &:active,
+        &:focus{
+            background-color: #ddd !important;
+            color: #777 !important;
+            cursor: not-allowed;
+        }
+    }
+
     // Color schemes
     // Uses the mixin in _buttons-mixins to create all the silent classes for the
     // backgrounds in the variables section of _buttons.
-    @each $key, $value in $btn-background {
+    @each $key, $value in $btn-background{
         &--#{$key} {
             @include button-color($value);
         }
@@ -75,7 +97,7 @@
         outline: none;
     }
 
-    &::-moz-focus-inner {
+    &::-moz-focus-inner{
         border: 0;
         padding: 0;
     }

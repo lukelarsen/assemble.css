@@ -71,12 +71,12 @@ $paragraph-justify: true !default;
     $BASE TYPE SETTINGS
 \*------------------------------------*/
 
-html {
+html{
     font-size: ($base-font-size / 16px) * 100%; // Sets the font-size of the project as a percentage. Making it easy to scale up/down the whole project for specific media queries
     -webkit-text-size-adjust: 100%;
 }
 
-body {
+body{
     margin: 0;
     padding: 0;
     font-family: $font-sans;
@@ -90,7 +90,7 @@ h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
-h6, .h6 {
+h6, .h6{
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 0;
@@ -103,59 +103,59 @@ h6, .h6 {
 // [3] A generic media query for tablet size ranges.
 // [4] Applies a margin bottom that is the same vertical grid value as the mobile first rule.
 // [5] Sets the type to one of the modular scale values and the second argument sets a unitless line-height as a multiple of the vertical grid.
-h1, .h1 {
+h1, .h1{
     margin-bottom: emRhythm(4, $ms-up2); // [1]
     @include setType(6, $ms-up2); // [2]
 
-    @media (min-width: 43.75em) {
+    @media (min-width: 43.75em){
         // [3]
         margin-bottom: emRhythm(4, $ms-up3); // [4]
         @include setType(8, $ms-up3); // [5]
     }
 
-    @media (min-width: 56.25em) {
+    @media (min-width: 56.25em){
         margin-bottom: emRhythm(4, $ms-up4);
         @include setType(10, $ms-up4);
     }
 }
 
-h2, .h2 {
+h2, .h2{
     margin-bottom: emRhythm(4, $ms-up1);
     @include setType(5, $ms-up1);
 
-    @media (min-width: 43.75em) {
+    @media (min-width: 43.75em){
         margin-bottom: emRhythm(4, $ms-up2);
         @include setType(6, $ms-up2)
     }
 
-    @media (min-width: 56.25em) {
+    @media (min-width: 56.25em){
         margin-bottom: emRhythm(4, $ms-up3);
         @include setType(8, $ms-up3);
     }
 }
 
-h3, .h3 {
+h3, .h3{
     margin-bottom: emRhythm(4, $ms-up1);
     @include setType(5, $ms-up1);
 
-    @media (min-width: 56.25em) {
+    @media (min-width: 56.25em){
         margin-bottom: emRhythm(4, $ms-up2);
         @include setType(6, $ms-up2);
     }
 }
 
-h4, .h4 {
+h4, .h4{
     margin-bottom: emRhythm(4, $ms-up1);
     @include setType(5, $ms-up1);
 }
 
 h5, .h5,
-h6, .h6 {
+h6, .h6{
     margin-bottom: emRhythm(4);
     @include setType(4);
 }
 
-p {
+p{
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 0;
@@ -174,7 +174,7 @@ p {
     }
 }
 
-@if $paragraph-indent {
+@if $paragraph-indent{
     p + p {
         margin-top: emRhythm(-4);
         text-indent: emRhythm(4);
@@ -182,12 +182,12 @@ p {
 }
 
 small,
-.font-small {
+.font-small{
     @include setType(3, $ms-down1);
 }
 
 
-blockquote {
+blockquote{
     margin-top: emRhythm(4);
     margin-bottom: emRhythm(4);
     margin-left: emRhythm(0);
@@ -202,11 +202,11 @@ blockquote {
 code,
 kbd,
 pre,
-samp {
+samp{
     font-family: $font-mono;
 }
 
-hr {
+hr{
     border: 0;
     margin-top: emRhythm(4);
     margin-bottom: 0;

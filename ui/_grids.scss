@@ -39,7 +39,6 @@
  * remaining space.
  */
 
-
 .g-main{
     @extend %grid;
     @extend %grid--flex-cells;
@@ -47,7 +46,7 @@
     @extend %grid--palm-full;
     @extend %gutters-large;
 }
-//
+
 //    .gc-reminders{
 //        @extend %grid__item--fifth;
 //        @extend %grid__item--palm-full;

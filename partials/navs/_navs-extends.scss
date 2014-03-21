@@ -1,0 +1,206 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * BASE
+ * FIT
+ * STACKED
+ * CENTER
+ * RIGHT
+ * LEFT
+ * SPACE BETWEEN
+ * SPACE AROUND
+ * KEYWORDS
+ * BREADCRUMB
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+
+%nav{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    > li{
+        flex: 0 1 auto;
+
+        > a{
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    $FIT
+\*------------------------------------*/
+ %nav--fit{
+     > li{
+         flex: 1 1 auto;
+     }
+ }
+
+
+
+
+
+/*------------------------------------*\
+    $STACKED
+\*------------------------------------*/
+
+%nav--stacked{
+ flex-direction: column;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $CENTER
+\*------------------------------------*/
+
+%nav--center{
+    justify-content: center;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $RIGHT
+\*------------------------------------*/
+
+%nav--right{
+    justify-content: flex-end;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $LEFT
+\*------------------------------------*/
+
+%nav--left{
+    justify-content: flex-start;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $SPACE BETWEEN
+\*------------------------------------*/
+
+%nav--space-between{
+    justify-content: space-between;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $SPACE AROUND
+\*------------------------------------*/
+
+%nav--space-around{
+    justify-content: space-around;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $KEYWORDS
+\*------------------------------------*/
+
+%nav--keywords{
+    > li{
+        &:after{
+            content:", ";
+        }
+
+        &:last-child:after{
+            display:none;
+        }
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    $BREADCRUMB
+\*------------------------------------*/
+
+/**
+ * These come from Inuit.css by Harry Roberts
+ *
+ * Extend %nav with these. Use %breadcrumb and then stack the other
+ * two options on if you want them.
+
+    .breadcrumb{
+        @extend %nav;
+        @extend %breadcrumb;
+        @extend %breadcrumb--path
+
+    <ul class="breadcrumb">
+        <li><a href="#">inuit.css</a></li>
+        <li><a href="#">inuit.css</a></li>
+        <li><a href="#">partials</a></li>
+        <li class="current"><a href="#">objects</a></li>
+    </ul>
+
+ */
+
+%breadcrumb{
+    > li > a{
+        margin-right: 4px;
+        margin-left: 12px;
+    }
+    > li + li:before{
+        content:"» ";
+        float: left;
+    }
+}
+
+%breadcrumb--path > li + li:before{
+    content:"/ ";
+}
+
+/**
+ * Assign a delimiter on the fly through a data attribute, e.g.:
+ *
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li data-breadcrumb="|"><a href="#">About</a></li>
+        <li data-breadcrumb="|"><a href="#">The Board</a></li>
+        <li data-breadcrumb="|" class="current"><a href="#">Directors</a></li>
+    </ul>
+ *
+ */
+%breadcrumb--custom{
+    > li + li[data-breadcrumb]:before{
+        content:attr(data-breadcrumb)" ";
+        float: left;
+    }
+}

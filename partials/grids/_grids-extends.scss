@@ -19,7 +19,7 @@
     GRID DEFAULT
 \*------------------------------------*/
 
-%grid {
+%grid{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
@@ -27,7 +27,7 @@
     padding: 0;
 }
 
-    %grid__item {
+    %grid__item{
         flex: 1;
     }
 
@@ -46,7 +46,7 @@
  * Apply with %grid.
  */
 
-%grid--flex-cells {
+%grid--flex-cells{
     & > div[class^='gc-'] {
         display: flex;
     }

@@ -232,7 +232,6 @@
  */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-dl, dd, ol, ul,
 form, fieldset, legend,
 table, th, td, caption,
 hr {
@@ -986,6 +985,136 @@ table {
     CONTENTS
 \*------------------------------------*/
 /**
+ * IMPORTS
+ * NAVS
+ */
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * BASE
+ * FIT
+ * STACKED
+ * CENTER
+ * RIGHT
+ * LEFT
+ * SPACE BETWEEN
+ * SPACE AROUND
+ * KEYWORDS
+ * BREADCRUMB
+ */
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+.nav-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-main > li {
+  flex: 0 1 auto;
+}
+.nav-main > li > a {
+  display: flex;
+  align-items: flex-start;
+}
+
+/*------------------------------------*\
+    $FIT
+\*------------------------------------*/
+/*------------------------------------*\
+    $STACKED
+\*------------------------------------*/
+/*------------------------------------*\
+    $CENTER
+\*------------------------------------*/
+/*------------------------------------*\
+    $RIGHT
+\*------------------------------------*/
+/*------------------------------------*\
+    $LEFT
+\*------------------------------------*/
+.nav-main {
+  justify-content: flex-start;
+}
+
+/*------------------------------------*\
+    $SPACE BETWEEN
+\*------------------------------------*/
+/*------------------------------------*\
+    $SPACE AROUND
+\*------------------------------------*/
+/*------------------------------------*\
+    $KEYWORDS
+\*------------------------------------*/
+/*------------------------------------*\
+    $BREADCRUMB
+\*------------------------------------*/
+/**
+ * These come from Inuit.css by Harry Roberts
+ *
+ * Extend %nav with these. Use %breadcrumb and then stack the other
+ * two options on if you want them.
+
+    .breadcrumb{
+        @extend %nav;
+        @extend %breadcrumb;
+        @extend %breadcrumb--path
+
+    <ul class="breadcrumb">
+        <li><a href="#">inuit.css</a></li>
+        <li><a href="#">inuit.css</a></li>
+        <li><a href="#">partials</a></li>
+        <li class="current"><a href="#">objects</a></li>
+    </ul>
+
+ */
+.breadcrumb > li > a {
+  margin-right: 4px;
+  margin-left: 12px;
+}
+.breadcrumb > li + li:before {
+  content: "» ";
+  float: left;
+}
+
+.breadcrumb > li + li:before {
+  content: "/ ";
+}
+
+/**
+ * Assign a delimiter on the fly through a data attribute, e.g.:
+ *
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li data-breadcrumb="|"><a href="#">About</a></li>
+        <li data-breadcrumb="|"><a href="#">The Board</a></li>
+        <li data-breadcrumb="|" class="current"><a href="#">Directors</a></li>
+    </ul>
+ *
+ */
+/*------------------------------------*\
+    $NAVS
+\*------------------------------------*/
+.nav-main > li > a {
+  margin: 7px 0px;
+  background-color: red;
+  padding: 12px;
+}
+
+.breadcrumb > li {
+  margin-right: 5px;
+}
+
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
  * CREDITS
  * VARIABLES
  * IMPORTS
@@ -1530,12 +1659,12 @@ textarea {
 /*------------------------------------*\
     $EXTENDS
 \*------------------------------------*/
-.btn {
+.btn, .btn-natural, .btn-disabled {
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
   font-family: inherit;
-  font-size: 0.7em;
+  font-size: 100%;
   cursor: pointer;
   margin: 0;
   padding-top: 0;
@@ -1552,28 +1681,48 @@ textarea {
   border: 1px solid;
 }
 .btn {
-  font-size: 0.84em;
+  font-size: 120%;
+}
+.btn-disabled {
+  font-size: 83.3333333%;
 }
 .btn {
   display: block;
   width: 100%;
   text-align: center;
 }
-.btn {
+.btn-natural {
+  vertical-align: baseline;
+  font-size: inherit;
+  line-height: inherit;
+  height: auto;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+.btn-disabled {
+  background-color: #ddd;
+  color: #777;
+}
+.btn-disabled:hover, .btn-disabled:active, .btn-disabled:focus {
+  background-color: #ddd !important;
+  color: #777 !important;
+  cursor: not-allowed;
+}
+.btn, .btn-natural {
   background-color: #565656;
   border-color: #232323;
 }
-.btn:hover, .btn:active {
+.btn:hover, .btn-natural:hover, .btn:active, .btn-natural:active {
   background: #6c4141;
 }
-.btn:hover, .btn:active, .btn:focus, .btn:visited {
+.btn:hover, .btn-natural:hover, .btn-disabled:hover, .btn:active, .btn-natural:active, .btn-disabled:active, .btn:focus, .btn-natural:focus, .btn-disabled:focus, .btn:visited, .btn-natural:visited, .btn-disabled:visited {
   text-decoration: none;
   color: #fff;
 }
-.btn:active, .btn:focus {
+.btn:active, .btn-natural:active, .btn-disabled:active, .btn:focus, .btn-natural:focus, .btn-disabled:focus {
   outline: none;
 }
-.btn::-moz-focus-inner {
+.btn::-moz-focus-inner, .btn-natural::-moz-focus-inner, .btn-disabled::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -1722,7 +1871,3 @@ textarea {
   color: white;
   padding: 3px 10px;
 }
-
-/*------------------------------------*\
-    $TESTING
-\*------------------------------------*/

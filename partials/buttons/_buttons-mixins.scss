@@ -13,15 +13,15 @@
     $BUTTON COLORS
 \*------------------------------------*/
 
-@mixin button-color($color) {
+@mixin button-color($color){
     background-color: $color;
 
     &:hover,
-    &:active {
+    &:active{
         background: call(nth($btn-hover, 1), $color, nth($btn-hover, 2));
     }
 
-    @if $btn-border != false {
+    @if $btn-border != false{
         border-color: call(nth($btn-border, 1), $color, nth($btn-border, 2));
     }
 }

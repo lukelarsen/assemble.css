@@ -19,19 +19,13 @@
 \*------------------------------------*/
 
 // Media Queries - Retina - http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss & http://www.brettjankord.com/2012/11/28/cross-browser-retinahigh-resolution-media-queries/
-@mixin image-2x($image, $width, $height) {
+@mixin image-2x($image, $width, $height){
     @media
     only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min-resolution: 192dpi) {
         background-image: url('../images/#{$image}');
         background-size: $width $height;
     }
-}
-
-// .svg w/ .png fallback for IE8
-@mixin svg-background($file_name) {
-    background-image: url('../images/#{$file_name}.png');
-    background-image: none, url('../images/#{$file_name}.svg');
 }
 
 
@@ -42,12 +36,12 @@
     $SIZING
 \*------------------------------------*/
 
-@mixin sizing($width, $height) {
+@mixin sizing($width, $height){
     width: $width;
     height: $height;
 }
 
-@mixin square($size) {
+@mixin square($size){
     width: $size;
     height: $size;
 }
@@ -130,7 +124,7 @@ $lap-end:               $desk-start - 1px;
  * Order of the includes matters, and it is: normal, bold, italic, bold+italic.
  */
 
-@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal){
     @font-face {
         font-family: $font-family;
         font-weight: $weight;

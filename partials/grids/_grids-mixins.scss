@@ -146,7 +146,7 @@
  * Generate our responsive extends (or classes)
  */
 
-@each $name in $breakpoint-has-widths {
+@each $name in $breakpoint-has-widths{
     @include grid-media-query($name) {
         @include device-type('#{$name}');
     }
@@ -175,7 +175,7 @@ $grid-fixed-widths: (
  * Generate our fixed width extends (or classes)
  */
 
-@each $width in $grid-fixed-widths {
+@each $width in $grid-fixed-widths{
     #{$class-type}grid__item--fixed-#{$width} {
         width: #{$width}px;
         flex: none !important;

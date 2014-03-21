@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * IMPORTS
+ * NAVS
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+
+@import "../partials/navs/navs-extends";
+
+
+
+
+
+/*------------------------------------*\
+    $NAVS
+\*------------------------------------*/
+
+.nav-main{
+    @extend %nav;
+    @extend %nav--left;
+
+    > li{
+        > a{
+
+            // margin-left: 15px; // use when ul has justify-content: flex-end;
+            // margin-right: 15px; // use when ul justify-content: flex-start;
+            margin: 7px 0px; // use when ul has justify-content: center;
+
+            background-color: red;
+            padding: 12px;
+        }
+    }
+
+}
+
+.breadcrumb{
+//    @extend %nav;
+    @extend %breadcrumb;
+    @extend %breadcrumb--path;
+
+    > li{
+        margin-right: 5px;
+//        margin-left: 5px;
+    }
+}
