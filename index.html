@@ -3,6 +3,9 @@
 <head>
     <title></title>
     <link rel="stylesheet" href="screen.css"/>
+
+    <script src="javascript/jquery.js"></script>
+    <script src="javascript/jquery.modalEffects.js"></script>
 </head>
 <body>
 
@@ -17,20 +20,35 @@
             <li><a href="#">Blog</a></li>
             <li><a href="#">Blog</a></li>
         </ul>
-        <ul class="breadcrumb">
+        <ol class="breadcrumb">
             <li data-breadcrumb="|"><a href="#">Word</a>
             <li data-breadcrumb="|"><a href="#">Word</a>
             <li data-breadcrumb="|"><a href="#">Word</a>
             <li data-breadcrumb="|"><a href="#">Word</a>
             </li>
-        </ul>
+        </ol>
+
+        <ol class="pagination">
+            <li class="pagination__first"><a href="#">First</a>
+            </li>
+            <li class="pagination__prev"><a href="#">Previous</a>
+            </li>
+            <li><a href="/page/1">1</a></li>
+            <li><a href="/page/2">2</a></li>
+            <li class="current"><a href="/page/3">3</a></li>
+            <li><a href="/page/4">4</a></li>
+            <li><a href="/page/5">5</a></li>
+            <li class="pagination__next"><a href="/page/next">Next</a></li>
+            <li class="pagination__last"><a href="/page/last">Last</a></li>
+        </ol>
+
     </header>
 
     <div class="g-main">
         <div class="gc-content">
             <div class="block">
                 <h1>This is an H1 tag</h1>
-                <a class="btn-disabled" href="#">Button Here</a>
+                <a class="btn" href="#">Button Here</a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Laborum neque praesentium temporibus.
                     Corporis error expedita in <a class="btn-natural  " href="#">Button</a> molestias omnis quaerat
@@ -99,7 +117,7 @@
                         </li>
                         <li class="form-item-half">
                             <label>Email</label>
-                                <div class="tool-tip-bottom  tool-tip-active">
+                                <div class="tool-tip-right  tool-tip-active">
                                     ?
                                     <div class="tool-tip__container">
                                         This is a tool tip<br>
@@ -157,5 +175,7 @@
             </div>
         </div>
     </div>
+
+    <script src="javascript/tool-tip.js"></script>
 </body>
 </html>

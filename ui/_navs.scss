@@ -2,10 +2,24 @@
     CONTENTS
 \*------------------------------------*/
 /**
+ * VARS
  * IMPORTS
  * NAVS
  */
 
+
+
+
+
+/*------------------------------------*\
+    $VARS
+\*------------------------------------*/
+
+$pagination-li-padding:         12px;
+$pagination-a-spacing:          12px;
+
+$breadcrumb-a-right:            10px;
+$breadcrumb-a-left:             13px;
 
 
 
@@ -33,7 +47,7 @@
 
             // margin-left: 15px; // use when ul has justify-content: flex-end;
             // margin-right: 15px; // use when ul justify-content: flex-start;
-            margin: 7px 0px; // use when ul has justify-content: center;
+            margin: 0px 7px; // use when ul has justify-content: center;
 
             background-color: red;
             padding: 12px;
@@ -43,12 +57,14 @@
 }
 
 .breadcrumb{
-//    @extend %nav;
+    @extend %nav;
     @extend %breadcrumb;
     @extend %breadcrumb--path;
 
-    > li{
-        margin-right: 5px;
-//        margin-left: 5px;
-    }
+
+}
+
+.pagination{
+    @extend %nav;
+    @extend %pagination;
 }

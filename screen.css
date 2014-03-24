@@ -985,9 +985,13 @@ table {
     CONTENTS
 \*------------------------------------*/
 /**
+ * VARS
  * IMPORTS
  * NAVS
  */
+/*------------------------------------*\
+    $VARS
+\*------------------------------------*/
 /*------------------------------------*\
     $IMPORTS
 \*------------------------------------*/
@@ -1009,19 +1013,20 @@ table {
 /*------------------------------------*\
     $BASE
 \*------------------------------------*/
-.nav-main {
+.nav-main, .breadcrumb, .pagination {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
-.nav-main > li {
+.nav-main > li, .breadcrumb > li, .pagination > li {
   flex: 0 1 auto;
 }
-.nav-main > li > a {
+.nav-main > li > a, .breadcrumb > li > a, .pagination > li > a {
   display: flex;
   align-items: flex-start;
+  text-decoration: none;
 }
 
 /*------------------------------------*\
@@ -1056,59 +1061,96 @@ table {
     $BREADCRUMB
 \*------------------------------------*/
 /**
- * These come from Inuit.css by Harry Roberts
+ * Slightly modified version of the inuit.css breadcrumb object
  *
- * Extend %nav with these. Use %breadcrumb and then stack the other
- * two options on if you want them.
+ * Extend %nav with these silent classes. Use %breadcrumb and
+ * then stack the other two options on if you want them.
 
     .breadcrumb{
         @extend %nav;
         @extend %breadcrumb;
         @extend %breadcrumb--path
+    }
 
-    <ul class="breadcrumb">
+    <ol class="breadcrumb">
         <li><a href="#">inuit.css</a></li>
         <li><a href="#">inuit.css</a></li>
         <li><a href="#">partials</a></li>
         <li class="current"><a href="#">objects</a></li>
-    </ul>
+    </ol>
 
  */
-.breadcrumb > li > a {
-  margin-right: 4px;
-  margin-left: 12px;
-}
 .breadcrumb > li + li:before {
   content: "» ";
   float: left;
 }
+.breadcrumb > li > a {
+  margin-right: 10px;
+  margin-left: 13px;
+}
 
+/**
+ * Breadcrumb Path
+ */
 .breadcrumb > li + li:before {
   content: "/ ";
 }
 
 /**
+ * Breadcrumb Custom
+ *
  * Assign a delimiter on the fly through a data attribute, e.g.:
  *
-    <ul class="breadcrumb">
+    <ol class="breadcrumb">
         <li><a href="#">Home</a></li>
         <li data-breadcrumb="|"><a href="#">About</a></li>
         <li data-breadcrumb="|"><a href="#">The Board</a></li>
         <li data-breadcrumb="|" class="current"><a href="#">Directors</a></li>
-    </ul>
- *
+    </ol>
  */
+/*------------------------------------*\
+    $PAGINATION
+\*------------------------------------*/
+/**
+ * Slightly modified version of the inuit.css pagination object
+ *
+   <ol class="nav  pagination">
+       <li class="pagination__first">First</li>
+       <li class="pagination__prev">Previous</li>
+       <li><a href="/page/1">1</a></li>
+       <li><a href="/page/2">2</a></li>
+       <li class="current"><a href="/page/3">3</a></li>
+       <li><a href="/page/4">4</a></li>
+       <li><a href="/page/5">5</a></li>
+       <li class="pagination__next"><a href="/page/next">Next</a></li>
+       <li class="pagination__last"><a href="/page/last">Last</a></li>
+   </ol>
+ */
+.pagination {
+  text-align: center;
+}
+.pagination > li {
+  padding: 12px;
+}
+.pagination > li > a {
+  padding: 12px;
+  margin: -12px;
+  display: block;
+}
+.pagination > .pagination__first a:before {
+  content: "« ";
+}
+.pagination > .pagination__last a:after {
+  content: " »";
+}
+
 /*------------------------------------*\
     $NAVS
 \*------------------------------------*/
 .nav-main > li > a {
-  margin: 7px 0px;
+  margin: 0px 7px;
   background-color: red;
   padding: 12px;
-}
-
-.breadcrumb > li {
-  margin-right: 5px;
 }
 
 /*------------------------------------*\
@@ -1670,7 +1712,6 @@ textarea {
   padding-top: 0;
   padding-bottom: 0;
   line-height: 3;
-  height: 3em;
   padding-right: 1.3em;
   padding-left: 1.3em;
   background-color: #000;
@@ -1680,16 +1721,8 @@ textarea {
   transition: background-color .2s ease-in-out;
   border: 1px solid;
 }
-.btn {
-  font-size: 120%;
-}
 .btn-disabled {
   font-size: 83.3333333%;
-}
-.btn {
-  display: block;
-  width: 100%;
-  text-align: center;
 }
 .btn-natural {
   vertical-align: baseline;
@@ -1792,7 +1825,7 @@ textarea {
     $TOOL TIP RIGHT
 \*------------------------------------*/
 .tool-tip-right > .tool-tip__container {
-  transition: visibility 0s ease-in, opacity .3s ease-in, left .3s ease-in;
+  transition: visibility 2s ease-in, opacity .3s ease-in, left .3s ease-in;
   top: -19px;
   left: 40px;
 }
@@ -1816,7 +1849,7 @@ textarea {
     $TOOL TIP BOTTOM
 \*------------------------------------*/
 .tool-tip-bottom > .tool-tip__container {
-  transition: visibility 0s ease-in, opacity .3s ease-in, top .3s ease-in;
+  transition: visibility 2s ease-in, opacity .3s ease-in, top .3s ease-in;
   top: 60px;
   left: -179px;
 }

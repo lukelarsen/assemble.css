@@ -48,8 +48,7 @@ $btn-background: (
 .btn{
     @extend %btn;
     @extend %btn--primary;
-    @extend %btn--large;
-    @extend %btn--block;
+//    @extend %btn--large;
 }
 
 .btn-natural{

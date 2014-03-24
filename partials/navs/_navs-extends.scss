@@ -35,6 +35,7 @@
         > a{
             display: flex;
             align-items: flex-start;
+            text-decoration: none;
         }
     }
 }
@@ -153,54 +154,112 @@
 \*------------------------------------*/
 
 /**
- * These come from Inuit.css by Harry Roberts
+ * Slightly modified version of the inuit.css breadcrumb object
  *
- * Extend %nav with these. Use %breadcrumb and then stack the other
- * two options on if you want them.
+ * Extend %nav with these silent classes. Use %breadcrumb and
+ * then stack the other two options on if you want them.
 
     .breadcrumb{
         @extend %nav;
         @extend %breadcrumb;
         @extend %breadcrumb--path
+    }
 
-    <ul class="breadcrumb">
+    <ol class="breadcrumb">
         <li><a href="#">inuit.css</a></li>
         <li><a href="#">inuit.css</a></li>
         <li><a href="#">partials</a></li>
         <li class="current"><a href="#">objects</a></li>
-    </ul>
+    </ol>
 
  */
 
 %breadcrumb{
-    > li > a{
-        margin-right: 4px;
-        margin-left: 12px;
-    }
     > li + li:before{
         content:"» ";
         float: left;
     }
+
+    > li{
+        > a{
+            margin-right: $breadcrumb-a-right;
+            margin-left: $breadcrumb-a-left;
+        }
+    }
 }
+
+
+/**
+ * Breadcrumb Path
+ */
 
 %breadcrumb--path > li + li:before{
     content:"/ ";
 }
 
+
 /**
+ * Breadcrumb Custom
+ *
  * Assign a delimiter on the fly through a data attribute, e.g.:
  *
-    <ul class="breadcrumb">
+    <ol class="breadcrumb">
         <li><a href="#">Home</a></li>
         <li data-breadcrumb="|"><a href="#">About</a></li>
         <li data-breadcrumb="|"><a href="#">The Board</a></li>
         <li data-breadcrumb="|" class="current"><a href="#">Directors</a></li>
-    </ul>
- *
+    </ol>
  */
+
 %breadcrumb--custom{
     > li + li[data-breadcrumb]:before{
         content:attr(data-breadcrumb)" ";
         float: left;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    $PAGINATION
+\*------------------------------------*/
+
+/**
+ * Slightly modified version of the inuit.css pagination object
+ *
+   <ol class="nav  pagination">
+       <li class="pagination__first">First</li>
+       <li class="pagination__prev">Previous</li>
+       <li><a href="/page/1">1</a></li>
+       <li><a href="/page/2">2</a></li>
+       <li class="current"><a href="/page/3">3</a></li>
+       <li><a href="/page/4">4</a></li>
+       <li><a href="/page/5">5</a></li>
+       <li class="pagination__next"><a href="/page/next">Next</a></li>
+       <li class="pagination__last"><a href="/page/last">Last</a></li>
+   </ol>
+ */
+
+%pagination{
+    text-align:center;
+
+    > li{
+        padding: $pagination-li-padding;
+
+        > a{
+            padding: $pagination-a-spacing;
+            margin: -$pagination-a-spacing;
+            display: block;
+        }
+    }
+
+    > .pagination__first a:before{
+        content:"« ";
+    }
+
+    > .pagination__last a:after{
+        content:" »";
     }
 }

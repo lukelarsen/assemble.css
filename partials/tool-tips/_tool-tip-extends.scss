@@ -52,7 +52,7 @@
 %tool-tip--right{
     > .tool-tip__container{
         @include arrow(left, top, $tool-tip-bg-color);
-        transition: visibility 0s ease-in, opacity .3s ease-in, left .3s ease-in;
+        transition: visibility 2s ease-in, opacity .3s ease-in, left .3s ease-in;
         top: $tool-tip--right-top;
         left: $tool-tip--right-start;
 
@@ -80,7 +80,8 @@
 %tool-tip--bottom{
     > .tool-tip__container{
         @include arrow(top, right, green);
-        transition: visibility 0s ease-in, opacity .3s ease-in, top .3s ease-in;
+        transition: visibility 2s ease-in, opacity .3s ease-in, top .3s ease-in;
+//        @include transition (visibility 0s .3s, opacity .3s ease-in, left .3s ease-in);
         top: $tool-tip--bottom-start;
         left: $tool-tip--bottom-left;
 
