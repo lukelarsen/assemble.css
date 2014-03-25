@@ -51,7 +51,8 @@
                 <a class="btn" href="#">Button Here</a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Laborum neque praesentium temporibus.
-                    Corporis error expedita in <a class="btn-natural  " href="#">Button</a> molestias omnis quaerat
+                    Corporis error expedita in <a class="btn-natural" href="#" id="delete">Button</a> molestias omnis
+                    quaerat
                     repudiandae! Atque cumque iure laudantium maiores, mollitia nam nihil sed totam!</p>
                 <ul>
                     <li>This is a list</li>
@@ -177,5 +178,23 @@
     </div>
 
     <script src="javascript/tool-tip.js"></script>
+    <script src="javascript/vex.js"></script>
+    <script src="javascript/vex.dialog.js"></script>
+
+    <script>
+        // Confirm, Alert, Dialog Modals
+        vex.defaultOptions.className = 'vex-theme-default';
+
+        $(document).ready(function() {
+            $("#delete").click(function() {
+                vex.dialog.confirm({
+                    message: 'Are you sure you want to remove this company?',
+                    callback: function(value) {
+
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
