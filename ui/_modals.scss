@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * VARIABLES
+ * IMPORTS
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+
+/**
+ * Backgrounds
+ */
+$modal-background-color:            white;
+$modal-overlay-background-color:    rgba(31,31,31,0.8);
+
+
+/**
+ * Header
+ */
+$modal-header-background-color:     black;
+$modal-header-text-color:           white;
+$modal-header-padding:              1em 2em;
+$modal-header-margin-bottom:        1em;
+
+
+/**
+ * Body
+ */
+$modal-body-padding:                0 2em;
+
+
+/**
+ * Footer
+ */
+$modal-footer-border-top:           solid 1px gray;
+$modal-footer-padding:              1.3em 2em;
+
+
+/**
+ * Sizes
+ */
+$modal-wide:                        false;
+$modal-normal:                      true;
+$modal-narrow:                      false;
+
+
+/**
+ * Animations
+ */
+$modal-scale-up:                    true;
+$modal-slide-right:                 false;
+$modal-3d-flip-horizontal:          false;
+$modal-3d-flip-vertical:            false;
+$modal-super-scaled:                false;
+
+
+
+
+
+
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+
+@import "../partials/modals/modals-extends";

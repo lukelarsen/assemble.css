@@ -2,7 +2,20 @@
     CONTENTS
 \*------------------------------------*/
 /**
- * $MODAL STRUCTURE
+ *  MODAL STRUCTURE
+        Modal Header
+        Modal Body
+        Modal Footer
+ *  MODAL WIDTHS
+        Modal Wide
+        Modal Normal
+        Modal Narrow
+ *  MODAL ANIMATIONS
+        Modal Slide Up
+        Modal Slide Right
+        Modal 3D Flip Horizontal
+        Modal 3D Flip Vertical
+        Modal Super Scaled
  */
 
 
@@ -13,55 +26,25 @@
     $MODAL STRUCTURE
 \*------------------------------------*/
 
-.md-modal {
+.modal {
     position: fixed;
-    top: 15%;
-    left: 30%;
-    width: 40%;
     min-width: 320px;
     height: auto;
     z-index: 2000;
     visibility: hidden;
     display: none;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
-
-    iframe{
-        width: 100%;
-        height: 550px;
-
-        @media (max-height: 900px) {
-            height: 300px;
-        }
-
-        @include media-query(palm) {
-            height: 250px;
-        }
-    }
-
-    @include media-query(palm) {
-        width: 100%;
-        left: 0%;
-        top: 0%;
-    }
 }
 
-
-
-.md-modal .btn.float--left{
-    float: left !important;
+.modal__content{
+    background-color: $modal-background-color;
 }
 
-.md-modal .btn.float--right{
-    float: right !important;
-}
-
-.md-show {
+.modal--show {
     visibility: visible;
 }
 
-.md-overlay {
+.modal-overlay {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -70,85 +53,47 @@
     left: 0;
     z-index: 1000;
     opacity: 0;
-    background: rgba(31,31,31,0.8);
+    background: $modal-overlay-background-color;
     display: none;
-    @include transition (all .3s);
+    transition: all .3s;
 }
 
-.md-show ~ .md-overlay {
+.modal--show ~ .modal-overlay {
     opacity: 1;
     visibility: visible;
 }
 
 
-
-
-
 /**
- * Modal Header
+ * ^Modal Header
  */
-.modal-header{
-    background-color: red;
-    color: white;
-    padding: 1em 2em;
-    margin-bottom: 1em;
+.modal__header{
+    background-color: $modal-header-background-color;
+    padding: $modal-header-padding;
+    margin-bottom: $modal-header-margin-bottom;
 
     h3{
         text-align: center;
-        color: white;
-    }
-}
-
-.modal-header--color3{
-    background-color: blue;
-}
-
-/**
- * Modal Body
- */
-.modal-body{
-    padding-left: 2em;
-    padding-right: 2em;
-
-    .multi-list li:last-child{
-        margin-bottom: 24px !important;
-    }
-
-    .single-col li{
-        width: 100%;
-    }
-}
-
-/**
- * Modal Footer
- */
-.modal-footer{
-    border-top: solid 1px darkslategray;
-    padding: 1.3em 2em;
-    @extend .cf;
-
-    .btn{
+        color: $modal-header-text-color;
         margin-bottom: 0;
     }
-
-    @media only screen and (max-width: 1400px) {
-        .btn.float--left,
-        .btn.float--right{
-            float: none !important;
-            margin-bottom: 5px;
-            margin-right: 5px;
-        }
-    }
 }
 
-.modal-close{
-    bottom: 13px;
-    right: 2.5em !important;
-    position: absolute !important;
 
-    &:before{
-        content: "Close" !important;
-    }
+/**
+ * ^Modal Body
+ */
+.modal__body{
+    padding: $modal-body-padding;
+}
+
+
+/**
+ * ^Modal Footer
+ */
+.modal__footer{
+    border-top: $modal-footer-border-top;
+    padding: $modal-footer-padding;
 }
 
 
@@ -160,27 +105,53 @@
     $MODAL WIDTHS
 \*------------------------------------*/
 
-.md-modal--wide{
-    width: 60%;
-    left: 20%;
+/**
+ * ^Modal Wide
+ */
+@if $modal-wide == true{
+    .modal--wide{
+        width: 60%;
+        left: 20%;
 
-    @include media-query(portable) {
-        top: 2%;
+        @include media-query(portable) {
+            top: 2%;
+        }
+
+        @include media-query(palm) {
+            left: 0%;
+            top: 0%;
+        }
     }
+}
+
+
+/**
+ * ^Modal Normal
+ */
+.modal {
+    top: 15%;
+    left: 30%;
+    width: 40%;
 
     @include media-query(palm) {
+        width: 100%;
         left: 0%;
         top: 0%;
     }
-
 }
 
-.md-modal--narrow{
-    width: 30%;
-    left: 35%;
 
-    @include media-query(palm) {
-        left: 0%;
+/**
+ * ^Modal Narrow
+ */
+@if $modal-narrow == true{
+    .modal--narrow{
+        width: 30%;
+        left: 35%;
+
+        @include media-query(palm) {
+            left: 0%;
+        }
     }
 }
 
@@ -192,123 +163,98 @@
     $MODAL ANIMATIONS
 \*------------------------------------*/
 
-// Effect 1: Fade in and scale up
-.md-effect-1 .vex-content {
-    -webkit-transform: scale(0.7);
-    -moz-transform: scale(0.7);
-    -ms-transform: scale(0.7);
-    transform: scale(0.7);
-    opacity: 0;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+/**
+ * ^Modal Slide Up
+ */
+@if $modal-scale-up == true{
+    .modal--scale-up .modal__content{
+        transform: scale(0.7);
+        opacity: 0;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .modal--show.modal--scale-up .modal__content{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
-.md-show.md-effect-1 .vex-content {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
+
+/**
+ * ^Modal Slide Right
+ */
+@if $modal-slide-right == true{
+    .modal--slide-right .modal__content{
+        transform: translateX(20%);
+        opacity: 0;
+        transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+    }
+
+    .modal--show.modal--scale-up .modal__content{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
-// Effect 2: Slide from the right
-//.md-effect-2 .vex-content {
-//    -webkit-transform: translateX(20%);
-//    -moz-transform: translateX(20%);
-//    -ms-transform: translateX(20%);
-//    transform: translateX(20%);
-//    opacity: 0;
-//    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
-//    -moz-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
-//    transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
-//}
-//
-//.md-show.md-effect-2 .vex-content {
-//    -webkit-transform: translateX(0);
-//    -moz-transform: translateX(0);
-//    -ms-transform: translateX(0);
-//    transform: translateX(0);
-//    opacity: 1;
-//}
+
+/**
+ * ^Modal 3D Flip Horizontal
+ */
+@if $modal-3d-flip-horizontal == true{
+    .modal--3d-flip-horizontal.modal{
+        perspective: 1300px;
+    }
+
+    .modal--3d-flip-horizontal .modal__content{
+        transform-style: preserve-3d;
+        transform: rotateY(-70deg);
+        transition: all 0.3s;
+        opacity: 0;
+    }
+
+    .modal--show.modal--3d-flip-horizontal .modal__content{
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
 
 
-// Effect 3: 3D flip horizontal
-//.md-effect-3.md-modal {
-//    -webkit-perspective: 1300px;
-//    -moz-perspective: 1300px;
-//    perspective: 1300px;
-//}
-//
-//.md-effect-3 .vex-content {
-//    -webkit-transform-style: preserve-3d;
-//    -moz-transform-style: preserve-3d;
-//    transform-style: preserve-3d;
-//    -webkit-transform: rotateY(-70deg);
-//    -moz-transform: rotateY(-70deg);
-//    -ms-transform: rotateY(-70deg);
-//    transform: rotateY(-70deg);
-//    -webkit-transition: all 0.3s;
-//    -moz-transition: all 0.3s;
-//    transition: all 0.3s;
-//    opacity: 0;
-//}
-//
-//.md-show.md-effect-3 .vex-content {
-//    -webkit-transform: rotateY(0deg);
-//    -moz-transform: rotateY(0deg);
-//    -ms-transform: rotateY(0deg);
-//    transform: rotateY(0deg);
-//    opacity: 1;
-//}
+/**
+ * ^Modal 3D Flip Vertical
+ */
+@if $modal-3d-flip-vertical == true{
+    .modal--3d-flip-vertical.modal {
+        perspective: 1300px;
+    }
 
-// Effect 4: 3D flip vertical
-//.md-effect-9.md-modal {
-//    -webkit-perspective: 1300px;
-//    -moz-perspective: 1300px;
-//    perspective: 1300px;
-//}
-//
-//.md-effect-4 .vex-content {
-//    -webkit-transform-style: preserve-3d;
-//    -moz-transform-style: preserve-3d;
-//    transform-style: preserve-3d;
-//    -webkit-transform: rotateX(-70deg);
-//    -moz-transform: rotateX(-70deg);
-//    -ms-transform: rotateX(-70deg);
-//    transform: rotateX(-70deg);
-//    -webkit-transition: all 0.3s;
-//    -moz-transition: all 0.3s;
-//    transition: all 0.3s;
-//    opacity: 0;
-//}
-//
-//.md-show.md-effect-4 .vex-content {
-//    -webkit-transform: rotateX(0deg);
-//    -moz-transform: rotateX(0deg);
-//    -ms-transform: rotateX(0deg);
-//    transform: rotateX(0deg);
-//    opacity: 1;
-//}
+    .modal--3d-flip-vertical .modal__content{
+        transform-style: preserve-3d;
+        transform: rotateX(-70deg);
+        transition: all 0.3s;
+        opacity: 0;
+    }
+
+    .modal--show.modal--3d-flip-vertical .modal__content{
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
 
 
-// Effect 5: Super scaled
-//.md-effect-5 .vex-content {
-//    -webkit-transform: scale(2);
-//    -moz-transform: scale(2);
-//    -ms-transform: scale(2);
-//    transform: scale(2);
-//    opacity: 0;
-//    -webkit-transition: all 0.3s;
-//    -moz-transition: all 0.3s;
-//    transition: all 0.3s;
-//}
-//
-//.md-show.md-effect-5 .vex-content {
-//    -webkit-transform: scale(1);
-//    -moz-transform: scale(1);
-//    -ms-transform: scale(1);
-//    transform: scale(1);
-//    opacity: 1;
-//}
+/**
+ * ^Modal Super Scaled
+ */
+@if $modal-super-scaled == true{
+    .modal--super-scaled .modal__content {
+        transform: scale(2);
+        opacity: 0;
+        transition: all 0.3s;
+    }
 
+    .modal--show.modal--super-scaled .modal__content{
+        transform: scale(1);
+        opacity: 1;
+    }
+}

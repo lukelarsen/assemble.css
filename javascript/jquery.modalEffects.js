@@ -7,12 +7,12 @@
         $this.o = new Object();
   
         var defaultOptions = {
-           overlaySelector: '.md-overlay',
-           closeSelector: '.md-close',
-           classAddAfterOpen: 'md-show',
+           overlaySelector: '.modal-overlay',
+           closeSelector: '.modal-close',
+           classAddAfterOpen: 'modal--show',
            modalAttr: 'data-modal',
-           perspectiveClass: 'md-perspective',
-           perspectiveSetClass: 'md-setperspective',
+           perspectiveClass: 'modal-perspective',
+           perspectiveSetClass: 'modal-setperspective',
            afterOpen: function(button, modal) {
             //do your stuff
            },

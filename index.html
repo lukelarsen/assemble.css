@@ -9,6 +9,21 @@
 </head>
 <body>
 
+    <div class="modal  modal--scale-up" id="js-modal-edit">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3 class="flush--bottom">Edit <span id="modal_title"></span></h3>
+            </div>
+            <div class="modal__body" id="modal_content">
+                <p>Modal Content</p>
+            </div>
+            <div class="modal__footer">
+                <button class="btn  btn--gray3  float--right  modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay"></div>
+
     <header class="">
         <a href="#" style="float: left; padding: 15px; background-color: yellow;">LOGO</a>
         <ul class="nav-main">
@@ -54,6 +69,7 @@
                     Corporis error expedita in <a class="btn-natural" href="#" id="delete">Button</a> molestias omnis
                     quaerat
                     repudiandae! Atque cumque iure laudantium maiores, mollitia nam nihil sed totam!</p>
+                <button class="btn  btn--small  btn--gray4  modal-trigger" data-modal="js-modal-edit">Edit</button>
                 <ul>
                     <li>This is a list</li>
                     <li>More list items</li>
@@ -182,10 +198,12 @@
     <script src="javascript/vex.dialog.js"></script>
 
     <script>
-        // Confirm, Alert, Dialog Modals
+        // Confirm, Alert, Dialog Modals for Vex
         vex.defaultOptions.className = 'vex-theme-default';
 
         $(document).ready(function() {
+
+            // Vex
             $("#delete").click(function() {
                 vex.dialog.confirm({
                     message: 'Are you sure you want to remove this company?',
@@ -194,6 +212,10 @@
                     }
                 });
             });
+
+            $('.modal').css('display','block');
+            $('.modal-overlay').css('display','block');
+            $('.modal-trigger').modalEffects();
         });
     </script>
 </body>
