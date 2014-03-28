@@ -13,6 +13,10 @@
     !BUTTON COLORS
 \*------------------------------------*/
 
+/**
+ * Credit: http://hugogiraudel.com/2014/03/03/another-sass-button-library/
+ */
+
 @mixin button-color($color){
     background-color: $color;
 

@@ -2,11 +2,11 @@
     CONTENTS
 \*------------------------------------*/
 /**
- * BACKGROUND IMAGES
- * SIZING
- * RESPONSIVE
- * LOAD CUSTOM FONTS
- * ARROWS
+ *  BACKGROUND IMAGES
+ *  SIZING
+ *  RESPONSIVE
+ *  LOAD CUSTOM FONTS
+ *  ARROWS
 */
 
 
@@ -52,6 +52,10 @@
 /*------------------------------------*\
     $RESPONSIVE
 \*------------------------------------*/
+
+/**
+ * Credit: Inuit.css
+ */
 
 /**
  * Media query mixin.
@@ -118,7 +122,7 @@ $lap-end:               $desk-start - 1px;
 \*------------------------------------*/
 
 /**
- * Slightly modified from Bourbon.io
+ * Credit: Bourbon.io
  *
  * Order of the includes matters, and it is: normal, bold, italic, bold+italic.
  */
@@ -146,7 +150,10 @@ $lap-end:               $desk-start - 1px;
 \*------------------------------------*/
 
 /**
- * This comes from inuit.css by @csswizardry
+ * Credit: Inuit.css
+ */
+
+/**
  *
  * CSS arrows!!! But... before you read on, you might want to grab a coffee...
  *
