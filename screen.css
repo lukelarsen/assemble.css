@@ -62,43 +62,43 @@
 /**
  * Forms the basis for any/all CSS arrows.
  */
-.tool-tip-bottom > .tool-tip__container, .tool-tip-right > .tool-tip__container {
+.tool-tip--bottom > .tool-tip__container, .tool-tip--right > .tool-tip__container {
   position: relative;
 }
-.tool-tip-bottom > .tool-tip__container:before, .tool-tip-right > .tool-tip__container:before, .tool-tip-bottom > .tool-tip__container:after, .tool-tip-right > .tool-tip__container:after {
+.tool-tip--bottom > .tool-tip__container:before, .tool-tip--right > .tool-tip__container:before, .tool-tip--bottom > .tool-tip__container:after, .tool-tip--right > .tool-tip__container:after {
   content: "";
   position: absolute;
   border-collapse: separate;
 }
-.tool-tip-bottom > .tool-tip__container:before, .tool-tip-right > .tool-tip__container:before {
+.tool-tip--bottom > .tool-tip__container:before, .tool-tip--right > .tool-tip__container:before {
   border: 10px solid transparent;
 }
-.tool-tip-bottom > .tool-tip__container:after, .tool-tip-right > .tool-tip__container:after {
+.tool-tip--bottom > .tool-tip__container:after, .tool-tip--right > .tool-tip__container:after {
   border: 9px solid transparent;
 }
 
 /**
  * Define individual edges so we can combine what we need, when we need.
  */
-.tool-tip-bottom > .tool-tip__container:before, .tool-tip-bottom > .tool-tip__container:after {
+.tool-tip--bottom > .tool-tip__container:before, .tool-tip--bottom > .tool-tip__container:after {
   bottom: 100%;
 }
 
-.tool-tip-right > .tool-tip__container:before {
+.tool-tip--right > .tool-tip__container:before {
   top: 9px;
 }
-.tool-tip-right > .tool-tip__container:after {
+.tool-tip--right > .tool-tip__container:after {
   top: 10px;
 }
 
-.tool-tip-right > .tool-tip__container:before, .tool-tip-right > .tool-tip__container:after {
+.tool-tip--right > .tool-tip__container:before, .tool-tip--right > .tool-tip__container:after {
   right: 100%;
 }
 
-.tool-tip-bottom > .tool-tip__container:before {
+.tool-tip--bottom > .tool-tip__container:before {
   right: 9px;
 }
-.tool-tip-bottom > .tool-tip__container:after {
+.tool-tip--bottom > .tool-tip__container:after {
   right: 10px;
 }
 
@@ -1872,12 +1872,11 @@ textarea {
     CONTENTS
 \*------------------------------------*/
 /**
- *  VARIABLES
+ *  DESIGN VARIABLES
         Tool Tip Right
         Tool Tip Bottom
+ *  MODIFIER VARIABLES
  *  IMPORTS
- *  TOOL TIP RIGHT
- *  TOOL TIP BOTTOM
  *  TOOL TIP CONTAINER
  *  TOOL TIP CLOSE BUTTON
  */
@@ -1891,6 +1890,9 @@ textarea {
  * ^Tool Tip Bottom
  */
 /*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
     !IMPORTS
 \*------------------------------------*/
 /*------------------------------------*\
@@ -1898,20 +1900,20 @@ textarea {
 \*------------------------------------*/
 /**
  *  TOOL TIP BASE
- *  TOOL TIP RIGHT
- *  TOOL TIP BOTTOM
- *  TOOL TIP ACTIVE
+ *  TOOL TIP LOCATIONS
+        Tool Tip Right
+        Tool Tip Bottom
  */
 /*------------------------------------*\
     !TOOL TIP BASE
 \*------------------------------------*/
-.tool-tip-right, .tool-tip-bottom {
+.tool-tip {
   position: relative;
   cursor: pointer;
   color: #B8B8B8;
   float: right;
 }
-.tool-tip-right .tool-tip__container, .tool-tip-bottom .tool-tip__container {
+.tool-tip .tool-tip__container {
   position: absolute;
   z-index: 9;
   visibility: hidden;
@@ -1921,80 +1923,73 @@ textarea {
   opacity: 0;
   cursor: default;
 }
-.tool-tip-right .tool-tip__close, .tool-tip-bottom .tool-tip__close {
+.tool-tip .tool-tip__close {
   position: absolute;
   right: 0;
   bottom: 0;
   cursor: pointer;
 }
 
-/*------------------------------------*\
-    !TOOL TIP RIGHT
-\*------------------------------------*/
-.tool-tip-right > .tool-tip__container {
-  transition: visibility 2s ease-in, opacity .3s ease-in, left .3s ease-in;
-  top: -19px;
-  left: 40px;
-}
-.tool-tip-right > .tool-tip__container:before {
-  border-right-color: green !important;
-}
-.tool-tip-right > .tool-tip__container:after {
-  border-right-color: green !important;
-}
-@media only screen and (max-width: 1023px) {
-  .tool-tip-right > .tool-tip__container {
-    top: 21px;
-    left: -191px !important;
-  }
-  .tool-tip-right > .tool-tip__container:before, .tool-tip-right > .tool-tip__container:after {
-    border-right-color: transparent !important;
-  }
-}
-
-/*------------------------------------*\
-    !TOOL TIP BOTTOM
-\*------------------------------------*/
-.tool-tip-bottom > .tool-tip__container {
-  transition: visibility 2s ease-in, opacity .3s ease-in, top .3s ease-in;
-  top: 60px;
-  left: -179px;
-}
-.tool-tip-bottom > .tool-tip__container:before {
-  border-bottom-color: green !important;
-}
-.tool-tip-bottom > .tool-tip__container:after {
-  border-bottom-color: green !important;
-}
-@media only screen and (max-width: 1023px) {
-  .tool-tip-bottom > .tool-tip__container {
-    top: 21px;
-    left: -191px !important;
-  }
-}
-
-/*------------------------------------*\
-    !TOOL TIP ACTIVE
-\*------------------------------------*/
-.tool-tip-active .tool-tip__container {
+.tool-tip--active .tool-tip__container {
   visibility: visible;
   opacity: 1;
 }
 
-.tool-tip-right.tool-tip-active .tool-tip__container {
+/*------------------------------------*\
+    !TOOL TIP LOCATIONS
+\*------------------------------------*/
+/**
+ * ^Tool Tip Right
+ */
+.tool-tip--right > .tool-tip__container {
+  transition: visibility 2s ease-in, opacity .3s ease-in, left .3s ease-in;
+  top: -7px;
   left: 35px;
 }
+.tool-tip--right > .tool-tip__container:before {
+  border-right-color: green !important;
+}
+.tool-tip--right > .tool-tip__container:after {
+  border-right-color: green !important;
+}
+@media only screen and (max-width: 1023px) {
+  .tool-tip--right > .tool-tip__container {
+    top: 48px;
+    left: -191px !important;
+  }
+  .tool-tip--right > .tool-tip__container:before, .tool-tip--right > .tool-tip__container:after {
+    border-right-color: transparent !important;
+  }
+}
 
-.tool-tip-bottom.tool-tip-active .tool-tip__container {
+.tool-tip--right.tool-tip--active .tool-tip__container {
+  left: 25px;
+}
+
+/**
+ * ^Tool Tip Bottom
+ */
+.tool-tip--bottom > .tool-tip__container {
+  transition: visibility 2s ease-in, opacity .3s ease-in, top .3s ease-in;
+  top: 60px;
+  left: -179px;
+}
+.tool-tip--bottom > .tool-tip__container:before {
+  border-bottom-color: green !important;
+}
+.tool-tip--bottom > .tool-tip__container:after {
+  border-bottom-color: green !important;
+}
+@media only screen and (max-width: 1023px) {
+  .tool-tip--bottom > .tool-tip__container {
+    left: -191px !important;
+  }
+}
+
+.tool-tip--bottom.tool-tip--active .tool-tip__container {
   top: 55px;
 }
 
-/*------------------------------------*\
-    !TOOLTIP RIGHT
-\*------------------------------------*/
-/*------------------------------------*\
-    !TOOLTIP BOTTOM
-\*------------------------------------*/
 /*------------------------------------*\
     !TOOL TIP CONTAINER
 \*------------------------------------*/
@@ -2531,7 +2526,13 @@ body.vex-open {
 \*------------------------------------*/
 /**
  *  DESIGN VARIABLES
+        Backgrounds
+        Header
+        Body
+        Footer
  *  MODIFIER VARIABLES
+        Sizes
+        Animations
  *  IMPORTS
  */
 /*------------------------------------*\

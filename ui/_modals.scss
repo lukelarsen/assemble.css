@@ -3,7 +3,13 @@
 \*------------------------------------*/
 /**
  *  DESIGN VARIABLES
+        Backgrounds
+        Header
+        Body
+        Footer
  *  MODIFIER VARIABLES
+        Sizes
+        Animations
  *  IMPORTS
  */
 
@@ -54,19 +60,18 @@ $modal_footer_padding:              1.3em 2em;
 /**
  * ^Sizes
  */
-$modal--wide:                        true;
-$modal--narrow:                      true;
+$modal--wide:                       true;
+$modal--narrow:                     true;
 
 
 /**
  * ^Animations
  */
-$modal--scale-up:                    true;
-$modal--slide-right:                 false;
-$modal--3d-flip-horizontal:          false;
-$modal--3d-flip-vertical:            false;
-$modal--super-scaled:                false;
-
+$modal--scale-up:                   true;
+$modal--slide-right:                false;
+$modal--3d-flip-horizontal:         false;
+$modal--3d-flip-vertical:           false;
+$modal--super-scaled:               false;
 
 
 

@@ -2,12 +2,11 @@
     CONTENTS
 \*------------------------------------*/
 /**
- *  VARIABLES
+ *  DESIGN VARIABLES
         Tool Tip Right
         Tool Tip Bottom
+ *  MODIFIER VARIABLES
  *  IMPORTS
- *  TOOL TIP RIGHT
- *  TOOL TIP BOTTOM
  *  TOOL TIP CONTAINER
  *  TOOL TIP CLOSE BUTTON
  */
@@ -26,12 +25,12 @@ $tool-tip-bg-color:                  green;
  * ^Tool Tip Right
  */
 // Will animate from the right slightly leftwards;
-$tool-tip--right-start:              40px;
-$tool-tip--right-end:                35px;
-$tool-tip--right-top:               -19px;
+$tool-tip--right-start:              35px;
+$tool-tip--right-end:                25px;
+$tool-tip--right-top:               -7px;
 
 // Position under portable media query
-$tool-tip--right-top--portable:      21px;
+$tool-tip--right-top--portable:      48px;
 $tool-tip--right-left--portable:    -191px;
 
 
@@ -44,8 +43,18 @@ $tool-tip--bottom-end:              55px;
 $tool-tip--bottom-left:            -179px;
 
 // Position under portable media query
-$tool-tip--bottom-top--portable:   $tool-tip--right-top--portable;
-$tool-tip--bottom-left--portable:  $tool-tip--right-left--portable;
+$tool-tip--bottom-left--portable:   $tool-tip--right-left--portable;
+
+
+
+
+
+/*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+
+$tool-tip--right:                   true;
+$tool-tip--bottom:                  true;
 
 
 
@@ -55,33 +64,7 @@ $tool-tip--bottom-left--portable:  $tool-tip--right-left--portable;
     !IMPORTS
 \*------------------------------------*/
 
-@import "../objects/tool-tips/tool-tip-extends";
-
-
-
-
-
-/*------------------------------------*\
-    !TOOLTIP RIGHT
-\*------------------------------------*/
-
-.tool-tip-right{
-    @extend %tool-tip;
-    @extend %tool-tip--right;
-}
-
-
-
-
-
-/*------------------------------------*\
-    !TOOLTIP BOTTOM
-\*------------------------------------*/
-
-.tool-tip-bottom{
-    @extend %tool-tip;
-    @extend %tool-tip--bottom;
-}
+@import "../objects/tool-tips/tool-tip-object";
 
 
 
