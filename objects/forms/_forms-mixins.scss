@@ -2,7 +2,18 @@
     CONTENTS
 \*------------------------------------*/
 /**
- * FORM RESPONSIVE MIXINS
+ *  FORM RESPONSIVE MIXIN
+        Forms One Col
+        Forms Two Cols
+        Forms Three Cols
+        Forms Four Cols
+        Forms Five Cols
+ *  FORMS RESPONSIVE GUTTER MIXIN
+        Forms Gutter Small
+        Forms Gutter Medium
+        Forms Gutter Large
+        Forms Gutter xLarge
+ *  GENERATE THE SILENT CLASSES
 */
 
 
@@ -10,7 +21,7 @@
 
 
 /*------------------------------------*\
-    $FORM RESPONSIVE MIXINS
+    !FORM RESPONSIVE MIXIN
 \*------------------------------------*/
 
 @mixin forms-device-type($namespace:""){
@@ -19,9 +30,8 @@
     // The second call is for individual form cells
 
     /**
-     * Forms One Col
+     * ^Forms One Col
      */
-
     #{$class-type}form--#{$namespace}-full > li,
     #{$class-type}form__item--#{$namespace}-full{
         flex: 0 0 100% !important;
@@ -29,9 +39,8 @@
 
 
     /**
-     * Form Two Cols
+     * ^Form Two Cols
      */
-
     #{$class-type}form--#{$namespace}-halves > li,
     #{$class-type}form__item--#{$namespace}-half{
         flex: 0 0 50% !important;
@@ -39,9 +48,8 @@
 
 
     /**
-     * Form Three Cols
+     * ^Form Three Cols
      */
-
     #{$class-type}form--#{$namespace}-thirds > li,
     #{$class-type}form__item--#{$namespace}-third{
         flex: 0 0 33.3333% !important;
@@ -49,9 +57,8 @@
 
 
     /**
-     * Forms Four Cols
+     * ^Forms Four Cols
      */
-
     #{$class-type}form--#{$namespace}-quarters > li,
     #{$class-type}form__item--#{$namespace}-quarter{
         flex: 0 0 25% !important;
@@ -59,15 +66,22 @@
 
 
     /**
-     * Forms Five Cols
+     * ^Forms Five Cols
      */
-
     #{$class-type}form--#{$namespace}-fifths > li,
     #{$class-type}form__item--#{$namespace}-fifth{
         flex: 0 0 20% !important;
     }
-
-
+    
+    
+    
+    
+    
+    /*------------------------------------*\ 
+        !RESPONSIVE FORMS GUTTER MIXIN
+    \*------------------------------------*/
+    
+    
     /**
      * Forms Gutter Small
      */
@@ -82,7 +96,6 @@
     /**
      * Forms Gutter Medium
      */
-
     #{$class-type}form-gutters--#{$namespace}-medium{
         margin-left: -1.5em;
         & > li {
@@ -95,7 +108,6 @@
     /**
      * Forms Gutter Large
      */
-
     #{$class-type}form-gutters--#{$namespace}-large{
         margin-left: -2em;
         & > li {
@@ -108,7 +120,6 @@
     /**
      * Forms Gutter xLarge
      */
-
     #{$class-type}form-gutters--#{$namespace}-xlarge{
         margin-left: -3em;
         & > li {
@@ -116,14 +127,19 @@
             margin-bottom: 3em;
         }
     }
-
 }
 
+
+
+
+
+/*------------------------------------*\ 
+    !GENERATE THE SILENT CLASSES
+\*------------------------------------*/
 
 /**
  * Generate our responsive extends (or classes)
  */
-
 @each $name in $breakpoint-has-widths{
     @include grid-media-query($name) {
         @include forms-device-type('#{$name}');

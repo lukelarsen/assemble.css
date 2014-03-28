@@ -2,10 +2,10 @@
     CONTENTS
 \*------------------------------------*/
 /**
- * TOOL TIP BASE
- * TOOL TIP RIGHT
- * TOOL TIP BOTTOM
- * TOOL TIP ACTIVE
+ *  TOOL TIP BASE
+ *  TOOL TIP RIGHT
+ *  TOOL TIP BOTTOM
+ *  TOOL TIP ACTIVE
  */
 
 
@@ -13,7 +13,7 @@
 
 
 /*------------------------------------*\
-    $TOOL TIP BASE
+    !TOOL TIP BASE
 \*------------------------------------*/
 
 %tool-tip{
@@ -46,7 +46,7 @@
 
 
 /*------------------------------------*\
-    $TOOL TIP RIGHT
+    !TOOL TIP RIGHT
 \*------------------------------------*/
 
 %tool-tip--right{
@@ -73,7 +73,7 @@
 
 
 /*------------------------------------*\
-    $TOOL TIP BOTTOM
+    !TOOL TIP BOTTOM
 \*------------------------------------*/
 
 
@@ -97,7 +97,7 @@
 
 
 /*------------------------------------*\
-    $TOOL TIP ACTIVE
+    !TOOL TIP ACTIVE
 \*------------------------------------*/
 
 .tool-tip-active .tool-tip__container{

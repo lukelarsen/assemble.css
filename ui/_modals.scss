@@ -2,7 +2,8 @@
     CONTENTS
 \*------------------------------------*/
 /**
- * VARIABLES
+ * DESIGN VARIABLES
+ * MODIFIER VARIABLES
  * IMPORTS
  */
 
@@ -11,54 +12,61 @@
 
 
 /*------------------------------------*\
-    $VARIABLES
+    !DESIGN_VARIABLES
 \*------------------------------------*/
 
 /**
- * Backgrounds
+ * ^Backgrounds
  */
-$modal-background-color:            white;
-$modal-overlay-background-color:    rgba(31,31,31,0.8);
+$modal_background_color:            white;
+$modal_overlay_background_color:    rgba(31,31,31,0.8);
 
 
 /**
- * Header
+ * ^Header
  */
-$modal-header-background-color:     black;
-$modal-header-text-color:           white;
-$modal-header-padding:              1em 2em;
-$modal-header-margin-bottom:        1em;
+$modal_header_background_color:     black;
+$modal_header_text_color:           white;
+$modal_header_padding:              1em 2em;
+$modal_header_margin_bottom:        1em;
 
 
 /**
- * Body
+ * ^Body
  */
-$modal-body-padding:                0 2em;
+$modal_body_padding:                0 2em;
 
 
 /**
- * Footer
+ * ^Footer
  */
-$modal-footer-border-top:           solid 1px gray;
-$modal-footer-padding:              1.3em 2em;
+$modal_footer_border_top:           solid 1px gray;
+$modal_footer_padding:              1.3em 2em;
+
+
+
+
+
+/*------------------------------------*\
+    !MODIFIER_VARIABLES
+\*------------------------------------*/
+
+/**
+ * ^Sizes
+ */
+$modal--wide:                        true;
+$modal--normal:                      true;
+$modal--narrow:                      true;
 
 
 /**
- * Sizes
+ * ^Animations
  */
-$modal-wide:                        false;
-$modal-normal:                      true;
-$modal-narrow:                      false;
-
-
-/**
- * Animations
- */
-$modal-scale-up:                    true;
-$modal-slide-right:                 false;
-$modal-3d-flip-horizontal:          false;
-$modal-3d-flip-vertical:            false;
-$modal-super-scaled:                false;
+$modal--scale-up:                    true;
+$modal--slide-right:                 false;
+$modal--3d-flip-horizontal:          false;
+$modal--3d-flip-vertical:            false;
+$modal--super-scaled:                false;
 
 
 
@@ -66,7 +74,7 @@ $modal-super-scaled:                false;
 
 
 /*------------------------------------*\
-    $IMPORTS
+    !IMPORTS
 \*------------------------------------*/
 
-@import "../partials/modals/modals-extends";
+@import "../objects/modals/modal-object";

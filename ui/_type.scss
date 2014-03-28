@@ -2,10 +2,10 @@
     CONTENTS
 \*------------------------------------*/
 /**
- * CREDITS
- * VARIABLES
- * IMPORTS
- * BASE TYPE SETTINGS
+ *  CREDITS
+ *  VARIABLES
+ *  IMPORTS
+ *  BASE TYPE SETTINGS
  */
 
 
@@ -13,7 +13,7 @@
 
 
 /*------------------------------------*\
-    $CREDITS
+    !CREDITS
 \*------------------------------------*/
 
 /**
@@ -26,7 +26,7 @@
 
 
 /*------------------------------------*\
-    $VARIABLES
+    !VARIABLES
 \*------------------------------------*/
 
 $font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
@@ -58,17 +58,17 @@ $paragraph-justify: true !default;
 
 
 /*------------------------------------*\
-    $IMPORTS
+    !IMPORTS
 \*------------------------------------*/
 
-@import "../partials/type/type-mixins";
+@import "../objects/type/type-mixins";
 
 
 
 
 
 /*------------------------------------*\
-    $BASE TYPE SETTINGS
+    !BASE TYPE SETTINGS
 \*------------------------------------*/
 
 html{
@@ -159,10 +159,6 @@ p{
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 0;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    -o-hyphens: auto;
     hyphens: auto;
     word-wrap: break-word;
     margin-bottom: emRhythm(4);

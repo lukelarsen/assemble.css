@@ -2,16 +2,19 @@
     CONTENTS
 \*------------------------------------*/
 /**
- * BASE
- * FIT
- * STACKED
- * CENTER
- * RIGHT
- * LEFT
- * SPACE BETWEEN
- * SPACE AROUND
- * KEYWORDS
- * BREADCRUMB
+ *  BASE
+ *  FIT
+ *  STACKED
+ *  CENTER
+ *  RIGHT
+ *  LEFT
+ *  SPACE BETWEEN
+ *  SPACE AROUND
+ *  KEYWORDS
+ *  BREADCRUMB
+        Breadcrumb Path
+        Breadcrumb Custom
+ *  PAGINATION
  */
 
 
@@ -19,7 +22,7 @@
 
 
 /*------------------------------------*\
-    $BASE
+    !BASE
 \*------------------------------------*/
 
 %nav{
@@ -45,7 +48,7 @@
 
 
 /*------------------------------------*\
-    $FIT
+    !FIT
 \*------------------------------------*/
  %nav--fit{
      > li{
@@ -58,7 +61,7 @@
 
 
 /*------------------------------------*\
-    $STACKED
+    !STACKED
 \*------------------------------------*/
 
 %nav--stacked{
@@ -70,7 +73,7 @@
 
 
 /*------------------------------------*\
-    $CENTER
+    !CENTER
 \*------------------------------------*/
 
 %nav--center{
@@ -82,7 +85,7 @@
 
 
 /*------------------------------------*\
-    $RIGHT
+    !RIGHT
 \*------------------------------------*/
 
 %nav--right{
@@ -94,7 +97,7 @@
 
 
 /*------------------------------------*\
-    $LEFT
+    !LEFT
 \*------------------------------------*/
 
 %nav--left{
@@ -106,7 +109,7 @@
 
 
 /*------------------------------------*\
-    $SPACE BETWEEN
+    !SPACE BETWEEN
 \*------------------------------------*/
 
 %nav--space-between{
@@ -118,7 +121,7 @@
 
 
 /*------------------------------------*\
-    $SPACE AROUND
+    !SPACE AROUND
 \*------------------------------------*/
 
 %nav--space-around{
@@ -130,7 +133,7 @@
 
 
 /*------------------------------------*\
-    $KEYWORDS
+    !KEYWORDS
 \*------------------------------------*/
 
 %nav--keywords{
@@ -150,7 +153,7 @@
 
 
 /*------------------------------------*\
-    $BREADCRUMB
+    !BREADCRUMB
 \*------------------------------------*/
 
 /**
@@ -190,7 +193,7 @@
 
 
 /**
- * Breadcrumb Path
+ * ^Breadcrumb Path
  */
 
 %breadcrumb--path > li + li:before{
@@ -199,7 +202,7 @@
 
 
 /**
- * Breadcrumb Custom
+ * ^Breadcrumb Custom
  *
  * Assign a delimiter on the fly through a data attribute, e.g.:
  *
@@ -223,7 +226,7 @@
 
 
 /*------------------------------------*\
-    $PAGINATION
+    !PAGINATION
 \*------------------------------------*/
 
 /**

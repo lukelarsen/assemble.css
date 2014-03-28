@@ -2,9 +2,9 @@
     CONTENTS
 \*------------------------------------*/
 /**
- * VARS
- * IMPORTS
- * NAVS
+ *  VARS
+ *  IMPORTS
+ *  NAVS
  */
 
 
@@ -12,7 +12,7 @@
 
 
 /*------------------------------------*\
-    $VARS
+    !VARS
 \*------------------------------------*/
 
 $pagination-li-padding:         12px;
@@ -25,17 +25,17 @@ $breadcrumb-a-left:             13px;
 
 
 /*------------------------------------*\
-    $IMPORTS
+    !IMPORTS
 \*------------------------------------*/
 
-@import "../partials/navs/navs-extends";
+@import "../objects/navs/navs-extends";
 
 
 
 
 
 /*------------------------------------*\
-    $NAVS
+    !NAVS
 \*------------------------------------*/
 
 .nav-main{

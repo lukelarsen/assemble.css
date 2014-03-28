@@ -2,9 +2,12 @@
     CONTENTS
 \*------------------------------------*/
 /**
- * VARIABLES
- * IMPORTS
- * THEME
+ *  VARIABLES
+        The Box
+        Buttons
+        Form Inputs
+ *  IMPORTS
+ *  THEME
  */
 
 
@@ -12,11 +15,11 @@
 
 
 /*------------------------------------*\
-    $VARIABLES
+    !VARIABLES
 \*------------------------------------*/
 
 /**
- * Box
+ * ^The Box
  */
 $vex-border-radius: 5px;
 $vex-background: #f0f0f0;
@@ -26,7 +29,7 @@ $vex-font-size: 1.1em;
 
 
 /**
- * Buttons
+ * ^Buttons
  */
 $vex-btn-border-radius: 3px;
 $vex-btn-text-transform: uppercase;
@@ -39,7 +42,7 @@ $vex-btn-secondary-color: #777777;
 
 
 /**
- * Form Inputs
+ * ^Form Inputs
  */
 $vex-input-border-radius: 3px;
 $vex-input-background: white;
@@ -50,17 +53,17 @@ $vex-input-border: 0px;
 
 
 /*------------------------------------*\
-    IMPORTS
+    !IMPORTS
 \*------------------------------------*/
 
-@import "../partials/dialogs/vex";
+@import "../objects/dialogs/vex";
 
 
 
 
 
 /*------------------------------------*\
-    $THEME
+    !THEME
 \*------------------------------------*/
 
 @keyframes vex-flyin {

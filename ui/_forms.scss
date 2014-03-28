@@ -2,10 +2,10 @@
     CONTENTS
 \*------------------------------------*/
 /**
- * IMPORTS
- * FORMS
- * FORM ERRORS
- * FORM HELP
+ *  IMPORTS
+ *  FORMS
+ *  FORM ERRORS
+ *  FORM HELP
  */
 
 
@@ -13,19 +13,19 @@
 
 
 /*------------------------------------*\
-    $IMPORTS
+    !IMPORTS
 \*------------------------------------*/
 
-@import "../partials/forms/forms-extends";
-@import "../partials/forms/forms-mixins";
-@import "../partials/forms/forms-base";
+@import "../objects/forms/forms-extends";
+@import "../objects/forms/forms-mixins";
+@import "../objects/forms/forms-base";
 
 
 
 
 
 /*------------------------------------*\ 
-    $FORMS
+    !FORMS
 \*------------------------------------*/
 
 /* Add classes here to extend the different columns your
@@ -65,7 +65,7 @@
 
 
 /*------------------------------------*\
-    $FORM ERRORS
+    !FORM ERRORS
 \*------------------------------------*/
 
 .form-error{

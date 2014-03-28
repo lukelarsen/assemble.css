@@ -2,12 +2,14 @@
     CONTENTS
 \*------------------------------------*/
 /**
- * VARIABLES
- * IMPORTS
- * TOOL TIP RIGHT
- * TOOL TIP BOTTOM
- * TOOL TIP CONTAINER
- * TOOL TIP CLOSE BUTTON
+ *  VARIABLES
+        Tool Tip Right
+        Tool Tip Bottom
+ *  IMPORTS
+ *  TOOL TIP RIGHT
+ *  TOOL TIP BOTTOM
+ *  TOOL TIP CONTAINER
+ *  TOOL TIP CLOSE BUTTON
  */
 
 
@@ -15,15 +17,14 @@
 
 
 /*------------------------------------*\
-    $VARIABLES
+    !VARIABLES
 \*------------------------------------*/
 
 $tool-tip-bg-color:                  green;
 
 /**
- * Tool Tip Right
+ * ^Tool Tip Right
  */
-
 // Will animate from the right slightly leftwards;
 $tool-tip--right-start:              40px;
 $tool-tip--right-end:                35px;
@@ -35,9 +36,8 @@ $tool-tip--right-left--portable:    -191px;
 
 
 /**
- * Tool Tip Bottom
+ * ^Tool Tip Bottom
  */
-
 // Will animate from the bottom slightly upwards;
 $tool-tip--bottom-start:            60px;
 $tool-tip--bottom-end:              55px;
@@ -52,17 +52,17 @@ $tool-tip--bottom-left--portable:  $tool-tip--right-left--portable;
 
 
 /*------------------------------------*\
-    $IMPORTS
+    !IMPORTS
 \*------------------------------------*/
 
-@import "../partials/tool-tips/tool-tip-extends";
+@import "../objects/tool-tips/tool-tip-extends";
 
 
 
 
 
 /*------------------------------------*\
-    $TOOLTIP RIGHT
+    !TOOLTIP RIGHT
 \*------------------------------------*/
 
 .tool-tip-right{
@@ -75,7 +75,7 @@ $tool-tip--bottom-left--portable:  $tool-tip--right-left--portable;
 
 
 /*------------------------------------*\
-    $TOOLTIP BOTTOM
+    !TOOLTIP BOTTOM
 \*------------------------------------*/
 
 .tool-tip-bottom{
@@ -88,7 +88,7 @@ $tool-tip--bottom-left--portable:  $tool-tip--right-left--portable;
 
 
 /*------------------------------------*\
-    $TOOL TIP CONTAINER
+    !TOOL TIP CONTAINER
 \*------------------------------------*/
 
 .tool-tip__container{
@@ -102,7 +102,7 @@ $tool-tip--bottom-left--portable:  $tool-tip--right-left--portable;
 
 
 /*------------------------------------*\
-    $TOOL TIP CLOSE BUTTON
+    !TOOL TIP CLOSE BUTTON
 \*------------------------------------*/
 
 .tool-tip__close{

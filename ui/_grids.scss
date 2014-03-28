@@ -2,8 +2,9 @@
     CONTENTS
 \*------------------------------------*/
 /**
- * IMPORTS
- * GRIDS
+ *  VARIABLES
+ *  IMPORTS
+ *  GRIDS
 */
 
 
@@ -11,18 +12,36 @@
 
 
 /*------------------------------------*\
-    $IMPORTS
+    !VARIABLES
 \*------------------------------------*/
 
-@import "../partials/grids/grids-extends";
-@import "../partials/grids/grids-mixins";
+/**
+ * Set the widths you need in your layout here.
+ * These are px values.
+ */
+
+$grid-fixed-widths: (
+    '200',
+    '400'
+);
 
 
 
 
 
 /*------------------------------------*\
-    $GRIDS
+    !IMPORTS
+\*------------------------------------*/
+
+@import "../objects/grids/grids-extends";
+@import "../objects/grids/grids-mixins";
+
+
+
+
+
+/*------------------------------------*\
+    !GRIDS
 \*------------------------------------*/
 
 /**

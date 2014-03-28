@@ -2,9 +2,9 @@
     CONTENTS
 \*------------------------------------*/
 /**
- * VARIABLES
- * IMPORTS
- * DEFINE BUTTONS
+ *  VARIABLES
+ *  IMPORTS
+ *  DEFINE BUTTONS
  */
 
 
@@ -12,7 +12,7 @@
 
 
 /*------------------------------------*\
-    $VARIABLES
+    !VARIABLES
 \*------------------------------------*/
 
 $btn-name:                  'btn' !default;
@@ -31,18 +31,18 @@ $btn-background: (
 
 
 /*------------------------------------*\
-    $IMPORTS
+    $!MPORTS
 \*------------------------------------*/
 
-@import "../partials/buttons/buttons-mixins";
-@import "../partials/buttons/buttons-extends";
+@import "../objects/buttons/buttons-mixins";
+@import "../objects/buttons/buttons-extends";
 
 
 
 
 
 /*------------------------------------*\
-    $DEFINE BUTTONS
+    !DEFINE BUTTONS
 \*------------------------------------*/
 
 .btn{

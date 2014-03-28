@@ -23,28 +23,33 @@
 
 
 /*------------------------------------*\
-    $MODAL STRUCTURE
+    !MODAL STRUCTURE
 \*------------------------------------*/
 
-.modal {
+.modal{
     position: fixed;
+    top: 15%;
     min-width: 320px;
     height: auto;
     z-index: 2000;
     visibility: hidden;
     display: none;
     backface-visibility: hidden;
+
+    @include media-query(palm){
+        top: 0%;
+    }
 }
 
 .modal__content{
-    background-color: $modal-background-color;
+    background-color: $modal_background_color;
 }
 
 .modal--show {
     visibility: visible;
 }
 
-.modal-overlay {
+.modal-overlay{
     position: fixed;
     width: 100%;
     height: 100%;
@@ -53,12 +58,12 @@
     left: 0;
     z-index: 1000;
     opacity: 0;
-    background: $modal-overlay-background-color;
+    background: $modal_overlay_background_color;
     display: none;
     transition: all .3s;
 }
 
-.modal--show ~ .modal-overlay {
+.modal--show ~ .modal-overlay{
     opacity: 1;
     visibility: visible;
 }
@@ -68,13 +73,13 @@
  * ^Modal Header
  */
 .modal__header{
-    background-color: $modal-header-background-color;
-    padding: $modal-header-padding;
-    margin-bottom: $modal-header-margin-bottom;
+    background-color: $modal_header_background_color;
+    padding: $modal_header_padding;
+    margin-bottom: $modal_header_margin_bottom;
 
     h3{
         text-align: center;
-        color: $modal-header-text-color;
+        color: $modal_header_text_color;
         margin-bottom: 0;
     }
 }
@@ -84,7 +89,7 @@
  * ^Modal Body
  */
 .modal__body{
-    padding: $modal-body-padding;
+    padding: $modal_body_padding;
 }
 
 
@@ -92,8 +97,8 @@
  * ^Modal Footer
  */
 .modal__footer{
-    border-top: $modal-footer-border-top;
-    padding: $modal-footer-padding;
+    border-top: $modal_footer_border_top;
+    padding: $modal_footer_padding;
 }
 
 
@@ -102,13 +107,13 @@
 
 
 /*------------------------------------*\
-    $MODAL WIDTHS
+    !MODAL WIDTHS
 \*------------------------------------*/
 
 /**
  * ^Modal Wide
  */
-@if $modal-wide == true{
+@if $modal--wide == true{
     .modal--wide{
         width: 60%;
         left: 20%;
@@ -119,7 +124,6 @@
 
         @include media-query(palm) {
             left: 0%;
-            top: 0%;
         }
     }
 }
@@ -128,15 +132,15 @@
 /**
  * ^Modal Normal
  */
-.modal {
-    top: 15%;
-    left: 30%;
-    width: 40%;
+@if $modal--normal == true {
+    .modal--normal {
+        left: 30%;
+        width: 40%;
 
-    @include media-query(palm) {
-        width: 100%;
-        left: 0%;
-        top: 0%;
+        @include media-query(palm) {
+            width: 100%;
+            left: 0%;
+        }
     }
 }
 
@@ -144,7 +148,7 @@
 /**
  * ^Modal Narrow
  */
-@if $modal-narrow == true{
+@if $modal--narrow == true{
     .modal--narrow{
         width: 30%;
         left: 35%;
@@ -160,13 +164,13 @@
 
 
 /*------------------------------------*\
-    $MODAL ANIMATIONS
+    !MODAL ANIMATIONS
 \*------------------------------------*/
 
 /**
  * ^Modal Slide Up
  */
-@if $modal-scale-up == true{
+@if $modal--scale-up == true{
     .modal--scale-up .modal__content{
         transform: scale(0.7);
         opacity: 0;
@@ -185,7 +189,7 @@
 /**
  * ^Modal Slide Right
  */
-@if $modal-slide-right == true{
+@if $modal--slide-right == true{
     .modal--slide-right .modal__content{
         transform: translateX(20%);
         opacity: 0;
@@ -202,7 +206,7 @@
 /**
  * ^Modal 3D Flip Horizontal
  */
-@if $modal-3d-flip-horizontal == true{
+@if $modal--3d-flip-horizontal == true{
     .modal--3d-flip-horizontal.modal{
         perspective: 1300px;
     }
@@ -224,7 +228,7 @@
 /**
  * ^Modal 3D Flip Vertical
  */
-@if $modal-3d-flip-vertical == true{
+@if $modal--3d-flip-vertical == true{
     .modal--3d-flip-vertical.modal {
         perspective: 1300px;
     }
@@ -246,7 +250,7 @@
 /**
  * ^Modal Super Scaled
  */
-@if $modal-super-scaled == true{
+@if $modal--super-scaled == true{
     .modal--super-scaled .modal__content {
         transform: scale(2);
         opacity: 0;

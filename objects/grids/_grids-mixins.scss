@@ -2,8 +2,18 @@
     CONTENTS
 \*------------------------------------*/
 /**
- * GRID RESPONSIVE EXTENDS
- * FIXED WIDTH GRID CELLS
+ *  GRID RESPONSIVE WIDTH MIXIN
+        Width Whole
+        Width Half
+        Width Third
+        Width Quarter
+        Width Fifth
+ *  GRID RESPONSIVE GUTTER MIXIN
+        Gutter Small
+        Gutter Medium
+        Gutter Large
+        Gutter xLarge
+ *  GENERATE THE SILENT CLASSES
 */
 
 
@@ -11,7 +21,7 @@
 
 
 /*------------------------------------*\
-    $RESPONSIVE EXTENDS
+    !GRID RESPONSIVE WIDTH MIXIN
 \*------------------------------------*/
 
 /**
@@ -48,7 +58,7 @@
     // The second call is for individual grid cells
 
     /**
-     * Width Whole
+     * ^Width Whole
      */
     #{$class-type}grid--#{$namespace}-full > div[class^='gc-'],
     #{$class-type}grid__item--#{$namespace}-full{
@@ -57,7 +67,7 @@
 
 
     /**
-     * Width Half
+     * ^Width Half
      */
     #{$class-type}grid--#{$namespace}-halves > div[class^='gc-'],
     #{$class-type}grid__item--#{$namespace}-half{
@@ -66,7 +76,7 @@
 
 
     /**
-     * Width Third
+     * ^Width Third
      */
     #{$class-type}grid--#{$namespace}-thirds > div[class^='gc-'],
     #{$class-type}grid__item--#{$namespace}-third{
@@ -75,7 +85,7 @@
 
 
     /**
-     * Width Quarter
+     * ^Width Quarter
      */
     #{$class-type}grid--#{$namespace}-quarters > div[class^='gc-'],
     #{$class-type}grid__item--#{$namespace}-quarter{
@@ -84,7 +94,7 @@
 
 
     /**
-     * Width Fifth
+     * ^Width Fifth
      */
     #{$class-type}grid--#{$namespace}-fifths > div[class^='gc-'],
     #{$class-type}grid__item--#{$namespace}-fifth{
@@ -92,8 +102,15 @@
     }
 
 
+
+
+
+/*------------------------------------*\
+    !GRID RESPONSIVE GUTTER MIXIN
+\*------------------------------------*/
+
     /**
-     * Gutter Small
+     * ^Gutter Small
      */
     #{$class-type}gutters--#{$namespace}-small{
         margin-left: -1em;
@@ -105,7 +122,7 @@
 
 
     /**
-     * Gutter Medium
+     * ^Gutter Medium
      */
     #{$class-type}gutters--#{$namespace}-medium{
         margin-left: -1.5em;
@@ -117,7 +134,7 @@
 
 
     /**
-     * Gutter Large
+     * ^Gutter Large
      */
     #{$class-type}gutters--#{$namespace}-large{
         margin-left: -2em;
@@ -129,7 +146,7 @@
 
 
     /**
-     * Gutter xLarge
+     * ^Gutter xLarge
      */
     #{$class-type}gutters--#{$namespace}-xlarge{
         margin-left: -3em;
@@ -142,10 +159,16 @@
 }
 
 
+
+
+
+/*------------------------------------*\
+    !GENERATE THE SILENT CLASSES
+\*------------------------------------*/
+
 /**
  * Generate our responsive extends (or classes)
  */
-
 @each $name in $breakpoint-has-widths{
     @include grid-media-query($name) {
         @include device-type('#{$name}');
@@ -153,28 +176,9 @@
 }
 
 
-
-
-
-/*------------------------------------*\ 
-    $FIXED WITH GRID CELLS
-\*------------------------------------*/
-
-/**
- * Set the widths you need in your layout here.
- * These are px values.
- */
-
-$grid-fixed-widths: (
-    '200',
-    '400'
-);
-
-
 /**
  * Generate our fixed width extends (or classes)
- */
-
+_*/
 @each $width in $grid-fixed-widths{
     #{$class-type}grid__item--fixed-#{$width} {
         width: #{$width}px;
