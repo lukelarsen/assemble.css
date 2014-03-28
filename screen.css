@@ -1013,13 +1013,23 @@ _*/
     CONTENTS
 \*------------------------------------*/
 /**
- *  VARS
+ *  DESIGN VARIABLES
+ *  MODIFIER VARIABLES
  *  IMPORTS
  *  NAVS
  */
 /*------------------------------------*\
-    !VARS
+    !DESIGN VARIABLES
 \*------------------------------------*/
+/*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+/**
+ * ^Orientation
+ */
+/**
+ * ^Type
+ */
 /*------------------------------------*\
     !IMPORTS
 \*------------------------------------*/
@@ -1027,83 +1037,142 @@ _*/
     CONTENTS
 \*------------------------------------*/
 /**
- *  BASE
- *  FIT
- *  STACKED
- *  CENTER
- *  RIGHT
- *  LEFT
- *  SPACE BETWEEN
- *  SPACE AROUND
- *  KEYWORDS
- *  BREADCRUMB
+ *  NAV BASE
+ *  NAV MODIFIERS
+        Nav Fit
+        Nav Stacked
+        Nav Center
+        Nav Right
+        Nav Left
+        Nav Space Between
+        Nav Space Around
+ *  NAV TYPES
+        Pagination
         Breadcrumb Path
         Breadcrumb Custom
- *  PAGINATION
  */
 /*------------------------------------*\
-    !BASE
+    !NAV BASE
 \*------------------------------------*/
-.nav-main, .breadcrumb, .pagination {
+.nav {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
-.nav-main > li, .breadcrumb > li, .pagination > li {
+.nav > li {
   flex: 0 1 auto;
 }
-.nav-main > li > a, .breadcrumb > li > a, .pagination > li > a {
+.nav > li > a {
   display: flex;
   align-items: flex-start;
   text-decoration: none;
 }
 
 /*------------------------------------*\
-    !FIT
+    !NAV MODIFIERS
 \*------------------------------------*/
-/*------------------------------------*\
-    !STACKED
-\*------------------------------------*/
-/*------------------------------------*\
-    !CENTER
-\*------------------------------------*/
-/*------------------------------------*\
-    !RIGHT
-\*------------------------------------*/
-/*------------------------------------*\
-    !LEFT
-\*------------------------------------*/
-.nav-main {
+/**
+ * ^Nav Fit
+ */
+/**
+ * ^Nav Stacked
+ */
+/**
+ * ^Nav Center
+ */
+/**
+ * ^Nav Right
+ */
+/**
+ * ^Nav Left
+ */
+.nav--left {
   justify-content: flex-start;
 }
 
+/**
+ * ^Nav Space Between
+ */
+/**
+ * ^Nav Space Around
+ */
 /*------------------------------------*\
-    !SPACE BETWEEN
-\*------------------------------------*/
-/*------------------------------------*\
-    !SPACE AROUND
-\*------------------------------------*/
-/*------------------------------------*\
-    !KEYWORDS
-\*------------------------------------*/
-/*------------------------------------*\
-    !BREADCRUMB
+    !NAV TYPES
 \*------------------------------------*/
 /**
- * Slightly modified version of the inuit.css breadcrumb object
- *
- * Extend %nav with these silent classes. Use %breadcrumb and
- * then stack the other two options on if you want them.
+ * ^Nav Keywords
 
-    .breadcrumb{
-        @extend %nav;
-        @extend %breadcrumb;
-        @extend %breadcrumb--path
-    }
+ * Credit: Inuit.css
 
-    <ol class="breadcrumb">
+   <ol class="nav  nav--keywords">
+       <li><a href="#">Word One</a></li>
+       <li><a href="#">Word Two</a></li>
+       <li><a href="#">Word Three</a></li>
+   </ol>
+
+   Can also be used without the <a> tags
+
+ */
+.nav--keywords > li {
+  margin-left: 7px;
+}
+.nav--keywords > li:after {
+  content: ", ";
+}
+.nav--keywords > li:last-child:after {
+  display: none;
+}
+.nav--keywords > li a {
+  display: inline-block;
+}
+.nav--keywords > li:first-child {
+  margin-left: 0;
+}
+
+/**
+ * ^Nav Pagination
+
+ * Credit: Inuit.css
+
+   <ol class="nav  nav--pagination">
+       <li class="nav--pagination__first">First</li>
+       <li class="nav--pagination__prev">Previous</li>
+       <li><a href="/page/1">1</a></li>
+       <li><a href="/page/2">2</a></li>
+       <li class="current"><a href="/page/3">3</a></li>
+       <li><a href="/page/4">4</a></li>
+       <li><a href="/page/5">5</a></li>
+       <li class="nav--pagination__next"><a href="/page/next">Next</a></li>
+       <li class="nav--pagination__last"><a href="/page/last">Last</a></li>
+   </ol>
+
+ */
+.nav--pagination {
+  text-align: center;
+}
+.nav--pagination > li {
+  padding: 12px;
+}
+.nav--pagination > li > a {
+  padding: 12px;
+  margin: -12px;
+  display: block;
+}
+.nav--pagination > .nav--pagination__first a:before {
+  content: "« ";
+}
+.nav--pagination > .nav--pagination__last a:after {
+  content: " »";
+}
+
+/**
+ * ^Nav Breadcrumb
+
+ * Credit: Inuit.css
+
+    <ol class="nav  nav--breadcrumb">
         <li><a href="#">inuit.css</a></li>
         <li><a href="#">inuit.css</a></li>
         <li><a href="#">partials</a></li>
@@ -1111,74 +1180,54 @@ _*/
     </ol>
 
  */
-.breadcrumb > li + li:before {
+.nav--breadcrumb > li + li:before {
   content: "» ";
   float: left;
 }
-.breadcrumb > li > a {
+.nav--breadcrumb > li > a {
   margin-right: 10px;
   margin-left: 13px;
 }
 
 /**
- * ^Breadcrumb Path
+ * ^Nav Breadcrumb Path
+
+ * Credit: Inuit.css
+
+    <ol class="nav  nav--breadcrumb  nav--breadcrumb--path">
+        <li><a href="#">inuit.css</a></li>
+        <li><a href="#">inuit.css</a></li>
+        <li><a href="#">partials</a></li>
+        <li class="current"><a href="#">objects</a></li>
+    </ol>
+
  */
-.breadcrumb > li + li:before {
+.nav--breadcrumb--path > li + li:before {
   content: "/ ";
 }
 
 /**
- * ^Breadcrumb Custom
- *
- * Assign a delimiter on the fly through a data attribute, e.g.:
- *
-    <ol class="breadcrumb">
+ * ^Nav Breadcrumb Custom
+
+ * Credit: Inuit.css
+
+    <ol class="nav  nav--breadcrumb  nav--breadcrumb--custom">
         <li><a href="#">Home</a></li>
         <li data-breadcrumb="|"><a href="#">About</a></li>
         <li data-breadcrumb="|"><a href="#">The Board</a></li>
         <li data-breadcrumb="|" class="current"><a href="#">Directors</a></li>
     </ol>
+
  */
-/*------------------------------------*\
-    !PAGINATION
-\*------------------------------------*/
-/**
- * Slightly modified version of the inuit.css pagination object
- *
-   <ol class="nav  pagination">
-       <li class="pagination__first">First</li>
-       <li class="pagination__prev">Previous</li>
-       <li><a href="/page/1">1</a></li>
-       <li><a href="/page/2">2</a></li>
-       <li class="current"><a href="/page/3">3</a></li>
-       <li><a href="/page/4">4</a></li>
-       <li><a href="/page/5">5</a></li>
-       <li class="pagination__next"><a href="/page/next">Next</a></li>
-       <li class="pagination__last"><a href="/page/last">Last</a></li>
-   </ol>
- */
-.pagination {
-  text-align: center;
-}
-.pagination > li {
-  padding: 12px;
-}
-.pagination > li > a {
-  padding: 12px;
-  margin: -12px;
-  display: block;
-}
-.pagination > .pagination__first a:before {
-  content: "« ";
-}
-.pagination > .pagination__last a:after {
-  content: " »";
+.nav--breadcrumb--custom > li + li[data-breadcrumb]:before {
+  content: attr(data-breadcrumb) " ";
+  float: left;
 }
 
 /*------------------------------------*\
     !NAVS
 \*------------------------------------*/
-.nav-main > li > a {
+.nav--main > li > a {
   margin: 0px 7px;
   background-color: red;
   padding: 12px;
@@ -2481,12 +2530,12 @@ body.vex-open {
     CONTENTS
 \*------------------------------------*/
 /**
- * DESIGN VARIABLES
- * MODIFIER VARIABLES
- * IMPORTS
+ *  DESIGN VARIABLES
+ *  MODIFIER VARIABLES
+ *  IMPORTS
  */
 /*------------------------------------*\
-    !DESIGN_VARIABLES
+    !DESIGN VARIABLES
 \*------------------------------------*/
 /**
  * ^Backgrounds
@@ -2501,7 +2550,7 @@ body.vex-open {
  * ^Footer
  */
 /*------------------------------------*\
-    !MODIFIER_VARIABLES
+    !MODIFIER VARIABLES
 \*------------------------------------*/
 /**
  * ^Sizes
@@ -2537,6 +2586,8 @@ body.vex-open {
 .modal {
   position: fixed;
   top: 15%;
+  left: 30%;
+  width: 40%;
   min-width: 320px;
   height: auto;
   z-index: 2000;
@@ -2547,6 +2598,8 @@ body.vex-open {
 @media only screen and (max-width: 480px) {
   .modal {
     top: 0%;
+    width: 100%;
+    left: 0%;
   }
 }
 
@@ -2623,20 +2676,6 @@ body.vex-open {
 }
 @media only screen and (max-width: 480px) {
   .modal--wide {
-    left: 0%;
-  }
-}
-
-/**
- * ^Modal Normal
- */
-.modal--normal {
-  left: 30%;
-  width: 40%;
-}
-@media only screen and (max-width: 480px) {
-  .modal--normal {
-    width: 100%;
     left: 0%;
   }
 }

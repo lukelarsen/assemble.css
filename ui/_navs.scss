@@ -2,7 +2,8 @@
     CONTENTS
 \*------------------------------------*/
 /**
- *  VARS
+ *  DESIGN VARIABLES
+ *  MODIFIER VARIABLES
  *  IMPORTS
  *  NAVS
  */
@@ -12,7 +13,7 @@
 
 
 /*------------------------------------*\
-    !VARS
+    !DESIGN VARIABLES
 \*------------------------------------*/
 
 $pagination-li-padding:         12px;
@@ -24,11 +25,40 @@ $breadcrumb-a-left:             13px;
 
 
 
+
+/*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+
+/**
+ * ^Orientation
+ */
+$nav--fit:                      false;
+$nav--stacked:                  false;
+$nav--center:                   false;
+$nav--right:                    false;
+$nav--left:                     true;
+$nav--space-between:            false;
+$nav--space-around:             false;
+
+
+/**
+ * ^Type
+ */
+$nav--keywords:                 true;
+$nav--pagination:               true;
+$nav--breadcrumb:               true;
+$nav--breadcrumb--path:         true;
+$nav--breadcrumb--custom:       false;
+
+
+
+
 /*------------------------------------*\
     !IMPORTS
 \*------------------------------------*/
 
-@import "../objects/navs/navs-extends";
+@import "../objects/navs/nav-object";
 
 
 
@@ -38,10 +68,7 @@ $breadcrumb-a-left:             13px;
     !NAVS
 \*------------------------------------*/
 
-.nav-main{
-    @extend %nav;
-    @extend %nav--left;
-
+.nav--main{
     > li{
         > a{
 
@@ -53,18 +80,4 @@ $breadcrumb-a-left:             13px;
             padding: 12px;
         }
     }
-
-}
-
-.breadcrumb{
-    @extend %nav;
-    @extend %breadcrumb;
-    @extend %breadcrumb--path;
-
-
-}
-
-.pagination{
-    @extend %nav;
-    @extend %pagination;
 }
