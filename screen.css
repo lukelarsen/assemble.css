@@ -1787,21 +1787,42 @@ textarea {
     CONTENTS
 \*------------------------------------*/
 /**
- *  VARIABLES
+ *  DESIGN VARIABLES
+        Button Borders
+ *  MODIFIER VARIABLES
+        Button Sizes
+        Button Types
+        Button Colors
  *  IMPORTS
  *  DEFINE BUTTONS
  */
 /*------------------------------------*\
-    !VARIABLES
+    !DESIGN VARIABLES
 \*------------------------------------*/
+/**
+ * ^Button Borders
+ */
 /*------------------------------------*\
-    $!MPORTS
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+/**
+ * ^Button Sizes
+ */
+/**
+ * ^Button Types
+ */
+/**
+ * ^Button Colors
+ */
+/*------------------------------------*\
+    !IMPORTS
 \*------------------------------------*/
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
 /**
  *  BUTTON COLORS
+ *  PRINT BUTTON COLORS
  */
 /*------------------------------------*\
     !BUTTON COLORS
@@ -1810,18 +1831,26 @@ textarea {
  * Credit: http://hugogiraudel.com/2014/03/03/another-sass-button-library/
  */
 /*------------------------------------*\
+    !PRINT BUTON COLORS
+\*------------------------------------*/
+/*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
 /**
- *  SILENT CLASSES
+ *  BUTTONS BASE
+ *  BUTTONS MODIFIERS
+        Buttons Sizes
+        Buttons Types
+        Buttons Colors
+ *  BUTTONS CLEAN UP
  */
 /*------------------------------------*\
-    !SILENT CLASSES
+    !BUTTONS BASE
 \*------------------------------------*/
 /**
  * Credit: http://hugogiraudel.com/2014/03/03/another-sass-button-library/
  */
-.btn, .btn-natural, .btn-disabled {
+.btn {
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
@@ -1839,43 +1868,43 @@ textarea {
   text-decoration: none;
   color: #fff;
   transition: background-color .2s ease-in-out;
-  border: 1px solid;
+  /*------------------------------------*\
+      !BUTTONS MODIFIERS
+  \*------------------------------------*/
+  /**
+   * ^Buttons Sizes
+   */
+  /**
+   * ^Buttons Types
+   */
+  /**
+   * ^Buttons Colors
+   */
+  /*------------------------------------*\
+      !BUTTONS CLEAN UP
+  \*------------------------------------*/
 }
-.btn-disabled {
-  font-size: 83.3333333%;
+.btn--primary {
+  background-color: red;
+  color: white;
 }
-.btn-natural {
-  vertical-align: baseline;
-  font-size: inherit;
-  line-height: inherit;
-  height: auto;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
+.btn--primary:hover {
+  background-color: blue;
 }
-.btn-disabled {
-  background-color: #ddd;
-  color: #777;
+.btn--secondary {
+  background-color: green;
+  color: black;
 }
-.btn-disabled:hover, .btn-disabled:active, .btn-disabled:focus {
-  background-color: #ddd !important;
-  color: #777 !important;
-  cursor: not-allowed;
+.btn--secondary:hover {
+  background-color: purple;
 }
-.btn, .btn-natural {
-  background-color: #565656;
-  border-color: #232323;
-}
-.btn:hover, .btn-natural:hover, .btn:active, .btn-natural:active {
-  background: #6c4141;
-}
-.btn:hover, .btn-natural:hover, .btn-disabled:hover, .btn:active, .btn-natural:active, .btn-disabled:active, .btn:focus, .btn-natural:focus, .btn-disabled:focus, .btn:visited, .btn-natural:visited, .btn-disabled:visited {
+.btn:hover, .btn:active, .btn:focus, .btn:visited {
   text-decoration: none;
-  color: #fff;
 }
-.btn:active, .btn-natural:active, .btn-disabled:active, .btn:focus, .btn-natural:focus, .btn-disabled:focus {
+.btn:active, .btn:focus {
   outline: none;
 }
-.btn::-moz-focus-inner, .btn-natural::-moz-focus-inner, .btn-disabled::-moz-focus-inner {
+.btn::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -1896,7 +1925,7 @@ textarea {
  *  TOOL TIP CLOSE BUTTON
  */
 /*------------------------------------*\
-    !VARIABLES
+    !DESIGN VARIABLES
 \*------------------------------------*/
 /**
  * ^Tool Tip Right

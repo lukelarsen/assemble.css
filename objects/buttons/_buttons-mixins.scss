@@ -3,6 +3,7 @@
 \*------------------------------------*/
 /**
  *  BUTTON COLORS
+ *  PRINT BUTTON COLORS
  */
 
 
@@ -17,15 +18,47 @@
  * Credit: http://hugogiraudel.com/2014/03/03/another-sass-button-library/
  */
 
+
+// Won't need this integrate what we need into the new one
+
 @mixin button-color($color){
     background-color: $color;
+    @if $btn-border == true{
+        border: solid $btn-border-size darken($color, $btn-border-darken-value);
+    }
 
     &:hover,
     &:active{
         background: call(nth($btn-hover, 1), $color, nth($btn-hover, 2));
     }
+}
+// END WON'T NEED SECTION
 
-    @if $btn-border != false{
-        border-color: call(nth($btn-border, 1), $color, nth($btn-border, 2));
+
+
+
+
+/*------------------------------------*\
+    !PRINT BUTON COLORS
+\*------------------------------------*/
+
+@mixin print-button-colors($map, $keys...){
+    $i: 1;
+    $length: length($keys);
+    @while $length >= $i  {
+        $map: map-get($map, nth($keys, $i));
+        $i: $i + 1;
+    }
+
+    @each $property, $value in $map {
+        @if $property == 'background-color' {
+            background-color: $value;
+        } @else if $property == 'color' {
+            color: $value;
+        } @else {
+            &:hover{
+                background-color: $value;
+            }
+        }
     }
 }
