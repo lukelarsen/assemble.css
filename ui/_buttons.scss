@@ -3,7 +3,6 @@
 \*------------------------------------*/
 /**
  *  DESIGN VARIABLES
-        Button Borders
  *  MODIFIER VARIABLES
         Button Sizes
         Button Types
@@ -20,17 +19,10 @@
     !DESIGN VARIABLES
 \*------------------------------------*/
 
-$btn-size-ratio:            1.2 !default;
-$btn-hover:                 saturate 25% !default;
-$btn-padding-sides:         1.3em !default;
-$btn-default-font-size:     100%;
-
-/**
- * ^Button Borders
- */
-$btn-border:                false;
-$btn-border-darken-value:   50%;
-$btn-border-size:           1px;
+$btn-size-ratio:                    1.2;
+$btn-padding-sides:                 1.3em;
+$btn-default-font-size:             100%;
+$btn-border-size:                   1px;  // Is only used if  border-color is set in the color map below
 
 
 
@@ -59,14 +51,15 @@ $btn--disabled:                     false;
  */
 $button-colors: (
     primary: (
-        background-color: red,
+        background: red,
+        border-color: black,
         color: white,
-        background-color-hover: blue
+        background-hover: blue
     ),
     secondary: (
-        background-color: green,
+        background: green,
         color: black,
-        background-color-hover: purple
+        background-hover: purple
     )
 );
 
@@ -77,8 +70,8 @@ $button-colors: (
     !IMPORTS
 \*------------------------------------*/
 
-@import "../objects/buttons/buttons-mixins";
-@import "../objects/buttons/buttons-extends";
+@import "../objects/buttons/button-mixins";
+@import "../objects/buttons/button-object";
 
 
 
@@ -88,20 +81,3 @@ $button-colors: (
     !DEFINE BUTTONS
 \*------------------------------------*/
 
-//.btn{
-//    @extend %btn;
-//    @extend %btn--primary;
-//    @extend %btn--large;
-//}
-//
-//.btn-natural{
-//    @extend %btn;
-//    @extend %btn--primary;
-//    @extend %btn--natural;
-//}
-//
-//.btn-disabled{
-//    @extend %btn;
-//    @extend %btn--small;
-//    @extend %btn--disabled;
-//}

@@ -1788,7 +1788,6 @@ textarea {
 \*------------------------------------*/
 /**
  *  DESIGN VARIABLES
-        Button Borders
  *  MODIFIER VARIABLES
         Button Sizes
         Button Types
@@ -1799,9 +1798,6 @@ textarea {
 /*------------------------------------*\
     !DESIGN VARIABLES
 \*------------------------------------*/
-/**
- * ^Button Borders
- */
 /*------------------------------------*\
     !MODIFIER VARIABLES
 \*------------------------------------*/
@@ -1821,35 +1817,25 @@ textarea {
     CONTENTS
 \*------------------------------------*/
 /**
- *  BUTTON COLORS
  *  PRINT BUTTON COLORS
  */
 /*------------------------------------*\
-    !BUTTON COLORS
-\*------------------------------------*/
-/**
- * Credit: http://hugogiraudel.com/2014/03/03/another-sass-button-library/
- */
-/*------------------------------------*\
-    !PRINT BUTON COLORS
+    !PRINT BUTTON COLORS
 \*------------------------------------*/
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
 /**
- *  BUTTONS BASE
- *  BUTTONS MODIFIERS
-        Buttons Sizes
-        Buttons Types
-        Buttons Colors
- *  BUTTONS CLEAN UP
+ *  BUTTON BASE
+ *  BUTTON MODIFIERS
+        Button Sizes
+        Button Types
+        Button Colors
+ *  BUTTON CLEAN UP
  */
 /*------------------------------------*\
-    !BUTTONS BASE
+    !BUTTON BASE
 \*------------------------------------*/
-/**
- * Credit: http://hugogiraudel.com/2014/03/03/another-sass-button-library/
- */
 .btn {
   display: inline-block;
   vertical-align: middle;
@@ -1867,36 +1853,35 @@ textarea {
   overflow: visible;
   text-decoration: none;
   color: #fff;
+  border: 0px;
   transition: background-color .2s ease-in-out;
   /*------------------------------------*\
-      !BUTTONS MODIFIERS
+      !BUTTON MODIFIERS
   \*------------------------------------*/
   /**
-   * ^Buttons Sizes
+   * ^Button Sizes
    */
   /**
-   * ^Buttons Types
-   */
-  /**
-   * ^Buttons Colors
+   * ^Button Types
    */
   /*------------------------------------*\
-      !BUTTONS CLEAN UP
+      !BUTTON CLEAN UP
   \*------------------------------------*/
 }
 .btn--primary {
-  background-color: red;
+  background: red;
+  border: solid 1px black;
   color: white;
 }
-.btn--primary:hover {
-  background-color: blue;
+.btn--primary:hover, .btn--primary:active {
+  background: blue;
 }
 .btn--secondary {
-  background-color: green;
+  background: green;
   color: black;
 }
-.btn--secondary:hover {
-  background-color: purple;
+.btn--secondary:hover, .btn--secondary:active {
+  background: purple;
 }
 .btn:hover, .btn:active, .btn:focus, .btn:visited {
   text-decoration: none;

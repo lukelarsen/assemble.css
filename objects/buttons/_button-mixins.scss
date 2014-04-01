@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  PRINT BUTTON COLORS
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !PRINT BUTTON COLORS
+\*------------------------------------*/
+
+@mixin print-button-colors($map, $keys...){
+    $i: 1;
+    $length: length($keys);
+    @while $length >= $i  {
+        $map: map-get($map, nth($keys, $i));
+        $i: $i + 1;
+    }
+
+    @each $property, $value in $map {
+        @if $property == 'background' {
+            background: $value;
+        } @else if $property == 'border-color' {
+            border: solid $btn-border-size $value;
+        } @else if $property == 'color' {
+            color: $value;
+        } @else if $property == 'background-hover' {
+            &:hover,
+            &:active{
+                background: $value;
+            }
+        }
+    }
+}

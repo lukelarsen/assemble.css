@@ -2,12 +2,12 @@
     CONTENTS
 \*------------------------------------*/
 /**
- *  BUTTONS BASE
- *  BUTTONS MODIFIERS
-        Buttons Sizes
-        Buttons Types
-        Buttons Colors
- *  BUTTONS CLEAN UP
+ *  BUTTON BASE
+ *  BUTTON MODIFIERS
+        Button Sizes
+        Button Types
+        Button Colors
+ *  BUTTON CLEAN UP
  */
 
 
@@ -15,12 +15,8 @@
 
 
 /*------------------------------------*\
-    !BUTTONS BASE
+    !BUTTON BASE
 \*------------------------------------*/
-
-/**
- * Credit: http://hugogiraudel.com/2014/03/03/another-sass-button-library/
- */
 
 .btn{
     display: inline-block;
@@ -39,6 +35,7 @@
     overflow: visible;
     text-decoration: none;
     color: #fff;
+    border: 0px;
     transition: background-color .2s ease-in-out;
 
 
@@ -46,11 +43,11 @@
 
 
 /*------------------------------------*\
-    !BUTTONS MODIFIERS
+    !BUTTON MODIFIERS
 \*------------------------------------*/
 
     /**
-     * ^Buttons Sizes
+     * ^Button Sizes
      */
     @if $btn--large == true {
         &--large{
@@ -74,7 +71,7 @@
 
 
     /**
-     * ^Buttons Types
+     * ^Button Types
      */
     @if $btn--natural == true {
         &--natural{
@@ -106,17 +103,6 @@
 
 
 
-//    &--primary{
-//        background-color: red;
-//        color: white;
-//
-//        &:hover{
-//            background-color: blue;
-//            color: pink;
-//        }
-//    }
-
-
     @each $key, $value in $button-colors{
         &--#{$key} {
             @include print-button-colors($button-colors, $key);
@@ -126,21 +112,9 @@
 
 
 
-    /**
-     * ^Buttons Colors
-     */
-//    @each $key, $value in $btn-background{
-//        &--#{$key} {
-//            @include button-color($value);
-//        }
-//    }
-
-
-
-
 
 /*------------------------------------*\
-    !BUTTONS CLEAN UP
+    !BUTTON CLEAN UP
 \*------------------------------------*/
     &:hover,
     &:active,
