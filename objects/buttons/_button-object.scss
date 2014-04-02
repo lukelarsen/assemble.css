@@ -97,12 +97,12 @@
                 cursor: not-allowed;
             }
         }
-
-
     }
 
 
-
+    /**
+     * ^Button Colors
+     */
     @each $key, $value in $button-colors{
         &--#{$key} {
             @include print-button-colors($button-colors, $key);

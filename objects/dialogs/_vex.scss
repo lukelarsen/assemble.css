@@ -183,16 +183,10 @@
 }
 
 .vex-overlay {
-    background: black;
-    filter: alpha(opacity=40);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-}
-
-.vex-overlay {
     animation: vex-fadein 0.5s;
     -webkit-backface-visibility: hidden;
     position: fixed;
-    background: rgba(0, 0, 0, 0.4);
+    background: $modal_overlay_background_color;
     top: 0;
     right: 0;
     bottom: 0;

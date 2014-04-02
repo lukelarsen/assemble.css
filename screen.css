@@ -1864,6 +1864,9 @@ textarea {
   /**
    * ^Button Types
    */
+  /**
+   * ^Button Colors
+   */
   /*------------------------------------*\
       !BUTTON CLEAN UP
   \*------------------------------------*/
@@ -2040,12 +2043,220 @@ textarea {
     CONTENTS
 \*------------------------------------*/
 /**
+ *  DESIGN VARIABLES
+        Backgrounds
+        Header
+        Body
+        Footer
+ *  MODIFIER VARIABLES
+        Sizes
+        Animations
+ *  IMPORTS
+ */
+/*------------------------------------*\
+    !DESIGN VARIABLES
+\*------------------------------------*/
+/**
+ * ^Backgrounds
+ */
+/**
+ * ^Header
+ */
+/**
+ * ^Body
+ */
+/**
+ * ^Footer
+ */
+/*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+/**
+ * ^Sizes
+ */
+/**
+ * ^Animations
+ */
+/*------------------------------------*\
+    !IMPORTS
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  MODAL STRUCTURE
+        Modal Header
+        Modal Body
+        Modal Footer
+ *  MODAL WIDTHS
+        Modal Wide
+        Modal Normal
+        Modal Narrow
+ *  MODAL ANIMATIONS
+        Modal Slide Up
+        Modal Slide Right
+        Modal 3D Flip Horizontal
+        Modal 3D Flip Vertical
+        Modal Super Scaled
+ */
+/*------------------------------------*\
+    !MODAL STRUCTURE
+\*------------------------------------*/
+.modal {
+  position: fixed;
+  top: 15%;
+  left: 30%;
+  width: 40%;
+  min-width: 320px;
+  height: auto;
+  z-index: 2000;
+  visibility: hidden;
+  display: none;
+  backface-visibility: hidden;
+}
+@media only screen and (max-width: 480px) {
+  .modal {
+    top: 0%;
+    width: 100%;
+    left: 0%;
+  }
+}
+
+.modal__content {
+  background-color: white;
+}
+
+.modal--show {
+  visibility: visible;
+}
+
+.modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  background: rgba(31, 31, 31, 0.8);
+  display: none;
+  transition: all .3s;
+}
+
+.modal--show ~ .modal-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/**
+ * ^Modal Header
+ */
+.modal__header {
+  background-color: black;
+  padding: 1em 2em;
+  margin-bottom: 1em;
+}
+.modal__header h3 {
+  text-align: center;
+  color: white;
+  margin-bottom: 0;
+}
+
+/**
+ * ^Modal Body
+ */
+.modal__body {
+  padding: 0 2em;
+  overflow-y: scroll;
+}
+
+/**
+ * ^Modal Footer
+ */
+.modal__footer {
+  border-top: solid 1px gray;
+  padding: 1.3em 2em;
+}
+
+/*------------------------------------*\
+    !MODAL WIDTHS
+\*------------------------------------*/
+/**
+ * ^Modal Wide
+ */
+.modal--wide {
+  width: 60%;
+  left: 20%;
+}
+@media only screen and (max-width: 1023px) {
+  .modal--wide {
+    top: 2%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .modal--wide {
+    left: 0%;
+  }
+}
+
+/**
+ * ^Modal Narrow
+ */
+.modal--narrow {
+  width: 30%;
+  left: 35%;
+}
+@media only screen and (max-width: 480px) {
+  .modal--narrow {
+    left: 0%;
+  }
+}
+
+/*------------------------------------*\
+    !MODAL ANIMATIONS
+\*------------------------------------*/
+/**
+ * Credit: http://tympanus.net/codrops/2013/06/25/nifty-modal-window-effects/
+ */
+/**
+ * ^Modal Slide Up
+ */
+.modal--scale-up .modal__content {
+  transform: scale(0.7);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal--show.modal--scale-up .modal__content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/**
+ * ^Modal Slide Right
+ */
+/**
+ * ^Modal 3D Flip Horizontal
+ */
+/**
+ * ^Modal 3D Flip Vertical
+ */
+/**
+ * ^Modal Super Scaled
+ */
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
  *  VARIABLES
         The Box
         Buttons
         Form Inputs
  *  IMPORTS
- *  THEME
+ *  STYLES
  */
 /*------------------------------------*\
     !VARIABLES
@@ -2223,16 +2434,10 @@ textarea {
 }
 
 .vex-overlay {
-  background: black;
-  filter: alpha(opacity=40);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-}
-
-.vex-overlay {
   animation: vex-fadein 0.5s;
   -webkit-backface-visibility: hidden;
   position: fixed;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(31, 31, 31, 0.8);
   top: 0;
   right: 0;
   bottom: 0;
@@ -2290,7 +2495,13 @@ body.vex-open {
 }
 
 /*------------------------------------*\
-    !THEME
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  FADE DOWN THEME
+ */
+/*------------------------------------*\
+    !FADE DOWN THEME
 \*------------------------------------*/
 @keyframes vex-flyin {
   0% {
@@ -2405,7 +2616,6 @@ body.vex-open {
 .vex.vex-theme-default {
   padding-top: 160px;
   padding-bottom: 160px;
-  transform: translateY(-40px);
 }
 
 .vex.vex-theme-default.vex-closing .vex-content {
@@ -2551,209 +2761,5 @@ body.vex-open {
 }
 
 /*------------------------------------*\
-    CONTENTS
+    !STYLES
 \*------------------------------------*/
-/**
- *  DESIGN VARIABLES
-        Backgrounds
-        Header
-        Body
-        Footer
- *  MODIFIER VARIABLES
-        Sizes
-        Animations
- *  IMPORTS
- */
-/*------------------------------------*\
-    !DESIGN VARIABLES
-\*------------------------------------*/
-/**
- * ^Backgrounds
- */
-/**
- * ^Header
- */
-/**
- * ^Body
- */
-/**
- * ^Footer
- */
-/*------------------------------------*\
-    !MODIFIER VARIABLES
-\*------------------------------------*/
-/**
- * ^Sizes
- */
-/**
- * ^Animations
- */
-/*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
-/*------------------------------------*\
-    CONTENTS
-\*------------------------------------*/
-/**
- *  MODAL STRUCTURE
-        Modal Header
-        Modal Body
-        Modal Footer
- *  MODAL WIDTHS
-        Modal Wide
-        Modal Normal
-        Modal Narrow
- *  MODAL ANIMATIONS
-        Modal Slide Up
-        Modal Slide Right
-        Modal 3D Flip Horizontal
-        Modal 3D Flip Vertical
-        Modal Super Scaled
- */
-/*------------------------------------*\
-    !MODAL STRUCTURE
-\*------------------------------------*/
-.modal {
-  position: fixed;
-  top: 15%;
-  left: 30%;
-  width: 40%;
-  min-width: 320px;
-  height: auto;
-  z-index: 2000;
-  visibility: hidden;
-  display: none;
-  backface-visibility: hidden;
-}
-@media only screen and (max-width: 480px) {
-  .modal {
-    top: 0%;
-    width: 100%;
-    left: 0%;
-  }
-}
-
-.modal__content {
-  background-color: white;
-}
-
-.modal--show {
-  visibility: visible;
-}
-
-.modal-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  opacity: 0;
-  background: rgba(31, 31, 31, 0.8);
-  display: none;
-  transition: all .3s;
-}
-
-.modal--show ~ .modal-overlay {
-  opacity: 1;
-  visibility: visible;
-}
-
-/**
- * ^Modal Header
- */
-.modal__header {
-  background-color: black;
-  padding: 1em 2em;
-  margin-bottom: 1em;
-}
-.modal__header h3 {
-  text-align: center;
-  color: white;
-  margin-bottom: 0;
-}
-
-/**
- * ^Modal Body
- */
-.modal__body {
-  padding: 0 2em;
-}
-
-/**
- * ^Modal Footer
- */
-.modal__footer {
-  border-top: solid 1px gray;
-  padding: 1.3em 2em;
-}
-
-/*------------------------------------*\
-    !MODAL WIDTHS
-\*------------------------------------*/
-/**
- * ^Modal Wide
- */
-.modal--wide {
-  width: 60%;
-  left: 20%;
-}
-@media only screen and (max-width: 1023px) {
-  .modal--wide {
-    top: 2%;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .modal--wide {
-    left: 0%;
-  }
-}
-
-/**
- * ^Modal Narrow
- */
-.modal--narrow {
-  width: 30%;
-  left: 35%;
-}
-@media only screen and (max-width: 480px) {
-  .modal--narrow {
-    left: 0%;
-  }
-}
-
-/*------------------------------------*\
-    !MODAL ANIMATIONS
-\*------------------------------------*/
-/**
- * Credit: http://tympanus.net/codrops/2013/06/25/nifty-modal-window-effects/
- */
-/**
- * ^Modal Slide Up
- */
-.modal--scale-up .modal__content {
-  transform: scale(0.7);
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.modal--show.modal--scale-up .modal__content {
-  transform: scale(1);
-  opacity: 1;
-}
-
-/**
- * ^Modal Slide Right
- */
-/**
- * ^Modal 3D Flip Horizontal
- */
-/**
- * ^Modal 3D Flip Vertical
- */
-/**
- * ^Modal Super Scaled
- */
