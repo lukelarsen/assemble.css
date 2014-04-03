@@ -3,7 +3,6 @@
 \*------------------------------------*/
 /**
  * RESPONSIVENESS
- * COLORS
 */
 
 
@@ -17,9 +16,7 @@
 /**
  * These came from CSS Wizardry Grids - http://csswizardry.com/csswizardry-grids/
  *
- * Define your breakpoints. The first value is the prefix that shall be used for
- * your classes (e.g. `.palm--full`), the second value is the media query
- * that the breakpoint fires at.
+ * Define your breakpoints.
  */
 $breakpoints: (
     'palm' '(max-width: 480px)',

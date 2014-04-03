@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  DESIGN VARIABLES
+ *  MODIFIER VARIABLES
+ *  CELL WIDTHS
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !DESIGN VARIABLES
+\*------------------------------------*/
+
+/**
+ * ^Background Color
+ */
+$table-stripe-background-color:     #eee;
+
+
+/**
+ * ^Borders
+ */
+$table-border-color:                #999;
+$table-border-size:                 1px;
+
+/*
+    Todo - Think about grouping these two sections. Ex a scss map with all the border options in it including if it is on or off.
+    @author - lukelarsen
+    @date - 4/2/14
+    @time - 5:16 PM
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+
+/**
+ * ^Borders
+ */
+$table--bordered:                   true;
+$table--outer-bordered:             true;
+
+
+/**
+ * ^Stripes
+ */
+$table--striped:                    true;
+
+
+/**
+ * ^Numerical
+ */
+$table-numerical:                   true;
+
+
+/**
+ * ^Responsive
+ */
+$table--responsive:                 true;
+
+
+
+
+
+/*------------------------------------*\
+    !CELL WIDTHS
+\*------------------------------------*/
+
+$table-cell-widths: (
+    5,
+    10,
+    66,
+    15
+);

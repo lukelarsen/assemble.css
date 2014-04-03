@@ -122,6 +122,8 @@ $lap-end:               $desk-start - 1px;
 \*------------------------------------*/
 
 /**
+ * Credit: Bourbon.io
+ *
  * Order of the includes matters, and it is: normal, bold, italic, bold+italic.
  */
 
@@ -130,7 +132,7 @@ $lap-end:               $desk-start - 1px;
         font-family: $font-family;
         font-weight: $weight;
         font-style: $style;
-        url('#{$file-path}.woff') format('woff'),
+        src: url('#{$file-path}.woff') format('woff');
     }
 }
 

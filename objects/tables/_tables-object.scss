@@ -1,0 +1,140 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  CELL WIDTHS
+ *  BORDERED TABLE
+        Table Bordered
+        Table Outer Bordered
+ *  STRIPED TABLE
+ *  NUMERICAL
+ *  RESPONSIVE TABLE
+*/
+
+
+
+
+
+/*------------------------------------*\
+    !CELL WIDTHS
+\*------------------------------------*/
+
+/**
+ * In the HTML example in _tables.scss we see several `col` elements with
+ * classes whose numbers represent a percentage width for that column. We
+ * leave one column free of a class so that column can soak up the effects
+ * of any accidental breakage in the table. This mixin will generate those
+ * classes for you. If you need to adjust what classes are generated refer
+ * to _tables.scss and modify the $table-cell-widths variable.
+ */
+@include table-width($table-cell-widths);
+
+
+
+
+
+/*------------------------------------*\
+    !BORDERED TABLE
+\*------------------------------------*/
+
+/**
+ * ^Table Bordered
+ */
+@if $table--bordered == true{
+    .table--bordered {
+        th,
+        td {
+            border: $table-border-size solid $table-border-color;
+
+            &:empty {
+                border: none;
+            }
+        }
+    }
+}
+
+
+/**
+ * ^Table Outer Bordered
+ */
+@if $table--outer-bordered == true{
+    .table--outer-bordered {
+        border: $table-border-size solid $table-border-color;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    !STRIPED TABLE
+\*------------------------------------*/
+@if $table--striped == true{
+    .table--striped {
+        tbody tr:nth-of-type(odd) {
+            background-color: $table-stripe-background-color;
+        }
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    !NUMERICAL
+\*------------------------------------*/
+
+@if $table--striped == true{
+    .numerical{
+        text-align: right;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    !RESPONSIVE TABLE
+\*------------------------------------*/
+
+/**
+ * ^Credit: http://codepen.io/geoffyuen/pen/FCBEg
+ */
+
+@if $table--responsive == true {
+    .table--responsive {
+
+        th {
+            display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!
+        }
+
+        td {
+            display: block;
+
+            &:before {
+                content: attr(data-th) ": "; // who knew you could do this? The internet, that's who.
+                font-weight: bold;
+                margin-right: 15px;
+                display: inline-block;
+
+                @include media-query(lap-and-up){
+                    display: none;
+                }
+            }
+        }
+
+        th,
+        td {
+            @include media-query(palm){
+                text-align: left;
+            }
+
+            @include media-query(lap-and-up){
+                display: table-cell;
+            }
+        }
+    }
+}
