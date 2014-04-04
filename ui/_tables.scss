@@ -3,6 +3,8 @@
 \*------------------------------------*/
 /**
  *  USAGE
+        HTML
+        Class Options
  *  IMPORTS
 */
 
@@ -15,6 +17,7 @@
 \*------------------------------------*/
 
 /**
+ * ^HTML
 
    <table class="table  table--bordered  table--striped">
        <colgroup>
@@ -69,6 +72,17 @@
  */
 
 
+/**
+ * ^Class Options
+
+ * Blocks:      .table
+ * Modifiers:   .table--bordered
+                .table--striped
+                .table--responsive
+ */
+
+
+
 
 
 
@@ -78,5 +92,4 @@
 
 @import "../options/table-options";
 @import "../objects/tables/tables-mixins";
-@import "../objects/tables/tables-base";
 @import "../objects/tables/tables-object";

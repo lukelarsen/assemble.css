@@ -1784,13 +1784,43 @@ textarea {
     CONTENTS
 \*------------------------------------*/
 /**
+ *  USAGE
+        HTML
+        Class Options
+ *  IMPORTS
+ */
+/*------------------------------------*\
+    !USAGE
+\*------------------------------------*/
+/**
+ * ^HTML
+
+   <button class="btn  btn--large  btn--primary">Primary Button</a>
+   <a href="#" class="btn  btn--secondary">Secondary Button</a>
+ */
+/**
+ * ^Class Options
+
+ * Blocks:      .btn
+ * Modifiers:   .btn--large
+                .btn--small
+                .btn--block
+                .btn--natural
+                .btn--disabled
+                .btn--{{you define color names}} (see the $button-colors var in _button-options.scss
+ */
+/*------------------------------------*\
+    !IMPORTS
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
  *  DESIGN VARIABLES
  *  MODIFIER VARIABLES
         Button Sizes
         Button Types
         Button Colors
- *  IMPORTS
- *  DEFINE BUTTONS
  */
 /*------------------------------------*\
     !DESIGN VARIABLES
@@ -1807,9 +1837,6 @@ textarea {
 /**
  * ^Button Colors
  */
-/*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
@@ -1894,9 +1921,6 @@ textarea {
   padding: 0;
 }
 
-/*------------------------------------*\
-    !DEFINE BUTTONS
-\*------------------------------------*/
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
@@ -2041,12 +2065,15 @@ textarea {
 \*------------------------------------*/
 /**
  *  USAGE
+        HTML
+        Class Options
  *  IMPORTS
 */
 /*------------------------------------*\
     !USAGE
 \*------------------------------------*/
 /**
+ * ^HTML
 
    <table class="table  table--bordered  table--striped">
        <colgroup>
@@ -2099,6 +2126,14 @@ textarea {
    </table>
 
  */
+/**
+ * ^Class Options
+
+ * Blocks:      .table
+ * Modifiers:   .table--bordered
+                .table--striped
+                .table--responsive
+ */
 /*------------------------------------*\
     !IMPORTS
 \*------------------------------------*/
@@ -2106,10 +2141,16 @@ textarea {
     CONTENTS
 \*------------------------------------*/
 /**
- *  DESIGN VARIABLES
+*  DESIGN VARIABLES
+        Background Color
+        Borders
  *  MODIFIER VARIABLES
+        Borders
+        Stripes
+        Numerical
+        Responsive
  *  CELL WIDTHS
- */
+*/
 /*------------------------------------*\
     !DESIGN VARIABLES
 \*------------------------------------*/
@@ -2118,12 +2159,6 @@ textarea {
  */
 /**
  * ^Borders
- */
-/*
-    Todo - Think about grouping these two sections. Ex a scss map with all the border options in it including if it is on or off.
-    @author - lukelarsen
-    @date - 4/2/14
-    @time - 5:16 PM
  */
 /*------------------------------------*\
     !MODIFIER VARIABLES
@@ -2156,9 +2191,15 @@ textarea {
     CONTENTS
 \*------------------------------------*/
 /**
- * USAGE
- * BASE
- * ALIGNMENT
+ *  BASE
+        Alignment
+ *  CELL WIDTHS
+ *  BORDERED TABLE
+        Table Bordered
+        Table Outer Bordered
+ *  STRIPED TABLE
+ *  NUMERICAL
+ *  RESPONSIVE TABLE
 */
 /*------------------------------------*\
     !BASE
@@ -2179,9 +2220,9 @@ td {
   }
 }
 
-/*------------------------------------*\
-    !ALIGNMENT
-\*------------------------------------*/
+/**
+ * ^Alignment
+ */
 [colspan] {
   text-align: center;
 }
@@ -2198,18 +2239,6 @@ td {
   vertical-align: top;
 }
 
-/*------------------------------------*\
-    CONTENTS
-\*------------------------------------*/
-/**
- *  CELL WIDTHS
- *  BORDERED TABLE
-        Table Bordered
-        Table Outer Bordered
- *  STRIPED TABLE
- *  NUMERICAL
- *  RESPONSIVE TABLE
-*/
 /*------------------------------------*\
     !CELL WIDTHS
 \*------------------------------------*/

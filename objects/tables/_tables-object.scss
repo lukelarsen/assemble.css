@@ -2,6 +2,8 @@
     CONTENTS
 \*------------------------------------*/
 /**
+ *  BASE
+        Alignment
  *  CELL WIDTHS
  *  BORDERED TABLE
         Table Bordered
@@ -10,6 +12,43 @@
  *  NUMERICAL
  *  RESPONSIVE TABLE
 */
+
+
+
+
+
+/*------------------------------------*\
+    !BASE
+\*------------------------------------*/
+
+table{
+    width:100%;
+}
+th,
+td{
+    padding:15px;
+    @media screen and (min-width:480px){
+        padding:7px;
+    }
+    text-align:left;
+}
+
+
+/**
+ * ^Alignment
+ */
+[colspan]{
+    text-align:center;
+}
+[colspan="1"]{
+    text-align:left;
+}
+[rowspan]{
+    vertical-align:middle;
+}
+[rowspan="1"]{
+    vertical-align:top;
+}
 
 
 
