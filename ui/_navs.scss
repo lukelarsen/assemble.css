@@ -2,10 +2,10 @@
     CONTENTS
 \*------------------------------------*/
 /**
- *  DESIGN VARIABLES
- *  MODIFIER VARIABLES
+ *  USAGE
+        HTML
+        Class Options
  *  IMPORTS
- *  NAVS
  */
 
 
@@ -13,43 +13,40 @@
 
 
 /*------------------------------------*\
-    !DESIGN VARIABLES
-\*------------------------------------*/
-
-$pagination-li-padding:             12px;
-$pagination-a-spacing:              12px;
-
-$breadcrumb-a-right:                10px;
-$breadcrumb-a-left:                 13px;
-
-
-
-
-
-/*------------------------------------*\
-    !MODIFIER VARIABLES
+    !USAGE
 \*------------------------------------*/
 
 /**
- * ^Orientation
+ * ^HTML
+
+   <ul class="nav  nav--left">
+       <li><a href="#">About</a></li>
+       <li><a href="#">Contact</a></li>
+       <li><a href="#">Portfolio</a></li>
+       <li><a href="#">Search</a></li>
+   </ul>
  */
-$nav--fit:                          false;
-$nav--stacked:                      false;
-$nav--center:                       false;
-$nav--right:                        false;
-$nav--left:                         true;
-$nav--space-between:                false;
-$nav--space-around:                 false;
+
 
 
 /**
- * ^Type
+ * ^Class Options
+
+ * Blocks:      .nav
+ * Modifiers:   .nav--fit
+                .nav--stacked
+                .nav--center
+                .nav--right
+                .nav--left
+                .nav--space-between
+                .nav--space-around
+                .nav--keywords
+                .nav--pagination
+                .nav--breadcrumb
+                .nav--breadcrumb--path
+                .nav--breadcrumb--custom
  */
-$nav--keywords:                     true;
-$nav--pagination:                   true;
-$nav--breadcrumb:                   true;
-$nav--breadcrumb--path:             true;
-$nav--breadcrumb--custom:           false;
+
 
 
 
@@ -58,6 +55,7 @@ $nav--breadcrumb--custom:           false;
     !IMPORTS
 \*------------------------------------*/
 
+@import "../options/nav-options";
 @import "../objects/navs/nav-object";
 
 
