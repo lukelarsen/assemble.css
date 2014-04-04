@@ -1786,7 +1786,7 @@ textarea {
 /**
  *  USAGE
         HTML
-        Class Options
+        Javascript
  *  IMPORTS
  */
 /*------------------------------------*\
@@ -1795,19 +1795,24 @@ textarea {
 /**
  * ^HTML
 
-   <button class="btn  btn--large  btn--primary">Primary Button</a>
-   <a href="#" class="btn  btn--secondary">Secondary Button</a>
+   <button class="btn  js-alert">Primary Button</a>
  */
 /**
- * ^Class Options
+ * ^Javascript
 
- * Blocks:      .btn
- * Modifiers:   .btn--large
-                .btn--small
-                .btn--block
-                .btn--natural
-                .btn--disabled
-                .btn--{{you define color names}} (see the $button-colors var in _button-options.scss
+    // Set theme for Vex
+    vex.defaultOptions.className = 'vex-theme-default';
+
+   $(document).ready(function() {
+        $(".js-alert").click(function() {
+            vex.dialog.confirm({
+                message: 'Are you sure you want to remove this company?',
+                callback: function(value) {
+
+                }
+            });
+        });
+    });
  */
 /*------------------------------------*\
     !IMPORTS
@@ -2550,15 +2555,45 @@ td {
     CONTENTS
 \*------------------------------------*/
 /**
- *  VARIABLES
+ *  USAGE
+        HTML
+        Class Options
+ *  IMPORTS
+ */
+/*------------------------------------*\
+    !USAGE
+\*------------------------------------*/
+/**
+ * ^HTML
+
+   <button class="btn  btn--large  btn--primary">Primary Button</a>
+   <a href="#" class="btn  btn--secondary">Secondary Button</a>
+ */
+/**
+ * ^Class Options
+
+ * Blocks:      .btn
+ * Modifiers:   .btn--large
+                .btn--small
+                .btn--block
+                .btn--natural
+                .btn--disabled
+                .btn--{{you define color names}} (see the $button-colors var in _button-options.scss
+ */
+/*------------------------------------*\
+    !IMPORTS
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  DESIGN VARIABLES
         The Box
         Buttons
         Form Inputs
- *  IMPORTS
- *  STYLES
  */
 /*------------------------------------*\
-    !VARIABLES
+    !DESIGN VARIABLES
 \*------------------------------------*/
 /**
  * ^The Box
@@ -2569,9 +2604,6 @@ td {
 /**
  * ^Form Inputs
  */
-/*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
@@ -3058,7 +3090,3 @@ body.vex-open {
   top: -1.1em;
   bottom: auto;
 }
-
-/*------------------------------------*\
-    !STYLES
-\*------------------------------------*/

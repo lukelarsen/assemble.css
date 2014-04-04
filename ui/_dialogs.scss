@@ -2,12 +2,10 @@
     CONTENTS
 \*------------------------------------*/
 /**
- *  VARIABLES
-        The Box
-        Buttons
-        Form Inputs
+ *  USAGE
+        HTML
+        Class Options
  *  IMPORTS
- *  STYLES
  */
 
 
@@ -15,39 +13,30 @@
 
 
 /*------------------------------------*\
-    !VARIABLES
+    !USAGE
 \*------------------------------------*/
 
 /**
- * ^The Box
+ * ^HTML
+
+   <button class="btn  btn--large  btn--primary">Primary Button</a>
+   <a href="#" class="btn  btn--secondary">Secondary Button</a>
  */
-$vex-border-radius: 5px;
-$vex-background: #f0f0f0;
-$vex-color: #444444;
-$vex-width: 450px;
-$vex-font-size: 1.1em;
+
 
 
 /**
- * ^Buttons
- */
-$vex-btn-border-radius: 3px;
-$vex-btn-text-transform: uppercase;
-$vex-btn-font-size: 0.8em;
-$vex-btn-padding: 0.75em 2em;
-$vex-btn-primary-background: #3288e6;
-$vex-btn-primary-color: white;
-$vex-btn-secondary-background: #e0e0e0;
-$vex-btn-secondary-color: #777777;
+ * ^Class Options
 
-
-/**
- * ^Form Inputs
+ * Blocks:      .btn
+ * Modifiers:   .btn--large
+                .btn--small
+                .btn--block
+                .btn--natural
+                .btn--disabled
+                .btn--{{you define color names}} (see the $button-colors var in _button-options.scss
  */
-$vex-input-border-radius: 3px;
-$vex-input-background: white;
-$vex-input-padding: 0.25em 0.67em;
-$vex-input-border: 0px;
+
 
 
 
@@ -56,14 +45,6 @@ $vex-input-border: 0px;
     !IMPORTS
 \*------------------------------------*/
 
+@import "../options/dialog-options";
 @import "../objects/dialogs/vex";
 @import "../objects/dialogs/vex-fade-down-theme";
-
-
-
-
-
-/*------------------------------------*\
-    !STYLES
-\*------------------------------------*/
-
