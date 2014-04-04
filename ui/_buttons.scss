@@ -28,7 +28,7 @@
 /**
  * ^Class Options
 
- * Blocks:      .btn
+ * Blocks:      .modal
  * Modifiers:   .btn--large
                 .btn--small
                 .btn--block
@@ -44,6 +44,6 @@
     !IMPORTS
 \*------------------------------------*/
 
-@import "../options/_button-options";
+@import "../options/button-options";
 @import "../objects/buttons/button-mixins";
 @import "../objects/buttons/button-object";

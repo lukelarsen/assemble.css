@@ -2,14 +2,9 @@
     CONTENTS
 \*------------------------------------*/
 /**
- *  DESIGN VARIABLES
-        Backgrounds
-        Header
-        Body
-        Footer
- *  MODIFIER VARIABLES
-        Sizes
-        Animations
+ *  USAGE
+        HTML
+        Class Options
  *  IMPORTS
  */
 
@@ -18,60 +13,43 @@
 
 
 /*------------------------------------*\
-    !DESIGN VARIABLES
+    !USAGE
 \*------------------------------------*/
 
 /**
- * ^Backgrounds
+ * ^HTML
+
+   <div class="modal  modal--narrow  modal--scale-up" id="js-modal-edit">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3>Edit</h3>
+            </div>
+            <div class="modal__body">
+                Modal Content
+            </div>
+            <div class="modal__footer">
+                <button class="modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay"></div>
  */
-$modal_background_color:            white;
-$modal_overlay_background_color:    rgba(31,31,31,0.8);
+
 
 
 /**
- * ^Header
+ * ^Class Options
+
+ * Blocks:      .modal
+   Modifiers:   .modal--wide
+                .modal--narrow
+                .modal--scale-up
+                .modal--slide-right
+                .modal--3d-flip-vertical
+                .modal--3d-flip-horizontal
+                .modal--super-scaled
  */
-$modal_header_background_color:     black;
-$modal_header_text_color:           white;
-$modal_header_padding:              1em 2em;
-$modal_header_margin_bottom:        1em;
 
-
-/**
- * ^Body
- */
-$modal_body_padding:                0 2em;
-
-
-/**
- * ^Footer
- */
-$modal_footer_border_top:           solid 1px gray;
-$modal_footer_padding:              1.3em 2em;
-
-
-
-
-
-/*------------------------------------*\
-    !MODIFIER VARIABLES
-\*------------------------------------*/
-
-/**
- * ^Sizes
- */
-$modal--wide:                       true;
-$modal--narrow:                     true;
-
-
-/**
- * ^Animations
- */
-$modal--scale-up:                   true;
-$modal--slide-right:                false;
-$modal--3d-flip-horizontal:         false;
-$modal--3d-flip-vertical:           false;
-$modal--super-scaled:               false;
 
 
 
@@ -81,4 +59,5 @@ $modal--super-scaled:               false;
     !IMPORTS
 \*------------------------------------*/
 
+@import "../options/modal-options";
 @import "../objects/modals/modal-object";

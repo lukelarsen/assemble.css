@@ -1801,7 +1801,7 @@ textarea {
 /**
  * ^Class Options
 
- * Blocks:      .btn
+ * Blocks:      .modal
  * Modifiers:   .btn--large
                 .btn--small
                 .btn--block
@@ -2342,6 +2342,51 @@ td {
     CONTENTS
 \*------------------------------------*/
 /**
+ *  USAGE
+        HTML
+        Class Options
+ *  IMPORTS
+ */
+/*------------------------------------*\
+    !USAGE
+\*------------------------------------*/
+/**
+ * ^HTML
+
+   <div class="modal  modal--narrow  modal--scale-up" id="js-modal-edit">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3>Edit</h3>
+            </div>
+            <div class="modal__body">
+                Modal Content
+            </div>
+            <div class="modal__footer">
+                <button class="modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay"></div>
+ */
+/**
+ * ^Class Options
+
+ * Blocks:      .modal
+   Modifiers:   .modal--wide
+                .modal--narrow
+                .modal--scale-up
+                .modal--slide-right
+                .modal--3d-flip-vertical
+                .modal--3d-flip-horizontal
+                .modal--super-scaled
+ */
+/*------------------------------------*\
+    !IMPORTS
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
  *  DESIGN VARIABLES
         Backgrounds
         Header
@@ -2350,7 +2395,6 @@ td {
  *  MODIFIER VARIABLES
         Sizes
         Animations
- *  IMPORTS
  */
 /*------------------------------------*\
     !DESIGN VARIABLES
@@ -2376,9 +2420,6 @@ td {
 /**
  * ^Animations
  */
-/*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
