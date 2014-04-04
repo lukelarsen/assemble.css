@@ -2,13 +2,10 @@
     CONTENTS
 \*------------------------------------*/
 /**
- *  DESIGN VARIABLES
-        Tool Tip Right
-        Tool Tip Bottom
- *  MODIFIER VARIABLES
+ *  USAGE
+        HTML
+        Class Options
  *  IMPORTS
- *  TOOL TIP CONTAINER
- *  TOOL TIP CLOSE BUTTON
  */
 
 
@@ -16,45 +13,30 @@
 
 
 /*------------------------------------*\
-    !DESIGN VARIABLES
+    !USAGE
 \*------------------------------------*/
 
-$tool-tip-bg-color:                  green;
+/**
+ * ^HTML
+
+   <div class="tool-tip  tool-tip--bottom">
+       ?
+       <div class="tool-tip__container">
+           This is a tool tip that helps provide some context about what is going on here.
+           <span class="tool-tip__close">X</span>
+       </div>
+   </div>
+ */
+
+
 
 /**
- * ^Tool Tip Right
+ * ^Class Options
+
+ * Blocks:      .tool-tip
+ * Modifiers:   .tool-tip--right
+                .tool-tip--bottom
  */
-// Will animate from the right slightly leftwards;
-$tool-tip--right-start:              35px;
-$tool-tip--right-end:                25px;
-$tool-tip--right-top:               -7px;
-
-// Position under portable media query
-$tool-tip--right-top--portable:      48px;
-$tool-tip--right-left--portable:    -191px;
-
-
-/**
- * ^Tool Tip Bottom
- */
-// Will animate from the bottom slightly upwards;
-$tool-tip--bottom-start:            60px;
-$tool-tip--bottom-end:              55px;
-$tool-tip--bottom-left:            -179px;
-
-// Position under portable media query
-$tool-tip--bottom-left--portable:   $tool-tip--right-left--portable;
-
-
-
-
-
-/*------------------------------------*\
-    !MODIFIER VARIABLES
-\*------------------------------------*/
-
-$tool-tip--right:                   true;
-$tool-tip--bottom:                  true;
 
 
 
@@ -64,33 +46,5 @@ $tool-tip--bottom:                  true;
     !IMPORTS
 \*------------------------------------*/
 
+@import "../options/tool-tip-options";
 @import "../objects/tool-tips/tool-tip-object";
-
-
-
-
-
-/*------------------------------------*\
-    !TOOL TIP CONTAINER
-\*------------------------------------*/
-
-.tool-tip__container{
-    // Your styles go here
-    background-color: $tool-tip-bg-color;
-    color: white;
-}
-
-
-
-
-
-/*------------------------------------*\
-    !TOOL TIP CLOSE BUTTON
-\*------------------------------------*/
-
-.tool-tip__close{
-    // Your styles here
-    background-color: black;
-    color: white;
-    padding: 3px 10px;
-}

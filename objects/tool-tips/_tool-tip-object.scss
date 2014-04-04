@@ -31,6 +31,8 @@
         text-transform: none;
         opacity: 0;
         cursor: default;
+        background-color: $tool-tip-bg-color;
+        color: $tool-tip-text-color;
     }
 
     .tool-tip__close{
@@ -38,6 +40,9 @@
         right: 0;
         bottom: 0;
         cursor: pointer;
+        background-color: $tool-tip-close-background;
+        color: $tool-tip-close-color;
+        padding: $tool-tip-close-padding;
     }
 }
 
