@@ -2,10 +2,131 @@
     CONTENTS
 \*------------------------------------*/
 /**
+ *  USAGE
+        HTML
+        Class Options
+        Example
  *  IMPORTS
  *  FORMS
- *  FORM ERRORS
- *  FORM HELP
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !USAGE
+\*------------------------------------*/
+
+/**
+ * ^HTML
+
+   1. Keep the 'form-' but 'quarters' can be renamed to be whatever you want.
+
+   <form>
+       <ul class="form-quarters">
+           <li>
+               <label>Name</label>
+               <input type="text">
+           </li>
+           <li class="form-error">
+               <span class="label">Title</span>
+               <ul class="check-list">
+                   <li>
+                       <input type="checkbox"> <label>Mr.</label>
+                   </li>
+                   <li>
+                       <input type="checkbox"> <label>Mrs.</label>
+                   </li>
+                   <li>
+                       <input type="checkbox"> <label>Miss.</label>
+                   </li>
+               </ul>
+               <span class="form-error__message">Error message</span>
+           </li>
+           <li class="form-item-half">
+               <label>Email</label>
+               <input type="text">
+           </li>
+           <li>
+               <span class="label">Gender</span>
+               <ul class="check-list--inline">
+                   <li>
+                       <input type="radio"> <label>Male</label>
+                   </li>
+                   <li>
+                       <input type="radio"> <label>Female</label>
+                   </li>
+                   <li>
+                       <input type="radio"> <label>Female</label>
+                   </li>
+               </ul>
+           </li>
+       </ul>
+   </form>
+ */
+
+
+/**
+ * ^Class Options
+
+ * Apply on .form-*
+ * Block:       %form
+   Modifiers:   %form--fit
+                %form--full
+                %form--halves
+                %form--thirds
+                %form--quarters
+                %form--fifths
+
+                (You can replace 'palm' with: lap, portable, desk, or wide.)
+                %form--palm-full
+                %form--palm-halves
+                %form--palm-quarters
+                %form--palm--fifths
+
+                %form-gutters-medium
+                %form-gutters-large
+                %form-gutters-xlarge
+
+                (You can replace 'palm' with: lap, portable, desk, or wide.)
+                %form-gutters--palm-small
+                %form-gutters--palm-medium
+                %form-gutters--palm-large
+                %form-gutters--palm--xlarge
+
+
+ * Make your own class as needed and apply to li
+   Elements
+   Modifiers:   %form__item--full
+                %form__item--half
+                %form__item--third
+                %form__item--quarter
+                %form__item--fifth
+
+                (You can replace 'palm' with: lap, portable, desk, or wide.)
+                %form__item--palm-full
+                %form__item--lap-full
+                %form__item--portable-full
+                %form__item--desk-full
+                %form__item--wide-full
+ */
+
+
+/**
+ * ^Example
+
+   .form-quarters{
+        @extend %form;
+        @extend %form--quarters;
+        @extend %form--palm-full;
+        @extend %form-gutters-xlarge;
+    }
+
+   .form-item-half{
+        @extend %form__item--half;
+   }
+
  */
 
 
@@ -16,6 +137,7 @@
     !IMPORTS
 \*------------------------------------*/
 
+@import "../options/form-options";
 @import "../objects/forms/forms-extends";
 @import "../objects/forms/forms-mixins";
 @import "../objects/forms/forms-base";
@@ -28,17 +150,7 @@
     !FORMS
 \*------------------------------------*/
 
-/* Add classes here to extend the different columns your
- * project will need. The classes need to start with .form-
- * For example .form-three-cols
- * You can then optionally include one of these:
- * %form--fit
- * %form--full
- * %form--halves
- * %form--thirds
- * %form--quarters
- * %form--fifths
- */
+// START YOUR FORMS HERE
 
 .form-thirds{
     @extend %form;
@@ -64,21 +176,3 @@
 
 
 
-/*------------------------------------*\
-    !FORM ERRORS
-\*------------------------------------*/
-
-.form-error{
-    > label,
-    > .label{
-        color: red;
-    }
-
-    input[type="text"] {
-        border: solid red 1px;
-    }
-}
-
-.form-error__message{
-    color: red;
-}

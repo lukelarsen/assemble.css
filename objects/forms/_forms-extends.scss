@@ -21,15 +21,7 @@
     @extend %grid;
 
     > li{
-
-        /*
-            Todo - The margin-bottom value can become dynamic or a variable
-            @author - lukelarsen
-            @date - 3/13/14
-            @time - 7:21 AM
-         */
-
-        margin-bottom: 15px;
+        margin-bottom: $form-push-bottom;
         padding-left: 1em;
     }
 }

@@ -676,10 +676,111 @@ table {
     CONTENTS
 \*------------------------------------*/
 /**
- *  IMPORTS
  *  USAGE
+        HTML
+        Class Options
+        Example
+ *  IMPORTS
  *  GRIDS
 */
+/*------------------------------------*\
+    !USAGE
+\*------------------------------------*/
+/**
+ * ^HTML
+
+   1. Keep the 'g-' but 'main' can be renamed to be whatever you want.
+   2. Keep the 'gc-' but 'content' can be renamed to be whatever you want.
+   3. Keep the 'gc-' but 'sidebar' can be renamed to be whatever you want.
+
+   <div class="g-main"> <!-- 1. -->
+       <div class="gc-content"> <!-- 2. -->
+           <div class="block">
+               <h2>Content</h2>
+               <p>Content here</p>
+           </div>
+       </div>
+       <div class="gc-sidebar"> <!-- 3. -->
+           <div class="block">
+               <h4>Sidebar Content</h4>
+               <p>Sidebar content would go here</p>
+           </div>
+       </div>
+   </div>
+ */
+/**
+ * ^Class Options
+
+ * Apply on .g-*
+ * Block:      %grid
+   Modifiers:   %grid--flex-cells (This will make cells the same height.)
+
+                %grid--fit
+                %grid--full
+                %grid--halves
+                %grid--thirds
+                %grid--quarters
+                %grid--fifths
+
+                (You can replace 'palm' with: lap, portable, desk, or wide.)
+                %grid--palm-full
+                %grid--palm-halves
+                %grid--palm-thirds
+                %grid--palm-quarters
+                %grid--palm-fifths
+
+                %gutters-small
+                %gutters-medium
+                %gutters-large
+                %gutters-xlarge
+
+                (You can replace 'palm' with: lap, portable, desk, or wide.)
+                %gutters--palm-small
+                %gutters--palm-medium
+                %gutters--palm-large
+                %gutters--palm--xlarge
+
+                %grid--top
+                %grid--bottom
+                %grid--center
+
+
+ * Apply on .gc-*
+ * Element:     %grid__item
+   Modifiers:   %grid__item--full
+                %grid__item--half
+                %grid__item--third
+                %grid__item--quarter
+                %grid__item--fifth
+
+                (You can replace 'palm' with: lap, portable, desk, or wide.)
+                %grid__item--palm-full
+                %grid__item--lap-full
+                %grid__item--portable-full
+                %grid__item--desk-full
+                %grid__item--wide-full
+
+                %grid__item--top
+                %grid__item--bottom
+                %grid__item--center
+ */
+/**
+ * ^Example
+
+   .g-main{
+       @extend %grid;
+       @extend %grid--flex-cells;
+       @extend %grid--halves;
+       @extend %grid--palm-full;
+       @extend %gutters-large;
+   }
+
+   .gc-content{
+       @extend %grid__item;
+       @extend %grid__item--palm-full;
+    }
+
+ */
 /*------------------------------------*\
     !IMPORTS
 \*------------------------------------*/
@@ -1005,85 +1106,6 @@ table {
 /**
  * Generate our fixed width extends (or classes)
 _*/
-/*------------------------------------*\
-    !USAGE
-\*------------------------------------*/
-/**
- * ^HTML
-
-   1. Keep the 'g-' but 'main' can be renamed to be whatever you want.
-   2. Keep the 'gc-' but 'content' can be renamed to be whatever you want.
-   3. Keep the 'gc-' but 'sidebar' can be renamed to be whatever you want.
-
-   <div class="g-main"> <!-- 1. -->
-       <div class="gc-content"> <!-- 2. -->
-           <div class="block">
-               <h2>Content</h2>
-               <p>Content here</p>
-           </div>
-       </div>
-       <div class="gc-sidebar"> <!-- 3. -->
-           <div class="block">
-               <h4>Sidebar Content</h4>
-               <p>Sidebar content would go here</p>
-           </div>
-       </div>
-   </div>
- */
-/**
- * ^Class Options
-
- * Apply on .g-*
- * Blocks:      %grid
-   Modifiers:   %grid--flex-cells (this will for cells to be the same height)
-
-                %grid--fit
-                %grid--full
-                %grid--halves
-                %grid--quarters
-                %grid--fifths
-
-                (You can replace 'palm' with: lap, portable, desk, or wide)
-                %grid--palm-full
-                %grid--palm-halves
-                %grid--palm-quarters
-                %grid--palm--fifths
-
-                %gutters-small
-                %gutters-medium
-                %gutters-large
-                %gutters-xlarge
-
-                (You can replace 'palm' with: lap, portable, desk, or wide)
-                %gutters--palm-small
-                %gutters--palm-medium
-                %gutters--palm-large
-                %gutters--palm--xlarge
-
-                %grid--top
-                %grid--bottom
-                %grid--center
-
-
- * Apply on .gc-*
- * Element:     %grid__item
-   Modifiers:   %grid__item--full
-                %grid__item--half
-                %grid__item--third
-                %grid__item--quarter
-                %grid__item--fifth
-
-                (You can replace 'palm' with: lap, portable, desk, or wide)
-                %grid__item--palm-full
-                %grid__item--lap-full
-                %grid__item--portable-full
-                %grid__item--desk-full
-                %grid__item--wide-full
-
-                %grid__item--top
-                %grid__item--bottom
-                %grid__item--center
- */
 /*------------------------------------*\
     !GRIDS
 \*------------------------------------*/
@@ -1565,13 +1587,133 @@ hr {
     CONTENTS
 \*------------------------------------*/
 /**
+ *  USAGE
+        HTML
+        Class Options
+        Example
  *  IMPORTS
  *  FORMS
- *  FORM ERRORS
- *  FORM HELP
+ */
+/*------------------------------------*\
+    !USAGE
+\*------------------------------------*/
+/**
+ * ^HTML
+
+   1. Keep the 'form-' but 'quarters' can be renamed to be whatever you want.
+
+   <form>
+       <ul class="form-quarters">
+           <li>
+               <label>Name</label>
+               <input type="text">
+           </li>
+           <li class="form-error">
+               <span class="label">Title</span>
+               <ul class="check-list">
+                   <li>
+                       <input type="checkbox"> <label>Mr.</label>
+                   </li>
+                   <li>
+                       <input type="checkbox"> <label>Mrs.</label>
+                   </li>
+                   <li>
+                       <input type="checkbox"> <label>Miss.</label>
+                   </li>
+               </ul>
+               <span class="form-error__message">Error message</span>
+           </li>
+           <li class="form-item-half">
+               <label>Email</label>
+               <input type="text">
+           </li>
+           <li>
+               <span class="label">Gender</span>
+               <ul class="check-list--inline">
+                   <li>
+                       <input type="radio"> <label>Male</label>
+                   </li>
+                   <li>
+                       <input type="radio"> <label>Female</label>
+                   </li>
+                   <li>
+                       <input type="radio"> <label>Female</label>
+                   </li>
+               </ul>
+           </li>
+       </ul>
+   </form>
+ */
+/**
+ * ^Class Options
+
+ * Apply on .form-*
+ * Block:       %form
+   Modifiers:   %form--fit
+                %form--full
+                %form--halves
+                %form--thirds
+                %form--quarters
+                %form--fifths
+
+                (You can replace 'palm' with: lap, portable, desk, or wide.)
+                %form--palm-full
+                %form--palm-halves
+                %form--palm-quarters
+                %form--palm--fifths
+
+                %form-gutters-medium
+                %form-gutters-large
+                %form-gutters-xlarge
+
+                (You can replace 'palm' with: lap, portable, desk, or wide.)
+                %form-gutters--palm-small
+                %form-gutters--palm-medium
+                %form-gutters--palm-large
+                %form-gutters--palm--xlarge
+
+
+ * Make your own class as needed and apply to li
+   Elements
+   Modifiers:   %form__item--full
+                %form__item--half
+                %form__item--third
+                %form__item--quarter
+                %form__item--fifth
+
+                (You can replace 'palm' with: lap, portable, desk, or wide.)
+                %form__item--palm-full
+                %form__item--lap-full
+                %form__item--portable-full
+                %form__item--desk-full
+                %form__item--wide-full
+ */
+/**
+ * ^Example
+
+   .form-quarters{
+        @extend %form;
+        @extend %form--quarters;
+        @extend %form--palm-full;
+        @extend %form-gutters-xlarge;
+    }
+
+   .form-item-half{
+        @extend %form__item--half;
+   }
+
  */
 /*------------------------------------*\
     !IMPORTS
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  VARIABLES
+ */
+/*------------------------------------*\
+    !VARIABLES
 \*------------------------------------*/
 /*------------------------------------*\
     CONTENTS
@@ -1589,13 +1731,7 @@ hr {
   margin-left: -1em;
 }
 .form-thirds > li, .form-quarters > li {
-  /*
-      Todo - The margin-bottom value can become dynamic or a variable
-      @author - lukelarsen
-      @date - 3/13/14
-      @time - 7:21 AM
-   */
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding-left: 1em;
 }
 
@@ -1849,6 +1985,7 @@ hr {
  *  GENERAL
  *  CHECKBOXES & RADIOS
  *  TEXTAREA
+ *  FORM ERRORS
 */
 /*------------------------------------*\
     !GENERAL
@@ -1884,20 +2021,6 @@ textarea {
   height: 100px;
 }
 
-/*------------------------------------*\ 
-    !FORMS
-\*------------------------------------*/
-/* Add classes here to extend the different columns your
- * project will need. The classes need to start with .form-
- * For example .form-three-cols
- * You can then optionally include one of these:
- * %form--fit
- * %form--full
- * %form--halves
- * %form--thirds
- * %form--quarters
- * %form--fifths
- */
 /*------------------------------------*\
     !FORM ERRORS
 \*------------------------------------*/
@@ -1913,6 +2036,9 @@ textarea {
   color: red;
 }
 
+/*------------------------------------*\ 
+    !FORMS
+\*------------------------------------*/
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/

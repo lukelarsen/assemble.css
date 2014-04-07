@@ -5,6 +5,7 @@
  *  GENERAL
  *  CHECKBOXES & RADIOS
  *  TEXTAREA
+ *  FORM ERRORS
 */
 
 
@@ -61,4 +62,27 @@
 
 textarea{
     height: 100px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    !FORM ERRORS
+\*------------------------------------*/
+
+.form-error{
+    > label,
+    > .label{
+        color: $form-label-error-color;
+    }
+
+    input[type="text"] {
+        border: $form-error-border-type $form-error-border-color $form-error-border-size;
+    }
+}
+
+.form-error__message{
+    color: $form-error-message;
 }
