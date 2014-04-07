@@ -2,28 +2,10 @@
     CONTENTS
 \*------------------------------------*/
 /**
- *  VARIABLES
  *  IMPORTS
+ *  USAGE
  *  GRIDS
 */
-
-
-
-
-
-/*------------------------------------*\
-    !VARIABLES
-\*------------------------------------*/
-
-/**
- * Set the widths you need in your layout here.
- * These are px values.
- */
-
-$grid-fixed-widths: (
-    '200',
-    '400'
-);
 
 
 
@@ -33,8 +15,97 @@ $grid-fixed-widths: (
     !IMPORTS
 \*------------------------------------*/
 
+@import "../options/grid-options";
 @import "../objects/grids/grids-extends";
 @import "../objects/grids/grids-mixins";
+
+
+
+
+
+/*------------------------------------*\
+    !USAGE
+\*------------------------------------*/
+
+/**
+ * ^HTML
+
+   1. Keep the 'g-' but 'main' can be renamed to be whatever you want.
+   2. Keep the 'gc-' but 'content' can be renamed to be whatever you want.
+   3. Keep the 'gc-' but 'sidebar' can be renamed to be whatever you want.
+
+   <div class="g-main"> <!-- 1. -->
+       <div class="gc-content"> <!-- 2. -->
+           <div class="block">
+               <h2>Content</h2>
+               <p>Content here</p>
+           </div>
+       </div>
+       <div class="gc-sidebar"> <!-- 3. -->
+           <div class="block">
+               <h4>Sidebar Content</h4>
+               <p>Sidebar content would go here</p>
+           </div>
+       </div>
+   </div>
+ */
+
+
+/**
+ * ^Class Options
+
+ * Apply on .g-*
+ * Blocks:      %grid
+   Modifiers:   %grid--flex-cells (this will for cells to be the same height)
+
+                %grid--fit
+                %grid--full
+                %grid--halves
+                %grid--quarters
+                %grid--fifths
+
+                (You can replace 'palm' with: lap, portable, desk, or wide)
+                %grid--palm-full
+                %grid--palm-halves
+                %grid--palm-quarters
+                %grid--palm--fifths
+
+                %gutters-small
+                %gutters-medium
+                %gutters-large
+                %gutters-xlarge
+
+                (You can replace 'palm' with: lap, portable, desk, or wide)
+                %gutters--palm-small
+                %gutters--palm-medium
+                %gutters--palm-large
+                %gutters--palm--xlarge
+
+                %grid--top
+                %grid--bottom
+                %grid--center
+
+
+ * Apply on .gc-*
+ * Element:     %grid__item
+   Modifiers:   %grid__item--full
+                %grid__item--half
+                %grid__item--third
+                %grid__item--quarter
+                %grid__item--fifth
+
+                (You can replace 'palm' with: lap, portable, desk, or wide)
+                %grid__item--palm-full
+                %grid__item--lap-full
+                %grid__item--portable-full
+                %grid__item--desk-full
+                %grid__item--wide-full
+
+                %grid__item--top
+                %grid__item--bottom
+                %grid__item--center
+ */
+
 
 
 
