@@ -21,7 +21,7 @@
     @extend %grid;
 
     > li{
-        margin-bottom: $form-push-bottom;
+        margin-bottom: $form-item-push-bottom;
         padding-left: 1em;
     }
 }

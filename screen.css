@@ -1710,11 +1710,32 @@ hr {
     CONTENTS
 \*------------------------------------*/
 /**
- *  VARIABLES
+ *  DESIGN VARIABLES
+        Push Bottom
+        Form Border Styles
+        Error Styles
+        Sizing
+        Webkit Appearance
+        Errors
  */
 /*------------------------------------*\
-    !VARIABLES
+    !DESIGN VARIABLES
 \*------------------------------------*/
+/**
+ * ^Push Bottom
+ */
+/**
+ * ^Form Border Styles
+ */
+/**
+ * ^Sizing
+ */
+/**
+ * ^Webkit Appearance
+ */
+/**
+ * ^Errors
+ */
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
@@ -1990,13 +2011,68 @@ hr {
 /*------------------------------------*\
     !GENERAL
 \*------------------------------------*/
-[class^='form-'] > li > input[type="text"],
-[class^='form-'] > li > input[type="number"],
-[class^='form-'] > li > input[type="date"],
+[class^='form-'] > li > input,
 [class^='form-'] > li > textarea,
 [class^='form-'] > li > select {
   width: 100%;
   display: block;
+}
+
+input,
+select,
+textarea {
+  border: solid 1px gray;
+  padding: 4px 8px;
+  outline: none;
+  height: 35px;
+  border-radius: 0px;
+}
+
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+textarea {
+  cursor: text;
+}
+
+input[type=color],
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select,
+textarea {
+  -webkit-appearance: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  select {
+    background-image: url("images/select-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 1.67em;
+  }
+}
+input[type='file'] {
+  padding-top: 6px;
+}
+
+.spoken-form input,
+.spoken-form select {
+  padding: 3px 4px;
+  height: 25px;
 }
 
 /*------------------------------------*\
@@ -2014,11 +2090,16 @@ hr {
   margin-right: 10px;
 }
 
+input[type='checkbox'],
+input[type='radio'] {
+  height: auto;
+}
+
 /*------------------------------------*\
     !TEXTAREA
 \*------------------------------------*/
 textarea {
-  height: 100px;
+  height: 150px;
 }
 
 /*------------------------------------*\

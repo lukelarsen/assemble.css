@@ -17,16 +17,73 @@
 \*------------------------------------*/
 
 [class^='form-']{
-//    > li > label,
-//    > li > .label,
-    > li > input[type="text"],
-    > li > input[type="number"],
-    > li > input[type="date"],
+    > li > input,
     > li > textarea,
     > li > select{
         width: 100%;
         display: block;
     }
+}
+
+input,
+select,
+textarea{
+    border: $form-item-border-style $form-item-border-size $form-item-border-color;
+    padding: $form-item-padding;
+    outline: none;
+    height: $form-item-height;
+    border-radius: $form-item-border-radius;
+
+}
+
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+textarea{
+    cursor: text;
+}
+
+@if $form-webkit-appearance == false {
+    input[type=color],
+    input[type=date],
+    input[type=datetime-local],
+    input[type=datetime],
+    input[type=email],
+    input[type=month],
+    input[type=number],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    input[type=time],
+    input[type=url],
+    input[type=week],
+    select,
+    textarea {
+        -webkit-appearance: none;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 0) {
+        select {
+            background-image: url('images/select-arrow.svg');
+            background-repeat: no-repeat;
+            background-position: right center;
+            padding-right: 1.67em;
+        }
+    }
+}
+
+input[type='file']{
+    padding-top: $form-item-file-padding;
+}
+
+.spoken-form input,
+.spoken-form select{
+    padding: $form-spoken-padding;
+    height: $form-spoken-height;
 }
 
 
@@ -53,6 +110,10 @@
     }
 }
 
+input[type='checkbox'],
+input[type='radio']{
+    height: auto;
+}
 
 
 
@@ -61,7 +122,7 @@
 \*------------------------------------*/
 
 textarea{
-    height: 100px;
+    height: $form-textarea-height;
 }
 
 
