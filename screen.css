@@ -40,7 +40,7 @@
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.check-list--inline:after {
+.check-list--inline:after, .btn-group:after {
   content: "";
   display: table;
   clear: both;
@@ -1223,8 +1223,7 @@ _*/
   flex: 0 1 auto;
 }
 .nav > li > a {
-  display: flex;
-  align-items: flex-start;
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -1234,15 +1233,31 @@ _*/
 /**
  * ^Nav Fit
  */
+.nav--fit > li {
+  flex: 1 1 auto;
+}
+
 /**
  * ^Nav Stacked
  */
+.nav--stacked {
+  flex-direction: column;
+}
+
 /**
  * ^Nav Center
  */
+.nav--center {
+  justify-content: center;
+}
+
 /**
  * ^Nav Right
  */
+.nav--right {
+  justify-content: flex-end;
+}
+
 /**
  * ^Nav Left
  */
@@ -1253,9 +1268,17 @@ _*/
 /**
  * ^Nav Space Between
  */
+.nav--space-between {
+  justify-content: space-between;
+}
+
 /**
  * ^Nav Space Around
  */
+.nav--space-around {
+  justify-content: space-around;
+}
+
 /*------------------------------------*\
     !NAV TYPES
 \*------------------------------------*/
@@ -1386,7 +1409,6 @@ _*/
     !NAVS
 \*------------------------------------*/
 .nav--main > li > a {
-  margin: 0px 7px;
   background-color: red;
   padding: 12px;
 }
@@ -2224,6 +2246,7 @@ input[type='radio'] {
         Button Types
         Button Colors
  *  BUTTON CLEAN UP
+ *  BUTTON GROUP
  */
 /*------------------------------------*\
     !BUTTON BASE
@@ -2287,6 +2310,19 @@ input[type='radio'] {
 .btn::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+/*------------------------------------*\
+    !BUTTON GROUP
+\*------------------------------------*/
+.btn-group {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.btn-group > * {
+  float: left;
 }
 
 /*------------------------------------*\
@@ -3513,4 +3549,35 @@ body.vex-open {
   border-top-color: #bbbbbb;
   top: -1.1em;
   bottom: auto;
+}
+
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  BASE
+ */
+/*------------------------------------*\
+    !BASE
+\*------------------------------------*/
+@font-face {
+  font-family: "Icons";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/Icons.woff") format("woff");
+}
+[data-icon]:before {
+  content: attr(data-icon);
+  text-transform: none;
+  font-weight: normal;
+  font-variant: normal;
+  font-family: 'Icons';
+  line-height: 1;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+i {
+  font-style: normal;
+  vertical-align: middle;
 }

@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  BASE
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !BASE
+\*------------------------------------*/
+
+@include font-face('Icons', 'fonts/Icons');
+
+[data-icon]:before {
+    content: attr(data-icon);
+    text-transform: none;
+    font-weight: normal;
+    font-variant: normal;
+    font-family: 'Icons';
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+i{
+    font-style: normal;
+    vertical-align: middle;
+}

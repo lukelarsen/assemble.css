@@ -8,6 +8,7 @@
         Button Types
         Button Colors
  *  BUTTON CLEAN UP
+ *  BUTTON GROUP
  */
 
 
@@ -131,5 +132,27 @@
     &::-moz-focus-inner{
         border: 0;
         padding: 0;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    !BUTTON GROUP
+\*------------------------------------*/
+
+@if $btn-group == true {
+    .btn-group {
+        position: relative;
+        display: inline-block;
+        white-space: nowrap;
+        vertical-align: middle;
+        @extend %cf;
+        
+        > * {
+            float: left;
+        }
     }
 }

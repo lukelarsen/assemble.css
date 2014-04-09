@@ -36,8 +36,7 @@
         flex: 0 1 auto;
 
         > a{
-            display: flex;
-            align-items: flex-start;
+            display: inline-block;
             text-decoration: none;
         }
     }
