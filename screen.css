@@ -1717,6 +1717,7 @@ hr {
         Sizing
         Webkit Appearance
         Errors
+    MODIFIER VARIABLES
  */
 /*------------------------------------*\
     !DESIGN VARIABLES
@@ -1736,6 +1737,9 @@ hr {
 /**
  * ^Errors
  */
+/*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
@@ -2005,8 +2009,8 @@ hr {
 /**
  *  GENERAL
  *  CHECKBOXES & RADIOS
- *  TEXTAREA
  *  FORM ERRORS
+ *  INPUT INLINE
 */
 /*------------------------------------*\
     !GENERAL
@@ -2038,6 +2042,12 @@ textarea {
   cursor: text;
 }
 
+.spoken-form input,
+.spoken-form select {
+  padding: 3px 4px;
+  height: 25px;
+}
+
 input[type=color],
 input[type=date],
 input[type=datetime-local],
@@ -2064,15 +2074,17 @@ textarea {
     background-position: right center;
     padding-right: 1.67em;
   }
+
+  .spoken-form select {
+    padding-right: 10px;
+  }
 }
 input[type='file'] {
   padding-top: 6px;
 }
 
-.spoken-form input,
-.spoken-form select {
-  padding: 3px 4px;
-  height: 25px;
+textarea {
+  height: 150px;
 }
 
 /*------------------------------------*\
@@ -2096,13 +2108,6 @@ input[type='radio'] {
 }
 
 /*------------------------------------*\
-    !TEXTAREA
-\*------------------------------------*/
-textarea {
-  height: 150px;
-}
-
-/*------------------------------------*\
     !FORM ERRORS
 \*------------------------------------*/
 .form-error > label,
@@ -2115,6 +2120,29 @@ textarea {
 
 .form-error__message {
   color: red;
+}
+
+/*------------------------------------*\
+    !INPUT INLINE
+\*------------------------------------*/
+.form-inline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.form-inline label {
+  display: block;
+}
+.form-inline > li > input {
+  width: auto;
+  display: inline;
+}
+.form-inline .btn {
+  margin-left: -.27em;
+  height: 35px;
+  padding: .25em 1em;
+  line-height: 1;
+  vertical-align: baseline;
 }
 
 /*------------------------------------*\ 
@@ -2141,7 +2169,7 @@ textarea {
 /**
  * ^Class Options
 
- * Blocks:      .modal
+ * Blocks:      .btn
  * Modifiers:   .btn--large
                 .btn--small
                 .btn--block

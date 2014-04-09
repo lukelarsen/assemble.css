@@ -4,8 +4,8 @@
 /**
  *  GENERAL
  *  CHECKBOXES & RADIOS
- *  TEXTAREA
  *  FORM ERRORS
+ *  INPUT INLINE
 */
 
 
@@ -46,6 +46,14 @@ textarea{
     cursor: text;
 }
 
+@if $spoken-form == true {
+    .spoken-form input,
+    .spoken-form select {
+        padding: $form-spoken-padding;
+        height: $form-spoken-height;
+    }
+}
+
 @if $form-webkit-appearance == false {
     input[type=color],
     input[type=date],
@@ -73,6 +81,9 @@ textarea{
             background-position: right center;
             padding-right: 1.67em;
         }
+        .spoken-form select{
+            padding-right: 10px;
+        }
     }
 }
 
@@ -80,11 +91,10 @@ input[type='file']{
     padding-top: $form-item-file-padding;
 }
 
-.spoken-form input,
-.spoken-form select{
-    padding: $form-spoken-padding;
-    height: $form-spoken-height;
+textarea{
+    height: $form-textarea-height;
 }
+
 
 
 
@@ -117,16 +127,6 @@ input[type='radio']{
 
 
 
-/*------------------------------------*\
-    !TEXTAREA
-\*------------------------------------*/
-
-textarea{
-    height: $form-textarea-height;
-}
-
-
-
 
 
 /*------------------------------------*\
@@ -146,4 +146,37 @@ textarea{
 
 .form-error__message{
     color: $form-error-message;
+}
+
+
+
+
+
+/*------------------------------------*\
+    !INPUT INLINE
+\*------------------------------------*/
+
+@if $input-inline == true {
+    .form-inline{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        label{
+            display: block;
+        }
+
+        > li > input{
+            width: auto;
+            display: inline;
+        }
+
+        .btn{
+            margin-left: -.27em;
+            height: $form-item-height;
+            padding: .25em 1em;
+            line-height: 1;
+            vertical-align: baseline;
+        }
+    }
 }

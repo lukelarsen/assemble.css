@@ -9,6 +9,7 @@
         Sizing
         Webkit Appearance
         Errors
+    MODIFIER VARIABLES
  */
 
 
@@ -61,3 +62,13 @@ $form-error-message:                    red;
 $form-error-border-color:               red;
 $form-error-border-size:                1px;
 $form-error-border-type:                solid;
+
+
+
+
+/*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+
+$spoken-form:                           true;
+$input-inline:                          true;
