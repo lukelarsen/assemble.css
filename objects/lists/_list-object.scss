@@ -1,0 +1,45 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !
+\*------------------------------------*/
+
+.no-bullets{
+    list-style-type: none;
+}
+
+
+
+
+ul ul,
+ol ul{
+    list-style-type: circle;
+}
+
+
+
+
+ol.colored > li:before,
+ul.colored > li:before {
+    content: "\25CF";
+    color: #00a9ec;
+    font-weight: 700;
+    font-size: 1em;
+    text-align: right;
+    position: absolute;
+    left: -1em;
+    top: 0;
+    text-decoration: none;
+    -webkit-margin-start: -.25em;
+}
+
+

@@ -389,7 +389,7 @@ audio:not([controls]) {
  * Address styling not present in IE 8/9.
  */
 [hidden] {
-  display: none;
+  display: none !important;
 }
 
 /* ==========================================================================
@@ -3649,4 +3649,150 @@ body.vex-open {
 .icon {
   font-style: normal;
   vertical-align: middle;
+}
+
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  USAGE
+        HTML
+        Class Options
+ *  IMPORTS
+ */
+/*------------------------------------*\
+    !USAGE
+\*------------------------------------*/
+/**
+ * ^HTML
+
+   YouTube
+   <div class="media">
+       <iframe src="http://www.youtube.com/embed/eRW84aVCMWo" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+   </div>
+
+   Instagram
+   <div class="media media--instagram">
+       <iframe src="http://instagram.com/p/dJJvzMI4X8/embed/" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+   </div>
+
+   Vine
+   <div class="media media--vine">
+       <iframe src="https://vine.co/v/bYwPIluIipH/embed/simple" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+   </div>
+
+   Vimeo
+   <div class="media media--vimeo">
+       <iframe src="http://player.vimeo.com/video/24954567" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+   </div>
+
+   Google Maps
+   <div class="media">
+       <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.uk/maps?q=glasgow&amp;ie=UTF8&amp;hq=&amp;hnear=Glasgow,+Glasgow+City,+United+Kingdom&amp;gl=uk&amp;t=m&amp;z=11&amp;iwloc=A&amp;output=embed"></iframe>
+       <br>
+       <small><a href="http://maps.google.co.uk/maps?q=glasgow&amp;ie=UTF8&amp;hq=&amp;hnear=Glasgow,+Glasgow+City,+United+Kingdom&amp;gl=uk&amp;t=m&amp;z=11&amp;iwloc=A&amp;source=embed" style="color: #0000FF; text-align: left">View Larger Map</a></small>
+   </div>
+
+ */
+/**
+ * ^Class Options
+
+ * Blocks:      .media
+   Modifiers:   .media--scroll
+                .media--vimeo
+                .media--instgram
+                .media--vine
+ */
+/*------------------------------------*\
+    !IMPORTS
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  MODIFIER VARIABLES
+ */
+/*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  MEDIA BASE
+ *  MEDIA MODIFIERS
+        Scrollable Media
+        Vimeo
+        Instgram
+        Vine
+ *  MEDIA PLAYER
+ */
+/*------------------------------------*\
+    !MEDIA BASE
+\*------------------------------------*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+audio, canvas, img, video {
+  vertical-align: middle;
+}
+
+.media {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+  height: 0;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 1em;
+  overflow: hidden;
+  /*------------------------------------*\
+      !MEDIA MODIFIERS
+  \*------------------------------------*/
+  /**
+   * ^Scrollabele Media
+   */
+  /**
+   * ^Vimeo places the controls on the player itself.
+   */
+  /**
+   * ^Instagram
+   */
+  /**
+   * ^Vine
+   */
+}
+.media--vimeo {
+  padding-top: 0;
+}
+.media--instagram {
+  height: auto;
+  max-width: none;
+  padding-bottom: 120%;
+}
+.media--vine {
+  height: auto;
+  max-width: none;
+  padding-bottom: 100%;
+}
+
+/*------------------------------------*\
+    !MEDIA PLAYER
+\*------------------------------------*/
+.media iframe,
+.media object,
+.media embed,
+.media video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  background-color: transparent;
 }
