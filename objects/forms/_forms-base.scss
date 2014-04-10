@@ -6,6 +6,7 @@
  *  CHECKBOXES & RADIOS
  *  FORM ERRORS
  *  INPUT INLINE
+ *  INPUT ADDON
 */
 
 
@@ -33,7 +34,12 @@ textarea{
     outline: none;
     height: $form-item-height;
     border-radius: $form-item-border-radius;
+    transition: border-color .2s ease-in-out, color .2s ease-in-out;
 
+    &:focus{
+        border-color: $form-focus-border-color;
+        color: $form-focus-text-color;
+    }
 }
 
 input[type=email],
@@ -104,11 +110,14 @@ textarea{
     !CHECKBOXES & RADIOS
 \*------------------------------------*/
 
-.check-list,
-.check-list--inline{
+.check-list{
     list-style: none;
     margin: 0;
     padding: 0;
+
+    li{
+        margin-top: $form-check-list-vertical-spacing;
+    }
 }
 
 .check-list--inline{
@@ -152,11 +161,37 @@ input[type='radio']{
 
 
 
+/*------------------------------------*\ 
+    !FORM DISABLED
+\*------------------------------------*/
+
+.form-disabled{
+    label{
+        color: gray;
+
+        &:hover{
+            cursor: not-allowed;
+        }
+    }
+    
+    input{
+        border-color: gray;
+
+        &:hover{
+            cursor: not-allowed;
+        }
+    }
+}
+
+
+
+
+
 /*------------------------------------*\
     !INPUT INLINE
 \*------------------------------------*/
 
-@if $input-inline == true {
+@if $input-inline == true{
     .form-inline{
         margin: 0;
         padding: 0;
@@ -177,6 +212,51 @@ input[type='radio']{
             padding: .25em 1em;
             line-height: 1;
             vertical-align: baseline;
+        }
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    !INPUT ADDON
+\*------------------------------------*/
+
+@if $input-addon == true{
+    .input-addon {
+        position: relative;
+
+        input{
+            width: 100%;
+        }
+
+        .icon{
+            position: absolute;
+            z-index: 1;
+        }
+    }
+
+    .input-addon--left{
+        input{
+            padding-left: 36px;
+        }
+
+        .icon{
+            top: 7px;
+            left: 11px;
+        }
+    }
+
+    .input-addon--right{
+        input{
+            padding-right: 36px;
+        }
+
+        .icon{
+            top: 7px;
+            right: 11px;
         }
     }
 }

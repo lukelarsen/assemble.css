@@ -9,6 +9,8 @@
         Sizing
         Webkit Appearance
         Errors
+        Disabled
+        Focus
     MODIFIER VARIABLES
  */
 
@@ -41,6 +43,7 @@ $form-item-border-radius:               0px;
 $form-item-padding:                     4px 8px;
 $form-item-height:                      35px;
 $form-item-file-padding:                6px;
+$form-check-list-vertical-spacing:      5px;
 
 $form-spoken-padding:                   3px 4px;
 $form-spoken-height:                    25px;
@@ -64,11 +67,24 @@ $form-error-border-size:                1px;
 $form-error-border-type:                solid;
 
 
+/**
+ * ^Disabled
+ */
+$form-disabled-color:                   gray;
+
+
+/**
+ * ^Focus
+ */
+$form-focus-border-color:               blue;
+$form-focus-text-color:                 blue;
+
 
 
 /*------------------------------------*\
     !MODIFIER VARIABLES
 \*------------------------------------*/
 
-$spoken-form:                           true;
-$input-inline:                          true;
+$spoken-form:                          true;
+$input-inline:                         true;
+$input-addon:                          true;

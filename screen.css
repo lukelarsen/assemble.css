@@ -1709,6 +1709,10 @@ hr {
                 %form__item--portable-full
                 %form__item--desk-full
                 %form__item--wide-full
+
+ * Options
+                .form-inline
+                .input-addon
  */
 /**
  * ^Example
@@ -1739,6 +1743,8 @@ hr {
         Sizing
         Webkit Appearance
         Errors
+        Disabled
+        Focus
     MODIFIER VARIABLES
  */
 /*------------------------------------*\
@@ -1758,6 +1764,12 @@ hr {
  */
 /**
  * ^Errors
+ */
+/**
+ * ^Disabled
+ */
+/**
+ * ^Focus
  */
 /*------------------------------------*\
     !MODIFIER VARIABLES
@@ -2033,6 +2045,7 @@ hr {
  *  CHECKBOXES & RADIOS
  *  FORM ERRORS
  *  INPUT INLINE
+ *  INPUT ADDON
 */
 /*------------------------------------*\
     !GENERAL
@@ -2052,6 +2065,13 @@ textarea {
   outline: none;
   height: 35px;
   border-radius: 0px;
+  transition: border-color .2s ease-in-out, color .2s ease-in-out;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: blue;
+  color: blue;
 }
 
 input[type=email],
@@ -2112,11 +2132,13 @@ textarea {
 /*------------------------------------*\
     !CHECKBOXES & RADIOS
 \*------------------------------------*/
-.check-list,
-.check-list--inline {
+.check-list {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.check-list li {
+  margin-top: 5px;
 }
 
 .check-list--inline li {
@@ -2144,6 +2166,22 @@ input[type='radio'] {
   color: red;
 }
 
+/*------------------------------------*\ 
+    !FORM DISABLED
+\*------------------------------------*/
+.form-disabled label {
+  color: gray;
+}
+.form-disabled label:hover {
+  cursor: not-allowed;
+}
+.form-disabled input {
+  border-color: gray;
+}
+.form-disabled input:hover {
+  cursor: not-allowed;
+}
+
 /*------------------------------------*\
     !INPUT INLINE
 \*------------------------------------*/
@@ -2165,6 +2203,36 @@ input[type='radio'] {
   padding: .25em 1em;
   line-height: 1;
   vertical-align: baseline;
+}
+
+/*------------------------------------*\
+    !INPUT ADDON
+\*------------------------------------*/
+.input-addon {
+  position: relative;
+}
+.input-addon input {
+  width: 100%;
+}
+.input-addon .icon {
+  position: absolute;
+  z-index: 1;
+}
+
+.input-addon--left input {
+  padding-left: 36px;
+}
+.input-addon--left .icon {
+  top: 7px;
+  left: 11px;
+}
+
+.input-addon--right input {
+  padding-right: 36px;
+}
+.input-addon--right .icon {
+  top: 7px;
+  right: 11px;
 }
 
 /*------------------------------------*\ 
@@ -2270,6 +2338,7 @@ input[type='radio'] {
   color: #fff;
   border: 0px;
   transition: background-color .2s ease-in-out;
+  outline: none;
   /*------------------------------------*\
       !BUTTON MODIFIERS
   \*------------------------------------*/
@@ -3577,7 +3646,7 @@ body.vex-open {
   -webkit-font-smoothing: antialiased;
 }
 
-i {
+.icon {
   font-style: normal;
   vertical-align: middle;
 }
