@@ -3810,8 +3810,8 @@ audio, canvas, img, video {
 /**
  * ^Class Options
 
- * Blocks:      None
-   Modifiers:   .list-no-bullets
+ * Blocks:      <ul>, <ol>
+   Options:     .list-no-bullets
                 .list-ordered
  */
 /*------------------------------------*\
@@ -3910,4 +3910,94 @@ ol.list-colored > li:before {
   width: 2.5em;
   -webkit-margin-start: 0;
   /* 2 */
+}
+
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  USAGE
+        HTML
+        Class Options
+ *  IMPORTS
+ */
+/*------------------------------------*\
+    !USAGE
+\*------------------------------------*/
+/**
+ * ^HTML
+
+   <p>Lorem ipsum dolor sit amet, <code>Atque facere</code> consectetur</p>
+
+   <pre class="code-scrollable><code>&lt;ol class="nav  nav--keywords"&gt;
+       &lt;li&gt;Word One&lt;/li&gt;
+       &lt;li&gt;Word Two&lt;/li&gt;
+       &lt;li&gt;Word Three&lt;/li&gt;
+   &lt;/ol&gt;</code></pre>
+ */
+/**
+ * ^Class Options
+
+ * Blocks:      <code>, <pre>
+ * Options:     .pre-scrollable
+ */
+/*------------------------------------*\
+    !IMPORTS
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  DESIGN VARIABLES
+ *  MODIFIER VARIABLES
+ */
+/*------------------------------------*\
+    !DESIGN VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  CODE BASE
+ *  SCROLLABLE
+ */
+/*------------------------------------*\
+    !CODE BASE
+\*------------------------------------*/
+pre,
+code {
+  background-color: true;
+  border: 1px solid silver;
+  color: #ad0d36;
+  padding: 0.5em;
+}
+
+code {
+  padding: 0.2em 0.25em;
+}
+
+pre code {
+  border: none;
+  padding: 0;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+pre code {
+  -ms-word-wrap: normal;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+/*------------------------------------*\
+    !SCROLLABLE
+\*------------------------------------*/
+.code-scrollable {
+  max-height: 20em;
+  overflow-y: scroll;
 }
