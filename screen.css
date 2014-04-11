@@ -3720,7 +3720,7 @@ body.vex-open {
 \*------------------------------------*/
 /**
  *  MEDIA BASE
- *  MEDIA MODIFIERS
+ *  MEDIA TYPES
         Scrollable Media
         Vimeo
         Instgram
@@ -3749,7 +3749,7 @@ audio, canvas, img, video {
   margin-bottom: 1em;
   overflow: hidden;
   /*------------------------------------*\
-      !MEDIA MODIFIERS
+      !MEDIA TYPES
   \*------------------------------------*/
   /**
    * ^Scrollabele Media
@@ -3763,19 +3763,6 @@ audio, canvas, img, video {
   /**
    * ^Vine
    */
-}
-.media--vimeo {
-  padding-top: 0;
-}
-.media--instagram {
-  height: auto;
-  max-width: none;
-  padding-bottom: 120%;
-}
-.media--vine {
-  height: auto;
-  max-width: none;
-  padding-bottom: 100%;
 }
 
 /*------------------------------------*\
@@ -3795,4 +3782,132 @@ audio, canvas, img, video {
   border: 0;
   outline: none;
   background-color: transparent;
+}
+
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  USAGE
+        HTML
+        Class Options
+ *  IMPORTS
+ */
+/*------------------------------------*\
+    !USAGE
+\*------------------------------------*/
+/**
+ * ^HTML
+
+   <ol class="list-colored">
+       <li>This is a list and stuff</li>
+       <li>And a list with a <a href="#">link</a> in it</li>
+       <li>And a third list.</li>
+       <li>Finally the last list here.</li>
+   </ol>
+
+ */
+/**
+ * ^Class Options
+
+ * Blocks:      None
+   Modifiers:   .list-no-bullets
+                .list-ordered
+ */
+/*------------------------------------*\
+    !IMPORTS
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  DESIGN VARIABLES
+ *  MODIFIER VARIABLES
+ */
+/*------------------------------------*\
+    !DESIGN VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  LIST BASE
+ *  LIST NO BULLETS
+ *  LIST COLORED
+ */
+/*------------------------------------*\
+    !LIST BASE
+\*------------------------------------*/
+ul ul,
+ol ul {
+  list-style: circle;
+}
+
+/*------------------------------------*\
+    !LIST NO BULLETS
+\*------------------------------------*/
+.list-no-bullets {
+  list-style: none;
+}
+
+/*------------------------------------*\
+    !LIST COLORED
+\*------------------------------------*/
+ul.list-colored,
+ol.list-colored {
+  padding-left: 40px;
+}
+
+ul.list-colored > li,
+ol.list-colored > li {
+  list-style-type: none;
+  position: relative;
+}
+
+/*
+ * 1. Escaped unicode coloured circle.
+ * 2. Edit this property to change all colored class lists.
+ * 3. Normalize funky webkit margin
+ */
+ul.list-colored > li:before,
+ol.list-colored > li:before {
+  content: "\25CF";
+  /* 1 */
+  color: red;
+  /* 2 */
+  font-weight: bold;
+  font-size: 1em;
+  text-align: right;
+  position: absolute;
+  left: -1em;
+  top: 0;
+  text-decoration: none;
+  -webkit-margin-start: -.25em;
+  /* 3 */
+}
+
+ol.list-colored {
+  counter-reset: foo;
+}
+
+ol.list-colored > li {
+  counter-increment: foo;
+}
+
+/*
+ * Use the :before pseudo element to supply numbers.
+ * 1. The counter value.
+ * 2. Normalize funky webkit margin
+ */
+ol.list-colored > li:before {
+  content: counter(foo) ".";
+  /* 1 */
+  left: -3.125em;
+  font-weight: normal;
+  width: 2.5em;
+  -webkit-margin-start: 0;
+  /* 2 */
 }

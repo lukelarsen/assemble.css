@@ -2,7 +2,9 @@
     CONTENTS
 \*------------------------------------*/
 /**
- *  
+ *  LIST BASE
+ *  LIST NO BULLETS
+ *  LIST COLORED
  */
 
 
@@ -10,36 +12,86 @@
 
 
 /*------------------------------------*\
-    !
+    !LIST BASE
 \*------------------------------------*/
-
-.no-bullets{
-    list-style-type: none;
-}
-
-
-
 
 ul ul,
 ol ul{
-    list-style-type: circle;
+    list-style: circle;
 }
 
 
 
 
-ol.colored > li:before,
-ul.colored > li:before {
-    content: "\25CF";
-    color: #00a9ec;
-    font-weight: 700;
-    font-size: 1em;
-    text-align: right;
-    position: absolute;
-    left: -1em;
-    top: 0;
-    text-decoration: none;
-    -webkit-margin-start: -.25em;
+
+/*------------------------------------*\
+    !LIST NO BULLETS
+\*------------------------------------*/
+
+@if $list-no-bullets == true {
+    .list-no-bullets {
+        list-style: none;
+    }
 }
 
 
+
+
+
+/*------------------------------------*\
+    !LIST COLORED
+\*------------------------------------*/
+
+@if $list-colored == true {
+    ul.list-colored,
+    ol.list-colored {
+        padding-left: $list-colored-padding-left;
+    }
+
+    ul.list-colored > li,
+    ol.list-colored > li {
+        list-style-type: none;
+        position: relative;
+    }
+
+    /*
+     * 1. Escaped unicode coloured circle.
+     * 2. Edit this property to change all colored class lists.
+     * 3. Normalize funky webkit margin
+     */
+    ul.list-colored > li:before,
+    ol.list-colored > li:before {
+        content: "\25CF"; /* 1 */
+        color: $list-colored-color; /* 2 */
+        font-weight: bold;
+        font-size: 1em;
+        text-align: right;
+        position: absolute;
+        left: -1em;
+        top: 0;
+        text-decoration: none;
+        -webkit-margin-start: -.25em; /* 3 */
+    }
+
+    // Counter increment to replace standard numbers.
+    ol.list-colored {
+        counter-reset: foo;
+    }
+
+    ol.list-colored > li {
+        counter-increment: foo;
+    }
+
+    /*
+     * Use the :before pseudo element to supply numbers.
+     * 1. The counter value.
+     * 2. Normalize funky webkit margin
+     */
+    ol.list-colored > li:before {
+        content: counter(foo) "."; /* 1 */
+        left: -3.125em;
+        font-weight: normal;
+        width: 2.5em;
+        -webkit-margin-start: 0; /* 2 */
+    }
+}

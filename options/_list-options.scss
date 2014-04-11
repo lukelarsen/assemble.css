@@ -2,7 +2,8 @@
     CONTENTS
 \*------------------------------------*/
 /**
- *  
+ *  DESIGN VARIABLES
+ *  MODIFIER VARIABLES
  */
 
 
@@ -10,6 +11,19 @@
 
 
 /*------------------------------------*\
-    !
+    !DESIGN VARIABLES
 \*------------------------------------*/
 
+$list-colored-color:                    red;
+$list-colored-padding-left:             40px;
+
+
+
+
+
+/*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+
+$list-no-bullets:                       true;
+$list-colored:                          true;
