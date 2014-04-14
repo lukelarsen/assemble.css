@@ -55,6 +55,11 @@ h6, .h6{
     padding-bottom: 0;
     font-family: $font-sans;
     font-weight: bold;
+    
+    .icon{
+        font-size: .8em;
+        vertical-align: base;
+    }
 }
 
 // [1] Applies a margin bottom that is a multiple of the vertical grid in EMs. The first argument is the font size context and the second is multiple of the vertical grid unit.
@@ -104,14 +109,14 @@ h3, .h3{
 }
 
 h4, .h4{
-    margin-bottom: emRhythm(4, $ms-up1);
-    @include setType(5, $ms-up1);
+    margin-bottom: emRhythm(2);
+    @include setType(2);
 }
 
 h5, .h5,
 h6, .h6{
-    margin-bottom: emRhythm(4);
-    @include setType(4);
+    margin-bottom: emRhythm(2);
+    @include setType(2, $ms-down1);
 }
 
 p{

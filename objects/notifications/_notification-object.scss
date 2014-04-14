@@ -1,0 +1,214 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  NOTIFICATION BASE
+        Message Title
+        Message Content
+ *  NOTIFICATION COLORS
+        Success
+        Warning
+        Info
+ *  NOTIFICATION POSITIONS
+        Bottom Right
+        Bottom Left
+        Top Right
+        Top Left
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !NOTIFICATION BASE
+\*------------------------------------*/
+
+.message-wrapper {
+    width: 315px;
+    position: fixed;
+    z-index: 1000;
+    font-size: .8rem;
+
+    @include media-query(palm) {
+        width: auto;
+    }
+}
+
+//Before animate in
+.dj-message {
+    //    opacity: 0;
+    //    left: -10px;
+}
+
+.message {
+    width: 100%;
+    min-height: 80px;
+    color: white;
+}
+
+    /**
+     * ^Message Title
+     */
+    .message__title-bar {
+        width: 100%;
+        padding: 7px 15px;
+        color: white;
+        display: flex;
+    }
+        .message-title {
+            color: white;
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .message-close-btn {
+            color: white;
+            margin-left: auto;
+            margin-top: auto;
+            cursor: pointer;
+            &:hover {
+                color: black;
+            }
+        }
+
+
+    /**
+     * ^Message Content
+     */
+    .message-content {
+        padding: 7px 15px;
+    }
+
+        .message-content a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        p.message-text {
+            margin: 0;
+            width: 100%;
+        }
+
+
+
+
+
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+
+/**
+ * ^Success
+ */
+.message-success {
+    background-color: green;
+}
+
+.message-success .message__title-bar {
+    background-color: darkgreen;
+}
+
+
+/**
+ * ^Warning
+ */
+.message-warning{
+    background-color: red;
+}
+
+.message-warning .message__title-bar {
+    background-color: darkred;
+}
+
+
+/**
+ * ^Info
+ */
+.message-info {
+    background-color: blue;
+}
+
+.message-info .message__title-bar {
+    background-color: darkblue;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $POSITIONS
+\*------------------------------------*/
+
+/**
+ * ^Bottom Right
+ */
+.message-wrapper--bottom-right {
+    bottom: 20px;
+    right: 20px;
+
+    @include media-query(palm) {
+        right: 0px;
+        width: 100%;
+    }
+
+    .message{
+        margin-top: 10px;
+    }
+}
+
+
+/**
+ * ^Bottom Left
+ */
+.message-wrapper--bottom-left {
+    bottom: 20px;
+    left: 20px;
+
+    @include media-query(palm) {
+        left: 0px;
+        width: 100%;
+    }
+
+    .message{
+        margin-top: 10px;
+    }
+}
+
+
+/**
+ * ^Top Right
+ */
+.message-wrapper--top-right {
+    top: 20px;
+    right: 20px;
+
+    @include media-query(palm) {
+        right: 0px;
+        width: 100%;
+    }
+
+    .message{
+        margin-bottom: 10px;
+    }
+}
+
+
+/**
+ * ^Top Left
+ */
+.message-wrapper--top-left {
+    top: 20px;
+    left: 20px;
+
+    @include media-query(palm) {
+        left: 0px;
+        width: 100%;
+    }
+
+    .message{
+        margin-bottom: 10px;
+    }
+}
