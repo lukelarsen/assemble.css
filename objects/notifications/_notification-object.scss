@@ -25,20 +25,14 @@
 \*------------------------------------*/
 
 .message-wrapper {
-    width: 315px;
+    width: $notification-width;
     position: fixed;
     z-index: 1000;
-    font-size: .8rem;
+    font-size: $notification-font-size;
 
     @include media-query(palm) {
         width: auto;
     }
-}
-
-//Before animate in
-.dj-message {
-    //    opacity: 0;
-    //    left: -10px;
 }
 
 .message {
@@ -52,24 +46,22 @@
      */
     .message__title-bar {
         width: 100%;
-        padding: 7px 15px;
-        color: white;
+        padding: $notification-padding;
         display: flex;
     }
         .message-title {
-            color: white;
             margin: 0px;
             padding: 0px;
-
         }
 
         .message-close-btn {
-            color: white;
+            color: $notification-close-color;
             margin-left: auto;
-            margin-top: auto;
+            display: flex;
             cursor: pointer;
+            align-items: center;
             &:hover {
-                color: black;
+                color: $notification-close-color-hover;
             }
         }
 
@@ -78,11 +70,10 @@
      * ^Message Content
      */
     .message-content {
-        padding: 7px 15px;
+        padding: $notification-padding;
     }
 
         .message-content a {
-            color: white;
             text-decoration: underline;
         }
 
@@ -99,40 +90,14 @@
     $COLORS
 \*------------------------------------*/
 
-/**
- * ^Success
- */
-.message-success {
-    background-color: green;
+.message{
+    @each $key, $value in $notification-colors{
+        &--#{$key} {
+            @include print-notification-colors($notification-colors, $key);
+        }
+    }
 }
 
-.message-success .message__title-bar {
-    background-color: darkgreen;
-}
-
-
-/**
- * ^Warning
- */
-.message-warning{
-    background-color: red;
-}
-
-.message-warning .message__title-bar {
-    background-color: darkred;
-}
-
-
-/**
- * ^Info
- */
-.message-info {
-    background-color: blue;
-}
-
-.message-info .message__title-bar {
-    background-color: darkblue;
-}
 
 
 
@@ -145,17 +110,19 @@
 /**
  * ^Bottom Right
  */
-.message-wrapper--bottom-right {
-    bottom: 20px;
-    right: 20px;
+@if $notification-bottom-right == true {
+    .message-wrapper--bottom-right {
+        bottom: $notification-space-from-edge;
+        right: $notification-space-from-edge;
 
-    @include media-query(palm) {
-        right: 0px;
-        width: 100%;
-    }
+        @include media-query(palm) {
+            right: 0px;
+            width: 100%;
+        }
 
-    .message{
-        margin-top: 10px;
+        .message {
+            margin-top: 10px;
+        }
     }
 }
 
@@ -163,17 +130,19 @@
 /**
  * ^Bottom Left
  */
-.message-wrapper--bottom-left {
-    bottom: 20px;
-    left: 20px;
+@if $notification-bottom-left == true {
+    .message-wrapper--bottom-left {
+        bottom: $notification-space-from-edge;
+        left: $notification-space-from-edge;
 
-    @include media-query(palm) {
-        left: 0px;
-        width: 100%;
-    }
+        @include media-query(palm) {
+            left: 0px;
+            width: 100%;
+        }
 
-    .message{
-        margin-top: 10px;
+        .message {
+            margin-top: 10px;
+        }
     }
 }
 
@@ -181,34 +150,37 @@
 /**
  * ^Top Right
  */
-.message-wrapper--top-right {
-    top: 20px;
-    right: 20px;
+@if $notification-top-right == true {
+    .message-wrapper--top-right {
+        top: $notification-space-from-edge;
+        right: $notification-space-from-edge;
 
-    @include media-query(palm) {
-        right: 0px;
-        width: 100%;
-    }
+        @include media-query(palm) {
+            right: 0px;
+            width: 100%;
+        }
 
-    .message{
-        margin-bottom: 10px;
+        .message {
+            margin-bottom: 10px;
+        }
     }
 }
-
 
 /**
  * ^Top Left
  */
-.message-wrapper--top-left {
-    top: 20px;
-    left: 20px;
+@if $notification-top-left == true {
+    .message-wrapper--top-left {
+        top: $notification-space-from-edge;
+        left: $notification-space-from-edge;
 
-    @include media-query(palm) {
-        left: 0px;
-        width: 100%;
-    }
+        @include media-query(palm) {
+            left: 0px;
+            width: 100%;
+        }
 
-    .message{
-        margin-bottom: 10px;
+        .message {
+            margin-bottom: 10px;
+        }
     }
 }

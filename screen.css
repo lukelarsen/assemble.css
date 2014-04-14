@@ -2274,7 +2274,7 @@ input[type='radio'] {
                 .btn--block
                 .btn--natural
                 .btn--disabled
-                .btn--{{you define color names}} (see the $button-colors var in _button-options.scss
+                .btn--{{you define color names}} (see the $button-colors var in _button-options.scss)
  */
 /*------------------------------------*\
     !IMPORTS
@@ -3644,13 +3644,30 @@ body.vex-open {
 /**
  * ^HTML
 
-
+   <div class="message-wrapper  message-wrapper--bottom-right">
+       <div class="message  message--info">
+           <div class="message__title-bar">
+               <h3 class="message-title"><i class="icon" data-icon="&#xf057;"></i> Message Title</h3>
+               <div class="message-close-btn">
+                   <i class="icon" data-icon="&#xf00d;"></i>
+               </div>
+           </div>
+           <div class="message-content">
+               <p class="message-text">Message Text that goes on for a while so show a large message.</p>
+           </div>
+       </div>
+   </div>
  */
 /**
  * ^Class Options
 
- * Blocks:      .nav
- * Modifiers:   .nav--fit
+ * Blocks:      .message-wrapper
+                .message
+ * Modifiers:   .message-wrapper--bottom-right
+                .message-wrapper--bottom-left
+                .message-wrapper--top-right
+                .message-wrapper--top-left
+                .message--{{you define color names}} (see the $notification-colors var in _notifications-options.scss)
  */
 /*------------------------------------*\
     !IMPORTS
@@ -3661,9 +3678,29 @@ body.vex-open {
 /**
  *  DESIGN VARIABLES
  *  MODIFIER VARIABLES
+        Notification Position
+        Notification Colors
  */
 /*------------------------------------*\
     !DESIGN VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+/**
+ * ^Notification Position
+ */
+/**
+ * ^Notification Colors
+ */
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  PRINT NOTIFICATION COLORS
+ */
+/*------------------------------------*\
+    !PRINT NOTIFICATION COLORS
 \*------------------------------------*/
 /*------------------------------------*\
     CONTENTS
@@ -3689,7 +3726,7 @@ body.vex-open {
   width: 315px;
   position: fixed;
   z-index: 1000;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 @media only screen and (max-width: 480px) {
   .message-wrapper {
@@ -3709,12 +3746,10 @@ body.vex-open {
 .message__title-bar {
   width: 100%;
   padding: 7px 15px;
-  color: white;
   display: flex;
 }
 
 .message-title {
-  color: white;
   margin: 0px;
   padding: 0px;
 }
@@ -3722,8 +3757,9 @@ body.vex-open {
 .message-close-btn {
   color: white;
   margin-left: auto;
-  margin-top: auto;
+  display: flex;
   cursor: pointer;
+  align-items: center;
 }
 .message-close-btn:hover {
   color: black;
@@ -3737,7 +3773,6 @@ body.vex-open {
 }
 
 .message-content a {
-  color: white;
   text-decoration: underline;
 }
 
@@ -3749,37 +3784,35 @@ p.message-text {
 /*------------------------------------*\
     $COLORS
 \*------------------------------------*/
-/**
- * ^Success
- */
-.message-success {
-  background-color: green;
+.message--success {
+  background: green;
+  color: white;
 }
-
-.message-success .message__title-bar {
-  background-color: darkgreen;
+.message--success .message__title-bar {
+  background: darkgreen;
 }
-
-/**
- * ^Warning
- */
-.message-warning {
-  background-color: red;
+.message--success .message__title-bar {
+  color: white;
 }
-
-.message-warning .message__title-bar {
-  background-color: darkred;
+.message--warning {
+  background: red;
+  color: white;
 }
-
-/**
- * ^Info
- */
-.message-info {
-  background-color: blue;
+.message--warning .message__title-bar {
+  background: darkred;
 }
-
-.message-info .message__title-bar {
-  background-color: darkblue;
+.message--warning .message__title-bar {
+  color: white;
+}
+.message--info {
+  background: blue;
+  color: white;
+}
+.message--info .message__title-bar {
+  background: darkblue;
+}
+.message--info .message__title-bar {
+  color: white;
 }
 
 /*------------------------------------*\
@@ -3805,54 +3838,12 @@ p.message-text {
 /**
  * ^Bottom Left
  */
-.message-wrapper--bottom-left {
-  bottom: 20px;
-  left: 20px;
-}
-@media only screen and (max-width: 480px) {
-  .message-wrapper--bottom-left {
-    left: 0px;
-    width: 100%;
-  }
-}
-.message-wrapper--bottom-left .message {
-  margin-top: 10px;
-}
-
 /**
  * ^Top Right
  */
-.message-wrapper--top-right {
-  top: 20px;
-  right: 20px;
-}
-@media only screen and (max-width: 480px) {
-  .message-wrapper--top-right {
-    right: 0px;
-    width: 100%;
-  }
-}
-.message-wrapper--top-right .message {
-  margin-bottom: 10px;
-}
-
 /**
  * ^Top Left
  */
-.message-wrapper--top-left {
-  top: 20px;
-  left: 20px;
-}
-@media only screen and (max-width: 480px) {
-  .message-wrapper--top-left {
-    left: 0px;
-    width: 100%;
-  }
-}
-.message-wrapper--top-left .message {
-  margin-bottom: 10px;
-}
-
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
