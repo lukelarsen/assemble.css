@@ -24,7 +24,7 @@
     !NOTIFICATION BASE
 \*------------------------------------*/
 
-.message-wrapper {
+.notification-wrapper {
     width: $notification-width;
     position: fixed;
     z-index: 1000;
@@ -35,7 +35,7 @@
     }
 }
 
-.message {
+.notification{
     width: 100%;
     min-height: 80px;
     color: white;
@@ -44,17 +44,17 @@
     /**
      * ^Message Title
      */
-    .message__title-bar {
+    .notification__title-bar {
         width: 100%;
         padding: $notification-padding;
         display: flex;
     }
-        .message-title {
+        .notification-title {
             margin: 0px;
             padding: 0px;
         }
 
-        .message-close-btn {
+        .notification-close-btn {
             color: $notification-close-color;
             margin-left: auto;
             display: flex;
@@ -69,15 +69,15 @@
     /**
      * ^Message Content
      */
-    .message-content {
+    .notification-content {
         padding: $notification-padding;
     }
 
-        .message-content a {
+        .notification-content a {
             text-decoration: underline;
         }
 
-        p.message-text {
+        p.notification-text {
             margin: 0;
             width: 100%;
         }
@@ -90,7 +90,7 @@
     $COLORS
 \*------------------------------------*/
 
-.message{
+.notification{
     @each $key, $value in $notification-colors{
         &--#{$key} {
             @include print-notification-colors($notification-colors, $key);
@@ -111,16 +111,16 @@
  * ^Bottom Right
  */
 @if $notification-bottom-right == true {
-    .message-wrapper--bottom-right {
+    .notification-wrapper--bottom-right{
         bottom: $notification-space-from-edge;
         right: $notification-space-from-edge;
 
-        @include media-query(palm) {
+        @include media-query(palm){
             right: 0px;
             width: 100%;
         }
 
-        .message {
+        .notification{
             margin-top: 10px;
         }
     }
@@ -131,16 +131,16 @@
  * ^Bottom Left
  */
 @if $notification-bottom-left == true {
-    .message-wrapper--bottom-left {
+    .notification-wrapper--bottom-left{
         bottom: $notification-space-from-edge;
         left: $notification-space-from-edge;
 
-        @include media-query(palm) {
+        @include media-query(palm){
             left: 0px;
             width: 100%;
         }
 
-        .message {
+        .notification{
             margin-top: 10px;
         }
     }
@@ -151,16 +151,16 @@
  * ^Top Right
  */
 @if $notification-top-right == true {
-    .message-wrapper--top-right {
+    .notification-wrapper--top-right{
         top: $notification-space-from-edge;
         right: $notification-space-from-edge;
 
-        @include media-query(palm) {
+        @include media-query(palm){
             right: 0px;
             width: 100%;
         }
 
-        .message {
+        .notification{
             margin-bottom: 10px;
         }
     }
@@ -170,16 +170,16 @@
  * ^Top Left
  */
 @if $notification-top-left == true {
-    .message-wrapper--top-left {
+    .notification-wrapper--top-left{
         top: $notification-space-from-edge;
         left: $notification-space-from-edge;
 
-        @include media-query(palm) {
+        @include media-query(palm){
             left: 0px;
             width: 100%;
         }
 
-        .message {
+        .notification{
             margin-bottom: 10px;
         }
     }

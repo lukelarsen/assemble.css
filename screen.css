@@ -3644,16 +3644,16 @@ body.vex-open {
 /**
  * ^HTML
 
-   <div class="message-wrapper  message-wrapper--bottom-right">
-       <div class="message  message--info">
-           <div class="message__title-bar">
-               <h3 class="message-title"><i class="icon" data-icon="&#xf057;"></i> Message Title</h3>
-               <div class="message-close-btn">
+   <div class="notification-wrapper  notification-wrapper--bottom-right">
+       <div class="notification  notification--info">
+           <div class="notification__title-bar">
+               <h3 class="notification-title"><i class="icon" data-icon="&#xf057;"></i> Message Title</h3>
+               <div class="notification-close-btn">
                    <i class="icon" data-icon="&#xf00d;"></i>
                </div>
            </div>
-           <div class="message-content">
-               <p class="message-text">Message Text that goes on for a while so show a large message.</p>
+           <div class="notification-content">
+               <p class="notification-text">Message Text that goes on for a while so show a large message.</p>
            </div>
        </div>
    </div>
@@ -3661,13 +3661,13 @@ body.vex-open {
 /**
  * ^Class Options
 
- * Blocks:      .message-wrapper
-                .message
- * Modifiers:   .message-wrapper--bottom-right
-                .message-wrapper--bottom-left
-                .message-wrapper--top-right
-                .message-wrapper--top-left
-                .message--{{you define color names}} (see the $notification-colors var in _notifications-options.scss)
+ * Blocks:      .notification-wrapper
+                .notification
+ * Modifiers:   .notification-wrapper--bottom-right
+                .notification-wrapper--bottom-left
+                .notification-wrapper--top-right
+                .notification-wrapper--top-left
+                .notification--{{you define color names}} (see the $notification-colors var in _notifications-options.scss)
  */
 /*------------------------------------*\
     !IMPORTS
@@ -3722,19 +3722,19 @@ body.vex-open {
 /*------------------------------------*\
     !NOTIFICATION BASE
 \*------------------------------------*/
-.message-wrapper {
+.notification-wrapper {
   width: 315px;
   position: fixed;
   z-index: 1000;
   font-size: 0.8rem;
 }
 @media only screen and (max-width: 480px) {
-  .message-wrapper {
+  .notification-wrapper {
     width: auto;
   }
 }
 
-.message {
+.notification {
   width: 100%;
   min-height: 80px;
   color: white;
@@ -3743,40 +3743,40 @@ body.vex-open {
 /**
  * ^Message Title
  */
-.message__title-bar {
+.notification__title-bar {
   width: 100%;
   padding: 7px 15px;
   display: flex;
 }
 
-.message-title {
+.notification-title {
   margin: 0px;
   padding: 0px;
 }
 
-.message-close-btn {
+.notification-close-btn {
   color: white;
   margin-left: auto;
   display: flex;
   cursor: pointer;
   align-items: center;
 }
-.message-close-btn:hover {
+.notification-close-btn:hover {
   color: black;
 }
 
 /**
  * ^Message Content
  */
-.message-content {
+.notification-content {
   padding: 7px 15px;
 }
 
-.message-content a {
+.notification-content a {
   text-decoration: underline;
 }
 
-p.message-text {
+p.notification-text {
   margin: 0;
   width: 100%;
 }
@@ -3784,34 +3784,34 @@ p.message-text {
 /*------------------------------------*\
     $COLORS
 \*------------------------------------*/
-.message--success {
+.notification--success {
   background: green;
   color: white;
 }
-.message--success .message__title-bar {
+.notification--success .notification__title-bar {
   background: darkgreen;
 }
-.message--success .message__title-bar {
+.notification--success .notification__title-bar {
   color: white;
 }
-.message--warning {
+.notification--warning {
   background: red;
   color: white;
 }
-.message--warning .message__title-bar {
+.notification--warning .notification__title-bar {
   background: darkred;
 }
-.message--warning .message__title-bar {
+.notification--warning .notification__title-bar {
   color: white;
 }
-.message--info {
+.notification--info {
   background: blue;
   color: white;
 }
-.message--info .message__title-bar {
+.notification--info .notification__title-bar {
   background: darkblue;
 }
-.message--info .message__title-bar {
+.notification--info .notification__title-bar {
   color: white;
 }
 
@@ -3821,17 +3821,17 @@ p.message-text {
 /**
  * ^Bottom Right
  */
-.message-wrapper--bottom-right {
+.notification-wrapper--bottom-right {
   bottom: 20px;
   right: 20px;
 }
 @media only screen and (max-width: 480px) {
-  .message-wrapper--bottom-right {
+  .notification-wrapper--bottom-right {
     right: 0px;
     width: 100%;
   }
 }
-.message-wrapper--bottom-right .message {
+.notification-wrapper--bottom-right .notification {
   margin-top: 10px;
 }
 

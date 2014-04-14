@@ -27,11 +27,11 @@
         } @else if $property == 'color' {
             color: $value;
         } @else if $property == 'title-bar-background' {
-            .message__title-bar{
+            .notification__title-bar{
                 background: $value;
             }
         } @else if $property == 'title-bar-color' {
-            .message__title-bar{
+            .notification__title-bar{
                 color: $value;
             }
         }
