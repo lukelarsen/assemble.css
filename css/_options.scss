@@ -13,7 +13,9 @@
     !IMPORT OPTIONS
 \*------------------------------------*/
 
-@import "ui/options/color_options";
+@import "ui/options/reset-options";
+@import "ui/options/responsive-options";
+@import "ui/options/color-options";
 @import "ui/options/arrows-options";
 @import "ui/options/button-options";
 @import "ui/options/code-options";
@@ -25,7 +27,6 @@
 @import "ui/options/modal-options";
 @import "ui/options/nav-options";
 @import "ui/options/notification-options";
-@import "ui/options/responsive-options";
 @import "ui/options/table-options";
 @import "ui/options/tool-tip-options";
 @import "ui/options/type-options";
