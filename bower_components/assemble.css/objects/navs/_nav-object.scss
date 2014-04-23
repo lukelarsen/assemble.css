@@ -1,0 +1,281 @@
+@if $use-navs == true{
+    /*------------------------------------*\
+        CONTENTS
+    \*------------------------------------*/
+    /**
+     *  NAV BASE
+     *  NAV MODIFIERS
+            Nav Fit
+            Nav Stacked
+            Nav Center
+            Nav Right
+            Nav Left
+            Nav Space Between
+            Nav Space Around
+     *  NAV TYPES
+            Pagination
+            Breadcrumb Path
+            Breadcrumb Custom
+     */
+
+
+
+
+
+    /*------------------------------------*\
+        !NAV BASE
+    \*------------------------------------*/
+
+    .nav{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        > li{
+            flex: 0 1 auto;
+
+            > a{
+                display: inline-block;
+                text-decoration: none;
+            }
+        }
+    }
+
+
+
+
+
+    /*------------------------------------*\
+        !NAV MODIFIERS
+    \*------------------------------------*/
+
+    /**
+     * ^Nav Fit
+     */
+    @if $nav--fit == true {
+        .nav--fit {
+            > li {
+                flex: 1 1 auto;
+            }
+        }
+    }
+
+
+    /**
+     * ^Nav Stacked
+     */
+    @if $nav--stacked == true {
+        .nav--stacked {
+            flex-direction: column;
+        }
+    }
+
+
+    /**
+     * ^Nav Center
+     */
+    @if $nav--center == true {
+        .nav--center {
+            justify-content: center;
+        }
+    }
+
+
+    /**
+     * ^Nav Right
+     */
+    @if $nav--right == true {
+        .nav--right {
+            justify-content: flex-end;
+        }
+    }
+
+
+    /**
+     * ^Nav Left
+     */
+    @if $nav--left == true {
+        .nav--left {
+            justify-content: flex-start;
+        }
+    }
+
+
+    /**
+     * ^Nav Space Between
+     */
+    @if $nav--space-between == true {
+        .nav--space-between {
+            justify-content: space-between;
+        }
+    }
+
+
+    /**
+     * ^Nav Space Around
+     */
+    @if $nav--space-around == true {
+        .nav--space-around {
+            justify-content: space-around;
+        }
+    }
+
+
+
+
+
+    /*------------------------------------*\
+        !NAV TYPES
+    \*------------------------------------*/
+
+    /**
+     * ^Nav Keywords
+
+     * Credit: Inuit.css
+
+       <ol class="nav  nav--keywords">
+           <li><a href="#">Word One</a></li>
+           <li><a href="#">Word Two</a></li>
+           <li><a href="#">Word Three</a></li>
+       </ol>
+
+       Can also be used without the <a> tags
+
+     */
+    .nav--keywords{
+        > li{
+            margin-left: 7px;
+
+            &:after{
+                content:", ";
+            }
+
+            &:last-child:after{
+                display:none;
+            }
+
+            a{
+                display: inline-block;
+
+            }
+
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+    }
+
+
+    /**
+     * ^Nav Pagination
+
+     * Credit: Inuit.css
+
+       <ol class="nav  nav--pagination">
+           <li class="nav--pagination__first">First</li>
+           <li class="nav--pagination__prev">Previous</li>
+           <li><a href="/page/1">1</a></li>
+           <li><a href="/page/2">2</a></li>
+           <li class="current"><a href="/page/3">3</a></li>
+           <li><a href="/page/4">4</a></li>
+           <li><a href="/page/5">5</a></li>
+           <li class="nav--pagination__next"><a href="/page/next">Next</a></li>
+           <li class="nav--pagination__last"><a href="/page/last">Last</a></li>
+       </ol>
+
+     */
+
+    .nav--pagination{
+        text-align:center;
+
+        > li{
+            padding: $pagination-li-padding;
+
+            > a{
+                padding: $pagination-a-spacing;
+                margin: -$pagination-a-spacing;
+                display: block;
+            }
+        }
+
+        > .nav--pagination__first a:before{
+            content:"« ";
+        }
+
+        > .nav--pagination__last a:after{
+            content:" »";
+        }
+    }
+
+
+    /**
+     * ^Nav Breadcrumb
+
+     * Credit: Inuit.css
+
+        <ol class="nav  nav--breadcrumb">
+            <li><a href="#">inuit.css</a></li>
+            <li><a href="#">inuit.css</a></li>
+            <li><a href="#">partials</a></li>
+            <li class="current"><a href="#">objects</a></li>
+        </ol>
+
+     */
+
+    .nav--breadcrumb{
+        > li + li:before{
+            content:"» ";
+            float: left;
+        }
+
+        > li{
+            > a{
+                margin-right: $breadcrumb-a-right;
+                margin-left: $breadcrumb-a-left;
+            }
+        }
+    }
+
+
+    /**
+     * ^Nav Breadcrumb Path
+
+     * Credit: Inuit.css
+
+        <ol class="nav  nav--breadcrumb  nav--breadcrumb--path">
+            <li><a href="#">inuit.css</a></li>
+            <li><a href="#">inuit.css</a></li>
+            <li><a href="#">partials</a></li>
+            <li class="current"><a href="#">objects</a></li>
+        </ol>
+
+     */
+
+    .nav--breadcrumb--path > li + li:before{
+        content:"/ ";
+    }
+
+
+    /**
+     * ^Nav Breadcrumb Custom
+
+     * Credit: Inuit.css
+
+        <ol class="nav  nav--breadcrumb  nav--breadcrumb--custom">
+            <li><a href="#">Home</a></li>
+            <li data-breadcrumb="|"><a href="#">About</a></li>
+            <li data-breadcrumb="|"><a href="#">The Board</a></li>
+            <li data-breadcrumb="|" class="current"><a href="#">Directors</a></li>
+        </ol>
+
+     */
+
+    .nav--breadcrumb--custom {
+        > li + li[data-breadcrumb]:before {
+            content: attr(data-breadcrumb) " ";
+            float: left;
+        }
+    }
+}

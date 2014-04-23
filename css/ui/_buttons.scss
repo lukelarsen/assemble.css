@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  USAGE
+        HTML
+        Class Options
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !USAGE
+\*------------------------------------*/
+
+/**
+ * ^HTML
+
+   <button class="btn  btn--large  btn--primary">Primary Button</a>
+   <a href="#" class="btn  btn--secondary">Secondary Button</a>
+ */
+
+
+
+/**
+ * ^Class Options
+
+ * Blocks:      .btn
+ * Modifiers:   .btn--large
+                .btn--small
+                .btn--block
+                .btn--natural
+                .btn--disabled
+                .btn--{{you define color names}} (see the $button-colors var in _button-options.scss)
+ */
+
+
+
+

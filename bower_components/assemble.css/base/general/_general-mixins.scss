@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  BACKGROUND IMAGES
+ *  SIZING
+ *  RESPONSIVE
+ *  LOAD CUSTOM FONTS
+ *  ARROWS
+*/
+
+
+
+
+
+/*------------------------------------*\
+    !BACKGROUND IMAGES
+\*------------------------------------*/
+
+// Media Queries - Retina - http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss & http://www.brettjankord.com/2012/11/28/cross-browser-retinahigh-resolution-media-queries/
+@mixin image-2x($image, $width, $height){
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi) {
+        background-image: url('../images/#{$image}');
+        background-size: $width $height;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    !SIZING
+\*------------------------------------*/
+
+@mixin sizing($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin square($size){
+    width: $size;
+    height: $size;
+}
+
+
+
+
+
+/*------------------------------------*\
+    !LOAD CUSTOM FONTS
+\*------------------------------------*/
+
+/**
+ * Credit: Bourbon.io
+ *
+ * Order of the includes matters, and it is: normal, bold, italic, bold+italic.
+ */
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal){
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-style: $style;
+        src: url('#{$file-path}.woff') format('woff');
+    }
+}
+
+
+
+
+

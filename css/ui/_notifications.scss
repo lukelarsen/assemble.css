@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  USAGE
+        HTML
+        Class Options
+ *  IMPORTS
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !USAGE
+\*------------------------------------*/
+
+/**
+ * ^HTML
+
+   <div class="notification-wrapper  notification-wrapper--bottom-right">
+       <div class="notification  notification--info">
+           <div class="notification__title-bar">
+               <h3 class="notification-title"><i class="icon" data-icon="&#xf057;"></i> Message Title</h3>
+               <div class="notification-close-btn">
+                   <i class="icon" data-icon="&#xf00d;"></i>
+               </div>
+           </div>
+           <div class="notification-content">
+               <p class="notification-text">Message Text that goes on for a while so show a large message.</p>
+           </div>
+       </div>
+   </div>
+ */
+
+
+
+/**
+ * ^Class Options
+
+ * Blocks:      .notification-wrapper
+                .notification
+ * Modifiers:   .notification-wrapper--bottom-right
+                .notification-wrapper--bottom-left
+                .notification-wrapper--top-right
+                .notification-wrapper--top-left
+                .notification--{{you define color names}} (see the $notification-colors var in _notifications-options.scss)
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !IMPORTS
+\*------------------------------------*/
+
+//@import "options/notification-options";
+//@import "../objects/notifications/notification-mixins";
+//@import "../objects/notifications/notification-object";

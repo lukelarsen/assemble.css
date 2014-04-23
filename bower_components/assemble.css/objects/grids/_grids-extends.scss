@@ -1,0 +1,242 @@
+@if $use-grids == true{
+    /*------------------------------------*\
+        CONTENTS
+    \*------------------------------------*/
+    /**
+     * GRID DEFAULT
+     * FLEX CELLS MODIFIER
+     * GRID WIDTH MODIFIERS
+     * GRID SINGLE WIDTH MODIFIERS
+     * GRID GUTTER MODIFIERS
+     * GRID ALIGNMENT MODIFIERS
+     * GRID SINGLE ALIGNMENT MODIFIERS
+    */
+
+    /**
+     * Influenced By: Inuit.css and http://philipwalton.github.io/solved-by-flexbox/demos/grids/
+     */
+
+
+
+
+
+    /*------------------------------------*\
+        !GRID DEFAULT
+    \*------------------------------------*/
+
+    %grid{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    %grid__item{
+        flex: 1;
+    }
+
+    .block{
+        display: block;
+    }
+
+
+
+
+
+    /*------------------------------------*\
+        !FLEX CELLS MODIFIER
+    \*------------------------------------*/
+    /**
+
+    /**
+     * This will make all cells the same height.
+     *
+     * Apply with %grid.
+     */
+
+    %grid--flex-cells{
+        & > div[class^='gc-'] {
+            display: flex;
+        }
+    }
+
+
+
+
+
+    /*------------------------------------*\
+        !GRID WIDTH MODIFIERS
+    \*------------------------------------*/
+
+    /**
+     * If we need to set a specific width to all
+     * cells in a grid use these extends
+     *
+     * Extend them along with %grid.
+     */
+    %grid--fit{
+        > div[class^='gc-'] {
+            flex: 1;
+        }
+    }
+
+    %grid--full{
+        > div[class^='gc-'] {
+            flex: 0 0 100%;
+        }
+    }
+
+    %grid--halves{
+        > div[class^='gc-'] {
+            flex: 0 0 50%;
+        }
+    }
+
+    %grid--thirds{
+        > div[class^='gc-'] {
+            flex: 0 0 33.3333%;
+        }
+    }
+
+    %grid--quarters{
+        > div[class^='gc-'] {
+            flex: 0 0 25%;
+        }
+    }
+
+    %grid--fifths{
+        > div[class^='gc-'] {
+            flex: 0 0 20%;
+        }
+    }
+
+
+
+
+
+    /*------------------------------------*\
+        !GRID SINGLE WIDTH MODIFIERS
+    \*------------------------------------*/
+
+    /**
+     * We can set individual cell width with these extends.
+     */
+
+    %grid__item--full{
+        flex: 0 0 100% !important;
+    }
+
+    %grid__item--half{
+        flex: 0 0 50% !important;
+    }
+
+    %grid__item--third{
+        flex: 0 0 33.3333% !important;
+    }
+
+    %grid__item--quarter{
+        flex: 0 0 25% !important;
+    }
+
+    %grid__item--fifth{
+        flex: 0 0 20% !important;
+    }
+
+
+
+
+
+    /*------------------------------------*\
+        !GRID GUTTER MODIFIERS
+    \*------------------------------------*/
+
+    /**
+     * We can set individual grid gutter width with these.
+     *
+     * Apply them with the %grid extend.
+     */
+    %gutters-small{
+        margin-left: -1em;
+        & > div[class^='gc-'] {
+            padding-left: 1em;
+            margin-bottom: 1em;
+        }
+    }
+
+    %gutters-medium{
+        margin-left: -1.5em;
+        & > div[class^='gc-'] {
+            padding-left: 1.5em;
+            margin-bottom: 1.5em;
+        }
+    }
+
+    %gutters-large{
+        margin-left: -2em;
+        & > div[class^='gc-'] {
+            padding-left: 2em;
+            margin-bottom: 2em;
+        }
+    }
+
+    %gutters-xlarge{
+        margin-left: -3em;
+        & > div[class^='gc-'] {
+            padding-left: 3em;
+            margin-bottom: 3em;
+        }
+    }
+
+
+
+
+
+    /*------------------------------------*\
+        !GRID ALIGNMENT MODIFIERS
+    \*------------------------------------*/
+
+    /**
+     * If we need all cells in a grid to align to the
+     * same location use these classes.
+     *
+     * Apply them with the %grid extend.
+     */
+    %grid--top{
+        align-items: flex-start;
+    }
+
+    %grid--bottom{
+        align-items: flex-end;
+    }
+
+    %grid--center{
+        align-items: center;
+    }
+
+
+
+
+
+    /*------------------------------------*\
+        !GRID SINGLE ALIGNMENT MODIFIERS
+    \*------------------------------------*/
+
+    /**
+     * If we need single cells in a grid to align to a
+     * specific location use these extends.
+     *
+     * Apply them with the %grid__item extend.
+     */
+    %grid__item--top{
+        align-self: flex-start;
+    }
+
+    %grid__item--bottom{
+        align-self: flex-end;
+    }
+
+    %grid__item--center{
+        align-self: center;
+    }
+}

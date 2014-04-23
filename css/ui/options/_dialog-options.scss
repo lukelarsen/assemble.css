@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  USE DIALOG
+ *  DESIGN VARIABLES
+        The Box
+        Buttons
+        Form Inputs
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !USE DIALOG
+\*------------------------------------*/
+
+$use-dialog:                         true;
+
+
+
+
+
+/*------------------------------------*\
+    !DESIGN VARIABLES
+\*------------------------------------*/
+
+/**
+ * ^The Box
+ */
+$vex-border-radius:                 5px;
+$vex-background:                    #f0f0f0;
+$vex-color:                         #444;
+$vex-width:                         450px;
+$vex-font-size:                     1.1em;
+
+
+/**
+ * ^Buttons
+ */
+$vex-btn-border-radius:             3px;
+$vex-btn-text-transform:            uppercase;
+$vex-btn-font-size:                 0.8em;
+$vex-btn-padding:                   0.75em 2em;
+$vex-btn-primary-background:        #3288e6;
+$vex-btn-primary-color:             white;
+$vex-btn-secondary-background:      #e0e0e0;
+$vex-btn-secondary-color:           #777;
+
+
+/**
+ * ^Form Inputs
+ */
+$vex-input-border-radius: 3px;
+$vex-input-background: white;
+$vex-input-padding: 0.25em 0.67em;
+$vex-input-border: 0px;

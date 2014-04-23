@@ -1,0 +1,81 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  USAGE
+        HTML
+        Class Options
+ *  IMPORTS
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !USAGE
+\*------------------------------------*/
+
+/**
+ * ^HTML
+
+   <ul class="nav  nav--left">
+       <li><a href="#">About</a></li>
+       <li><a href="#">Contact</a></li>
+       <li><a href="#">Portfolio</a></li>
+       <li><a href="#">Search</a></li>
+   </ul>
+ */
+
+
+
+/**
+ * ^Class Options
+
+ * Blocks:      .nav
+ * Modifiers:   .nav--fit
+                .nav--stacked
+                .nav--center
+                .nav--right
+                .nav--left
+                .nav--space-between
+                .nav--space-around
+                .nav--keywords
+                .nav--pagination
+                .nav--breadcrumb
+                .nav--breadcrumb--path
+                .nav--breadcrumb--custom
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !IMPORTS
+\*------------------------------------*/
+
+//@import "options/nav-options";
+//@import "../objects/navs/nav-object";
+
+
+
+
+
+/*------------------------------------*\
+    !NAVS
+\*------------------------------------*/
+
+.nav--main{
+    > li{
+        > a{
+
+            // margin-left: 15px; // use when ul has justify-content: flex-end;
+            // margin-right: 15px; // use when ul justify-content: flex-start;
+//            margin: 0px 7px; // use when ul has justify-content: center;
+
+            background-color: red;
+            padding: 12px;
+        }
+    }
+}

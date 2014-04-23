@@ -1,0 +1,70 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  USE TOOL TIPS
+ *  DESIGN VARIABLES
+        Tool Tip Right
+        Tool Tip Bottom
+ *  MODIFIER VARIABLES
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !USE TOOL TIPS
+\*------------------------------------*/
+
+$use-tool-tips:                     true;
+
+
+
+
+
+/*------------------------------------*\
+    !DESIGN VARIABLES
+\*------------------------------------*/
+
+$tool-tip-bg-color:                 green;
+$tool-tip-text-color:               white;
+
+$tool-tip-close-background:         black;
+$tool-tip-close-color:              white;
+$tool-tip-close-padding:            3px 10px;
+
+/**
+ * ^Tool Tip Right
+ */
+// Will animate from the right slightly leftwards;
+$tool-tip--right-start:             35px;
+$tool-tip--right-end:               25px;
+$tool-tip--right-top:               -7px;
+
+// Position under portable media query
+$tool-tip--right-top--portable:     58px;
+$tool-tip--right-left--portable:    -191px;
+
+
+/**
+ * ^Tool Tip Bottom
+ */
+// Will animate from the bottom slightly upwards;
+$tool-tip--bottom-start:            60px;
+$tool-tip--bottom-end:              58px;
+$tool-tip--bottom-left:            -179px;
+
+// Position under portable media query
+$tool-tip--bottom-left--portable:   $tool-tip--right-left--portable;
+
+
+
+
+
+/*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+
+$tool-tip--right:                   true;
+$tool-tip--bottom:                  true;

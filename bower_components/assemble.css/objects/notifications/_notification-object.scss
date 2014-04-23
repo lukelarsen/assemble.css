@@ -1,0 +1,188 @@
+@if $use-notifications == true{
+    /*------------------------------------*\
+        CONTENTS
+    \*------------------------------------*/
+    /**
+     *  NOTIFICATION BASE
+            Message Title
+            Message Content
+     *  NOTIFICATION COLORS
+            Success
+            Warning
+            Info
+     *  NOTIFICATION POSITIONS
+            Bottom Right
+            Bottom Left
+            Top Right
+            Top Left
+     */
+
+
+
+
+
+    /*------------------------------------*\
+        !NOTIFICATION BASE
+    \*------------------------------------*/
+
+    .notification-wrapper {
+        width: $notification-width;
+        position: fixed;
+        z-index: 1000;
+        font-size: $notification-font-size;
+
+        @include media-query(palm) {
+            width: auto;
+        }
+    }
+
+    .notification{
+        width: 100%;
+        min-height: 80px;
+        color: white;
+    }
+
+    /**
+     * ^Message Title
+     */
+    .notification__title-bar {
+        width: 100%;
+        padding: $notification-padding;
+        display: flex;
+    }
+    .notification-title {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .notification-close-btn {
+        color: $notification-close-color;
+        margin-left: auto;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        &:hover {
+            color: $notification-close-color-hover;
+        }
+    }
+
+
+    /**
+     * ^Message Content
+     */
+    .notification-content {
+        padding: $notification-padding;
+    }
+
+    .notification-content a {
+        text-decoration: underline;
+    }
+
+    p.notification-text {
+        margin: 0;
+        width: 100%;
+    }
+
+
+
+
+
+    /*------------------------------------*\
+        $COLORS
+    \*------------------------------------*/
+
+    .notification{
+        @each $key, $value in $notification-colors{
+            &--#{$key} {
+            @include print-notification-colors($notification-colors, $key);
+        }
+        }
+    }
+
+
+
+
+
+
+    /*------------------------------------*\
+        $POSITIONS
+    \*------------------------------------*/
+
+    /**
+     * ^Bottom Right
+     */
+    @if $notification-bottom-right == true {
+        .notification-wrapper--bottom-right{
+            bottom: $notification-space-from-edge;
+            right: $notification-space-from-edge;
+
+            @include media-query(palm){
+                right: 0px;
+                width: 100%;
+            }
+
+            .notification{
+                margin-top: 10px;
+            }
+        }
+    }
+
+
+    /**
+     * ^Bottom Left
+     */
+    @if $notification-bottom-left == true {
+        .notification-wrapper--bottom-left{
+            bottom: $notification-space-from-edge;
+            left: $notification-space-from-edge;
+
+            @include media-query(palm){
+                left: 0px;
+                width: 100%;
+            }
+
+            .notification{
+                margin-top: 10px;
+            }
+        }
+    }
+
+
+    /**
+     * ^Top Right
+     */
+    @if $notification-top-right == true {
+        .notification-wrapper--top-right{
+            top: $notification-space-from-edge;
+            right: $notification-space-from-edge;
+
+            @include media-query(palm){
+                right: 0px;
+                width: 100%;
+            }
+
+            .notification{
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    /**
+     * ^Top Left
+     */
+    @if $notification-top-left == true {
+        .notification-wrapper--top-left{
+            top: $notification-space-from-edge;
+            left: $notification-space-from-edge;
+
+            @include media-query(palm){
+                left: 0px;
+                width: 100%;
+            }
+
+            .notification{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

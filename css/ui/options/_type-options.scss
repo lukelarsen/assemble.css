@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  USE TYPE
+ *  VARIABLES
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !USE TYPE
+\*------------------------------------*/
+
+$use-type:                          true;
+
+
+
+
+
+/*------------------------------------*\
+    !VARIABLES
+\*------------------------------------*/
+
+$font-sans:                         'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-serif:                        Georgia, 'Times New Roman', serif !default;
+$font-mono:                         'Lucida Console', Monaco, monospace !default;
+$text-color:                        #000 !default;
+
+// The vertical grid unit. Margin, padding, and line-height are set to multiples of this value.
+// This is the value that determines the baseline for our vertical rhythm. The default value of 6px
+// allows more fine tuned designs that still obey vertical rhythm.
+$base-vertical-unit:                6px !default;
+
+// The value that multiplies the $base-vertical-unit to get the $base-line-height. This gives type
+// an ideal line-height.
+$base-line-multi:                   4 !default;
+
+// Base font size in pixels.
+$base-font-size:                    16px !default;
+
+// Modular scale ratio that is used to figure out all the different font sizes
+$ms-ratio:                          1.414 !default;
+
+// Paragraph settings
+$paragraph-indent:                  true !default;
+$paragraph-justify:                 true !default;

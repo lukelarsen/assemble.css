@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  CLEARFIX
+ *  SHOW / HIDE
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !CLEARFIX
+\*------------------------------------*/
+
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
+ * and over in your markup.
+ */
+%cf{
+    &:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    !SHOW / HIDE
+\*------------------------------------*/
+
+%hidden{
+    display: none !important;
+    visibility: hidden;
+}
+
+%visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    &.focusable:active,
+    &.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+}
+
+%invisible {
+    visibility: hidden;
+}

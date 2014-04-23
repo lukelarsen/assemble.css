@@ -1,0 +1,51 @@
+@if $use-code == true {
+    /*------------------------------------*\
+        CONTENTS
+    \*------------------------------------*/
+    /**
+     *  CODE BASE
+     *  SCROLLABLE
+     */
+
+    /*------------------------------------*\
+        !CODE BASE
+    \*------------------------------------*/
+
+    pre,
+    code {
+        background-color: $code-border;
+        border: $code-border-size $code-border-type $code-border-color;
+        color: $code-color;
+        padding: $code-padding;
+    }
+
+    code {
+        padding: $code-inline-padding;
+    }
+
+    pre code {
+        border: none;
+        padding: 0;
+    }
+
+    pre {
+        overflow-x: auto;
+    }
+
+    pre code {
+        -ms-word-wrap: normal;
+        word-wrap: normal;
+        white-space: pre;
+    }
+
+    /*------------------------------------*\
+        !SCROLLABLE
+    \*------------------------------------*/
+
+    @if $code-scrollable == true {
+        .code-scrollable {
+            max-height: $code-scroll-max-height;
+            overflow-y: scroll;
+        }
+    }
+}

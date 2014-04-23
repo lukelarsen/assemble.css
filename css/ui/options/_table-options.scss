@@ -1,0 +1,92 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+*  USE TABLES
+*  DESIGN VARIABLES
+        Background Color
+        Borders
+ *  MODIFIER VARIABLES
+        Borders
+        Stripes
+        Numerical
+        Responsive
+ *  CELL WIDTHS
+*/
+
+
+
+
+
+/*------------------------------------*\
+    !USE TABLES
+\*------------------------------------*/
+
+$use-tables:                        true;
+
+
+
+
+
+/*------------------------------------*\
+    !DESIGN VARIABLES
+\*------------------------------------*/
+
+/**
+ * ^Background Color
+ */
+$table-stripe-background-color:     #eee;
+
+
+/**
+ * ^Borders
+ */
+$table-border-color:                #999;
+$table-border-size:                 1px;
+
+
+
+
+
+/*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+
+/**
+ * ^Borders
+ */
+$table--bordered:                   true;
+$table--outer-bordered:             true;
+
+
+/**
+ * ^Stripes
+ */
+$table--striped:                    true;
+
+
+/**
+ * ^Numerical
+ */
+$table-numerical:                   true;
+
+
+/**
+ * ^Responsive
+ */
+$table--responsive:                 true;
+
+
+
+
+
+/*------------------------------------*\
+    !CELL WIDTHS
+\*------------------------------------*/
+
+$table-cell-widths: (
+    5,
+    10,
+    66,
+    15
+);

@@ -1,0 +1,73 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  USE NOTIFICATIONS
+ *  DESIGN VARIABLES
+ *  MODIFIER VARIABLES
+        Notification Position
+        Notification Colors
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !USE NOTIFICATIONS
+\*------------------------------------*/
+
+$use-notifications:                 true;
+
+
+
+
+
+/*------------------------------------*\
+    !DESIGN VARIABLES
+\*------------------------------------*/
+
+$notification-width:                315px;
+$notification-font-size:            .8rem;
+$notification-padding:              7px 15px;
+$notification-close-color:          #fff;
+$notification-close-color-hover:    #000;
+$notification-space-from-edge:      20px;
+
+
+
+/*------------------------------------*\
+    !MODIFIER VARIABLES
+\*------------------------------------*/
+
+/**
+ * ^Notification Position
+ */
+$notification-bottom-right:         true;
+$notification-bottom-left:          false;
+$notification-top-right:            false;
+$notification-top-left:             false;
+
+/**
+ * ^Notification Colors
+ */
+$notification-colors: (
+    success: (
+        background: green,
+        color: white,
+        title-bar-background: darkgreen,
+        title-bar-color: white
+    ),
+    warning: (
+        background: red,
+        color: white,
+        title-bar-background: darkred,
+        title-bar-color: white
+    ),
+    info: (
+        background: blue,
+        color: white,
+        title-bar-background: darkblue,
+        title-bar-color: white
+    )
+);
