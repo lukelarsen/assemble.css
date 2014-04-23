@@ -1483,6 +1483,14 @@ pre code {
       !BUTTON CLEAN UP
   \*------------------------------------*/
 }
+.btn--natural {
+  vertical-align: baseline;
+  font-size: inherit;
+  line-height: inherit;
+  height: auto;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
 .btn--primary {
   background: red;
   border: solid 1px black;
