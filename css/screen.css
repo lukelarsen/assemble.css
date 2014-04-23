@@ -448,6 +448,19 @@
     !VARIABLES
 \*------------------------------------*/
 /*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  Z-INDEX MAP
+ *  Z-INDEX FUNCTION
+ */
+/*------------------------------------*\
+    !Z-INDEX MAP
+\*------------------------------------*/
+/*------------------------------------*\
+    !Z-INDEX FUNCTION
+\*------------------------------------*/
+/*------------------------------------*\
     !IMPORT ASSEMBLE.CSS
 \*------------------------------------*/
 /*------------------------------------*\
@@ -960,9 +973,7 @@ table {
 /**
  *  BACKGROUND IMAGES
  *  SIZING
- *  RESPONSIVE
  *  LOAD CUSTOM FONTS
- *  ARROWS
 */
 /*------------------------------------*\
     !BACKGROUND IMAGES
@@ -1667,7 +1678,6 @@ pre code {
   position: fixed;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  z-index: 1111;
   top: 0;
   right: 0;
   bottom: 0;
@@ -1720,7 +1730,6 @@ pre code {
   -webkit-backface-visibility: hidden;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
   position: fixed;
-  z-index: 1112;
   margin: auto;
   top: 0;
   right: 0;
@@ -2446,7 +2455,6 @@ input[type='radio'] {
 }
 .input-addon .icon {
   position: absolute;
-  z-index: 1;
 }
 
 .input-addon--left input {
@@ -2654,7 +2662,6 @@ audio, canvas, img, video {
   width: 40%;
   min-width: 320px;
   height: auto;
-  z-index: 2000;
   visibility: hidden;
   display: none;
   backface-visibility: hidden;
@@ -2682,7 +2689,6 @@ audio, canvas, img, video {
   visibility: hidden;
   top: 0;
   left: 0;
-  z-index: 1000;
   opacity: 0;
   background: rgba(31, 31, 31, 0.8);
   display: none;
@@ -3067,7 +3073,6 @@ audio, canvas, img, video {
 .notification-wrapper {
   width: 315px;
   position: fixed;
-  z-index: 1000;
   font-size: 0.8rem;
 }
 @media only screen and (max-width: 480px) {
@@ -3372,7 +3377,6 @@ td {
 }
 .tool-tip .tool-tip__container {
   position: absolute;
-  z-index: 9;
   visibility: hidden;
   padding: 10px 15px;
   width: 200px;
@@ -3486,7 +3490,6 @@ td {
         HTML
         Class Options
         Example
- *  IMPORTS
  *  GRIDS
 */
 /*------------------------------------*\
@@ -3588,9 +3591,6 @@ td {
 
  */
 /*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
-/*------------------------------------*\
     !GRIDS
 \*------------------------------------*/
 /**
@@ -3617,7 +3617,6 @@ td {
 \*------------------------------------*/
 /**
  *  USAGE
- *  IMPORTS
  */
 /*------------------------------------*\
     !USAGE
@@ -3662,16 +3661,12 @@ td {
  *
  */
 /*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
-/*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
 /**
  *  USAGE
         HTML
         Class Options
- *  IMPORTS
  */
 /*------------------------------------*\
     !USAGE
@@ -3703,9 +3698,6 @@ td {
                 .nav--breadcrumb--path
                 .nav--breadcrumb--custom
  */
-/*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
 /*------------------------------------*\
     !NAVS
 \*------------------------------------*/
@@ -3890,7 +3882,6 @@ hr {
         HTML
         Class Options
         Example
- *  IMPORTS
  *  FORMS
  */
 /*------------------------------------*\
@@ -4006,9 +3997,6 @@ hr {
    }
 
  */
-/*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
 /*------------------------------------*\ 
     !FORMS
 \*------------------------------------*/
@@ -4047,7 +4035,6 @@ hr {
  *  USAGE
         HTML
         Class Options
- *  IMPORTS
  */
 /*------------------------------------*\
     !USAGE
@@ -4071,16 +4058,12 @@ hr {
                 .tool-tip--bottom
  */
 /*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
-/*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
 /**
  *  USAGE
         HTML
         Class Options
- *  IMPORTS
 */
 /*------------------------------------*\
     !USAGE
@@ -4148,16 +4131,12 @@ hr {
                 .table--responsive
  */
 /*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
-/*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
 /**
  *  USAGE
         HTML
         Class Options
- *  IMPORTS
  */
 /*------------------------------------*\
     !USAGE
@@ -4193,16 +4172,12 @@ hr {
                 .modal--super-scaled
  */
 /*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
-/*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
 /**
  *  USAGE
         HTML
         Class Options
- *  IMPORTS
  */
 /*------------------------------------*\
     !USAGE
@@ -4230,16 +4205,12 @@ hr {
     });
  */
 /*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
-/*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
 /**
  *  USAGE
         HTML
         Class Options
- *  IMPORTS
  */
 /*------------------------------------*\
     !USAGE
@@ -4272,9 +4243,6 @@ hr {
                 .notification-wrapper--top-left
                 .notification--{{you define color names}} (see the $notification-colors var in _notifications-options.scss)
  */
-/*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
@@ -4313,7 +4281,6 @@ hr {
  *  USAGE
         HTML
         Class Options
- *  IMPORTS
  */
 /*------------------------------------*\
     !USAGE
@@ -4359,16 +4326,12 @@ hr {
                 .media--vine
  */
 /*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
-/*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
 /**
  *  USAGE
         HTML
         Class Options
- *  IMPORTS
  */
 /*------------------------------------*\
     !USAGE
@@ -4392,16 +4355,12 @@ hr {
                 .list-ordered
  */
 /*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
-/*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
 /**
  *  USAGE
         HTML
         Class Options
- *  IMPORTS
  */
 /*------------------------------------*\
     !USAGE
@@ -4424,5 +4383,50 @@ hr {
  * Options:     .pre-scrollable
  */
 /*------------------------------------*\
-    !IMPORTS
+    CONTENTS
 \*------------------------------------*/
+/**
+ *  SET Z-INDEX VALUES
+        Dialogs
+        Modals
+        Notifications
+        Tool Tips
+ */
+/*------------------------------------*\
+    !SET Z-INDEX VALUES
+\*------------------------------------*/
+/**
+ * ^Dialogs
+ */
+.vex {
+  z-index: 50;
+}
+
+.vex-load-spinner {
+  z-index: 51;
+}
+
+/**
+ * ^Modals
+ */
+.modal {
+  z-index: 40;
+}
+
+.modal-overlay {
+  z-index: 39;
+}
+
+/**
+ * ^Notifications
+ */
+.notification-wrapper {
+  z-index: 30;
+}
+
+/**
+ * ^Tool Tips
+ */
+.tool-tip__container {
+  z-index: 20;
+}

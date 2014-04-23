@@ -28,7 +28,6 @@
     .notification-wrapper {
         width: $notification-width;
         position: fixed;
-        z-index: 1000;
         font-size: $notification-font-size;
 
         @include media-query(palm) {

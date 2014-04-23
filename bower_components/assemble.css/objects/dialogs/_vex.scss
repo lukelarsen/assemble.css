@@ -172,7 +172,6 @@
         position: fixed;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
-        z-index: 1111;
         top: 0;
         right: 0;
         bottom: 0;
@@ -224,7 +223,6 @@
         -webkit-backface-visibility: hidden;
         box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
         position: fixed;
-        z-index: 1112;
         margin: auto;
         top: 0;
         right: 0;

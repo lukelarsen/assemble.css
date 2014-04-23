@@ -34,7 +34,6 @@
         width: 40%;
         min-width: 320px;
         height: auto;
-        z-index: 2000;
         visibility: hidden;
         display: none;
         backface-visibility: hidden;
@@ -61,7 +60,6 @@
         visibility: hidden;
         top: 0;
         left: 0;
-        z-index: 1000;
         opacity: 0;
         background: $modal_overlay_background_color;
         display: none;

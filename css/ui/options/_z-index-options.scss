@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  Z-INDEX MAP
+ *  Z-INDEX FUNCTION
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !Z-INDEX MAP
+\*------------------------------------*/
+
+// A clean way to deal with z-index layers in Sass
+// Based on http://css-tricks.com/handling-z-index/
+
+// A map of z layers
+// All z-index values should be set there
+$z-layers: (
+    'vex':                          50,
+    'modal':                        40,
+    'notification-wrapper':         30,
+    'tool-tip__container':          20
+);
+
+
+
+
+
+/*------------------------------------*\
+    !Z-INDEX FUNCTION
+\*------------------------------------*/
+
+// A function helper to avoid having to type `map-get($z-layers, ...)`
+// @param [string] $component (default): the layer to use
+// @return [number] | null
+@function z($layer: 'default') {
+    @if map-has-key($z-layers, $layer) {
+        @return map-get($z-layers, $layer);
+    }
+
+    @warn "No z-index found in $z-layers map for `#{$layer}`. Property omitted.";
+    @return null;
+}
