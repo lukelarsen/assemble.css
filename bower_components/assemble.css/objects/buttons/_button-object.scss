@@ -1,82 +1,83 @@
-/*------------------------------------*\
-    CONTENTS
-\*------------------------------------*/
-/**
- *  BUTTON BASE
- *  BUTTON MODIFIERS
-        Button Sizes
-        Button Types
-        Button Colors
- *  BUTTON CLEAN UP
- *  BUTTON GROUP
- */
-
-
-
-
-
-/*------------------------------------*\
-    !BUTTON BASE
-\*------------------------------------*/
-
-.btn{
-    display: inline-block;
-    vertical-align: middle;
-    white-space: nowrap;
-    font-family: inherit;
-    font-size: $btn-default-font-size;
-    cursor: pointer;
-    margin: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    line-height: 3;
-    padding-right: $btn-padding-sides;
-    padding-left: $btn-padding-sides;
-    background-color: #000;
-    overflow: visible;
-    text-decoration: none;
-    color: #fff;
-    border: 0px;
-    transition: background-color .2s ease-in-out;
-    outline: none;
-
-
-
-
-
-/*------------------------------------*\
-    !BUTTON MODIFIERS
-\*------------------------------------*/
-
+@if $use-buttons == true {
+    /*------------------------------------*\
+        CONTENTS
+    \*------------------------------------*/
     /**
-     * ^Button Sizes
+     *  BUTTON BASE
+     *  BUTTON MODIFIERS
+            Button Sizes
+            Button Types
+            Button Colors
+     *  BUTTON CLEAN UP
+     *  BUTTON GROUP
      */
-    @if $btn--large == true {
-        &--large{
+
+
+
+
+
+    /*------------------------------------*\
+        !BUTTON BASE
+    \*------------------------------------*/
+
+    .btn{
+        display: inline-block;
+        vertical-align: middle;
+        white-space: nowrap;
+        font-family: inherit;
+        font-size: $btn-default-font-size;
+        cursor: pointer;
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 3;
+        padding-right: $btn-padding-sides;
+        padding-left: $btn-padding-sides;
+        background-color: #000;
+        overflow: visible;
+        text-decoration: none;
+        color: #fff;
+        border: 0px;
+        transition: background-color .2s ease-in-out;
+        outline: none;
+
+
+
+
+
+        /*------------------------------------*\
+            !BUTTON MODIFIERS
+        \*------------------------------------*/
+
+        /**
+         * ^Button Sizes
+         */
+        @if $btn--large == true {
+            &--large{
             font-size: $btn-default-font-size * $btn-size-ratio;
         }
-    }
+        }
 
-    @if $btn--small== true {
-        &--small{
+        @if $btn--small== true {
+            &--small{
             font-size: $btn-default-font-size / $btn-size-ratio;
         }
-    }
+        }
 
-    @if $btn--block == true {
-        &--block{
+        @if $btn--block == true {
+            &--block{
             display: block;
             width: 100%;
             text-align: center;
         }
-    }
+        }
 
 
-    /**
-     * ^Button Types
-     */
-    @if $btn--natural == true {
-        &--natural{
+        /**
+         * ^Button Types
+         */
+        @if $btn--natural == true {
+            &--natural{
             vertical-align: baseline;
             font-size: inherit;
             line-height: inherit;
@@ -84,10 +85,10 @@
             padding-right: 0.5em;
             padding-left: 0.5em;
         }
-    }
+        }
 
-    @if $btn--disabled == true {
-        &--disabled{
+        @if $btn--disabled == true {
+            &--disabled{
             background-color: #ddd;
             color: #777;
 
@@ -99,15 +100,40 @@
                 cursor: not-allowed;
             }
         }
-    }
+        }
 
 
-    /**
-     * ^Button Colors
-     */
-    @each $key, $value in $button-colors{
-        &--#{$key} {
+        /**
+         * ^Button Colors
+         */
+        @each $key, $value in $button-colors{
+            &--#{$key} {
             @include print-button-colors($button-colors, $key);
+        }
+        }
+
+
+
+
+
+        /*------------------------------------*\
+            !BUTTON CLEAN UP
+        \*------------------------------------*/
+        &:hover,
+        &:active,
+        &:focus,
+        &:visited{
+            text-decoration: none;
+        }
+
+        &:active,
+        &:focus{
+            outline: none;
+        }
+
+        &::-moz-focus-inner{
+            border: 0;
+            padding: 0;
         }
     }
 
@@ -115,45 +141,21 @@
 
 
 
-/*------------------------------------*\
-    !BUTTON CLEAN UP
-\*------------------------------------*/
-    &:hover,
-    &:active,
-    &:focus,
-    &:visited{
-        text-decoration: none;
-    }
+    /*------------------------------------*\
+        !BUTTON GROUP
+    \*------------------------------------*/
 
-    &:active,
-    &:focus{
-        outline: none;
-    }
+    @if $btn-group == true {
+        .btn-group {
+            position: relative;
+            display: inline-block;
+            white-space: nowrap;
+            vertical-align: middle;
+            @extend %cf;
 
-    &::-moz-focus-inner{
-        border: 0;
-        padding: 0;
-    }
-}
-
-
-
-
-
-/*------------------------------------*\
-    !BUTTON GROUP
-\*------------------------------------*/
-
-@if $btn-group == true {
-    .btn-group {
-        position: relative;
-        display: inline-block;
-        white-space: nowrap;
-        vertical-align: middle;
-        @extend %cf;
-        
-        > * {
-            float: left;
+            > * {
+                float: left;
+            }
         }
     }
 }

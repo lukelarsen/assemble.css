@@ -5,7 +5,6 @@
  *  USAGE
         HTML
         Class Options
- *  IMPORTS
  */
 
 
@@ -47,15 +46,3 @@
                 .notification-wrapper--top-left
                 .notification--{{you define color names}} (see the $notification-colors var in _notifications-options.scss)
  */
-
-
-
-
-
-/*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
-
-//@import "options/notification-options";
-//@import "../objects/notifications/notification-mixins";
-//@import "../objects/notifications/notification-object";

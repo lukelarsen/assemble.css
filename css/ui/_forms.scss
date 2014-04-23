@@ -6,7 +6,6 @@
         HTML
         Class Options
         Example
- *  IMPORTS
  *  FORMS
  */
 
@@ -137,19 +136,6 @@
 
 
 
-/*------------------------------------*\
-    !IMPORTS
-\*------------------------------------*/
-
-//@import "options/form-options";
-//@import "../objects/forms/forms-extends";
-//@import "../objects/forms/forms-mixins";
-//@import "../objects/forms/forms-object";
-
-
-
-
-
 /*------------------------------------*\ 
     !FORMS
 \*------------------------------------*/
@@ -175,8 +161,3 @@
 .form-item-half{
     @extend %form__item--half;
 }
-
-
-
-
-
