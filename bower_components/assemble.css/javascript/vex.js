@@ -179,7 +179,7 @@
   };
 
   if (typeof define === 'function' && define.amd) {
-    define(['jquery'], vexFactory);
+    define(['../../../javascript/jquery'], vexFactory);
   } else if (typeof exports === 'object') {
     module.exports = vexFactory(require('jquery'));
   } else {

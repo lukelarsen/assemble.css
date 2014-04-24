@@ -4438,3 +4438,9 @@ hr {
 .tool-tip__container {
   z-index: 20;
 }
+
+.iconic {
+  width: 40px;
+  height: 40px;
+  fill: orange !important;
+}

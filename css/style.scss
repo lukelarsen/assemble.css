@@ -54,3 +54,10 @@
 @import "ui/lists";
 @import "ui/code";
 @import "ui/z-index";
+
+
+.iconic{
+    @include sizing(40px, 40px);
+    fill: orange !important;
+//    stroke: orange;
+}
