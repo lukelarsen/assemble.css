@@ -233,30 +233,31 @@
                 width: 100%;
             }
 
-            .icon{
+            .iconic{
                 position: absolute;
+                @include square($form-icon-size);
             }
         }
 
         .input-addon--left{
             input{
-                padding-left: 36px;
+                padding-left: $form-icon-padding-side;
             }
 
-            .icon{
-                top: 7px;
-                left: 11px;
+            .iconic{
+                top: $form-icon-top-indent;
+                left: $form-icon-top-indent;
             }
         }
 
         .input-addon--right{
             input{
-                padding-right: 36px;
+                padding-right: $form-icon-padding-side;
             }
 
-            .icon{
-                top: 7px;
-                right: 11px;
+            .iconic{
+                top: $form-icon-top-indent;
+                right: $form-icon-side-indent;
             }
         }
     }

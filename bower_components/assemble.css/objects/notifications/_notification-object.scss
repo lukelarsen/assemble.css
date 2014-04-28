@@ -93,8 +93,8 @@
     .notification{
         @each $key, $value in $notification-colors{
             &--#{$key} {
-            @include print-notification-colors($notification-colors, $key);
-        }
+                @include print-notification-colors($notification-colors, $key);
+            }
         }
     }
 
@@ -121,7 +121,7 @@
             }
 
             .notification{
-                margin-top: 10px;
+                margin-top: $notification-space-from-edge;
             }
         }
     }

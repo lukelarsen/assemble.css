@@ -212,6 +212,9 @@
  * ^Sizing
  */
 /**
+ * ^Icons
+ */
+/**
  * ^Webkit Appearance
  */
 /**
@@ -243,6 +246,19 @@
  * Set the widths you need in your layout here.
  * These are px values.
  */
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  USE ICONS
+ *  DESIGN VARIABLES
+ */
+/*------------------------------------*\
+    !USE ICONS
+\*------------------------------------*/
+/*------------------------------------*\
+    !DESIGN VARIABLES
+\*------------------------------------*/
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
@@ -2461,24 +2477,26 @@ input[type='radio'] {
 .input-addon input {
   width: 100%;
 }
-.input-addon .icon {
+.input-addon .iconic {
   position: absolute;
+  width: 20px;
+  height: 20px;
 }
 
 .input-addon--left input {
-  padding-left: 36px;
+  padding-left: 38px;
 }
-.input-addon--left .icon {
-  top: 7px;
-  left: 11px;
+.input-addon--left .iconic {
+  top: 8px;
+  left: 8px;
 }
 
 .input-addon--right input {
-  padding-right: 36px;
+  padding-right: 38px;
 }
-.input-addon--right .icon {
-  top: 7px;
-  right: 11px;
+.input-addon--right .iconic {
+  top: 8px;
+  right: 10px;
 }
 
 /*------------------------------------*\
@@ -3187,7 +3205,7 @@ p.notification-text {
   }
 }
 .notification-wrapper--bottom-right .notification {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 /**
@@ -3713,6 +3731,10 @@ td {
   background-color: red;
   padding: 12px;
 }
+.nav--main > li > a .iconic {
+  width: 0.8em;
+  height: 0.8em;
+}
 
 /*------------------------------------*\
     CONTENTS
@@ -3751,15 +3773,6 @@ h6, .h6 {
   padding-bottom: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
-}
-h1 .icon, .h1 .icon,
-h2 .icon, .h2 .icon,
-h3 .icon, .h3 .icon,
-h4 .icon, .h4 .icon,
-h5 .icon, .h5 .icon,
-h6 .icon, .h6 .icon {
-  font-size: .8em;
-  vertical-align: base;
 }
 
 h1, .h1 {
@@ -4036,6 +4049,10 @@ hr {
                 .btn--disabled
                 .btn--{{you define color names}} (see the $button-colors var in _button-options.scss)
  */
+.btn--primary .iconic {
+  fill: white;
+}
+
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
@@ -4255,33 +4272,11 @@ hr {
     CONTENTS
 \*------------------------------------*/
 /**
- *  BASE
+ *
  */
 /*------------------------------------*\
-    !BASE
+    !
 \*------------------------------------*/
-@font-face {
-  font-family: "Icons";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/Icons.woff") format("woff");
-}
-[data-icon]:before {
-  content: attr(data-icon);
-  text-transform: none;
-  font-weight: normal;
-  font-variant: normal;
-  font-family: 'Icons';
-  line-height: 1;
-  speak: none;
-  -webkit-font-smoothing: antialiased;
-}
-
-.icon {
-  font-style: normal;
-  vertical-align: middle;
-}
-
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
@@ -4439,8 +4434,6 @@ hr {
   z-index: 20;
 }
 
-.iconic {
-  width: 40px;
-  height: 40px;
-  fill: orange !important;
-}
+/*------------------------------------*\
+    !TEMP
+\*------------------------------------*/

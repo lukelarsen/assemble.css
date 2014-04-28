@@ -15,7 +15,6 @@
     !IMPORT OPTIONS
 \*------------------------------------*/
 
-// RESET AND RESPONSIVE GO UNDER OPTIONS OR NOT?
 @import "options";
 
 
@@ -56,8 +55,10 @@
 @import "ui/z-index";
 
 
-.iconic{
-    @include sizing(40px, 40px);
-    fill: orange !important;
-//    stroke: orange;
-}
+
+
+
+/*------------------------------------*\
+    !TEMP
+\*------------------------------------*/
+

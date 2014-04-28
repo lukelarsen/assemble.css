@@ -64,6 +64,11 @@
 
             background-color: red;
             padding: 12px;
+//            @include setType(6, $ms-up2); //
+            
+            .iconic{
+                @include square(.8em);
+            }
         }
     }
 }

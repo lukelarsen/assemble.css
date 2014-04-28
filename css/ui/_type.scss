@@ -43,11 +43,6 @@ h6, .h6{
     padding-bottom: 0;
     font-family: $font-sans;
     font-weight: bold;
-
-    .icon{
-        font-size: .8em;
-        vertical-align: base;
-    }
 }
 
 // [1] Applies a margin bottom that is a multiple of the vertical grid in EMs. The first argument is the font size context and the second is multiple of the vertical grid unit.
