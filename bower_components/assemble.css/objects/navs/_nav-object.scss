@@ -132,17 +132,7 @@
 
     /**
      * ^Nav Keywords
-
      * Credit: Inuit.css
-
-       <ol class="nav  nav--keywords">
-           <li><a href="#">Word One</a></li>
-           <li><a href="#">Word Two</a></li>
-           <li><a href="#">Word Three</a></li>
-       </ol>
-
-       Can also be used without the <a> tags
-
      */
     .nav--keywords{
         > li{
@@ -170,21 +160,7 @@
 
     /**
      * ^Nav Pagination
-
      * Credit: Inuit.css
-
-       <ol class="nav  nav--pagination">
-           <li class="nav--pagination__first">First</li>
-           <li class="nav--pagination__prev">Previous</li>
-           <li><a href="/page/1">1</a></li>
-           <li><a href="/page/2">2</a></li>
-           <li class="current"><a href="/page/3">3</a></li>
-           <li><a href="/page/4">4</a></li>
-           <li><a href="/page/5">5</a></li>
-           <li class="nav--pagination__next"><a href="/page/next">Next</a></li>
-           <li class="nav--pagination__last"><a href="/page/last">Last</a></li>
-       </ol>
-
      */
 
     .nav--pagination{
@@ -212,16 +188,7 @@
 
     /**
      * ^Nav Breadcrumb
-
      * Credit: Inuit.css
-
-        <ol class="nav  nav--breadcrumb">
-            <li><a href="#">inuit.css</a></li>
-            <li><a href="#">inuit.css</a></li>
-            <li><a href="#">partials</a></li>
-            <li class="current"><a href="#">objects</a></li>
-        </ol>
-
      */
 
     .nav--breadcrumb{
@@ -241,16 +208,7 @@
 
     /**
      * ^Nav Breadcrumb Path
-
      * Credit: Inuit.css
-
-        <ol class="nav  nav--breadcrumb  nav--breadcrumb--path">
-            <li><a href="#">inuit.css</a></li>
-            <li><a href="#">inuit.css</a></li>
-            <li><a href="#">partials</a></li>
-            <li class="current"><a href="#">objects</a></li>
-        </ol>
-
      */
 
     .nav--breadcrumb--path > li + li:before{
@@ -260,16 +218,7 @@
 
     /**
      * ^Nav Breadcrumb Custom
-
      * Credit: Inuit.css
-
-        <ol class="nav  nav--breadcrumb  nav--breadcrumb--custom">
-            <li><a href="#">Home</a></li>
-            <li data-breadcrumb="|"><a href="#">About</a></li>
-            <li data-breadcrumb="|"><a href="#">The Board</a></li>
-            <li data-breadcrumb="|" class="current"><a href="#">Directors</a></li>
-        </ol>
-
      */
 
     .nav--breadcrumb--custom {
