@@ -1,0 +1,26 @@
+{
+  "name": "assemble.css",
+  "version": "0.0.1",
+  "homepage": "https://github.com/lukelarsen/assemble.css",
+  "authors": [
+    "Luke Larsen <luke@lukelarsen.com>"
+  ],
+  "description": "A Sass framework assembled.",
+  "keywords": [
+    "framework",
+    "css",
+    "scss"
+  ],
+  "dependencies": {
+      "jquery": "~2.1.0"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/bower_components",
+    "test",
+    "tests"
+  ]
+}
