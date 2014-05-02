@@ -13,11 +13,11 @@
         !FORM GRID
     \*------------------------------------*/
 
-    %form {
+    %form{
         margin-left: -1em;
         @extend %grid;
 
-        > li {
+        > li{
             margin-bottom: $form-item-push-bottom;
             padding-left: 1em;
         }
@@ -27,38 +27,38 @@
         !FORM WIDTH MODIFIERS
     \*------------------------------------*/
 
-    %form--fit {
-        > li {
+    %form--fit{
+        > li{
             flex: 1;
         }
     }
 
-    %form--full {
-        > li {
+    %form--full{
+        > li{
             flex: 0 0 100%;
         }
     }
 
-    %form--halves {
-        > li {
+    %form--halves{
+        > li{
             flex: 0 0 50%;
         }
     }
 
-    %form--thirds {
-        > li {
+    %form--thirds{
+        > li{
             flex: 0 0 33.3333%;
         }
     }
 
-    %form--quarters {
-        > li {
+    %form--quarters{
+        > li{
             flex: 0 0 25%;
         }
     }
 
-    %form--fifths {
-        > li {
+    %form--fifths{
+        > li{
             flex: 0 0 20%;
         }
     }
@@ -70,23 +70,23 @@
     /**
      * We can set individual form width with these extends.
      */
-    %form__item--full {
+    %form__item--full{
         flex: 0 0 100% !important;
     }
 
-    %form__item--half {
+    %form__item--half{
         flex: 0 0 50% !important;
     }
 
-    %form__item--third {
+    %form__item--third{
         flex: 0 0 33.3333% !important;
     }
 
-    %form__item--quarter {
+    %form__item--quarter{
         flex: 0 0 25% !important;
     }
 
-    %form__item--fifth {
+    %form__item--fifth{
         flex: 0 0 20% !important;
     }
 
@@ -98,25 +98,25 @@
      * The small settings are the default so they are not included
      * here. These others will override the small size default.
      */
-    %form-gutters-medium {
+    %form-gutters-medium{
         margin-left: -1.5em;
-        & > li {
+        & > li{
             padding-left: 1.5em;
             margin-bottom: 1.5em;
         }
     }
 
-    %form-gutters-large {
+    %form-gutters-large{
         margin-left: -2em;
-        & > li {
+        & > li{
             padding-left: 2em;
             margin-bottom: 2em;
         }
     }
 
-    %form-gutters-xlarge {
+    %form-gutters-xlarge{
         margin-left: -3em;
-        & > li {
+        & > li{
             padding-left: 3em;
             margin-bottom: 3em;
         }

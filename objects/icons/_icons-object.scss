@@ -1,0 +1,55 @@
+@if $use-icons == true{
+    /*------------------------------------*\
+        CONTENTS
+    \*------------------------------------*/
+    /**
+     *  DEFAULTS
+     *  HEADINGS
+     *  NOTIFICATIONS
+     */
+
+
+
+
+
+    /*------------------------------------*\
+        !DEFAULTS
+    \*------------------------------------*/
+
+    .iconic{
+        @include square($icon-default-size);
+        fill: $icon-default-color;
+    }
+
+
+
+
+    /*------------------------------------*\
+        !HEADINGS
+    \*------------------------------------*/
+
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6{
+        .iconic{
+            vertical-align: $icon-header-vertical-align;
+        }
+    }
+
+
+
+
+
+    /*------------------------------------*\
+        !NOTIFICATIONS
+    \*------------------------------------*/
+
+    .notification-close-btn{
+        .iconic{
+            @include square($icon-close-notification-size);
+        }
+    }
+}
