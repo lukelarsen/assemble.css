@@ -1,4 +1,4 @@
-@if $use-buttons == true {
+@if $use-buttons == true{
     /*------------------------------------*\
         CONTENTS
     \*------------------------------------*/
@@ -52,19 +52,19 @@
         /**
          * ^Button Sizes
          */
-        @if $btn--large == true {
+        @if $btn--large == true{
             &--large{
             font-size: $btn-default-font-size * $btn-size-ratio;
         }
         }
 
-        @if $btn--small== true {
+        @if $btn--small== true{
             &--small{
             font-size: $btn-default-font-size / $btn-size-ratio;
         }
         }
 
-        @if $btn--block == true {
+        @if $btn--block == true{
             &--block{
             display: block;
             width: 100%;
@@ -76,7 +76,7 @@
         /**
          * ^Button Types
          */
-        @if $btn--natural == true {
+        @if $btn--natural == true{
             &--natural{
             vertical-align: baseline;
             font-size: inherit;
@@ -87,14 +87,14 @@
         }
         }
 
-        @if $btn--disabled == true {
+        @if $btn--disabled == true{
             &--disabled{
             background-color: #ddd;
             color: #777;
 
             &:hover,
             &:active,
-            &:focus {
+            &:focus{
                 background-color: #ddd !important;
                 color: #777 !important;
                 cursor: not-allowed;
@@ -107,7 +107,7 @@
          * ^Button Colors
          */
         @each $key, $value in $button-colors{
-            &--#{$key} {
+            &--#{$key}{
             @include print-button-colors($button-colors, $key);
         }
         }
@@ -145,15 +145,15 @@
         !BUTTON GROUP
     \*------------------------------------*/
 
-    @if $btn-group == true {
-        .btn-group {
+    @if $btn-group == true{
+        .btn-group{
             position: relative;
             display: inline-block;
             white-space: nowrap;
             vertical-align: middle;
             @extend %cf;
 
-            > * {
+            > *{
                 float: left;
             }
         }

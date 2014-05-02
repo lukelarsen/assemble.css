@@ -21,14 +21,14 @@
         $i: $i + 1;
     }
 
-    @each $property, $value in $map {
-        @if $property == 'background' {
+    @each $property, $value in $map{
+        @if $property == 'background'{
             background: $value;
-        } @else if $property == 'border-color' {
+        } @else if $property == 'border-color'{
             border: solid $btn-border-size $value;
-        } @else if $property == 'color' {
+        } @else if $property == 'color'{
             color: $value;
-        } @else if $property == 'background-hover' {
+        } @else if $property == 'background-hover'{
             &:hover,
             &:active{
                 background: $value;

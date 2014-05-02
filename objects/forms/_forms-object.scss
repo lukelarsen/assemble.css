@@ -53,15 +53,15 @@
         cursor: text;
     }
 
-    @if $spoken-form == true {
+    @if $spoken-form == true{
         .spoken-form input,
-        .spoken-form select {
+        .spoken-form select{
             padding: $form-spoken-padding;
             height: $form-spoken-height;
         }
     }
 
-    @if $customize-webkit-forms == true {
+    @if $customize-webkit-forms == true{
         input[type=color],
         input[type=date],
         input[type=datetime-local],
@@ -77,12 +77,12 @@
         input[type=url],
         input[type=week],
         select,
-        textarea {
+        textarea{
             -webkit-appearance: none;
         }
 
-        @media (-webkit-min-device-pixel-ratio: 0) {
-            select {
+        @media (-webkit-min-device-pixel-ratio: 0){
+            select{
                 background-image: $webkit-select-arrow;
                 background-repeat: no-repeat;
                 background-position: right center;
@@ -149,7 +149,7 @@
             color: $form-label-error-color;
         }
 
-        input[type="text"] {
+        input[type="text"]{
             border: $form-error-border-type $form-error-border-color $form-error-border-size;
         }
     }
@@ -226,7 +226,7 @@
     \*------------------------------------*/
 
     @if $input-addon == true{
-        .input-addon {
+        .input-addon{
             position: relative;
 
             input{

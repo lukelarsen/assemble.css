@@ -65,7 +65,7 @@
      */
     @if $tool-tip--right == true{
         .tool-tip--right{
-            > .tool-tip__container {
+            > .tool-tip__container{
                 @include arrow(left, top, $tool-tip-bg-color);
                 transition: visibility 2s ease-in, opacity .3s ease-in, left .3s ease-in;
                 top: $tool-tip--right-top;
@@ -76,7 +76,7 @@
                     left: $tool-tip--right-left--portable !important;
 
                     &:before,
-                    &:after {
+                    &:after{
                         border-right-color: transparent !important;
                     }
                 }
@@ -93,7 +93,7 @@
     /**
      * ^Tool Tip Bottom
      */
-    @if $tool-tip--bottom == true {
+    @if $tool-tip--bottom == true{
         .tool-tip--bottom{
             > .tool-tip__container{
                 @include arrow(top, right, $tool-tip-bg-color);
@@ -101,7 +101,7 @@
                 top: $tool-tip--bottom-start;
                 left: $tool-tip--bottom-left;
 
-                @include media-query(portable) {
+                @include media-query(portable){
                     left: $tool-tip--bottom-left--portable !important;
                 }
             }

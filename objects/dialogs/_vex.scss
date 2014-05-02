@@ -1,4 +1,4 @@
-@if $use-dialog == true {
+@if $use-dialog == true{
     /*------------------------------------*\
         CONTENTS
     \*------------------------------------*/
@@ -16,159 +16,159 @@
      * To style Vex see the ui/_dialogs.scss file.
      */
 
-    @keyframes vex-fadein {
-        0% {
+    @keyframes vex-fadein{
+        0%{
             opacity: 0;
         }
 
-        100% {
+        100%{
             opacity: 1;
         }
     }
 
-    @-webkit-keyframes vex-fadein {
-        0% {
+    @-webkit-keyframes vex-fadein{
+        0%{
             opacity: 0;
         }
 
-        100% {
+        100%{
             opacity: 1;
         }
     }
 
-    @-moz-keyframes vex-fadein {
-        0% {
+    @-moz-keyframes vex-fadein{
+        0%{
             opacity: 0;
         }
 
-        100% {
+        100%{
             opacity: 1;
         }
     }
 
-    @-ms-keyframes vex-fadein {
-        0% {
+    @-ms-keyframes vex-fadein{
+        0%{
             opacity: 0;
         }
 
-        100% {
+        100%{
             opacity: 1;
         }
     }
 
-    @-o-keyframes vex-fadein {
-        0% {
+    @-o-keyframes vex-fadein{
+        0%{
             opacity: 0;
         }
 
-        100% {
+        100%{
             opacity: 1;
         }
     }
 
-    @keyframes vex-fadeout {
-        0% {
+    @keyframes vex-fadeout{
+        0%{
             opacity: 1;
         }
 
-        100% {
+        100%{
             opacity: 0;
         }
     }
 
-    @-webkit-keyframes vex-fadeout {
-        0% {
+    @-webkit-keyframes vex-fadeout{
+        0%{
             opacity: 1;
         }
 
-        100% {
+        100%{
             opacity: 0;
         }
     }
 
-    @-moz-keyframes vex-fadeout {
-        0% {
+    @-moz-keyframes vex-fadeout{
+        0%{
             opacity: 1;
         }
 
-        100% {
+        100%{
             opacity: 0;
         }
     }
 
-    @-ms-keyframes vex-fadeout {
-        0% {
+    @-ms-keyframes vex-fadeout{
+        0%{
             opacity: 1;
         }
 
-        100% {
+        100%{
             opacity: 0;
         }
     }
 
-    @-o-keyframes vex-fadeout {
-        0% {
+    @-o-keyframes vex-fadeout{
+        0%{
             opacity: 1;
         }
 
-        100% {
+        100%{
             opacity: 0;
         }
     }
 
-    @keyframes vex-rotation {
-        0% {
+    @keyframes vex-rotation{
+        0%{
             transform: rotate(0deg);
         }
 
-        100% {
+        100%{
             transform: rotate(359deg);
         }
     }
 
-    @-webkit-keyframes vex-rotation {
-        0% {
+    @-webkit-keyframes vex-rotation{
+        0%{
             transform: rotate(0deg);
         }
 
-        100% {
+        100%{
             transform: rotate(359deg);
         }
     }
 
-    @-moz-keyframes vex-rotation {
-        0% {
+    @-moz-keyframes vex-rotation{
+        0%{
             transform: rotate(0deg);
         }
 
-        100% {
+        100%{
             transform: rotate(359deg);
         }
     }
 
-    @-ms-keyframes vex-rotation {
-        0% {
+    @-ms-keyframes vex-rotation{
+        0%{
             transform: rotate(0deg);
         }
 
-        100% {
+        100%{
             transform: rotate(359deg);
         }
     }
 
-    @-o-keyframes vex-rotation {
+    @-o-keyframes vex-rotation{
         //noinspection ALL
-        0% {
+        0%{
             transform: rotate(0deg);
         }
 
         //noinspection SassScssUnresolvedFunction
-        100% {
+        100%{
             transform: rotate(359deg);
         }
     }
 
-    .vex {
+    .vex{
         position: fixed;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
@@ -178,7 +178,7 @@
         left: 0;
     }
 
-    .vex-overlay {
+    .vex-overlay{
         animation: vex-fadein 0.5s;
         -webkit-backface-visibility: hidden;
         position: fixed;
@@ -188,37 +188,37 @@
         bottom: 0;
         left: 0;
     }
-    .vex.vex-closing .vex-overlay {
+    .vex.vex-closing .vex-overlay{
         animation: vex-fadeout 0.5s;
         -webkit-backface-visibility: hidden;
     }
 
-    .vex-content {
+    .vex-content{
         animation: vex-fadein 0.5s;
         -webkit-backface-visibility: hidden;
         background: white;
     }
 
-    .vex.vex-closing .vex-content {
+    .vex.vex-closing .vex-content{
         animation: vex-fadeout 0.5s;
         -webkit-backface-visibility: hidden;
     }
 
-    .vex-close:before {
+    .vex-close:before{
         font-family: Arial, sans-serif;
         content: "\00D7";
     }
 
-    .vex-dialog-form {
+    .vex-dialog-form{
         margin: 0;
     }
 
-    .vex-dialog-button {
+    .vex-dialog-button{
         -webkit-appearance: none;
         cursor: pointer;
     }
 
-    .vex-loading-spinner {
+    .vex-loading-spinner{
         animation: vex-rotation 0.7s linear infinite;
         -webkit-backface-visibility: hidden;
         box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
@@ -233,7 +233,7 @@
         background: white;
     }
 
-    body.vex-open {
+    body.vex-open{
         overflow: hidden;
     }
 }

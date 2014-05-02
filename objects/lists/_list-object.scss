@@ -1,4 +1,4 @@
-@if $use-list == true {
+@if $use-list == true{
     /*------------------------------------*\
         CONTENTS
     \*------------------------------------*/
@@ -29,8 +29,8 @@
         !LIST NO BULLETS
     \*------------------------------------*/
 
-    @if $list-no-bullets == true {
-        .list-no-bullets {
+    @if $list-no-bullets == true{
+        .list-no-bullets{
             list-style: none;
         }
     }
@@ -43,14 +43,14 @@
         !LIST COLORED
     \*------------------------------------*/
 
-    @if $list-colored == true {
+    @if $list-colored == true{
         ul.list-colored,
-        ol.list-colored {
+        ol.list-colored{
             padding-left: $list-colored-padding-left;
         }
 
         ul.list-colored > li,
-        ol.list-colored > li {
+        ol.list-colored > li{
             list-style-type: none;
             position: relative;
         }
@@ -61,7 +61,7 @@
          * 3. Normalize funky webkit margin
          */
         ul.list-colored > li:before,
-        ol.list-colored > li:before {
+        ol.list-colored > li:before{
             content: "\25CF"; /* 1 */
             color: $list-colored-color; /* 2 */
             font-weight: bold;
@@ -75,11 +75,11 @@
         }
 
         // Counter increment to replace standard numbers.
-        ol.list-colored {
+        ol.list-colored{
             counter-reset: foo;
         }
 
-        ol.list-colored > li {
+        ol.list-colored > li{
             counter-increment: foo;
         }
 
@@ -88,7 +88,7 @@
          * 1. The counter value.
          * 2. Normalize funky webkit margin
          */
-        ol.list-colored > li:before {
+        ol.list-colored > li:before{
             content: counter(foo) "."; /* 1 */
             left: -3.125em;
             font-weight: normal;

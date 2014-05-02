@@ -49,7 +49,7 @@
         background-color: $modal_background_color;
     }
 
-    .modal--show {
+    .modal--show{
         visibility: visible;
     }
 
@@ -122,11 +122,11 @@
             width: 60%;
             left: 20%;
 
-            @include media-query(portable) {
+            @include media-query(portable){
                 top: 2%;
             }
 
-            @include media-query(palm) {
+            @include media-query(palm){
                 left: 0%;
             }
         }
@@ -141,7 +141,7 @@
             width: 30%;
             left: 35%;
 
-            @include media-query(palm) {
+            @include media-query(palm){
                 left: 0%;
             }
         }
@@ -251,7 +251,7 @@
      * ^Modal 3D Flip Vertical
      */
     @if $modal--3d-flip-vertical == true{
-        .modal--3d-flip-vertical.modal {
+        .modal--3d-flip-vertical.modal{
             perspective: 1300px;
         }
 
@@ -273,7 +273,7 @@
      * ^Modal Super Scaled
      */
     @if $modal--super-scaled == true{
-        .modal--super-scaled .modal__content {
+        .modal--super-scaled .modal__content{
             transform: scale(2);
             opacity: 0;
             transition: all 0.3s;

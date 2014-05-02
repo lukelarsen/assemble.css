@@ -14,8 +14,8 @@
 \*------------------------------------*/
 
 @mixin table-width($table-cell-widths){
-    @each $value in $table-cell-widths {
-        .t#{$value} {
+    @each $value in $table-cell-widths{
+        .t#{$value}{
             width: percentage($value / 100);
         }
     }

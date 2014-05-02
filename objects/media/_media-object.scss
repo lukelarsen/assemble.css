@@ -20,15 +20,18 @@
         !MEDIA BASE
     \*------------------------------------*/
 
-    img {
+    img{
         max-width: 100%;
         height: auto;
     }
-    audio, canvas, img, video {
+    audio,
+    canvas,
+    img,
+    video{
         vertical-align: middle;
     }
 
-    .media {
+    .media{
         position: relative;
         padding-top: 30px;
         padding-bottom: 56.25%;
@@ -49,8 +52,8 @@
         /**
          * ^Scrollabele Media
          */
-        @if $media--scroll == true {
-            &--scroll {
+        @if $media--scroll == true{
+            &--scroll{
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
         }
@@ -60,8 +63,8 @@
         /**
          * ^Vimeo places the controls on the player itself.
          */
-        @if $media--vimeo == true {
-            &--vimeo {
+        @if $media--vimeo == true{
+            &--vimeo{
             padding-top: 0;
         }
         }
@@ -70,8 +73,8 @@
         /**
          * ^Instagram
          */
-        @if $media--instagram == true {
-            &--instagram {
+        @if $media--instagram == true{
+            &--instagram{
             height: auto;
             max-width: none;
             padding-bottom: 120%;
@@ -82,8 +85,8 @@
         /**
          * ^Vine
          */
-        @if $media--vine == true {
-            &--vine {
+        @if $media--vine == true{
+            &--vine{
             height: auto;
             max-width: none;
             padding-bottom: 100%;
@@ -103,7 +106,7 @@
     .media iframe,
     .media object,
     .media embed,
-    .media video {
+    .media video{
         position: absolute;
         top: 0;
         left: 0;

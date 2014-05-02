@@ -56,7 +56,7 @@
      */
 
     %grid--flex-cells{
-        & > div[class^='gc-'] {
+        & > div[class^='gc-']{
             display: flex;
         }
     }
@@ -76,37 +76,37 @@
      * Extend them along with %grid.
      */
     %grid--fit{
-        > div[class^='gc-'] {
+        > div[class^='gc-']{
             flex: 1;
         }
     }
 
     %grid--full{
-        > div[class^='gc-'] {
+        > div[class^='gc-']{
             flex: 0 0 100%;
         }
     }
 
     %grid--halves{
-        > div[class^='gc-'] {
+        > div[class^='gc-']{
             flex: 0 0 50%;
         }
     }
 
     %grid--thirds{
-        > div[class^='gc-'] {
+        > div[class^='gc-']{
             flex: 0 0 33.3333%;
         }
     }
 
     %grid--quarters{
-        > div[class^='gc-'] {
+        > div[class^='gc-']{
             flex: 0 0 25%;
         }
     }
 
     %grid--fifths{
-        > div[class^='gc-'] {
+        > div[class^='gc-']{
             flex: 0 0 20%;
         }
     }
@@ -158,7 +158,7 @@
      */
     %gutters-small{
         margin-left: -1em;
-        & > div[class^='gc-'] {
+        & > div[class^='gc-']{
             padding-left: 1em;
             margin-bottom: 1em;
         }
@@ -166,7 +166,7 @@
 
     %gutters-medium{
         margin-left: -1.5em;
-        & > div[class^='gc-'] {
+        & > div[class^='gc-']{
             padding-left: 1.5em;
             margin-bottom: 1.5em;
         }
@@ -174,7 +174,7 @@
 
     %gutters-large{
         margin-left: -2em;
-        & > div[class^='gc-'] {
+        & > div[class^='gc-']{
             padding-left: 2em;
             margin-bottom: 2em;
         }
@@ -182,7 +182,7 @@
 
     %gutters-xlarge{
         margin-left: -3em;
-        & > div[class^='gc-'] {
+        & > div[class^='gc-']{
             padding-left: 3em;
             margin-bottom: 3em;
         }

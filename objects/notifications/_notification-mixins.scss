@@ -16,21 +16,21 @@
 @mixin print-notification-colors($map, $keys...){
     $i: 1;
     $length: length($keys);
-    @while $length >= $i  {
+    @while $length >= $i{
         $map: map-get($map, nth($keys, $i));
         $i: $i + 1;
     }
 
-    @each $property, $value in $map {
-        @if $property == 'background' {
+    @each $property, $value in $map{
+        @if $property == 'background'{
             background: $value;
-        } @else if $property == 'color' {
+        } @else if $property == 'color'{
             color: $value;
-        } @else if $property == 'title-bar-background' {
+        } @else if $property == 'title-bar-background'{
             .notification__title-bar{
                 background: $value;
             }
-        } @else if $property == 'title-bar-color' {
+        } @else if $property == 'title-bar-color'{
             .notification__title-bar{
                 color: $value;
             }

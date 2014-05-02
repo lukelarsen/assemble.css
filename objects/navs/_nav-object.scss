@@ -54,9 +54,9 @@
     /**
      * ^Nav Fit
      */
-    @if $nav--fit == true {
-        .nav--fit {
-            > li {
+    @if $nav--fit == true{
+        .nav--fit{
+            > li{
                 flex: 1 1 auto;
             }
         }
@@ -66,8 +66,8 @@
     /**
      * ^Nav Stacked
      */
-    @if $nav--stacked == true {
-        .nav--stacked {
+    @if $nav--stacked == true{
+        .nav--stacked{
             flex-direction: column;
         }
     }
@@ -76,8 +76,8 @@
     /**
      * ^Nav Center
      */
-    @if $nav--center == true {
-        .nav--center {
+    @if $nav--center == true{
+        .nav--center{
             justify-content: center;
         }
     }
@@ -86,8 +86,8 @@
     /**
      * ^Nav Right
      */
-    @if $nav--right == true {
-        .nav--right {
+    @if $nav--right == true{
+        .nav--right{
             justify-content: flex-end;
         }
     }
@@ -96,8 +96,8 @@
     /**
      * ^Nav Left
      */
-    @if $nav--left == true {
-        .nav--left {
+    @if $nav--left == true{
+        .nav--left{
             justify-content: flex-start;
         }
     }
@@ -106,8 +106,8 @@
     /**
      * ^Nav Space Between
      */
-    @if $nav--space-between == true {
-        .nav--space-between {
+    @if $nav--space-between == true{
+        .nav--space-between{
             justify-content: space-between;
         }
     }
@@ -116,8 +116,8 @@
     /**
      * ^Nav Space Around
      */
-    @if $nav--space-around == true {
-        .nav--space-around {
+    @if $nav--space-around == true{
+        .nav--space-around{
             justify-content: space-around;
         }
     }
@@ -221,8 +221,8 @@
      * Credit: Inuit.css
      */
 
-    .nav--breadcrumb--custom {
-        > li + li[data-breadcrumb]:before {
+    .nav--breadcrumb--custom{
+        > li + li[data-breadcrumb]:before{
             content: attr(data-breadcrumb) " ";
             float: left;
         }

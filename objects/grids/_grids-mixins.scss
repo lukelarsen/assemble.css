@@ -118,7 +118,7 @@
      */
     #{$class-type}gutters--#{$namespace}-small{
         margin-left: -1em;
-        & > div[class^='gc-'] {
+        & > div[class^='gc-']{
             padding-left: 1em;
             margin-bottom: 1em;
         }
@@ -130,7 +130,7 @@
      */
     #{$class-type}gutters--#{$namespace}-medium{
         margin-left: -1.5em;
-        & > div[class^='gc-'] {
+        & > div[class^='gc-']{
             padding-left: 1.5em;
             margin-bottom: 1.5em;
         }
@@ -142,7 +142,7 @@
      */
     #{$class-type}gutters--#{$namespace}-large{
         margin-left: -2em;
-        & > div[class^='gc-'] {
+        & > div[class^='gc-']{
             padding-left: 2em;
             margin-bottom: 2em;
         }
@@ -154,7 +154,7 @@
      */
     #{$class-type}gutters--#{$namespace}-xlarge{
         margin-left: -3em;
-        & > div[class^='gc-'] {
+        & > div[class^='gc-']{
             padding-left: 3em;
             margin-bottom: 3em;
         }
@@ -174,7 +174,7 @@
  * Generate our responsive extends (or classes)
  */
 @each $name in $breakpoint-has-widths{
-    @include grid-media-query($name) {
+    @include grid-media-query($name){
         @include device-type('#{$name}');
     }
 }
@@ -184,7 +184,7 @@
  * Generate our fixed width extends (or classes)
 _*/
 @each $width in $grid-fixed-widths{
-    #{$class-type}grid__item--fixed-#{$width} {
+    #{$class-type}grid__item--fixed-#{$width}{
         width: #{$width}px;
         flex: none !important;
     }

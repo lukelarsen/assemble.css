@@ -25,12 +25,12 @@
         !NOTIFICATION BASE
     \*------------------------------------*/
 
-    .notification-wrapper {
+    .notification-wrapper{
         width: $notification-width;
         position: fixed;
         font-size: $notification-font-size;
 
-        @include media-query(palm) {
+        @include media-query(palm){
             width: auto;
         }
     }
@@ -44,23 +44,23 @@
     /**
      * ^Message Title
      */
-    .notification__title-bar {
+    .notification__title-bar{
         width: 100%;
         padding: $notification-padding;
         display: flex;
     }
-    .notification-title {
+    .notification-title{
         margin: 0px;
         padding: 0px;
     }
 
-    .notification-close-btn {
+    .notification-close-btn{
         color: $notification-close-color;
         margin-left: auto;
         display: flex;
         cursor: pointer;
         align-items: center;
-        &:hover {
+        &:hover{
             color: $notification-close-color-hover;
         }
     }
@@ -69,15 +69,15 @@
     /**
      * ^Message Content
      */
-    .notification-content {
+    .notification-content{
         padding: $notification-padding;
     }
 
-    .notification-content a {
+    .notification-content a{
         text-decoration: underline;
     }
 
-    p.notification-text {
+    p.notification-text{
         margin: 0;
         width: 100%;
     }
@@ -92,7 +92,7 @@
 
     .notification{
         @each $key, $value in $notification-colors{
-            &--#{$key} {
+            &--#{$key}{
                 @include print-notification-colors($notification-colors, $key);
             }
         }
@@ -110,7 +110,7 @@
     /**
      * ^Bottom Right
      */
-    @if $notification-bottom-right == true {
+    @if $notification-bottom-right == true{
         .notification-wrapper--bottom-right{
             bottom: $notification-space-from-edge;
             right: $notification-space-from-edge;
@@ -130,7 +130,7 @@
     /**
      * ^Bottom Left
      */
-    @if $notification-bottom-left == true {
+    @if $notification-bottom-left == true{
         .notification-wrapper--bottom-left{
             bottom: $notification-space-from-edge;
             left: $notification-space-from-edge;
@@ -150,7 +150,7 @@
     /**
      * ^Top Right
      */
-    @if $notification-top-right == true {
+    @if $notification-top-right == true{
         .notification-wrapper--top-right{
             top: $notification-space-from-edge;
             right: $notification-space-from-edge;
@@ -169,7 +169,7 @@
     /**
      * ^Top Left
      */
-    @if $notification-top-left == true {
+    @if $notification-top-left == true{
         .notification-wrapper--top-left{
             top: $notification-space-from-edge;
             left: $notification-space-from-edge;

@@ -1,4 +1,4 @@
-@if $use-arrows == true {
+@if $use-arrows == true{
     /*------------------------------------*\
         CONTENTS
     \*------------------------------------*/
@@ -21,19 +21,19 @@
     /**
      * Forms the basis for any/all CSS arrows.
      */
-    %arrow {
+    %arrow{
         position: relative;
 
         &:before,
-        &:after {
+        &:after{
             content: "";
             position: absolute;
             border-collapse: separate;
         }
-        &:before {
+        &:before{
             border: $border solid transparent;
         }
-        &:after {
+        &:after{
             border: $arrow solid transparent;
         }
     }
@@ -41,108 +41,108 @@
     /**
      * Define individual edges so we can combine what we need, when we need.
      */
-    %arrow--top {
+    %arrow--top{
         @extend %arrow;
 
         &:before,
-        &:after {
+        &:after{
             bottom: 100%;
         }
     }
 
-    %arrow--upper {
+    %arrow--upper{
         @extend %arrow;
 
-        &:before {
+        &:before{
             top: $arrow;
         }
-        &:after {
+        &:after{
             top: $border;
         }
     }
 
-    %arrow--middle {
+    %arrow--middle{
         @extend %arrow;
 
         &:before,
-        &:after {
+        &:after{
             top: 50%;
             margin-top: -$border;
         }
-        &:after {
+        &:after{
             margin-top: -$arrow;
         }
     }
 
-    %arrow--lower {
+    %arrow--lower{
         @extend %arrow;
 
-        &:before {
+        &:before{
             bottom: $arrow;
         }
-        &:after {
+        &:after{
             bottom: $border;
         }
     }
 
-    %arrow--bottom {
+    %arrow--bottom{
         @extend %arrow;
 
         &:before,
-        &:after {
+        &:after{
             top: 100%;
         }
     }
 
-    %arrow--near {
+    %arrow--near{
         @extend %arrow;
 
         &:before,
-        &:after {
+        &:after{
             right: 100%;
         }
     }
 
-    %arrow--left {
+    %arrow--left{
         @extend %arrow;
 
-        &:before {
+        &:before{
             left: $arrow;
         }
-        &:after {
+        &:after{
             left: $border;
         }
     }
 
-    %arrow--center {
+    %arrow--center{
         @extend %arrow;
 
         &:before,
-        &:after {
+        &:after{
             left: 50%;
             margin-left: -$border;
         }
-        &:after {
+        &:after{
             margin-left: -$arrow;
         }
     }
 
-    %arrow--right {
+    %arrow--right{
         @extend %arrow;
 
-        &:before {
+        &:before{
             right: $arrow;
         }
-        &:after {
+        &:after{
             right: $border;
         }
     }
 
-    %arrow--far {
+    %arrow--far{
         @extend %arrow;
 
         &:before,
-        &:after {
+        &:after{
             left: 100%;
         }
     }

@@ -81,12 +81,12 @@
      * ^Table Bordered
      */
     @if $table--bordered == true{
-        .table--bordered {
+        .table--bordered{
             th,
-            td {
+            td{
                 border: $table-border-size solid $table-border-color;
 
-                &:empty {
+                &:empty{
                     border: none;
                 }
             }
@@ -98,7 +98,7 @@
      * ^Table Outer Bordered
      */
     @if $table--outer-bordered == true{
-        .table--outer-bordered {
+        .table--outer-bordered{
             border: $table-border-size solid $table-border-color;
         }
     }
@@ -111,8 +111,8 @@
         !STRIPED TABLE
     \*------------------------------------*/
     @if $table--striped == true{
-        .table--striped {
-            tbody tr:nth-of-type(odd) {
+        .table--striped{
+            tbody tr:nth-of-type(odd){
                 background-color: $table-stripe-background-color;
             }
         }
@@ -144,17 +144,17 @@
      * ^Credit: http://codepen.io/geoffyuen/pen/FCBEg
      */
 
-    @if $table--responsive == true {
-        .table--responsive {
+    @if $table--responsive == true{
+        .table--responsive{
 
-            th {
+            th{
                 display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!
             }
 
-            td {
+            td{
                 display: block;
 
-                &:before {
+                &:before{
                     content: attr(data-th) ": "; // who knew you could do this? The internet, that's who.
                     font-weight: bold;
                     margin-right: 15px;
@@ -167,7 +167,7 @@
             }
 
             th,
-            td {
+            td{
                 @include media-query(palm){
                     text-align: left;
                 }

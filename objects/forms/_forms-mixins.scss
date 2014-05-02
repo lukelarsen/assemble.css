@@ -20,7 +20,7 @@
     !FORM RESPONSIVE MIXIN
 \*------------------------------------*/
 
-@mixin forms-device-type($namespace: "") {
+@mixin forms-device-type($namespace: ""){
 
     // The first call is for the entire form block
     // The second call is for individual form cells
@@ -29,7 +29,7 @@
      * ^Forms One Col
      */
     #{$class-type}form--#{$namespace}-full > li,
-    #{$class-type}form__item--#{$namespace}-full {
+    #{$class-type}form__item--#{$namespace}-full{
         flex: 0 0 100% !important;
     }
 
@@ -37,7 +37,7 @@
      * ^Form Two Cols
      */
     #{$class-type}form--#{$namespace}-halves > li,
-    #{$class-type}form__item--#{$namespace}-half {
+    #{$class-type}form__item--#{$namespace}-half{
         flex: 0 0 50% !important;
     }
 
@@ -45,7 +45,7 @@
      * ^Form Three Cols
      */
     #{$class-type}form--#{$namespace}-thirds > li,
-    #{$class-type}form__item--#{$namespace}-third {
+    #{$class-type}form__item--#{$namespace}-third{
         flex: 0 0 33.3333% !important;
     }
 
@@ -53,7 +53,7 @@
      * ^Forms Four Cols
      */
     #{$class-type}form--#{$namespace}-quarters > li,
-    #{$class-type}form__item--#{$namespace}-quarter {
+    #{$class-type}form__item--#{$namespace}-quarter{
         flex: 0 0 25% !important;
     }
 
@@ -61,7 +61,7 @@
      * ^Forms Five Cols
      */
     #{$class-type}form--#{$namespace}-fifths > li,
-    #{$class-type}form__item--#{$namespace}-fifth {
+    #{$class-type}form__item--#{$namespace}-fifth{
         flex: 0 0 20% !important;
     }
 
@@ -82,9 +82,9 @@
     /**
      * Forms Gutter Medium
      */
-    #{$class-type}form-gutters--#{$namespace}-medium {
+    #{$class-type}form-gutters--#{$namespace}-medium{
         margin-left: -1.5em;
-        & > li {
+        & > li{
             padding-left: 1.5em;
             margin-bottom: 1.5em;
         }
@@ -93,9 +93,9 @@
     /**
      * Forms Gutter Large
      */
-    #{$class-type}form-gutters--#{$namespace}-large {
+    #{$class-type}form-gutters--#{$namespace}-large{
         margin-left: -2em;
-        & > li {
+        & > li{
             padding-left: 2em;
             margin-bottom: 2em;
         }
@@ -104,9 +104,9 @@
     /**
      * Forms Gutter xLarge
      */
-    #{$class-type}form-gutters--#{$namespace}-xlarge {
+    #{$class-type}form-gutters--#{$namespace}-xlarge{
         margin-left: -3em;
-        & > li {
+        & > li{
             padding-left: 3em;
             margin-bottom: 3em;
         }
@@ -120,8 +120,8 @@
 /**
  * Generate our responsive extends (or classes)
  */
-@each $name in $breakpoint-has-widths {
-    @include grid-media-query($name) {
+@each $name in $breakpoint-has-widths{
+    @include grid-media-query($name){
         @include forms-device-type('#{$name}');
     }
 }

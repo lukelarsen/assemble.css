@@ -1,4 +1,4 @@
-@if $use-code == true {
+@if $use-code == true{
     /*------------------------------------*\
         CONTENTS
     \*------------------------------------*/
@@ -12,27 +12,27 @@
     \*------------------------------------*/
 
     pre,
-    code {
+    code{
         background-color: $code-border;
         border: $code-border-size $code-border-type $code-border-color;
         color: $code-color;
         padding: $code-padding;
     }
 
-    code {
+    code{
         padding: $code-inline-padding;
     }
 
-    pre code {
+    pre code{
         border: none;
         padding: 0;
     }
 
-    pre {
+    pre{
         overflow-x: auto;
     }
 
-    pre code {
+    pre code{
         -ms-word-wrap: normal;
         word-wrap: normal;
         white-space: pre;
@@ -42,8 +42,8 @@
         !SCROLLABLE
     \*------------------------------------*/
 
-    @if $code-scrollable == true {
-        .code-scrollable {
+    @if $code-scrollable == true{
+        .code-scrollable{
             max-height: $code-scroll-max-height;
             overflow-y: scroll;
         }
