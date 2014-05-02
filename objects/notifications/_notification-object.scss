@@ -29,6 +29,7 @@
         width: $notification-width;
         position: fixed;
         font-size: $notification-font-size;
+        z-index: z(notification-wrapper);
 
         @include media-query(palm){
             width: auto;

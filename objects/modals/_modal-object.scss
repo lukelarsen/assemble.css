@@ -37,6 +37,7 @@
         visibility: hidden;
         display: none;
         backface-visibility: hidden;
+        z-index: z(modal);
 
         @include media-query(palm){
             top: 0%;
@@ -64,6 +65,7 @@
         background: $modal_overlay_background_color;
         display: none;
         transition: all .3s;
+        z-index: (z(modal) - 1);
     }
 
     .modal--show ~ .modal-overlay{

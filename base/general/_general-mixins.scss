@@ -5,6 +5,7 @@
  *  BACKGROUND IMAGES
  *  SIZING
  *  LOAD CUSTOM FONTS
+ *  Z-INDEX
 */
 
 
@@ -64,4 +65,24 @@
         font-style: $style;
         src: url('#{$file-path}.woff') format('woff');
     }
+}
+
+
+
+
+
+/*------------------------------------*\
+    !Z-INDEX FUNCTION
+\*------------------------------------*/
+
+// A function helper to avoid having to type `map-get($z-layers, ...)`
+// @param [string] $component (default): the layer to use
+// @return [number] | null
+@function z($layer: 'default'){
+    @if map-has-key($z-layers, $layer) {
+        @return map-get($z-layers, $layer);
+    }
+
+    @warn "No z-index found in $z-layers map for `#{$layer}`. Property omitted.";
+    @return null;
 }

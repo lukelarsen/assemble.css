@@ -33,6 +33,7 @@
             cursor: default;
             background-color: $tool-tip-bg-color;
             color: $tool-tip-text-color;
+            z-index: z(tool-tip__container);
         }
 
         .tool-tip__close{
