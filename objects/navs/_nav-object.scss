@@ -162,7 +162,6 @@
      * ^Nav Pagination
      * Credit: Inuit.css
      */
-
     .nav--pagination{
         text-align:center;
 
@@ -190,7 +189,6 @@
      * ^Nav Breadcrumb
      * Credit: Inuit.css
      */
-
     .nav--breadcrumb{
         > li + li:before{
             content:"» ";
@@ -210,7 +208,6 @@
      * ^Nav Breadcrumb Path
      * Credit: Inuit.css
      */
-
     .nav--breadcrumb--path > li + li:before{
         content:"/ ";
     }
@@ -220,7 +217,6 @@
      * ^Nav Breadcrumb Custom
      * Credit: Inuit.css
      */
-
     .nav--breadcrumb--custom{
         > li + li[data-breadcrumb]:before{
             content: attr(data-breadcrumb) " ";

@@ -53,10 +53,10 @@
          * ^Scrollabele Media
          */
         @if $media--scroll == true{
-            &--scroll{
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-        }
+                &--scroll{
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
         }
 
 
@@ -64,9 +64,9 @@
          * ^Vimeo places the controls on the player itself.
          */
         @if $media--vimeo == true{
-            &--vimeo{
-            padding-top: 0;
-        }
+                &--vimeo{
+                padding-top: 0;
+            }
         }
 
 
@@ -74,11 +74,11 @@
          * ^Instagram
          */
         @if $media--instagram == true{
-            &--instagram{
-            height: auto;
-            max-width: none;
-            padding-bottom: 120%;
-        }
+                &--instagram{
+                height: auto;
+                max-width: none;
+                padding-bottom: 120%;
+            }
         }
 
 
@@ -86,11 +86,11 @@
          * ^Vine
          */
         @if $media--vine == true{
-            &--vine{
-            height: auto;
-            max-width: none;
-            padding-bottom: 100%;
-        }
+                &--vine{
+                height: auto;
+                max-width: none;
+                padding-bottom: 100%;
+            }
         }
     }
 
