@@ -53,23 +53,23 @@
          * ^Button Sizes
          */
         @if $btn--large == true{
-            &--large{
-            font-size: $btn-default-font-size * $btn-size-ratio;
-        }
+                &--large{
+                font-size: $btn-default-font-size * $btn-size-ratio;
+            }
         }
 
         @if $btn--small== true{
-            &--small{
-            font-size: $btn-default-font-size / $btn-size-ratio;
-        }
+                &--small{
+                font-size: $btn-default-font-size / $btn-size-ratio;
+            }
         }
 
         @if $btn--block == true{
-            &--block{
-            display: block;
-            width: 100%;
-            text-align: center;
-        }
+                &--block{
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
         }
 
 
@@ -77,29 +77,29 @@
          * ^Button Types
          */
         @if $btn--natural == true{
-            &--natural{
-            vertical-align: baseline;
-            font-size: inherit;
-            line-height: inherit;
-            height: auto;
-            padding-right: 0.5em;
-            padding-left: 0.5em;
-        }
+                &--natural{
+                vertical-align: baseline;
+                font-size: inherit;
+                line-height: inherit;
+                height: auto;
+                padding-right: 0.5em;
+                padding-left: 0.5em;
+            }
         }
 
         @if $btn--disabled == true{
-            &--disabled{
-            background-color: #ddd;
-            color: #777;
+                &--disabled{
+                background-color: #ddd;
+                color: #777;
 
-            &:hover,
-            &:active,
-            &:focus{
-                background-color: #ddd !important;
-                color: #777 !important;
-                cursor: not-allowed;
+                &:hover,
+                &:active,
+                &:focus{
+                    background-color: #ddd !important;
+                    color: #777 !important;
+                    cursor: not-allowed;
+                }
             }
-        }
         }
 
 
@@ -107,9 +107,9 @@
          * ^Button Colors
          */
         @each $key, $value in $button-colors{
-            &--#{$key}{
-            @include print-button-colors($button-colors, $key);
-        }
+                &--#{$key}{
+                @include print-button-colors($button-colors, $key);
+            }
         }
 
 
