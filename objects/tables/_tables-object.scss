@@ -12,6 +12,7 @@
      *  STRIPED TABLE
      *  NUMERICAL
      *  RESPONSIVE TABLE
+     *  ROW HOVER
     */
 
 
@@ -24,14 +25,16 @@
 
     table{
         width:100%;
+        font-size: 1rem;
     }
     th,
     td{
-        padding:15px;
-        @media screen and (min-width:480px){
-            padding:7px;
-        }
+        padding: $table-padding;
         text-align:left;
+
+        @include media-query(palm){
+            padding: $table-padding / 2;
+        }
     }
 
 
@@ -175,6 +178,51 @@
                 @include media-query(lap-and-up){
                     display: table-cell;
                 }
+            }
+        }
+    }
+
+
+
+
+
+    /*------------------------------------*\
+        !ROW HOVER
+    \*------------------------------------*/
+
+    @if $table--row-hover == true {
+        .table--row-hover {
+            tr {
+                transition: background-color .1s ease-in-out;
+
+                &:hover {
+                    background-color: $table-row-hover-color !important;
+                    cursor: pointer;
+                }
+
+                td {
+                    padding: 0;
+                }
+
+                a {
+                    padding: $table-padding;
+                    display: block;
+                    text-decoration: none;
+                    color: inherit;
+
+                    &:hover {
+                        color: inherit;
+                    }
+
+                    @include media-query(palm) {
+                        padding: $table-padding-palm;
+                    }
+                }
+            }
+
+            thead tr:hover {
+                background-color: inherit !important;
+                cursor: default;
             }
         }
     }
