@@ -42,11 +42,11 @@ Assemble.css doesn't contain vendor prefixes. In my opinion they change to often
 
 ####Credits
 #####Many ideas and components in Assemble.css came from these fine projects/people.
-<a href="http://typesettings.io/" target="_blank">Typesettings.io</a>
-<a href="http://tympanus.net/" target="_blank">Tympanus.net</a>
-<a href="http://inuitcss.com/" target="_blank">Inuit.css</a>
-<a href="https://github.com/HubSpot/vex" target="_blank">Vex.js</a>
-<a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>
-<a href="http://responsivebp.com/" target="_blank">Responsive Framework</a>
-<a href="http://hugogiraudel.com/" target="_blank">Hugo Giraudel</a>
-<a href="http://philipwalton.com/" target="_blank">Philip Walton</a>
+* <a href="http://typesettings.io/" target="_blank">Typesettings.io</a>
+* <a href="http://tympanus.net/" target="_blank">Tympanus.net</a>
+* <a href="http://inuitcss.com/" target="_blank">Inuit.css</a>
+* <a href="https://github.com/HubSpot/vex" target="_blank">Vex.js</a>
+* <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>
+* <a href="http://responsivebp.com/" target="_blank">Responsive Framework</a>
+* <a href="http://hugogiraudel.com/" target="_blank">Hugo Giraudel</a>
+* <a href="http://philipwalton.com/" target="_blank">Philip Walton</a>
