@@ -52,12 +52,6 @@
     !LOAD CUSTOM FONTS
 \*------------------------------------*/
 
-/**
- * Credit: Bourbon.io
- *
- * Order of the includes matters, and it is: normal, bold, italic, bold+italic.
- */
-
 @mixin font-face($font-family, $file-path, $weight: normal, $style: normal){
     @font-face{
         font-family: $font-family;
