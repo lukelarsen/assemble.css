@@ -1,11 +1,12 @@
 {
   "name": "assemble.css",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/lukelarsen/assemble.css",
   "authors": [
     "Luke Larsen <luke@lukelarsen.com>"
   ],
-  "description": "A Sass framework assembled.",
+  "description": "Assemble.css is a designless scss framework",
+  "main": "_assemble.scss",
   "keywords": [
     "framework",
     "css",
