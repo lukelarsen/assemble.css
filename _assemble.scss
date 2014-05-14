@@ -5,6 +5,7 @@
  *  GENERAL
  *  GRIDS
  *  ARROWS
+ *  BUTTONS
  *  CODE
  *  DIALOGS
  *  FORMS
@@ -57,21 +58,21 @@
 
 
 /*------------------------------------*\
-    !CODE
+    !BUTTONS
 \*------------------------------------*/
 
-@import "objects/code/code-object";
+@import "objects/buttons/button-mixins";
+@import "objects/buttons/button-object";
 
 
 
 
 
 /*------------------------------------*\
-    !BUTTONS
+    !CODE
 \*------------------------------------*/
 
-@import "objects/buttons/button-mixins";
-@import "objects/buttons/button-object";
+@import "objects/code/code-object";
 
 
 
@@ -167,6 +168,16 @@
 
 @import "objects/tables/tables-mixins";
 @import "objects/tables/tables-object";
+
+
+
+
+
+/*------------------------------------*\
+    !TIPS
+\*------------------------------------*/
+
+@import "objects/tips/tip-object";
 
 
 

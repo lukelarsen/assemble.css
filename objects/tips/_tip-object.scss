@@ -1,0 +1,149 @@
+@if $use-tips == true {
+    /*------------------------------------*\
+        CONTENTS
+    \*------------------------------------*/
+    /**
+     *  TIP BASE
+     */
+
+
+
+
+
+    /*------------------------------------*\
+        !TIP BASE
+    \*------------------------------------*/
+
+    /**
+     * A simple tip component. Simply drop a `data-tip` attribute onto
+     * (almost) any element and have a tip placed center-bottom on hover.
+     *
+     * Because the tip text is sourced from a `data-*` attribute, do not use
+     * it for any content which *needs* to be accessible: use it for decorative
+     * information only.
+     */
+
+    /**
+     * 1. tips require positioning context.
+     */
+    [data-tip] {
+        position: relative; /* [1] */
+
+        /**
+         * 1. Hide our tips by default. This is still ‘accessible’ as our tip
+         *    text only exists in generated content anyway.
+         */
+        &:before,
+        &:after {
+            content: none;
+            content: normal;
+        }
+
+        /**
+         * Show the tip when we give the element attention.
+         *
+         * 1. Populate the tips when we show the element some attention.
+         * 2. Source the tip’s content from its `data-tip` attribute.
+         */
+        &:hover,
+        &:active,
+        &:focus {
+
+            &:before,
+            &:after {
+                animation: 0.5s tip linear;
+            }
+
+            &:before {
+                content: ""; /* [1] */
+            }
+
+            &:after {
+                content: attr(data-tip); /* [1] [2] */
+            }
+
+        }
+
+        /**
+         * Create an arrow (linking the tip to its originator) using pure
+         * CSS triangles.
+         */
+        &:before {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-top:  -3px;
+            margin-left: -5px;
+            border: 5px solid transparent;
+            border-bottom-color: $tip-color;
+        }
+
+        /**
+         * The textual part of the tip.
+         *
+         * 1. Position the text center–bottom.
+         */
+        &:after {
+            position: absolute; /* [1] */
+            top: 100%; /* [1] */
+            left: 50%; /* [1] */
+            border-radius: 3px;
+            padding-right: 5px;
+            padding-left:  5px;
+            margin-top:    7px;
+            white-space: nowrap;
+            font-weight: normal;
+            color: $tip-text-color;
+            background-color: $tip-color;
+            border-bottom: 1px solid darken($tip-color, 25%);
+            z-index: 1;
+            transform: translateX(-50%);
+        }
+    }
+
+
+    /**
+     * Animation to gradually fade tips in.
+     */
+    @-webkit-keyframes tip {
+        from {
+            opacity: 0;
+        }
+
+        66.666% {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-moz-keyframes tip {
+        from {
+            opacity: 0;
+        }
+
+        66.666% {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes tip {
+        from {
+            opacity: 0;
+        }
+
+        66.666% {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
