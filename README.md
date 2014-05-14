@@ -30,9 +30,31 @@ will include the css code for the components you want. Everything is excluded by
 set the components you want to true. You may also set some design options by editing the design variables in specific
 option files.
 
+##What's Included
+###Components
+* Arrows
+* Buttons
+* Code Styling
+* Dialogs
+* Forms
+* Grids (uses flexbox)
+* Icons
+* Lists
+* Media (Images, Video, Embeds)
+* Modals
+* Navigation
+* Tables
+* Tool Tips
+
+###Other
+* Reset
+* Typography Settings
+* Various Helper Mixins
+* Responsive Mixins
+
 ###Documentation for separate components are coming.
 
-###A note on vendor prefixes
+##A note on vendor prefixes
 Assemble.css doesn't contain vendor prefixes. In my opinion they change to often and would take extra work to update
  mixins to output different or less prefixes as browsers change. I highly recommend
  <a href="https://github.com/ai/autoprefixer" target="_blank">Autoprefixer</a>. It  will go through your css file and
@@ -40,8 +62,8 @@ Assemble.css doesn't contain vendor prefixes. In my opinion they change to often
  something that needs a vendor prefix it will add it. It is beautiful.
 
 
-####Credits
-#####Many ideas and components in Assemble.css came from these fine projects/people.
+##Credits
+###Many ideas and components in Assemble.css came from these fine projects/people.
 * <a href="http://typesettings.io/" target="_blank">Typesettings.io</a>
 * <a href="http://tympanus.net/" target="_blank">Tympanus.net</a>
 * <a href="http://inuitcss.com/" target="_blank">Inuit.css</a>
