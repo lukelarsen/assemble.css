@@ -67,6 +67,7 @@ Assemble.css doesn't contain vendor prefixes. In my opinion they change to often
 * <a href="http://typesettings.io/" target="_blank">Typesettings.io</a>
 * <a href="http://tympanus.net/" target="_blank">Tympanus.net</a>
 * <a href="http://inuitcss.com/" target="_blank">Inuit.css</a>
+* <a href="http://philipwalton.github.io/solved-by-flexbox/" target="_blank">Solved By Flexbox</a>
 * <a href="https://github.com/HubSpot/vex" target="_blank">Vex.js</a>
 * <a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a>
 * <a href="http://responsivebp.com/" target="_blank">Responsive Framework</a>
