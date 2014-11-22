@@ -65,14 +65,12 @@
          */
         ul.list-colored > li:before,
         ol.list-colored > li:before{
+            @include absolute(top 0 left -1em);
             content: "\25CF"; /* 1 */
             color: $list-colored-color; /* 2 */
             font-weight: bold;
             font-size: 1em;
             text-align: right;
-            position: absolute;
-            left: -1em;
-            top: 0;
             text-decoration: none;
             -webkit-margin-start: -.25em; /* 3 */
         }

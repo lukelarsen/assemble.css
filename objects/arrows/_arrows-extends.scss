@@ -25,8 +25,8 @@
 
         &:before,
         &:after{
+            @include absolute();
             content: "";
-            position: absolute;
             border-collapse: separate;
         }
         &:before{

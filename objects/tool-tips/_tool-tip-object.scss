@@ -24,7 +24,7 @@
         float: right;
 
         .tool-tip__container{
-            position: absolute;
+            @include position();
             visibility: hidden;
             padding: 10px 15px;
             width: 200px;
@@ -37,9 +37,7 @@
         }
 
         .tool-tip__close{
-            position: absolute;
-            right: 0;
-            bottom: 0;
+            @include position(right 0 bottom 0);
             cursor: pointer;
             background-color: $tool-tip-close-background;
             color: $tool-tip-close-color;

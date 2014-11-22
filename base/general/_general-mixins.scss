@@ -6,6 +6,11 @@
  *  SIZING
  *  LOAD CUSTOM FONTS
  *  Z-INDEX
+ *  POSITION MIXIN
+ *      Examples
+ *      Position Mixin
+ *      Checking Function
+ *      Shorthands
 */
 
 
@@ -79,4 +84,99 @@
 
     @warn "No z-index found in $z-layers map for `#{$layer}`. Property omitted.";
     @return null;
+}
+
+
+
+
+
+/*------------------------------------*\
+    !POSITION MIXIN
+\*------------------------------------*/
+
+/**
+ * Helper mixin for offset positioning
+ * Credit: http://hugogiraudel.com/2014/05/19/new-offsets-sass-mixin/
+ */
+
+/**
+ * ^Examples
+ */
+/**
+.a {
+    @include absolute();
+}
+
+.b {
+    @include absolute(top);
+}
+
+.f {
+    @include absolute(top right 1em);
+}
+
+.g {
+    @include absolute(top 1em right);
+}
+
+.h {
+    @include absolute(top 1em right 100%);
+}
+
+.j {
+    @include absolute(top 1em right 1em bottom 1em left 1em)
+}
+*/
+
+/**
+ * ^Position Mixin
+ */
+@mixin position($position, $args: ()) {
+    $offsets: top right bottom left;
+    position: $position;
+
+    @each $offset in $offsets {
+        $index: index($args, $offset);
+
+        @if $index {
+            @if $index == length($args) {
+                #{$offset}: 0;
+            }
+            @else {
+                $next: nth($args, $index + 1);
+                @if is-valid-length($next) {
+                    #{$offset}: $next;
+                }
+                @else if index($offsets, $next) {
+                    #{$offset}: 0;
+                }
+                @else {
+                    @warn "Invalid value `#{$next}` for offset `#{$offset}`.";
+                }
+            }
+        }
+    }
+}
+
+/**
+ * ^Checking Function
+ */
+@function is-valid-length($value) {
+    @return (type-of($value) == "number" and not unitless($value))
+       or (index(auto initial inherit 0, $value) != false);
+}
+
+/**
+ * ^Shorthands
+ */
+@mixin absolute($args: ()) {
+    @include position(absolute, $args);
+}
+
+@mixin fixed($args: ()) {
+    @include position(fixed, $args);
+}
+
+@mixin relative($args: ()) {
+    @include position(relative, $args);
 }

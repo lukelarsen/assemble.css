@@ -27,9 +27,9 @@
     !GENERAL
 \*------------------------------------*/
 
+@import "base/general/general-mixins";
 @import "base/general/general-reset";
 @import "base/general/general-extends";
-@import "base/general/general-mixins";
 
 
 
@@ -61,8 +61,8 @@
     !BUTTONS
 \*------------------------------------*/
 
-@import "objects/buttons/button-mixins";
 @import "objects/buttons/button-object";
+@import "objects/buttons/button-print";
 
 
 

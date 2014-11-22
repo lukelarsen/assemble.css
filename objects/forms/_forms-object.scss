@@ -238,7 +238,7 @@
             }
 
             .iconic{
-                position: absolute;
+                @include absolute();
                 @include square($form-icon-size);
             }
         }

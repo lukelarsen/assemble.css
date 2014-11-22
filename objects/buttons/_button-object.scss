@@ -7,7 +7,6 @@
      *  BUTTON MODIFIERS
             Button Sizes
             Button Types
-            Button Colors
      *  BUTTON CLEAN UP
      *  BUTTON GROUP
      */
@@ -103,16 +102,6 @@
                     color: #777 !important;
                     cursor: not-allowed;
                 }
-            }
-        }
-
-
-        /**
-         * ^Button Colors
-         */
-        @each $key, $value in $button-colors{
-                &--#{$key}{
-                @include print-button-colors($button-colors, $key);
             }
         }
 

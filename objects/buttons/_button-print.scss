@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  PRINT BUTTON COLORS
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !PRINT BUTTON COLORS
+\*------------------------------------*/
+
+@each $name, $btn-styles in $button-colors {
+    .btn--#{$name} {
+        @each $prop, $val in $btn-styles {
+            @if $prop == 'background' {
+                background: map-get($btn-styles, background);
+            } @else if $prop == 'color'{
+                color: map-get($btn-styles, color);
+            } @else if $prop == 'border-color'{
+                border: solid $btn-border-size map-get($btn-styles, border-color);
+            } @else if $prop == 'hover' {
+                &:hover,
+                &:active {
+                    @each $inner-prop, $inner-val in $val {
+                        @if $inner-prop == 'background-hover' {
+                            background: map-get($val, background-hover);
+                        } @else if $inner-prop == 'border-color-hover' {
+                            border: solid 1px map-get($val, border-color-hover);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

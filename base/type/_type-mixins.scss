@@ -16,7 +16,7 @@
 
 
 /*------------------------------------*\
-    $INTERNAL VARIABLES
+    !INTERNAL VARIABLES
 \*------------------------------------*/
 
 // Best not to adjust these.
@@ -53,7 +53,7 @@ $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
 
 
 /*------------------------------------*\
-    $HELPER FUNCTIONS
+    !HELPER FUNCTIONS
 \*------------------------------------*/
 
 // Returns a number without a unit. For example 16px becomes 16
@@ -82,7 +82,7 @@ $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
 
 
 /*------------------------------------*\
-    $MIXINS
+    !MIXINS
 \*------------------------------------*/
 
 // Finally, the tools that you can use throughout your project to set
