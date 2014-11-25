@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  PRINT CUSTOM FONTS
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !PRINT CUSTOM FONTS
+\*------------------------------------*/
+
+@each $font, $font-list in $fonts {
+    @font-face{
+        @each $prop, $val in $font-list {
+            @if $prop == 'name' {
+                font-family: map-get($font-list, name);
+            } @else if $prop == 'src' {
+                src: url(map-get($font-list, src)) format('woff')
+            }
+        }
+    }
+}

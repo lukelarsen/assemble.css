@@ -4,7 +4,6 @@
 /**
  *  BACKGROUND IMAGES
  *  SIZING
- *  LOAD CUSTOM FONTS
  *  Z-INDEX
  *  POSITION MIXIN
  *      Examples
@@ -47,23 +46,6 @@
 @mixin square($size){
     width: $size;
     height: $size;
-}
-
-
-
-
-
-/*------------------------------------*\
-    !LOAD CUSTOM FONTS
-\*------------------------------------*/
-
-@mixin font-face($font-family, $file-path, $weight: normal, $style: normal){
-    @font-face{
-        font-family: $font-family;
-        font-weight: $weight;
-        font-style: $style;
-        src: url('#{$file-path}.woff') format('woff');
-    }
 }
 
 
