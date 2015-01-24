@@ -27,9 +27,9 @@
     !GENERAL
 \*------------------------------------*/
 
-@import "base/general/general-mixins";
-@import "base/general/general-reset";
-@import "base/general/general-extends";
+@import 'base/general/general-mixins';
+@import 'base/general/general-reset';
+@import 'base/general/general-extends';
 
 
 
@@ -39,8 +39,8 @@
     !GRIDS
 \*------------------------------------*/
 
-@import "objects/grids/grids-mixins";
-@import "objects/grids/grids-extends";
+@import 'objects/grids/grids-mixins';
+@import 'objects/grids/grids-extends';
 
 
 
@@ -50,8 +50,8 @@
     !ARROWS
 \*------------------------------------*/
 
-@import "objects/arrows/arrows-mixins";
-@import "objects/arrows/arrows-extends";
+@import 'objects/arrows/arrows-mixins';
+@import 'objects/arrows/arrows-extends';
 
 
 
@@ -61,8 +61,8 @@
     !BUTTONS
 \*------------------------------------*/
 
-@import "objects/buttons/button-object";
-@import "objects/buttons/button-print";
+@import 'objects/buttons/button-object';
+@import 'objects/buttons/button-print';
 
 
 
@@ -72,7 +72,7 @@
     !CODE
 \*------------------------------------*/
 
-@import "objects/code/code-object";
+@import 'objects/code/code-object';
 
 
 
@@ -82,8 +82,8 @@
     !DIALOGS
 \*------------------------------------*/
 
-@import "objects/dialogs/vex";
-@import "objects/dialogs/vex-fade-down-theme";
+@import 'objects/dialogs/vex';
+@import 'objects/dialogs/vex-fade-down-theme';
 
 
 
@@ -93,9 +93,9 @@
     !FORMS
 \*------------------------------------*/
 
-@import "objects/forms/forms-extends";
-@import "objects/forms/forms-mixins";
-@import "objects/forms/forms-object";
+@import 'objects/forms/forms-extends';
+@import 'objects/forms/forms-mixins';
+@import 'objects/forms/forms-object';
 
 
 
@@ -105,7 +105,7 @@
     !ICONS
 \*------------------------------------*/
 
-@import "objects/icons/icons-object";
+@import 'objects/icons/icons-object';
 
 
 
@@ -115,7 +115,7 @@
     !LISTS
 \*------------------------------------*/
 
-@import "objects/lists/list-object";
+@import 'objects/lists/list-object';
 
 
 
@@ -125,7 +125,7 @@
     !MEDIA
 \*------------------------------------*/
 
-@import "objects/media/media-object";
+@import 'objects/media/media-object';
 
 
 
@@ -135,7 +135,7 @@
     !MODALS
 \*------------------------------------*/
 
-@import "objects/modals/modal-object";
+@import 'objects/modals/modal-object';
 
 
 
@@ -145,7 +145,7 @@
     !NAVS
 \*------------------------------------*/
 
-@import "objects/navs/nav-object";
+@import 'objects/navs/nav-object';
 
 
 
@@ -155,8 +155,8 @@
     !NOTIFICATIONS
 \*------------------------------------*/
 
-@import "objects/notifications/notification-mixins";
-@import "objects/notifications/notification-object";
+@import 'objects/notifications/notification-mixins';
+@import 'objects/notifications/notification-object';
 
 
 
@@ -166,8 +166,8 @@
     !TABLES
 \*------------------------------------*/
 
-@import "objects/tables/tables-mixins";
-@import "objects/tables/tables-object";
+@import 'objects/tables/tables-mixins';
+@import 'objects/tables/tables-object';
 
 
 
@@ -177,7 +177,7 @@
     !TIPS
 \*------------------------------------*/
 
-@import "objects/tips/tip-object";
+@import 'objects/tips/tip-object';
 
 
 
@@ -187,7 +187,7 @@
     !TOOL TIPS
 \*------------------------------------*/
 
-@import "objects/tool-tips/tool-tip-object";
+@import 'objects/tool-tips/tool-tip-object';
 
 
 
@@ -197,5 +197,5 @@
     !TYPE
 \*------------------------------------*/
 
-@import "base/type/type-mixins";
-@import "base/type/type-print";
+@import 'base/type/type-mixins';
+@import 'base/type/type-print';
