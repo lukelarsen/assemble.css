@@ -29,7 +29,7 @@
     !FORM RESPONSIVE MIXIN
 \*------------------------------------*/
 
-@mixin forms-device-type($namespace: ""){
+@mixin forms-device-type($namespace: ''){
 
     // The first call is for the entire form block
     // The second call is for individual form cells
@@ -98,9 +98,10 @@
      */
     #{$class-type}form-gutters--#{$namespace}-medium{
         margin-left: -1.5em;
+
         & > li{
-            padding-left: 1.5em;
             margin-bottom: 1.5em;
+            padding-left: 1.5em;
         }
     }
 
@@ -110,9 +111,10 @@
      */
     #{$class-type}form-gutters--#{$namespace}-large{
         margin-left: -2em;
+
         & > li{
-            padding-left: 2em;
             margin-bottom: 2em;
+            padding-left: 2em;
         }
     }
 
@@ -122,9 +124,10 @@
      */
     #{$class-type}form-gutters--#{$namespace}-xlarge{
         margin-left: -3em;
+
         & > li{
-            padding-left: 3em;
             margin-bottom: 3em;
+            padding-left: 3em;
         }
     }
 }

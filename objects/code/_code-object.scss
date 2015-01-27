@@ -21,10 +21,10 @@
 
     pre,
     code{
-        background-color: $code-border;
-        border: $code-border-size $code-border-type $code-border-color;
-        color: $code-color;
         padding: $code-padding;
+        border: $code-border-size $code-border-type $code-border-color;
+        background-color: $code-border;
+        color: $code-color;
     }
 
     code{
@@ -32,8 +32,8 @@
     }
 
     pre code{
-        border: none;
         padding: 0;
+        border: 0;
     }
 
     pre{
@@ -41,9 +41,9 @@
     }
 
     pre code{
+        white-space: pre;
         -ms-word-wrap: normal;
         word-wrap: normal;
-        white-space: pre;
     }
 
 

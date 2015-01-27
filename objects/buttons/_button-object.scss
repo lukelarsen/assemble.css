@@ -25,24 +25,21 @@
 
     .btn{
         display: inline-block;
-        vertical-align: middle;
-        white-space: nowrap;
+        margin: 0;
+        padding: 0 $btn-padding-sides;
+        transition: background-color .2s ease-in-out;
+        border: 0;
+        outline: none;
+        background-color: #000;
+        cursor: pointer;
+        color: #fff;
         font-family: inherit;
         font-size: $btn-default-font-size;
-        cursor: pointer;
-        margin: 0;
-        padding-top: 0;
-        padding-bottom: 0;
         line-height: 3;
-        padding-right: $btn-padding-sides;
-        padding-left: $btn-padding-sides;
-        background-color: #000;
-        overflow: visible;
         text-decoration: none;
-        color: #fff;
-        border: 0px;
-        transition: background-color .2s ease-in-out;
-        outline: none;
+        white-space: nowrap;
+        overflow: visible;
+        vertical-align: middle;
 
 
 
@@ -56,19 +53,19 @@
          * ^Button Sizes
          */
         @if $btn--large == true{
-                &--large{
+            &--large{
                 font-size: $btn-default-font-size * $btn-size-ratio;
             }
         }
 
         @if $btn--small== true{
-                &--small{
+            &--small{
                 font-size: $btn-default-font-size / $btn-size-ratio;
             }
         }
 
         @if $btn--block == true{
-                &--block{
+            &--block{
                 display: block;
                 width: 100%;
                 text-align: center;
@@ -80,18 +77,18 @@
          * ^Button Types
          */
         @if $btn--natural == true{
-                &--natural{
-                vertical-align: baseline;
+            &--natural{
+                height: auto;
+                padding-right: .5em;
+                padding-left: .5em;
                 font-size: inherit;
                 line-height: inherit;
-                height: auto;
-                padding-right: 0.5em;
-                padding-left: 0.5em;
+                vertical-align: baseline;
             }
         }
 
         @if $btn--disabled == true{
-                &--disabled{
+            &--disabled{
                 background-color: #ddd;
                 color: #777;
 
@@ -99,8 +96,8 @@
                 &:active,
                 &:focus{
                     background-color: #ddd !important;
-                    color: #777 !important;
                     cursor: not-allowed;
+                    color: #777 !important;
                 }
             }
         }
@@ -125,8 +122,8 @@
         }
 
         &::-moz-focus-inner{
-            border: 0;
             padding: 0;
+            border: 0;
         }
     }
 
@@ -140,11 +137,11 @@
 
     @if $btn-group == true{
         .btn-group{
-            position: relative;
+            @extend %cf;
             display: inline-block;
+            position: relative;
             white-space: nowrap;
             vertical-align: middle;
-            @extend %cf;
 
             > *{
                 float: left;

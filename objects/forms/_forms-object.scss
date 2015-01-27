@@ -26,20 +26,20 @@
         > li > input,
         > li > textarea,
         > li > select{
-            width: 100%;
             display: block;
+            width: 100%;
         }
     }
 
     input,
     select,
     textarea{
-        border: $form-item-border-style $form-item-border-size $form-item-border-color;
-        padding: $form-item-padding;
-        outline: none;
         height: $form-item-height;
-        border-radius: $form-item-border-radius;
+        padding: $form-item-padding;
         transition: border-color .2s ease-in-out, color .2s ease-in-out;
+        border: $form-item-border-style $form-item-border-size $form-item-border-color;
+        border-radius: $form-item-border-radius;
+        outline: none;
 
         &:focus{
             border-color: $form-focus-border-color;
@@ -47,12 +47,12 @@
         }
     }
 
-    input[type=email],
-    input[type=number],
-    input[type=password],
-    input[type=search],
-    input[type=tel],
-    input[type=text],
+    input[type='email'],
+    input[type='number'],
+    input[type='password'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='text'],
     textarea{
         cursor: text;
     }

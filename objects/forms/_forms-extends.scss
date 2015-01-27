@@ -23,8 +23,8 @@
     \*------------------------------------*/
 
     %form{
-        margin-left: -1em;
         @extend %grid;
+        margin-left: -1em;
 
         > li{
             margin-bottom: $form-item-push-bottom;
@@ -121,25 +121,28 @@
      */
     %form-gutters-medium{
         margin-left: -1.5em;
+
         & > li{
-            padding-left: 1.5em;
             margin-bottom: 1.5em;
+            padding-left: 1.5em;
         }
     }
 
     %form-gutters-large{
         margin-left: -2em;
+
         & > li{
-            padding-left: 2em;
             margin-bottom: 2em;
+            padding-left: 2em;
         }
     }
 
     %form-gutters-xlarge{
         margin-left: -3em;
+
         & > li{
-            padding-left: 3em;
             margin-bottom: 3em;
+            padding-left: 3em;
         }
     }
 }

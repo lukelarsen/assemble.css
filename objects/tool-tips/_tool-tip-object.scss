@@ -19,36 +19,36 @@
 
     .tool-tip{
         position: relative;
-        cursor: pointer;
-        color: #B8B8B8;
         float: right;
+        cursor: pointer;
+        color: #b8b8b8;
 
         .tool-tip__container{
-            @include position();
-            visibility: hidden;
-            padding: 10px 15px;
+            @include absolute();
             width: 200px;
+            padding: 10px 15px;
+            background-color: $tool-tip-bg-color;
+            cursor: default;
+            color: $tool-tip-text-color;
             text-transform: none;
             opacity: 0;
-            cursor: default;
-            background-color: $tool-tip-bg-color;
-            color: $tool-tip-text-color;
+            visibility: hidden;
             z-index: z(tool-tip__container);
         }
 
         .tool-tip__close{
             @include position(right 0 bottom 0);
-            cursor: pointer;
-            background-color: $tool-tip-close-background;
-            color: $tool-tip-close-color;
             padding: $tool-tip-close-padding;
+            background-color: $tool-tip-close-background;
+            cursor: pointer;
+            color: $tool-tip-close-color;
         }
     }
 
     // Active State
     .tool-tip--active .tool-tip__container{
-        visibility: visible;
         opacity: 1;
+        visibility: visible;
     }
 
 
@@ -66,9 +66,9 @@
         .tool-tip--right{
             > .tool-tip__container{
                 @include arrow(left, top, $tool-tip-bg-color);
-                transition: visibility 2s ease-in, opacity .3s ease-in, left .3s ease-in;
                 top: $tool-tip--right-top;
                 left: $tool-tip--right-start;
+                transition: visibility 2s ease-in, opacity .3s ease-in, left .3s ease-in;
 
                 @include media-query(portable){
                     top: $tool-tip--right-top--portable;
@@ -96,9 +96,9 @@
         .tool-tip--bottom{
             > .tool-tip__container{
                 @include arrow(top, right, $tool-tip-bg-color);
-                transition: visibility 2s ease-in, opacity .3s ease-in, top .3s ease-in;
                 top: $tool-tip--bottom-start;
                 left: $tool-tip--bottom-left;
+                transition: visibility 2s ease-in, opacity .3s ease-in, top .3s ease-in;
 
                 @include media-query(portable){
                     left: $tool-tip--bottom-left--portable !important;

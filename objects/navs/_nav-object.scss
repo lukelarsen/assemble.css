@@ -31,11 +31,11 @@
     \*------------------------------------*/
 
     .nav{
-        list-style: none;
-        margin: 0;
-        padding: 0;
         display: flex;
         flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
 
         > li{
             flex: 0 1 auto;
@@ -143,11 +143,11 @@
             margin-left: 7px;
 
             &:after{
-                content:", ";
+                content: ', ';
             }
 
             &:last-child:after{
-                display:none;
+                display: none;
             }
 
             a{
@@ -167,24 +167,24 @@
      * Credit: Inuit.css
      */
     .nav--pagination{
-        text-align:center;
+        text-align: center;
 
         > li{
             padding: $pagination-li-padding;
 
             > a{
-                padding: $pagination-a-spacing;
-                margin: -$pagination-a-spacing;
                 display: block;
+                margin: -$pagination-a-spacing;
+                padding: $pagination-a-spacing;
             }
         }
 
         > .nav--pagination__first a:before{
-            content:"« ";
+            content: '« ';
         }
 
         > .nav--pagination__last a:after{
-            content:" »";
+            content: ' »';
         }
     }
 
@@ -195,8 +195,8 @@
      */
     .nav--breadcrumb{
         > li + li:before{
-            content:"» ";
             float: left;
+            content: '» ';
         }
 
         > li{
@@ -213,7 +213,7 @@
      * Credit: Inuit.css
      */
     .nav--breadcrumb--path > li + li:before{
-        content:"/ ";
+        content: '/ ';
     }
 
 
@@ -223,8 +223,8 @@
      */
     .nav--breadcrumb--custom{
         > li + li[data-breadcrumb]:before{
-            content: attr(data-breadcrumb) " ";
             float: left;
+            content: attr(data-breadcrumb) ' ';
         }
     }
 }

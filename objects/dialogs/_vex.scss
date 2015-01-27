@@ -174,44 +174,45 @@
 
     .vex{
         position: fixed;
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
+        overflow: auto;
         z-index: z(vex);
+        -webkit-overflow-scrolling: touch;
     }
 
     .vex-overlay{
-        animation: vex-fadein 0.5s;
-        -webkit-backface-visibility: hidden;
         position: fixed;
-        background: $modal_overlay_background_color;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
+        background: $modal-overlay-background-color;
+        animation: vex-fadein .5s;
+        -webkit-backface-visibility: hidden;
     }
+
     .vex.vex-closing .vex-overlay{
-        animation: vex-fadeout 0.5s;
+        animation: vex-fadeout .5s;
         -webkit-backface-visibility: hidden;
     }
 
     .vex-content{
-        animation: vex-fadein 0.5s;
+        background: #fff;
+        animation: vex-fadein .5s;
         -webkit-backface-visibility: hidden;
-        background: white;
     }
 
     .vex.vex-closing .vex-content{
-        animation: vex-fadeout 0.5s;
+        animation: vex-fadeout .5s;
         -webkit-backface-visibility: hidden;
     }
 
     .vex-close:before{
         font-family: Arial, sans-serif;
-        content: "\00D7";
+        content: '\00D7';
     }
 
     .vex-dialog-form{
@@ -219,27 +220,27 @@
     }
 
     .vex-dialog-button{
-        -webkit-appearance: none;
         cursor: pointer;
+        -webkit-appearance: none;
     }
 
     .vex-loading-spinner{
-        animation: vex-rotation 0.7s linear infinite;
-        -webkit-backface-visibility: hidden;
-        box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
         position: fixed;
-        margin: auto;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        height: 2em;
         width: 2em;
-        background: white;
+        height: 2em;
+        margin: auto;
+        background: #fff;
+        box-shadow: 0 0 1em rgba(0, 0, 0, .1);
         z-index: (z(vex) + 1);
+        animation: vex-rotation .7s linear infinite;
+        -webkit-backface-visibility: hidden;
     }
 
-    body.vex-open{
+    .vex-open{
         overflow: hidden;
     }
 }

@@ -57,7 +57,7 @@
 /**
  * Create our width & gutter extends (or classes), prefixed by the specified namespace.
  */
-@mixin device-type($namespace:""){
+@mixin device-type($namespace:''){
 
     // The first call is for the entire grid block
     // The second call is for individual grid cells
@@ -119,9 +119,10 @@
      */
     #{$class-type}gutters--#{$namespace}-small{
         margin-left: -1em;
+
         & > div[class^='gc-']{
-            padding-left: 1em;
             margin-bottom: 1em;
+            padding-left: 1em;
         }
     }
 
@@ -131,9 +132,10 @@
      */
     #{$class-type}gutters--#{$namespace}-medium{
         margin-left: -1.5em;
+
         & > div[class^='gc-']{
-            padding-left: 1.5em;
             margin-bottom: 1.5em;
+            padding-left: 1.5em;
         }
     }
 
@@ -143,9 +145,10 @@
      */
     #{$class-type}gutters--#{$namespace}-large{
         margin-left: -2em;
+
         & > div[class^='gc-']{
-            padding-left: 2em;
             margin-bottom: 2em;
+            padding-left: 2em;
         }
     }
 
@@ -155,9 +158,10 @@
      */
     #{$class-type}gutters--#{$namespace}-xlarge{
         margin-left: -3em;
+
         & > div[class^='gc-']{
-            padding-left: 3em;
             margin-bottom: 3em;
+            padding-left: 3em;
         }
     }
 
@@ -186,7 +190,7 @@
 _*/
 @each $width in $grid-fixed-widths{
     #{$class-type}grid__item--fixed-#{$width}{
-        width: #{$width}px;
         flex: none !important;
+        width: #{$width}px;
     }
 }

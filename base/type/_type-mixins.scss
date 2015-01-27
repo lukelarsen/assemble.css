@@ -57,23 +57,23 @@ $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
 \*------------------------------------*/
 
 // Returns a number without a unit. For example 16px becomes 16
-@function stripUnits($number){
+@function strip-units($number){
     @return $number / ($number * 0 + 1);
 }
 
 // Returns an EM value. For example 24px becomes 1.5em
-@function emCalc($target, $context: $base-font-size){
-    @return stripUnits(($target / $context)) + 0em;
+@function em-calc($target, $context: $base-font-size){
+    @return strip-units(($target / $context)) + 0em;
 }
 
 // Returns an EM value that is a multiple of our defined base vertical unit. For example 3 becomes 1.125em
-@function emRhythm($lines: $base-vertical-unit, $font-size: $base-em-font-size){
-    @return (stripUnits($lines) * stripUnits($base-vertical-unit)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
+@function em-rhythm($lines: $base-vertical-unit, $font-size: $base-em-font-size){
+    @return (strip-units($lines) * strip-units($base-vertical-unit)) / (strip-units($font-size) * strip-units($base-font-size)) + 0em;
 }
 
 // Returns a unitless number that is a multiple of our defined base vertical unit. For example 3 becomes 1.125
-@function unitlessRhythm($lines: $base-vertical-unit, $font-size: $base-em-font-size){
-    @return ($lines * stripUnits($base-vertical-unit)) / (stripUnits($font-size) * stripUnits($base-font-size));
+@function unitless-rhythm($lines: $base-vertical-unit, $font-size: $base-em-font-size){
+    @return ($lines * strip-units($base-vertical-unit)) / (strip-units($font-size) * strip-units($base-font-size));
 }
 
 
@@ -89,27 +89,27 @@ $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
 // all the wonderful type related stuffs.
 
 // Sets the type in EMs and makes a vertical rhythm unitless line-height that is based on context.
-@mixin setType($lines: $base-line-multi, $font-size: $base-em-font-size){
+@mixin set-type($lines: $base-line-multi, $font-size: $base-em-font-size){
     font-size: $font-size;
-    line-height: unitlessRhythm($lines, $font-size);
+    line-height: unitless-rhythm($lines, $font-size);
 }
 
 // Creates a vertical rhythm unitless line-height that is based on context
-@mixin setLeading($lines: $base-line-multi, $font-size: $base-em-font-size){
-    line-height: unitlessRhythm($lines, $font-size);
+@mixin set-teading($lines: $base-line-multi, $font-size: $base-em-font-size){
+    line-height: unitless-rhythm($lines, $font-size);
 }
 
-@mixin rhythmBorderTop($border-width: 1px, $lines: $base-line-multi, $font-size: $base-em-font-size){
+@mixin rhythm-border-top($border-width: 1px, $lines: $base-line-multi, $font-size: $base-em-font-size){
+    padding-top: (($lines * strip-units($base-vertical-unit)) - strip-units($border-width)) / (strip-units($font-size) * strip-units($base-font-size)) + 0em;
     border-top-width: $border-width;
-    padding-top: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
 }
 
-@mixin rhythmBorderBottom($border-width: 1px, $lines: $base-line-multi, $font-size: $base-em-font-size){
+@mixin rhythm-border-bottom($border-width: 1px, $lines: $base-line-multi, $font-size: $base-em-font-size){
+    padding-bottom: (($lines * strip-units($base-vertical-unit)) - strip-units($border-width)) / (strip-units($font-size) * strip-units($base-font-size)) + 0em;
     border-bottom-width: $border-width;
-    padding-bottom: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
 }
 
-@mixin rhythmBorder($border-width: 1px, $lines: $base-line-multi, $font-size: $base-em-font-size){
+@mixin rhythm-border($border-width: 1px, $lines: $base-line-multi, $font-size: $base-em-font-size){
+    padding: (($lines * strip-units($base-vertical-unit)) - strip-units($border-width)) / (strip-units($font-size) * strip-units($base-font-size)) + 0em;
     border-width: $border-width;
-    padding: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
 }

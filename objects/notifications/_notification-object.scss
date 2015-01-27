@@ -26,8 +26,8 @@
     \*------------------------------------*/
 
     .notification-wrapper{
-        width: $notification-width;
         position: fixed;
+        width: $notification-width;
         font-size: $notification-font-size;
         z-index: z(notification-wrapper);
 
@@ -39,7 +39,7 @@
     .notification{
         width: 100%;
         min-height: 80px;
-        color: white;
+        color: #fff;
     }
 
 
@@ -47,21 +47,23 @@
      * ^Message Title
      */
     .notification__title-bar{
+        display: flex;
         width: 100%;
         padding: $notification-padding;
-        display: flex;
     }
+
     .notification-title{
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
     }
 
     .notification-close-btn{
-        color: $notification-close-color;
-        margin-left: auto;
         display: flex;
-        cursor: pointer;
         align-items: center;
+        margin-left: auto;
+        cursor: pointer;
+        color: $notification-close-color;
+
         &:hover{
             color: $notification-close-color-hover;
         }
@@ -79,9 +81,9 @@
         text-decoration: underline;
     }
 
-    p.notification-text{
-        margin: 0;
+    .notification-text{
         width: 100%;
+        margin: 0;
     }
 
 
@@ -114,11 +116,11 @@
      */
     @if $notification-bottom-right == true{
         .notification-wrapper--bottom-right{
-            bottom: $notification-space-from-edge;
             right: $notification-space-from-edge;
+            bottom: $notification-space-from-edge;
 
             @include media-query(palm){
-                right: 0px;
+                right: 0;
                 width: 100%;
             }
 
@@ -138,7 +140,7 @@
             left: $notification-space-from-edge;
 
             @include media-query(palm){
-                left: 0px;
+                left: 0;
                 width: 100%;
             }
 
@@ -158,7 +160,7 @@
             right: $notification-space-from-edge;
 
             @include media-query(palm){
-                right: 0px;
+                right: 0;
                 width: 100%;
             }
 
@@ -178,7 +180,7 @@
             left: $notification-space-from-edge;
 
             @include media-query(palm){
-                left: 0px;
+                left: 0;
                 width: 100%;
             }
 

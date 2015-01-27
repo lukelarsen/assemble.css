@@ -47,15 +47,13 @@
     \*------------------------------------*/
 
     @if $list-colored == true{
-        ul.list-colored,
-        ol.list-colored{
+        .list-colored{
             padding-left: $list-colored-padding-left;
         }
 
-        ul.list-colored > li,
-        ol.list-colored > li{
-            list-style-type: none;
+        .list-colored > li{
             position: relative;
+            list-style-type: none;
         }
 
         /*
@@ -63,15 +61,14 @@
          * 2. Edit this property to change all colored class lists.
          * 3. Normalize funky webkit margin
          */
-        ul.list-colored > li:before,
-        ol.list-colored > li:before{
+        .list-colored > li:before{
             @include absolute(top 0 left -1em);
-            content: "\25CF"; /* 1 */
             color: $list-colored-color; /* 2 */
-            font-weight: bold;
             font-size: 1em;
+            font-weight: bold;
             text-align: right;
             text-decoration: none;
+            content: '\25CF'; /* 1 */
             -webkit-margin-start: -.25em; /* 3 */
         }
 
@@ -90,10 +87,10 @@
          * 2. Normalize funky webkit margin
          */
         ol.list-colored > li:before{
-            content: counter(foo) "."; /* 1 */
             left: -3.125em;
-            font-weight: normal;
             width: 2.5em;
+            font-weight: normal;
+            content: counter(foo) '.'; /* 1 */
             -webkit-margin-start: 0; /* 2 */
         }
     }

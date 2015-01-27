@@ -39,7 +39,6 @@
          */
         &:before,
         &:after {
-            content: none;
             content: normal;
         }
 
@@ -55,11 +54,11 @@
 
             &:before,
             &:after {
-                animation: 0.5s tip linear;
+                animation: .5s tip linear;
             }
 
             &:before {
-                content: ""; /* [1] */
+                content: ''; /* [1] */
             }
 
             &:after {
@@ -74,7 +73,7 @@
          */
         &:before {
             @include position(top 100% left 50%);
-            margin-top:  -3px;
+            margin-top: -3px;
             margin-left: -5px;
             border: 5px solid transparent;
             border-bottom-color: $tip-color;
@@ -87,17 +86,17 @@
          */
         &:after {
             @include absolute(top 100% left 50%); /* [1] */
-            border-radius: 3px;
+            margin-top: 7px;
             padding-right: 5px;
-            padding-left:  5px;
-            margin-top:    7px;
-            white-space: nowrap;
-            font-weight: normal;
-            color: $tip-text-color;
-            background-color: $tip-color;
-            border-bottom: 1px solid darken($tip-color, 25%);
-            z-index: 1;
+            padding-left: 5px;
             transform: translateX(-50%);
+            border-bottom: 1px solid darken($tip-color, 25%);
+            border-radius: 3px;
+            background-color: $tip-color;
+            color: $tip-text-color;
+            font-weight: normal;
+            white-space: nowrap;
+            z-index: 1;
         }
     }
 

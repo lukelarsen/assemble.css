@@ -28,9 +28,9 @@
     %grid{
         display: flex;
         flex-wrap: wrap;
-        list-style: none;
         margin: 0;
         padding: 0;
+        list-style: none;
     }
 
     %grid__item{
@@ -159,33 +159,37 @@
      */
     %gutters-small{
         margin-left: -1em;
+
         & > div[class^='gc-']{
-            padding-left: 1em;
             margin-bottom: 1em;
+            padding-left: 1em;
         }
     }
 
     %gutters-medium{
         margin-left: -1.5em;
+
         & > div[class^='gc-']{
-            padding-left: 1.5em;
             margin-bottom: 1.5em;
+            padding-left: 1.5em;
         }
     }
 
     %gutters-large{
         margin-left: -2em;
+
         & > div[class^='gc-']{
-            padding-left: 2em;
             margin-bottom: 2em;
+            padding-left: 2em;
         }
     }
 
     %gutters-xlarge{
         margin-left: -3em;
+
         & > div[class^='gc-']{
-            padding-left: 3em;
             margin-bottom: 3em;
+            padding-left: 3em;
         }
     }
 
