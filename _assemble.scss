@@ -7,7 +7,6 @@
  *  ARROWS
  *  BUTTONS
  *  CODE
- *  DIALOGS
  *  FORMS
  *  ICONS
  *  LISTS
@@ -15,7 +14,7 @@
  *  MODALS
  *  NAVS
  *  TABLES
- *  TOOL TIPS
+ *  TIPS
  *  TYPE
  */
 
@@ -61,8 +60,8 @@
     !BUTTONS
 \*------------------------------------*/
 
-@import 'objects/buttons/button-object';
 @import 'objects/buttons/button-print';
+@import 'objects/buttons/button-object';
 
 
 
@@ -73,17 +72,6 @@
 \*------------------------------------*/
 
 @import 'objects/code/code-object';
-
-
-
-
-
-/*------------------------------------*\
-    !DIALOGS
-\*------------------------------------*/
-
-@import 'objects/dialogs/vex';
-@import 'objects/dialogs/vex-fade-down-theme';
 
 
 
@@ -136,6 +124,7 @@
 \*------------------------------------*/
 
 @import 'objects/modals/modal-object';
+@import 'objects/modals/modal-print';
 
 
 
@@ -155,7 +144,7 @@
     !NOTIFICATIONS
 \*------------------------------------*/
 
-@import 'objects/notifications/notification-mixins';
+@import 'objects/notifications/notification-print';
 @import 'objects/notifications/notification-object';
 
 
@@ -166,7 +155,7 @@
     !TABLES
 \*------------------------------------*/
 
-@import 'objects/tables/tables-mixins';
+@import 'objects/tables/tables-print';
 @import 'objects/tables/tables-object';
 
 
@@ -184,18 +173,8 @@
 
 
 /*------------------------------------*\
-    !TOOL TIPS
-\*------------------------------------*/
-
-@import 'objects/tool-tips/tool-tip-object';
-
-
-
-
-
-/*------------------------------------*\
     !TYPE
 \*------------------------------------*/
 
-@import 'base/type/type-mixins';
 @import 'base/type/type-print';
+@import 'base/type/type-mixins';

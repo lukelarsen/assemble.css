@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  RETURN COLORS
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !RETURN COLORS
+\*------------------------------------*/
+
+@function color($color, $tone: 'base') {
+    @return map-get(map-get($color-palette, $color), $tone);
+}

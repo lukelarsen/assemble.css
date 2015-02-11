@@ -3,24 +3,9 @@
         CONTENTS
     \*------------------------------------*/
     /**
-     *  MODAL STRUCTURE
-            Modal Header
-            Modal Body
-            Modal Footer
-     *  MODAL WIDTHS
-            Modal Wide
-            Modal Normal
-            Modal Narrow
-     *  MODAL ANIMATIONS
-            Modal Slide Up
-            Modal Slide Right
-            Modal 3D Flip Horizontal
-            Modal 3D Flip Vertical
-            Modal Super Scaled
-     */
-
-    /**
-     *  Credit goes to Code Drops - Nifty Modal Window Effects - http://tympanus.net/codrops/2013/06/25/nifty-modal-window-effects/
+     *  MODAL BASE
+     *  MODAL INNER
+     *  MODAL CLOSE
      */
 
 
@@ -28,158 +13,53 @@
 
 
     /*------------------------------------*\
-        !MODAL STRUCTURE
+        !MODAL BASE
     \*------------------------------------*/
 
-    .modal{
+    .modal,
+    .modal-block{
         display: none;
-        position: fixed;
-        top: 15%;
-        left: 30%;
-        width: 40%;
-        min-width: 320px;
-        height: auto;
-        visibility: hidden;
-        z-index: z(modal);
-        backface-visibility: hidden;
-
-        @include media-query(palm){
-            top: 0%;
-            left: 0%;
-            width: 100%;
-        }
     }
 
-    .modal__content{
-        background-color: $modal-background-color;
-    }
-
-    .modal--show{
-        visibility: visible;
-    }
-
-    .modal-overlay{
-        display: none;
+    .vanilla-modal .modal {
+        display: block;
         position: fixed;
         top: 0;
+        right: 0;
+        bottom: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        transition: all .3s;
-        background: $modal-overlay-background-color;
+        transition: opacity .3s, z-index 0s .3s;
+        background: $modal-overlay-color;
+        text-align: center;
+        white-space: nowrap;
+        content: '';
         opacity: 0;
-        visibility: hidden;
-        z-index: (z(modal) - 1);
+        overflow: hidden;
+        z-index: z(modal-inner);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
-    .modal--show ~ .modal-overlay{
+    .vanilla-modal .modal > * {
+        display: inline-block;
+        text-align: left;
+        white-space: normal;
+        vertical-align: middle;
+    }
+
+    .vanilla-modal .modal:before {
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        content: '';
+        overflow: hidden;
+        vertical-align: middle;
+    }
+
+    .vanilla-modal.modal-visible .modal {
+        transition: opacity .3s;
         opacity: 1;
-        visibility: visible;
-    }
-
-
-    /**
-     * ^Modal Header
-     */
-    .modal__header{
-        margin-bottom: $modal-header-margin-bottom;
-        padding: $modal-header-padding;
-        background-color: $modal-header-background-color;
-
-        h3{
-            margin-bottom: 0;
-            color: $modal-header-text-color;
-            text-align: center;
-        }
-    }
-
-
-    /**
-     * ^Modal Body
-     */
-    .modal__body{
-        padding: $modal-body-padding;
-        overflow-y: scroll;
-    }
-
-
-    /**
-     * ^Modal Footer
-     */
-    .modal__footer{
-        padding: $modal-footer-padding;
-        border-top: $modal-footer-border-top;
-    }
-
-
-
-
-
-
-    /*------------------------------------*\
-        !MODAL WIDTHS
-    \*------------------------------------*/
-
-    /**
-     * ^Modal Wide
-     */
-    @if $modal--wide == true{
-        .modal--wide{
-            left: 20%;
-            width: 60%;
-
-            @include media-query(portable){
-                top: 2%;
-            }
-
-            @include media-query(palm){
-                left: 0%;
-            }
-        }
-    }
-
-
-    /**
-     * ^Modal Narrow
-     */
-    @if $modal--narrow == true{
-        .modal--narrow{
-            left: 35%;
-            width: 30%;
-
-            @include media-query(palm){
-                left: 0%;
-            }
-        }
-    }
-
-
-    /**
-     * ^Modal Palm;
-     */
-
-    @include media-query(palm){
-        .modal{
-            height: 100%;
-        }
-
-        .modal__content{
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-
-            .modal__header{
-                flex: auto 0 0;
-            }
-
-            .modal__body{
-                max-height: none !important;
-            }
-
-            .modal__footer{
-                flex: auto 0 0;
-            }
-        }
+        z-index: z(modal);
     }
 
 
@@ -187,106 +67,51 @@
 
 
     /*------------------------------------*\
-        !MODAL ANIMATIONS
+        !MODAL INNER
     \*------------------------------------*/
 
-    /**
-     * Credit: http://tympanus.net/codrops/2013/06/25/nifty-modal-window-effects/
-     */
+    .modal-inner {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        padding: $modal-inner-padding;
+        transform: scale(0);
+        transition: opacity .3s, transform .3s, z-index 0s .3s;
+        background: $modal-inner-background-color;
+        opacity: 0;
+        overflow: hidden;
+        z-index: z(modal-inner);
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
 
-    /**
-     * ^Modal Slide Up
-     */
-    @if $modal--scale-up == true{
-        .modal--scale-up .modal__content{
-            transform: scale(.7);
-            -moz-transition: all .3s;
-            -webkit-transition: all .3s;
-            transition: all .3s;
-            opacity: 0;
-        }
-
-        .modal--show.modal--scale-up .modal__content{
-            transform: scale(1);
-            opacity: 1;
-        }
+    .modal-visible .modal-inner {
+        transform: scale(1);
+        transition: opacity .3s, transform .3s;
+        opacity: 1;
+        z-index: z(modal-inner-visible);
     }
 
 
-    /**
-     * ^Modal Slide Right
-     */
-    @if $modal--slide-right == true{
-        .modal--slide-right .modal__content{
-            transform: translateX(20%);
-            transition: all .3s cubic-bezier(.25, .5, .5, .9);
-            opacity: 0;
-        }
-
-        .modal--show.modal--scale-up .modal__content{
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
 
 
-    /**
-     * ^Modal 3D Flip Horizontal
-     */
-    @if $modal--3d-flip-horizontal == true{
-        .modal--3d-flip-horizontal.modal{
-            perspective: 1300px;
-        }
 
-        .modal--3d-flip-horizontal .modal__content{
-            transform: rotateY(-70deg);
-            transform-style: preserve-3d;
-            transition: all .3s;
-            opacity: 0;
-        }
+    /*------------------------------------*\
+        !MODAL CLOSE
+    \*------------------------------------*/
 
-        .modal--show.modal--3d-flip-horizontal .modal__content{
-            transform: rotateY(0deg);
-            opacity: 1;
-        }
-    }
-
-
-    /**
-     * ^Modal 3D Flip Vertical
-     */
-    @if $modal--3d-flip-vertical == true{
-        .modal--3d-flip-vertical.modal{
-            perspective: 1300px;
-        }
-
-        .modal--3d-flip-vertical .modal__content{
-            transform: rotateX(-70deg);
-            transform-style: preserve-3d;
-            transition: all .3s;
-            opacity: 0;
-        }
-
-        .modal--show.modal--3d-flip-vertical .modal__content{
-            transform: rotateX(0deg);
-            opacity: 1;
-        }
-    }
-
-
-    /**
-     * ^Modal Super Scaled
-     */
-    @if $modal--super-scaled == true{
-        .modal--super-scaled .modal__content{
-            transform: scale(2);
-            transition: all .3s;
-            opacity: 0;
-        }
-
-        .modal--show.modal--super-scaled .modal__content{
-            transform: scale(1);
-            opacity: 1;
-        }
+    a[rel="modal:close"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25px;
+        height: 25px;
+        background: $modal-close-background-color;
+        cursor: pointer;
+        color: $modal-close-color;
+        font-size: 13px;
+        line-height: 25px;
+        text-align: center;
+        z-index: z(modal-close);
     }
 }

@@ -1,0 +1,21 @@
+/*------------------------------------*\
+ *
+    CONTENTS
+\*------------------------------------*/
+/**
+ *  PRINT MODAL FIXED WIDTHS
+ */
+
+
+
+
+
+/*------------------------------------*\
+    !PRINT MODAL FIXED WIDTHS
+\*------------------------------------*/
+
+@each $modal-width in $modal-fixed-widths{
+    .modal__block-#{$modal-width}{
+        max-width: #{$modal-width}px;
+    }
+}
