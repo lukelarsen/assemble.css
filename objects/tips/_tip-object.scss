@@ -99,7 +99,7 @@
 
     @if $tip-enable-top == true{
         .tip--top{
-            right: 0;
+            right: 26px;
             bottom: $tip-top-position;
         }
     }
@@ -111,7 +111,7 @@
     @if $tip-enable-bottom == true{
         .tip--bottom{
             top: $tip-bottom-position;
-            right: 0;
+            right: 26px;
         }
     }
 
@@ -125,6 +125,11 @@
             right: $tip-right-position;
             width: $tip-width;
             white-space: normal;
+
+            @include media-query(palm){
+                top: $tip-bottom-position;
+                right: 26px;
+            }
         }
     }
 
@@ -138,6 +143,11 @@
             left: $tip-left-position;
             width: $tip-width;
             white-space: normal;
+
+            @include media-query(palm){
+                top: $tip-bottom-position;
+                left: $tip-left-position + 16;
+            }
         }
     }
 }
