@@ -26,6 +26,8 @@ Then you'll need to:
 * Place the images directory in your public directory
 * Remove style.scss from the stylesheets directory. It isn't needed when using Meteor.
 
+NOTE: When you run your app for the first time with Assemble.css it might throw an error saying a file it tried to import wasn't found. Just exit out and run meteor a second time and it will compile just fine.
+
 All done.
 
 ##Usage
