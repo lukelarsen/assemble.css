@@ -10,7 +10,7 @@ Assemble.css is a designless Scss framework. It contains a lot of commonly used 
 Then you'll need to:
 * Download the <a href="http://github.com/lukelarsen/assemble.css-template">assemble.css-template</a>
 * Place the images and stylesheets directories in your project where you need them.
-* If you put the stylesheet directory someplace other than your root directory you'll need to update two paths in the _assemble.scss file. They are to the general-returns.scss and assemble.scss files. 
+* Depending on how you structure your app you might need to help Assemble.css find files it needs to compile. You can adjust this in the stylesheets/style.scss file. You need to make sure the path to general-returns.scss and assemble.scss are correct.
 
 You do not need stylesheets/style.meteor.scss and scss.json. They aren't needed when using Bower.
 
