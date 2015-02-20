@@ -67,7 +67,7 @@ Assemble.css doesn't contain vendor prefixes. In my opinion they change to often
  mixins to output different or less prefixes as browsers change. I highly recommend
  <a href="https://github.com/ai/autoprefixer" target="_blank">Autoprefixer</a>. It  will go through your css file and
  compare what it finds with what is on <a href="http://caniuse.com" target="_blank">caniuse.com</a>. If it finds
- something that needs a vendor prefix it will add it. It is beautiful. If you Assemb.css with Meteor this is enabled 
+ something that needs a vendor prefix it will add it. It is beautiful. If you Assemble.css with Meteor this is enabled 
  by default. Otherwise you will need to set it up. I suggest using <a href="http://gulpjs.com" target="_blank">Gulp</a>.
 
 
