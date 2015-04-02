@@ -26,7 +26,7 @@
     .btn{
         display: inline-block;
         margin: 0;
-        padding: 0 $btn-padding-sides;
+        padding: $btn-padding-ends $btn-padding-sides;
         transition: background-color .2s ease-in-out;
         border: 0;
         outline: none;
@@ -35,7 +35,6 @@
         color: #FFF;
         font-family: inherit;
         font-size: $btn-default-font-size;
-        line-height: 3;
         text-decoration: none;
         white-space: nowrap;
         overflow: visible;
