@@ -32,7 +32,7 @@
         outline: none;
         background-color: #000;
         cursor: pointer;
-        color: #fff;
+        color: #FFF;
         font-family: inherit;
         font-size: $btn-default-font-size;
         line-height: 3;
@@ -89,13 +89,13 @@
 
         @if $btn--disabled == true{
             &--disabled{
-                background-color: #ddd;
+                background-color: #DDD;
                 color: #777;
 
                 &:hover,
                 &:active,
                 &:focus{
-                    background-color: #ddd !important;
+                    background-color: #DDD !important;
                     cursor: not-allowed;
                     color: #777 !important;
                 }
