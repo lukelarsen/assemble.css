@@ -183,7 +183,7 @@
 @each $width in $grid-fixed-widths{
     #{$class-type}grid--fixed-#{$width}{
         max-width: #{$width}px;
-        margin: 0 auto;
+        margin: 0 auto !important;
     }
 }
 
