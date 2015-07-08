@@ -14,6 +14,8 @@
         Gutter Large
         Gutter xLarge
  *  GENERATE THE SILENT CLASSES
+        Generate our fixed width extends (or classes)
+        Generate our responsive extends (or classes)
 */
 
 /**
@@ -176,9 +178,20 @@
 \*------------------------------------*/
 
 /**
- * Generate our fixed width extends (or classes)
+ * ^Generate our fixed width grid extends (or classes)
  */
 @each $width in $grid-fixed-widths{
+    #{$class-type}grid--fixed-#{$width}{
+        max-width: #{$width}px;
+        margin: 0 auto;
+    }
+}
+
+
+/**
+ * ^Generate our fixed width grid__item extends (or classes)
+ */
+@each $width in $grid-item-fixed-widths{
     #{$class-type}grid__item--fixed-#{$width}{
         flex: none !important;
         width: #{$width}px;
@@ -187,7 +200,7 @@
 
 
 /**
- * Generate our responsive extends (or classes)
+ * ^Generate our responsive extends (or classes)
  */
 @each $name in $breakpoint-has-widths{
     @include grid-media-query($name){
