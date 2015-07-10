@@ -178,12 +178,12 @@
 \*------------------------------------*/
 
 /**
- * ^Generate our fixed width grid extends (or classes)
+ * ^Generate our center grid extends (or classes)
  */
-@each $width in $grid-fixed-widths{
-    #{$class-type}grid--fixed-#{$width}{
+@each $width in $grid-center-widths{
+    #{$class-type}grid--center-#{$width}{
         max-width: #{$width}px;
-        margin: 0 auto !important;
+        margin: 0 auto;
     }
 }
 
