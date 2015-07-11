@@ -22,8 +22,10 @@
     pre,
     code{
         padding: $code-padding;
-        border: $code-border-size $code-border-type $code-border-color;
-        background-color: $code-border;
+        @if $code-border == true{
+            border: $code-border-size $code-border-type $code-border-color;
+        }
+        background-color: $code-background-color;
         color: $code-color;
     }
 
