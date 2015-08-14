@@ -99,8 +99,8 @@
 
     @if $tip-enable-top == true{
         .tip--top{
+            top: $tip-top-position;
             right: 26px;
-            bottom: $tip-top-position;
         }
     }
 
@@ -110,8 +110,8 @@
 
     @if $tip-enable-bottom == true{
         .tip--bottom{
-            top: $tip-bottom-position;
             right: 26px;
+            bottom: $tip-bottom-position;
         }
     }
 

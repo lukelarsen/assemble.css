@@ -138,25 +138,27 @@
      * ^Nav Keywords
      * Credit: Inuit.css
      */
-    .nav--keywords{
-        > li{
-            margin-left: 7px;
+    @if $nav--keywords == true{
+        .nav--keywords{
+            > li{
+                margin-left: 7px;
 
-            &:after{
-                content: ', ';
-            }
+                &:after{
+                    content: ', ';
+                }
 
-            &:last-child:after{
-                display: none;
-            }
+                &:last-child:after{
+                    display: none;
+                }
 
-            a{
-                display: inline-block;
+                a{
+                    display: inline-block;
 
-            }
+                }
 
-            &:first-child{
-                margin-left: 0;
+                &:first-child{
+                    margin-left: 0;
+                }
             }
         }
     }
@@ -166,25 +168,27 @@
      * ^Nav Pagination
      * Credit: Inuit.css
      */
-    .nav--pagination{
-        text-align: center;
+    @if $nav--pagination == true{
+        .nav--pagination{
+            text-align: center;
 
-        > li{
-            padding: $pagination-li-padding;
+            > li{
+                padding: $pagination-li-padding;
 
-            > a{
-                display: block;
-                margin: -$pagination-a-spacing;
-                padding: $pagination-a-spacing;
+                > a{
+                    display: block;
+                    margin: -$pagination-a-spacing;
+                    padding: $pagination-a-spacing;
+                }
             }
-        }
 
-        > .nav--pagination__first a:before{
-            content: '« ';
-        }
+            > .nav--pagination__first a:before{
+                content: '« ';
+            }
 
-        > .nav--pagination__last a:after{
-            content: ' »';
+            > .nav--pagination__last a:after{
+                content: ' »';
+            }
         }
     }
 
@@ -193,16 +197,18 @@
      * ^Nav Breadcrumb
      * Credit: Inuit.css
      */
-    .nav--breadcrumb{
-        > li + li:before{
-            float: left;
-            content: '» ';
-        }
+    @if $nav--breadcrumb == true{
+        .nav--breadcrumb{
+            > li + li:before{
+                float: left;
+                content: '» ';
+            }
 
-        > li{
-            > a{
-                margin-right: $breadcrumb-a-right;
-                margin-left: $breadcrumb-a-left;
+            > li{
+                > a{
+                    margin-right: $breadcrumb-a-right;
+                    margin-left: $breadcrumb-a-left;
+                }
             }
         }
     }
@@ -212,8 +218,10 @@
      * ^Nav Breadcrumb Path
      * Credit: Inuit.css
      */
-    .nav--breadcrumb--path > li + li:before{
-        content: '/ ';
+    @if $nav--breadcrumb--path == true{
+        .nav--breadcrumb--path > li + li:before{
+            content: '/ ';
+        }
     }
 
 
@@ -221,10 +229,12 @@
      * ^Nav Breadcrumb Custom
      * Credit: Inuit.css
      */
-    .nav--breadcrumb--custom{
-        > li + li[data-breadcrumb]:before{
-            float: left;
-            content: attr(data-breadcrumb) ' ';
+    @if $nav--breadcrumb--custom == true{
+        .nav--breadcrumb--custom{
+            > li + li[data-breadcrumb]:before{
+                float: left;
+                content: attr(data-breadcrumb) ' ';
+            }
         }
     }
 }
