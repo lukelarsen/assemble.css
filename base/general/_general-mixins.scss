@@ -12,6 +12,10 @@
  *      Shorthands
 */
 
+////
+/// @group general
+////
+
 
 
 
@@ -20,7 +24,11 @@
     !BACKGROUND IMAGES
 \*------------------------------------*/
 
-// Media Queries - Retina - http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss & http://www.brettjankord.com/2012/11/28/cross-browser-retinahigh-resolution-media-queries/
+/// Use a @2x backgroung image. The media query is built in.
+/// @param {string} $image - file name and extension
+/// @param {number} $width - number plus measurement (px, em, rem)
+/// @param {number} $height - number plus measurement (px, em, rem)
+/// @link http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss
 @mixin image-2x($image, $width, $height){
     @media
     only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -38,11 +46,16 @@
     !SIZING
 \*------------------------------------*/
 
+/// Set the size of something.
+/// @param {number} $width - number plus measurement (px, em, rem)
+/// @param {number} $height - number plus measurement (px, em, rem)
 @mixin sizing($width, $height){
     width: $width;
     height: $height;
 }
 
+/// Set the square size of something.
+/// @param {number} $size - number plus measurement (px, em, rem)
 @mixin square($size){
     width: $size;
     height: $size;
@@ -56,9 +69,11 @@
     !Z-INDEX FUNCTION
 \*------------------------------------*/
 
-// A function helper to avoid having to type `map-get($z-layers, ...)`
-// @param [string] $component (default): the layer to use
-// @return [number] | null
+/// A function helper to avoid having to type map-get($z-layers, ...)
+/// @param {string} $layer [default] - name of the layer
+/// @return {number | null}
+/// @example z-index: z('modal-inner');
+/// @requires {variable} $z-layers - See ui/options/_z-index-options.scss
 @function z($layer: 'default'){
     @if map-has-key($z-layers, $layer) {
         @return map-get($z-layers, $layer);
@@ -113,6 +128,14 @@
 /**
  * ^Position Mixin
  */
+
+/// Helper mixin for offset positioning
+/// @access private
+/// @param {position} $position
+/// @param {args} $args
+/// @require {function} is-valid-length
+/// @author Hugo Giraudel
+/// @link http://hugogiraudel.com/2014/05/19/new-offsets-sass-mixin/
 @mixin position($position, $args: ()) {
     $offsets: top right bottom left;
     position: $position;
@@ -143,6 +166,10 @@
 /**
  * ^Checking Function
  */
+
+/// A function that the position mixin uses.
+/// @access private
+/// @param {value} $value
 @function is-valid-length($value) {
     @return (type-of($value) == 'number' and not unitless($value))
        or (index(auto initial inherit 0, $value) != false);
@@ -151,14 +178,27 @@
 /**
  * ^Shorthands
  */
+
+/// A function for setting absolute position
+/// @param {args} $args - ex. top 1em right 100%
+/// @require {mixin} position
+/// @example @include absolute(top 1em right 1em bottom 1em left 1em);
 @mixin absolute($args: ()) {
     @include position(absolute, $args);
 }
 
+/// A function for setting fixed position
+/// @param {args} $args - ex. top 1em right 100%
+/// @require {mixin} position
+/// @example @include fixed(top 1em right 1em bottom 1em left 1em);
 @mixin fixed($args: ()) {
     @include position(fixed, $args);
 }
 
+/// A function for setting relative position
+/// @param {args} $args - ex. top 1em right 100%
+/// @require {mixin} position
+/// @example @include relative(top 1em right 1em bottom 1em left 1em);
 @mixin relative($args: ()) {
     @include position(relative, $args);
 }

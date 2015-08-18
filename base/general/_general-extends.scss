@@ -6,6 +6,10 @@
  *  SHOW / HIDE
  */
 
+////
+/// @group general
+////
+
 
 
 
@@ -19,6 +23,9 @@
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
+
+/// Clearfix helper
+/// @link css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
 %cf{
     &:after{
         display: table;
@@ -35,11 +42,13 @@
     !SHOW / HIDE
 \*------------------------------------*/
 
+/// Hidden helper. Use to completely hide. Uses display: none;
 %hidden{
     display: none !important;
     visibility: hidden;
 }
 
+/// Visually hidden helper. Use to visually hide. Won't use display: none; but will pull it out of the box-model.
 %visually-hidden{
     @include absolute();
     width: 1px;
@@ -61,6 +70,7 @@
     }
 }
 
+/// Invisible helper. Use to visually hide. Will only use visibility: hidden;
 %invisible{
     visibility: hidden;
 }

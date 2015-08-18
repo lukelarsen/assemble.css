@@ -13,6 +13,13 @@
     !RETURN COLORS
 \*------------------------------------*/
 
+/// A function helper to grab colors from the color map.
+/// @group general
+/// @param {string} $color - name of the color
+/// @param {string} $tone [base] - name of the tone
+/// @return {color from color map}
+/// @example color: color(orange, base);
+/// @require {variable} $color-palette - See ui/options/_color-options.scss
 @function color($color, $tone: 'base') {
     @return map-get(map-get($color-palette, $color), $tone);
 }
