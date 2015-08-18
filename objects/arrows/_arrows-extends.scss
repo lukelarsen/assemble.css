@@ -6,9 +6,15 @@
      *  ARROWS EXTENDS
      */
 
-    /**
-     *  Credit goes to inuit.css by @csswizardry
-     */
+////
+/// Used by the arrow mixin to position the arrow.
+/// This extend is not for individual use.
+/// @author Harry Roberts
+/// @link http://csswizardry.com
+/// @group arrows
+/// @access private
+////
+
 
 
 
@@ -17,9 +23,7 @@
         !ARROWS EXTENDS
     \*------------------------------------*/
 
-    /**
-     * Forms the basis for any/all CSS arrows.
-     */
+/// The foundation for css arrows.
     %arrow{
         position: relative;
 
@@ -39,9 +43,7 @@
         }
     }
 
-    /**
-     * Define individual edges so we can combine what we need, when we need.
-     */
+/// Used when aligning the arrow at the top side of a block.
     %arrow--top{
         @extend %arrow;
 
@@ -51,6 +53,7 @@
         }
     }
 
+/// Used when placing the arrow on the top side of a block.
     %arrow--upper{
         @extend %arrow;
 
@@ -63,6 +66,7 @@
         }
     }
 
+/// Used when aligning the arrow to the middle of a block.
     %arrow--middle{
         @extend %arrow;
 
@@ -77,6 +81,7 @@
         }
     }
 
+/// Used when placing the arrow on the bottom side of a block.
     %arrow--lower{
         @extend %arrow;
 
@@ -89,6 +94,7 @@
         }
     }
 
+/// Used when aligning the arrow to the bottom of a block.
     %arrow--bottom{
         @extend %arrow;
 
@@ -98,6 +104,7 @@
         }
     }
 
+/// Used when aligning the arrow far right.
     %arrow--near{
         @extend %arrow;
 
@@ -107,6 +114,7 @@
         }
     }
 
+/// Used when aligning the arrow to the left side of a block.
     %arrow--left{
         @extend %arrow;
 
@@ -119,6 +127,7 @@
         }
     }
 
+/// Used when aligning the arrow to the center side of a block.
     %arrow--center{
         @extend %arrow;
 
@@ -133,6 +142,7 @@
         }
     }
 
+/// Used when aligning the arrow to the right side of a block.
     %arrow--right{
         @extend %arrow;
 
@@ -145,6 +155,7 @@
         }
     }
 
+/// Used when aligning the arrow far left.
     %arrow--far{
         @extend %arrow;
 

@@ -17,6 +17,10 @@
      *  & Solved By Flexbox - Grids by @philwalton
      */
 
+////
+/// @group grids
+////
+
 
 
 
@@ -25,6 +29,7 @@
         !GRID DEFAULT
     \*------------------------------------*/
 
+/// Base placeholder for building grids.
     %grid{
         display: flex;
         flex-wrap: wrap;
@@ -33,6 +38,8 @@
         list-style: none;
     }
 
+/// Base placeholder for grid items.
+/// @require {placeholder} %grid
     %grid__item{
         flex: 1;
     }
@@ -44,14 +51,9 @@
     /*------------------------------------*\
         !FLEX CELLS MODIFIER
     \*------------------------------------*/
-    /**
 
-    /**
-     * This will make all cells the same height.
-     *
-     * Apply with %grid.
-     */
-
+/// Placeholder that will make all cells the same height.
+/// @require {placeholder} %grid
     %grid--flex-cells{
         & > div[class^='gc-']{
             display: flex;
@@ -66,42 +68,48 @@
         !GRID WIDTH MODIFIERS
     \*------------------------------------*/
 
-    /**
-     * If we need to set a specific width to all
-     * cells in a grid use these extends
-     *
-     * Extend them along with %grid.
-     */
+/// A placeholder that will make all cells fit on one row.
+/// @require {placeholder} %grid
     %grid--fit{
         > div[class^='gc-']{
             flex: 1;
         }
     }
 
+/// A placeholder that will make all cells in a grid have a width of 100%.
+/// @require {placeholder} %grid
     %grid--full{
         > div[class^='gc-']{
             flex: 0 0 100%;
         }
     }
 
+/// A placeholder that will make all cells in a grid have a width of 50%.
+/// @require {placeholder} %grid
     %grid--halves{
         > div[class^='gc-']{
             flex: 0 0 50%;
         }
     }
 
+/// A placeholder that will make all cells in a grid have a width of 33.33%.
+/// @require {placeholder} %grid
     %grid--thirds{
         > div[class^='gc-']{
             flex: 0 0 33.3333%;
         }
     }
 
+/// A placeholder that will make all cells in a grid have a width of 25%.
+/// @require {placeholder} %grid
     %grid--quarters{
         > div[class^='gc-']{
             flex: 0 0 25%;
         }
     }
 
+/// A placeholder that will make all cells in a grid have a width of 20%.
+/// @require {placeholder} %grid
     %grid--fifths{
         > div[class^='gc-']{
             flex: 0 0 20%;
@@ -116,26 +124,32 @@
         !GRID SINGLE WIDTH MODIFIERS
     \*------------------------------------*/
 
-    /**
-     * We can set individual cell width with these extends.
-     */
-
+/// A placeholder that will make an individual cell in a grid have a width of 100%.
+/// @require {placeholder} %grid__item
     %grid__item--full{
         flex: 0 0 100% !important;
     }
 
+/// A placeholder that will make an individual cell in a grid have a width of 50%.
+/// @require {placeholder} %grid__item
     %grid__item--half{
         flex: 0 0 50% !important;
     }
 
+/// A placeholder that will make an individual cell in a grid have a width of 33.33%.
+/// @require {placeholder} %grid__item
     %grid__item--third{
         flex: 0 0 33.3333% !important;
     }
 
+/// A placeholder that will make an individual cell in a grid have a width of 25%.
+/// @require {placeholder} %grid__item
     %grid__item--quarter{
         flex: 0 0 25% !important;
     }
 
+/// A placeholder that will make an individual cell in a grid have a width of 20%.
+/// @require {placeholder} %grid__item
     %grid__item--fifth{
         flex: 0 0 20% !important;
     }
@@ -148,11 +162,8 @@
         !GRID GUTTER MODIFIERS
     \*------------------------------------*/
 
-    /**
-     * We can set individual grid gutter width with these.
-     *
-     * Apply them with the %grid extend.
-     */
+/// A placeholder that will make the gutters of a grid be small.
+/// @require {placeholder} %grid
     %gutters-small{
         margin-left: -1em;
 
@@ -162,6 +173,8 @@
         }
     }
 
+/// A placeholder that will make the gutters of a grid be medium.
+/// @require {placeholder} %grid
     %gutters-medium{
         margin-left: -1.5em;
 
@@ -171,6 +184,8 @@
         }
     }
 
+/// A placeholder that will make the gutters of a grid be large.
+/// @require {placeholder} %grid
     %gutters-large{
         margin-left: -2em;
 
@@ -180,6 +195,8 @@
         }
     }
 
+/// A placeholder that will make the gutters of a grid be xlarge.
+/// @require {placeholder} %grid
     %gutters-xlarge{
         margin-left: -3em;
 
@@ -197,20 +214,20 @@
         !GRID ALIGNMENT MODIFIERS
     \*------------------------------------*/
 
-    /**
-     * If we need all cells in a grid to align to the
-     * same location use these classes.
-     *
-     * Apply them with the %grid extend.
-     */
+/// A placeholder that will make all cells in a grid align to the top.
+/// @require {placeholder} %grid
     %grid--top{
         align-items: flex-start;
     }
 
+/// A placeholder that will make all cells in a grid align to the bottom.
+/// @require {placeholder} %grid
     %grid--bottom{
         align-items: flex-end;
     }
 
+/// A placeholder that will make all cells in a grid align to the center.
+/// @require {placeholder} %grid
     %grid--center{
         align-items: center;
     }
@@ -223,20 +240,20 @@
         !GRID SINGLE ALIGNMENT MODIFIERS
     \*------------------------------------*/
 
-    /**
-     * If we need single cells in a grid to align to a
-     * specific location use these extends.
-     *
-     * Apply them with the %grid__item extend.
-     */
+/// A placeholder that will make an individual cell in a grid be aligned to the top.
+/// @require {placeholder} %grid__item
     %grid__item--top{
         align-self: flex-start;
     }
 
+/// A placeholder that will make an individual cell in a grid be aligned to the bottom.
+/// @require {placeholder} %grid__item
     %grid__item--bottom{
         align-self: flex-end;
     }
 
+/// A placeholder that will make an individual cell in a grid be aligned to the center.
+/// @require {placeholder} %grid__item
     %grid__item--center{
         align-self: center;
     }

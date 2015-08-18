@@ -5,9 +5,11 @@
  *  ARROWS
  */
 
-/**
- *  Credit goes to inuit.css by @csswizardry
- */
+////
+/// @author Harry Roberts
+/// @link http://csswizardry.com
+/// @group arrows
+////
 
 
 
@@ -17,6 +19,13 @@
     !ARROWS
 \*------------------------------------*/
 
+/// Used to apply a css arrow
+/// @param {string} $arrow-edge - Set to: top, right, bottom, or left
+/// @param {string} $arrow-location - Set to: top, bottom, left, right, or center
+/// @param {string} $arrow-color - can be any color
+/// @param {string} $border-color [$arrow-color] - can be any color
+/// @example @include arrow(bottom, right, #000);
+/// @requires {placeholder} %arrow
 @mixin arrow($arrow-edge, $arrow-location, $arrow-color, $border-color: $arrow-color){
 
     @if $arrow-edge == top{

@@ -29,6 +29,12 @@
     !FORM RESPONSIVE MIXIN
 \*------------------------------------*/
 
+/// Used to gernate all the placeholders needed for responsive forms.
+/// This mixin will generate placeholders from the $breakpoint-has-widths variable.
+/// If the var $use-silent-classes is false this mixing will generate classes instead of placeholders
+/// @param {string} $namespace
+/// @group forms
+/// @access private
 @mixin forms-device-type($namespace: ''){
 
     // The first call is for the entire form block

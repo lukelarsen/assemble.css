@@ -13,6 +13,11 @@
     !PRINT NOTIFICATION COLORS
 \*------------------------------------*/
 
+/// Get all the breakpoints that will be used in our responsive grids.
+/// @group notifications
+/// @access private
+/// @param {map} $map
+/// @param {string} $keys
 @mixin print-notification-colors($map, $keys...){
     $i: 1;
     $length: length($keys);

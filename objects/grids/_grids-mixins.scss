@@ -23,6 +23,11 @@
  *  & Solved By Flexbox - Grids by @philwalton
  */
 
+////
+/// @group grids
+/// @access private
+////
+
 
 
 
@@ -34,6 +39,9 @@
 /**
  * Enclose a block of code with a media query as named in `$breakpoints`.
  */
+
+/// Get all the breakpoints that will be used in our responsive grids.
+/// @param {string} $media-query
 @mixin grid-media-query($media-query){
     $breakpoint-found: false;
 
@@ -59,6 +67,11 @@
 /**
  * Create our width & gutter extends (or classes), prefixed by the specified namespace.
  */
+
+/// Used to gernate all the placeholders needed for responsive grids.
+/// This mixin will generate placeholders from the $breakpoint-has-widths variable.
+/// If the var $use-silent-classes is false this mixing will generate classes instead of placeholders
+/// @param {string} $namespace
 @mixin device-type($namespace:''){
 
     // The first call is for the entire grid block

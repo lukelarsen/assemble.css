@@ -14,6 +14,10 @@
      *  & Solved By Flexbox - Grids by @philwalton
      */
 
+////
+/// @group forms
+////
+
 
 
 
@@ -22,6 +26,7 @@
         !FORM GRID
     \*------------------------------------*/
 
+/// Base placeholder for building forms.
     %form{
         @extend %grid;
         margin-left: -1em;
@@ -40,36 +45,48 @@
         !FORM WIDTH MODIFIERS
     \*------------------------------------*/
 
+/// A placeholder that will make all form elements in a group be in the same row.
+/// @require {placeholder} %form
     %form--fit{
         > li{
             flex: 1;
         }
     }
 
+/// A placeholder that will make all form elements in a group have a width of 100%.
+/// @require {placeholder} %form
     %form--full{
         > li{
             flex: 0 0 100%;
         }
     }
 
+/// A placeholder that will make all form elements in a group have a width of 50%.
+/// @require {placeholder} %form
     %form--halves{
         > li{
             flex: 0 0 50%;
         }
     }
 
+/// A placeholder that will make all form elements in a group have a width of 33.33%.
+/// @require {placeholder} %form
     %form--thirds{
         > li{
             flex: 0 0 33.3333%;
         }
     }
 
+/// A placeholder that will make all form elements in a group have a width of 25%.
+/// @require {placeholder} %form
     %form--quarters{
         > li{
             flex: 0 0 25%;
         }
     }
 
+/// A placeholder that will make all form elements in a group have a width of 20%.
+/// @require {placeholder} %form
     %form--fifths{
         > li{
             flex: 0 0 20%;
@@ -84,25 +101,32 @@
         !SINGLE FORM FIELD MODIFIERS
     \*------------------------------------*/
 
-    /**
-     * We can set individual form width with these extends.
-     */
+/// A placeholder that will make an individual form element have a width of 100%.
+/// @require {placeholder} %form
     %form__item--full{
         flex: 0 0 100% !important;
     }
 
+/// A placeholder that will make an individual form element have a width of 50%.
+/// @require {placeholder} %form
     %form__item--half{
         flex: 0 0 50% !important;
     }
 
+/// A placeholder that will make an individual form element have a width of 33.33%.
+/// @require {placeholder} %form
     %form__item--third{
         flex: 0 0 33.3333% !important;
     }
 
+/// A placeholder that will make an individual form element have a width of 25%.
+/// @require {placeholder} %form
     %form__item--quarter{
         flex: 0 0 25% !important;
     }
 
+/// A placeholder that will make an individual form element have a width of 20%.
+/// @require {placeholder} %form
     %form__item--fifth{
         flex: 0 0 20% !important;
     }
@@ -119,6 +143,9 @@
      * The small settings are the default so they are not included
      * here. These others will override the small size default.
      */
+
+/// A placeholder that will make the gutters of a form group medium.
+/// @require {placeholder} %form
     %form-gutters-medium{
         margin-left: -1.5em;
 
@@ -128,6 +155,8 @@
         }
     }
 
+/// A placeholder that will make the gutters of a form group large.
+/// @require {placeholder} %form
     %form-gutters-large{
         margin-left: -2em;
 
@@ -137,6 +166,8 @@
         }
     }
 
+/// A placeholder that will make the gutters of a form group xlarge.
+/// @require {placeholder} %form
     %form-gutters-xlarge{
         margin-left: -3em;
 
