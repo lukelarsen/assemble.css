@@ -27,7 +27,7 @@
                 &:active {
                     @each $inner-prop, $inner-val in $val {
                         @if $inner-prop == 'background-color-hover' {
-                            background: map-get($val, background-hover);
+                            background: map-get($val, background-color-hover);
                         } @else if $inner-prop == 'border-color-hover' {
                             border: solid 1px map-get($val, border-color-hover);
                         } @else if $inner-prop == 'text-color-hover' {
