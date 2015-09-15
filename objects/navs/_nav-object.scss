@@ -32,10 +32,10 @@
 
     .nav{
         display: flex;
-        flex-wrap: wrap;
         margin: 0;
         padding: 0;
         list-style: none;
+        flex-wrap: wrap;
 
         > li{
             flex: 0 1 auto;

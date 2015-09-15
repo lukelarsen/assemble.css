@@ -86,6 +86,7 @@ ins{
  * So that `alt` text is visually offset if images don’t load.
  */
 img{
+    border: 0;
     font-style: italic;
 }
 
@@ -219,6 +220,7 @@ audio:not([controls]){
     display: none !important;
 }
 
+
 /* ==========================================================================
    Base
    ========================================================================== */
@@ -240,7 +242,6 @@ html{
    Links
    ========================================================================== */
 
-
 /*
  * Improve readability when focused and also mouse hovered in all browsers.
  */
@@ -251,10 +252,10 @@ a:hover{
     outline: 0;
 }
 
+
 /* ==========================================================================
    Typography
    ========================================================================== */
-
 
 /*
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
@@ -326,12 +327,13 @@ sup{
 }
 
 sup{
-    top: -.5em;
+    top: -0.5em;
 }
 
 sub{
-    bottom: -.25em;
+    bottom: -0.25em;
 }
+
 
 /* ==========================================================================
    Embedded content
@@ -341,9 +343,7 @@ sub{
  * Remove border when inside `a` element in IE 8/9.
  */
 
-img{
-    border: 0;
-}
+
 
 /*
  * Correct overflow displayed oddly in IE 9.
@@ -352,6 +352,7 @@ img{
 svg:not(:root){
     overflow: hidden;
 }
+
 
 /* ==========================================================================
    Figures
@@ -365,6 +366,7 @@ figure{
     margin: 0;
 }
 
+
 /* ==========================================================================
    Forms
    ========================================================================== */
@@ -375,7 +377,7 @@ figure{
 
 fieldset{
     margin: 0 2px;
-    padding: .35em .625em .75em;
+    padding: 0.35em 0.625em 0.75em;
     border: 1px solid #C0C0C0;
 }
 
@@ -505,6 +507,7 @@ textarea{
     vertical-align: top; /* 2 */
 }
 
+
 /* ==========================================================================
    Tables
    ========================================================================== */
@@ -528,12 +531,12 @@ table{
 
 @if $always-show-scrollbars == true{
     .show-scrollbars::-webkit-scrollbar {
-        -webkit-appearance: none;
         width: 7px;
+        -webkit-appearance: none;
     }
 
     .show-scrollbars::-webkit-scrollbar-thumb {
         border-radius: 4px;
-        background-color: rgba(0, 0, 0, .5);
+        background-color: rgba(0, 0, 0, 0.5);
     }
 }

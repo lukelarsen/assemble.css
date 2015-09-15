@@ -36,7 +36,7 @@
     textarea{
         height: $form-item-height;
         padding: $form-item-padding;
-        transition: border-color .2s ease-in-out, color .2s ease-in-out;
+        transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
         border: $form-item-border-style $form-item-border-size $form-item-border-color;
         border-radius: $form-item-border-radius;
         outline: none;
@@ -214,8 +214,8 @@
 
             .btn{
                 height: $form-item-height;
-                margin-left: -.27em;
-                padding: .25em 1em;
+                margin-left: -0.27em;
+                padding: 0.25em 1em;
                 line-height: 1;
                 vertical-align: baseline;
             }

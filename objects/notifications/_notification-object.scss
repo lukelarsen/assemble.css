@@ -56,10 +56,10 @@
 
     .notification-close-btn{
         display: flex;
-        align-items: center;
         margin-left: auto;
         cursor: pointer;
         color: $notification-close-color;
+        align-items: center;
 
         &:hover{
             color: $notification-close-color-hover;
