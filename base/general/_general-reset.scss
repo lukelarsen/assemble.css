@@ -530,6 +530,10 @@ table{
 \*------------------------------------*/
 
 @if $always-show-scrollbars == true{
+    .show-scrollbars{
+        overflow: auto
+    }
+
     .show-scrollbars::-webkit-scrollbar {
         width: 7px;
         -webkit-appearance: none;
