@@ -160,7 +160,8 @@
     }
 
     .form-error__message{
-        color: $form-error-message;
+        color: $form-error-message-color;
+        font-size: $form-error-message-size;
     }
 
 
