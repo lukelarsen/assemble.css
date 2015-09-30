@@ -36,6 +36,14 @@
         padding: 0;
         list-style: none;
         flex-wrap: wrap;
+
+        & > div[class^='gc-']{
+            display: flex;
+
+            > .gc-content{
+                flex: 1 0 auto;
+            }
+        }
     }
 
 /// Base placeholder for grid items.
@@ -52,11 +60,12 @@
         !FLEX CELLS MODIFIER
     \*------------------------------------*/
 
-/// Placeholder that will make all cells the same height.
+/// Placeholder that will not make all cells the same height.
+/// By default they are all the same height.
 /// @require {placeholder} %grid
-    %grid--flex-cells{
+    %grid--no-flex-cells{
         & > div[class^='gc-']{
-            display: flex;
+            display: block;
         }
     }
 
