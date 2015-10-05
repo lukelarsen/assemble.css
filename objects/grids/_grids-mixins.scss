@@ -202,21 +202,21 @@
 
 
 /**
+ * ^Generate our responsive extends (or classes)
+ */
+@each $name in $breakpoint-has-widths{
+    @include grid-media-query($name){
+        @include device-type('#{$name}');
+    }
+}
+
+
+/**
  * ^Generate our fixed width grid__item extends (or classes)
  */
 @each $width in $grid-item-fixed-widths{
     #{$class-type}grid__item--fixed-#{$width}{
         flex: none !important;
         width: #{$width}px;
-    }
-}
-
-
-/**
- * ^Generate our responsive extends (or classes)
- */
-@each $name in $breakpoint-has-widths{
-    @include grid-media-query($name){
-        @include device-type('#{$name}');
     }
 }
