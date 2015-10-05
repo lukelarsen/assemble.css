@@ -194,7 +194,7 @@
 @each $width in $grid-center-widths{
     #{$class-type}grid--center-#{$width}{
         max-width: #{$width}px;
-        margin: 0 auto;
+        margin: 0 auto !important;
     }
 }
 
