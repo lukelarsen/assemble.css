@@ -78,29 +78,11 @@
     // The second call is for individual grid cells
 
     /**
-     * ^Width Whole
+     * ^Width Fifth
      */
-    #{$class-type}grid--#{$namespace}-full > div[class^='gc-'],
-    #{$class-type}grid__item--#{$namespace}-full{
-        flex: 0 0 100% !important;
-    }
-
-
-    /**
-     * ^Width Half
-     */
-    #{$class-type}grid--#{$namespace}-halves > div[class^='gc-'],
-    #{$class-type}grid__item--#{$namespace}-half{
-        flex: 0 0 50% !important;
-    }
-
-
-    /**
-     * ^Width Third
-     */
-    #{$class-type}grid--#{$namespace}-thirds > div[class^='gc-'],
-    #{$class-type}grid__item--#{$namespace}-third{
-        flex: 0 0 33.3333% !important;
+    #{$class-type}grid--#{$namespace}-fifths > div[class^='gc-'],
+    #{$class-type}grid__item--#{$namespace}-fifth{
+        flex: 0 0 20% !important;
     }
 
 
@@ -114,14 +96,30 @@
 
 
     /**
-     * ^Width Fifth
+     * ^Width Third
      */
-    #{$class-type}grid--#{$namespace}-fifths > div[class^='gc-'],
-    #{$class-type}grid__item--#{$namespace}-fifth{
-        flex: 0 0 20% !important;
+    #{$class-type}grid--#{$namespace}-thirds > div[class^='gc-'],
+    #{$class-type}grid__item--#{$namespace}-third{
+        flex: 0 0 33.3333% !important;
     }
 
 
+    /**
+     * ^Width Half
+     */
+    #{$class-type}grid--#{$namespace}-halves > div[class^='gc-'],
+    #{$class-type}grid__item--#{$namespace}-half{
+        flex: 0 0 50% !important;
+    }
+
+
+    /**
+     * ^Width Whole
+     */
+    #{$class-type}grid--#{$namespace}-full > div[class^='gc-'],
+    #{$class-type}grid__item--#{$namespace}-full{
+        flex: 0 0 100% !important;
+    }
 
 
 
