@@ -41,43 +41,43 @@
     // The second call is for individual form cells
 
     /**
-     * ^Forms One Col
+     * ^Forms Five Cols
      */
-    #{$class-type}form--#{$namespace}-full > li,
-    #{$class-type}form__item--#{$namespace}-full{
-        flex: 0 0 100% !important;
-    }
-
-    /**
-     * ^Form Two Cols
-     */
-    #{$class-type}form--#{$namespace}-halves > li,
-    #{$class-type}form__item--#{$namespace}-half{
-        flex: 0 0 50% !important;
-    }
-
-    /**
-     * ^Form Three Cols
-     */
-    #{$class-type}form--#{$namespace}-thirds > li,
-    #{$class-type}form__item--#{$namespace}-third{
-        flex: 0 0 33.3333% !important;
+    #{$class-type}form--#{$namespace}-fifths > li,
+    ul[class^='form-'] > #{$class-type}form__item--#{$namespace}-fifth{
+        flex: 0 0 20% !important;
     }
 
     /**
      * ^Forms Four Cols
      */
     #{$class-type}form--#{$namespace}-quarters > li,
-    #{$class-type}form__item--#{$namespace}-quarter{
+    ul[class^='form-'] > #{$class-type}form__item--#{$namespace}-quarter{
         flex: 0 0 25% !important;
     }
 
     /**
-     * ^Forms Five Cols
+     * ^Form Three Cols
      */
-    #{$class-type}form--#{$namespace}-fifths > li,
-    #{$class-type}form__item--#{$namespace}-fifth{
-        flex: 0 0 20% !important;
+    #{$class-type}form--#{$namespace}-thirds > li,
+    ul[class^='form-'] > #{$class-type}form__item--#{$namespace}-third{
+        flex: 0 0 33.3333% !important;
+    }
+
+    /**
+     * ^Form Two Cols
+     */
+    #{$class-type}form--#{$namespace}-halves > li,
+    ul[class^='form-'] > #{$class-type}form__item--#{$namespace}-half{
+        flex: 0 0 50% !important;
+    }
+
+    /**
+     * ^Forms One Col
+     */
+    #{$class-type}form--#{$namespace}-full > li,
+    ul[class^='form-'] > #{$class-type}form__item--#{$namespace}-full{
+        flex: 0 0 100% !important;
     }
 
 
