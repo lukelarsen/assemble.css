@@ -91,12 +91,14 @@
     /**
      * Forms Gutter Small
      */
+    #{$class-type}form-gutters--#{$namespace}-small{
+        margin-left: -1em;
 
-    /**
-     * There is no extend for Forms Gutter Small because it is
-     * the default. Just don't extend any form gutters to get
-     * it's size.
-     */
+        & > li{
+            margin-bottom: 1em;
+            padding-left: 1em;
+        }
+    }
 
 
     /**
