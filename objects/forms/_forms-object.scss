@@ -67,6 +67,7 @@
 
         .form-spoken select{
             padding: $form-spoken-padding-select;
+            background-position: right $form-select-arrow-spoken-ypos;
         }
     }
 
