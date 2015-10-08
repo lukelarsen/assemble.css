@@ -57,9 +57,9 @@
         cursor: text;
     }
 
-    @if $spoken-form == true{
-        .spoken-form input,
-        .spoken-form select{
+    @if $form-spoken == true{
+        .form-spoken input,
+        .form-spoken select{
             height: $form-spoken-height;
             padding: $form-spoken-padding;
         }
