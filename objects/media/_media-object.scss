@@ -54,17 +54,6 @@
         \*------------------------------------*/
 
         /**
-         * ^Scrollabele Media
-         */
-        @if $media--scroll == true{
-            &--scroll{
-                overflow-y: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-        }
-
-
-        /**
          * ^Vimeo places the controls on the player itself.
          */
         @if $media--vimeo == true{
