@@ -61,8 +61,8 @@
         .form-spoken input,
         .form-spoken select{
             height: $form-spoken-height;
-            padding: $form-spoken-padding-input;
             margin: 0 5px;
+            padding: $form-spoken-padding-input;
         }
 
         .form-spoken select{
@@ -219,17 +219,19 @@
                 display: block;
             }
 
-            > li > input{
-                display: inline;
-                width: auto;
+            > li{
+                @extend %cf;
+
+                > input{
+                    display: inline;
+                    width: auto;
+                    float: left;
+                }
             }
 
             .btn{
                 height: $form-item-height;
-                margin-left: -0.27em;
-                padding: 0.25em 1em;
-                line-height: 1;
-                vertical-align: baseline;
+                float: left;
             }
         }
     }
