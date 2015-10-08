@@ -61,7 +61,12 @@
         .form-spoken input,
         .form-spoken select{
             height: $form-spoken-height;
-            padding: $form-spoken-padding;
+            padding: $form-spoken-padding-input;
+            margin: 0 5px;
+        }
+
+        .form-spoken select{
+            padding: $form-spoken-padding-select;
         }
     }
 
@@ -90,7 +95,7 @@
                 padding-right: 1.67em;
                 background-image: $webkit-select-arrow;
                 background-repeat: no-repeat;
-                background-position: right center;
+                background-position: right $form-select-arrow-ypos;
             }
 
             .spoken-form select{
