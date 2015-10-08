@@ -89,7 +89,7 @@
         ol.list-colored > li:before{
             left: -3.125em;
             width: 2.5em;
-            font-weight: normal;
+            font-weight: $list-col-colored-weight;
             content: counter(foo) '.'; /* 1 */
             -webkit-margin-start: 0; /* 2 */
         }
