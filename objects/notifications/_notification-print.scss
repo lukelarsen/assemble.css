@@ -31,15 +31,18 @@
             background: $value;
         } @else if $property == 'color'{
             color: $value;
+            .notification-text{
+                color: $value;
+            }
         } @else if $property == 'title-bar-background'{
             .notification__title-bar{
                 background: $value;
             }
         } @else if $property == 'title-bar-color'{
-            .notification__title-bar{
+            .notification__title-bar,
+            .notification__title-bar h3{
                 color: $value;
             }
         }
     }
 }
-
