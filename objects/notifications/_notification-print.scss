@@ -31,8 +31,13 @@
             background: $value;
         } @else if $property == 'color'{
             color: $value;
+
             .notification-text{
                 color: $value;
+            }
+
+            .iconic *{
+                fill: $value;
             }
         } @else if $property == 'title-bar-background'{
             .notification__title-bar{
