@@ -39,6 +39,7 @@
         padding: $tip-padding;
         transition: $tip-transition;
         background: $tip-background-color;
+        cursor: default;
         color: $tip-text-color;
         font-size: $tip-font-size;
         line-height: $tip-line-height;
@@ -105,8 +106,8 @@
 
     @if $tip-enable-top == true{
         .tip--top{
-            top: $tip-top-position;
-            right: 26px;
+            top: $tip-top-top-position;
+            right: $tip-top-right-position;
         }
     }
 
@@ -116,8 +117,8 @@
 
     @if $tip-enable-bottom == true{
         .tip--bottom{
-            right: 26px;
-            bottom: $tip-bottom-position;
+            right: $tip-bottom-right-position;
+            bottom: $tip-bottom-bottom-position;
         }
     }
 
@@ -127,13 +128,13 @@
 
     @if $tip-enable-right == true{
         .tip--right{
-            top: -7px;
-            right: $tip-right-position;
+            top: $tip-right-top-position;
+            right: $tip-right-right-position;
             width: $tip-width;
             white-space: normal;
 
             @include media-query(palm){
-                top: $tip-bottom-position;
+                top: $tip-bottom-bottom-position;
                 right: 26px;
             }
         }
@@ -145,14 +146,14 @@
 
     @if $tip-enable-left == true{
         .tip--left{
-            top: -7px;
-            left: $tip-left-position;
+            top: $tip-left-top-position;
+            left: $tip-left-left-position;
             width: $tip-width;
             white-space: normal;
 
             @include media-query(palm){
-                top: $tip-bottom-position;
-                left: $tip-left-position + 16;
+                top: $tip-bottom-bottom-position;
+                left: $tip-left-left-position + 16;
             }
         }
     }
