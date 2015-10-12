@@ -106,8 +106,8 @@
 
     @if $tip-enable-top == true{
         .tip--top{
-            top: $tip-top-top-position;
             right: $tip-top-right-position;
+            bottom: $tip-bottom-bottom-position;
         }
     }
 
@@ -117,8 +117,8 @@
 
     @if $tip-enable-bottom == true{
         .tip--bottom{
+            top: $tip-top-top-position;
             right: $tip-bottom-right-position;
-            bottom: $tip-bottom-bottom-position;
         }
     }
 
