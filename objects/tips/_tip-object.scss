@@ -26,6 +26,12 @@
         position: relative;
     }
 
+    @if $tip-container--right == true{
+        .tip-container--right{
+            float: right;
+        }
+    }
+
     .tip{
         display: inline-block;
         position: absolute;
