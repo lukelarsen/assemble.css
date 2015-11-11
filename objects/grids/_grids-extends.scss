@@ -174,44 +174,44 @@
 /// A placeholder that will make the gutters of a grid be small.
 /// @require {placeholder} %grid
     %gutters-small{
-        margin-left: -1em;
+        margin-left: -$grid-gutters-small;
 
         & > div[class^='gc-']{
-            margin-bottom: 1em;
-            padding-left: 1em;
+            margin-bottom: $grid-gutters-small;
+            padding-left: $grid-gutters-small;
         }
     }
 
 /// A placeholder that will make the gutters of a grid be medium.
 /// @require {placeholder} %grid
     %gutters-medium{
-        margin-left: -1.5em;
+        margin-left: -$grid-gutters-medium;
 
         & > div[class^='gc-']{
-            margin-bottom: 1.5em;
-            padding-left: 1.5em;
+            margin-bottom: $grid-gutters-medium;
+            padding-left: $grid-gutters-medium;
         }
     }
 
 /// A placeholder that will make the gutters of a grid be large.
 /// @require {placeholder} %grid
     %gutters-large{
-        margin-left: -2em;
+        margin-left: -$grid-gutters-large;
 
         & > div[class^='gc-']{
-            margin-bottom: 2em;
-            padding-left: 2em;
+            margin-bottom: $grid-gutters-large;
+            padding-left: $grid-gutters-large;
         }
     }
 
 /// A placeholder that will make the gutters of a grid be xlarge.
 /// @require {placeholder} %grid
     %gutters-xlarge{
-        margin-left: -3em;
+        margin-left: -$grid-gutters-xlarge;
 
         & > div[class^='gc-']{
-            margin-bottom: 3em;
-            padding-left: 3em;
+            margin-bottom: $grid-gutters-xlarge;
+            padding-left: $grid-gutters-xlarge;
         }
     }
 

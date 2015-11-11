@@ -57,7 +57,7 @@
             }
         }
 
-        @if $btn--small== true{
+        @if $btn--small == true{
             &--small{
                 font-size: $btn-default-font-size / $btn-size-ratio;
             }
